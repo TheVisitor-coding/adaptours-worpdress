@@ -1,0 +1,204 @@
+// Bloc adaptours/team-grid — section équipe (+ cartes membres enfants).
+// Fond clair, en-tête titre/description sur 2 colonnes, grille de cartes légèrement
+// inclinées, bande basse « on recrute ? ». Contenu borné à 1280px. Desktop-first.
+
+@use "abstracts" as *;
+
+.team-grid {
+	position: relative;
+	overflow: hidden;
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface);
+
+	// Halo décoratif (coin haut-droit).
+	&::before {
+		content: "";
+		position: absolute;
+		top: 5rem;
+		right: -9.375rem;
+		width: 25rem;
+		height: 25rem;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle,
+			color-mix(in srgb, var(--wp--preset--color--highlight) 10%, transparent) 0%,
+			transparent 70%
+		);
+		pointer-events: none;
+	}
+
+	&__inner {
+		@include container;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--60);
+	}
+
+	// En-tête
+	&__head {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+		gap: var(--wp--preset--spacing--40);
+		align-items: end;
+	}
+
+	&__eyebrow {
+		margin: 0 0 0.8rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+		font-size: clamp(2rem, 4vw, 3rem);
+		color: var(--wp--preset--color--ink);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__desc {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1rem;
+		line-height: 1.6;
+		text-align: right;
+		color: var(--wp--preset--color--body);
+	}
+
+	// Grille de membres
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: var(--wp--preset--spacing--30);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		padding: 0.875rem 0.875rem 1.5rem;
+		background: var(--wp--preset--color--surface);
+		border-radius: 0.25rem;
+		box-shadow: 0 2px 3px rgba(27, 29, 42, 0.05), 0 14px 16px rgba(27, 29, 42, 0.08);
+
+		// Légères inclinaisons décoratives, alternées.
+		&:nth-child(4n + 1) { transform: rotate(-1.5deg); }
+		&:nth-child(4n + 2) { transform: rotate(1deg); }
+		&:nth-child(4n + 3) { transform: rotate(-0.5deg); }
+		&:nth-child(4n + 4) { transform: rotate(1.8deg); }
+	}
+
+	// Photo (portrait). En l'absence de photo, dégradé décoratif (varie par position).
+	&__photo {
+		display: block;
+		width: 100%;
+		aspect-ratio: 283 / 350;
+		border-radius: 2px;
+		overflow: hidden;
+		border: 0;
+		padding: 0;
+		cursor: inherit;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__photo--placeholder {
+		background: linear-gradient(180deg, #f5d890 0%, #e8775f 70%, #a04030 100%);
+	}
+	&__card:nth-child(4n + 2) &__photo--placeholder {
+		background: linear-gradient(180deg, #e8d5b0 0%, #c89775 60%, #6b4f38 100%);
+	}
+	&__card:nth-child(4n + 3) &__photo--placeholder {
+		background: linear-gradient(180deg, #c8d9a8 0%, #6b9260 60%, #3d5a4a 100%);
+	}
+	&__card:nth-child(4n + 4) &__photo--placeholder {
+		background: linear-gradient(180deg, #c9ddea 0%, #8ab4ca 50%, #5e8aa5 100%);
+	}
+
+	&__card-body {
+		padding-top: 1rem;
+		padding-inline: 0.25rem;
+	}
+
+	&__name {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-size: 1.125rem; // 18px
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__role {
+		margin: 0.25rem 0 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.8125rem; // 13px
+		color: var(--wp--preset--color--body);
+	}
+
+	&__tagline {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.375rem;
+		margin: 0.75rem 0 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.625rem; // 10px
+		font-weight: 500;
+		letter-spacing: 0.09em;
+		text-transform: uppercase;
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	&__tagline-mark { line-height: 1.4; }
+
+	// Bande basse « on recrute ? »
+	&__band {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 1.125rem;
+	}
+
+	&__band-text {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-size: 1.5rem; // 24px
+		color: var(--wp--preset--color--body);
+	}
+
+	// Responsive (desktop-first)
+	@include bp(tablet) {
+		&__head {
+			grid-template-columns: 1fr;
+			align-items: start;
+		}
+		&__desc { text-align: left; }
+		&__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--wp--preset--spacing--40); }
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--70);
+
+		&__grid { grid-template-columns: 1fr; max-width: 22rem; margin-inline: auto; }
+		&__card { transform: none !important; } // pas d'inclinaison sur une seule colonne
+		&__band { flex-direction: column; gap: 0.75rem; }
+	}
+}

@@ -1,0 +1,73 @@
+// adaptours/media-full — styles front (clé "style" du block.json → style-index.css).
+// Grande image pleine largeur (défaut) ou cadrée à 1280px. Légende superposée + dégradé
+// décoratif en bas. Tokens theme.json, sizing rem, BEM scopé, desktop-first.
+
+@use "abstracts" as *;
+
+.media-full {
+	padding-block: var(--wp--preset--spacing--60);
+
+	&__figure {
+		margin: 0;
+		position: relative;
+		overflow: hidden;
+
+		// Dégradé décoratif bas (lisibilité d'une légende éventuelle).
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+			background: linear-gradient(to bottom, transparent 55%, rgba(27, 29, 42, 0.3) 100%);
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__caption {
+		position: absolute;
+		left: var(--wp--preset--spacing--40);
+		bottom: var(--wp--preset--spacing--30);
+		z-index: 1;
+		margin: 0;
+		max-width: min(40rem, 90%);
+		color: rgba(255, 253, 248, 0.85); // surface, lisible sur le dégradé sombre
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--small);
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+	}
+
+	// Variante pleine largeur (défaut)
+	&--full-bleed {
+		.media-full__figure {
+			@include full-bleed; // déborde le conteneur 1280px → 100vw
+		}
+		.media-full__img {
+			height: clamp(18rem, 42vw, 34rem);
+		}
+	}
+
+	// Variante cadrée (1280px, coins arrondis)
+	&--boxed {
+		.media-full__figure {
+			@include container;
+			border-radius: 1.125rem;
+		}
+		.media-full__img {
+			border-radius: 1.125rem;
+			aspect-ratio: 59 / 26;
+		}
+		.media-full__figure::after { border-radius: 1.125rem; }
+	}
+
+	@include bp(mobile) {
+		&--full-bleed .media-full__img { height: clamp(14rem, 60vw, 22rem); }
+		&--boxed .media-full__img { aspect-ratio: 3 / 2; }
+	}
+}

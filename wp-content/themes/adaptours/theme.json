@@ -1,0 +1,152 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"settings": {
+		"appearanceTools": true,
+		"useRootPaddingAwareAlignments": true,
+		"layout": {
+			"contentSize": "80rem",
+			"wideSize": "80rem"
+		},
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{ "slug": "ink", "name": "Encre", "color": "#1B1D2A" },
+				{ "slug": "highlight", "name": "Orange highlight", "color": "#E8775F" },
+				{ "slug": "highlight-soft", "name": "Pêche", "color": "#FBE3CC" },
+				{ "slug": "body", "name": "Texte secondaire", "color": "#4A4D5C" },
+				{ "slug": "eyebrow", "name": "Eyebrow", "color": "#9C8F78" },
+				{ "slug": "surface", "name": "Surface", "color": "#FFFDF8" },
+				{ "slug": "surface-alt", "name": "Surface alt", "color": "#F5EEE3" },
+				{ "slug": "dark", "name": "Fond sombre", "color": "#1B1D2A" },
+				{ "slug": "line", "name": "Filet", "color": "rgba(27, 29, 42, 0.1)" }
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"fluid": true,
+			"lineHeightControl": false,
+			"defaultFontSizes": false,
+			"fontFamilies": [
+				{
+					"slug": "display",
+					"name": "Bricolage Grotesque (titres)",
+					"fontFamily": "\"Bricolage Grotesque\", system-ui, sans-serif",
+					"fontFace": [
+						{ "fontFamily": "Bricolage Grotesque", "fontWeight": "400", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/bricolage-grotesque-400.woff2"] },
+						{ "fontFamily": "Bricolage Grotesque", "fontWeight": "600", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/bricolage-grotesque-600.woff2"] },
+						{ "fontFamily": "Bricolage Grotesque", "fontWeight": "700", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/bricolage-grotesque-700.woff2"] }
+					]
+				},
+				{
+					"slug": "sans",
+					"name": "Inter (corps & UI)",
+					"fontFamily": "\"Inter\", system-ui, -apple-system, sans-serif",
+					"fontFace": [
+						{ "fontFamily": "Inter", "fontWeight": "400", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/inter-400.woff2"] },
+						{ "fontFamily": "Inter", "fontWeight": "500", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/inter-500.woff2"] },
+						{ "fontFamily": "Inter", "fontWeight": "600", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/inter-600.woff2"] }
+					]
+				},
+				{
+					"slug": "accent",
+					"name": "Caveat (accent manuscrit)",
+					"fontFamily": "\"Caveat\", cursive",
+					"fontFace": [
+						{ "fontFamily": "Caveat", "fontWeight": "400", "fontStyle": "normal", "fontDisplay": "swap", "src": ["file:./assets/fonts/caveat-400.woff2"] }
+					]
+				}
+			],
+			"fontSizes": [
+				{ "slug": "small", "name": "Small", "size": "0.8125rem", "fluid": false },
+				{ "slug": "medium", "name": "Medium", "size": "1rem", "fluid": false },
+				{ "slug": "large", "name": "Large", "size": "1.1875rem", "fluid": { "min": "1.0625rem", "max": "1.1875rem" } },
+				{ "slug": "x-large", "name": "X-Large", "size": "1.3125rem", "fluid": { "min": "1.1875rem", "max": "1.3125rem" } },
+				{ "slug": "xx-large", "name": "XX-Large", "size": "3rem", "fluid": { "min": "2rem", "max": "3rem" } },
+				{ "slug": "display", "name": "Display", "size": "4rem", "fluid": { "min": "2.25rem", "max": "4rem" } },
+				{ "slug": "hero", "name": "Hero", "size": "6.75rem", "fluid": { "min": "2.75rem", "max": "6.75rem" } }
+			]
+		},
+		"spacing": {
+			"customSpacingSize": false,
+			"defaultSpacingSizes": false,
+			"units": ["rem", "%", "vw", "svh"],
+			"spacingSizes": [
+				{ "slug": "20", "name": "XS", "size": "0.5rem" },
+				{ "slug": "30", "name": "S", "size": "1rem" },
+				{ "slug": "40", "name": "M", "size": "1.5rem" },
+				{ "slug": "50", "name": "L", "size": "2rem" },
+				{ "slug": "60", "name": "XL", "size": "3rem" },
+				{ "slug": "70", "name": "2XL", "size": "4rem" },
+				{ "slug": "80", "name": "3XL", "size": "5rem" },
+				{ "slug": "90", "name": "4XL", "size": "7.5rem" }
+			]
+		},
+		"custom": {
+			"color": {
+				"highlightStrong": "#D2563B",
+				"link": "#B0432A",
+				"buttonPrimary": "#C2502E"
+			},
+			"radius": {
+				"media": "0.75rem",
+				"card": "1.5rem",
+				"chip": "1.75rem",
+				"pill": "999px"
+			},
+			"shadow": {
+				"card": "0 2px 3px rgba(27, 29, 42, 0.03), 0 12px 20px rgba(27, 29, 42, 0.06)"
+			},
+			"tracking": {
+				"eyebrow": "0.14em"
+			},
+			"content": {
+				"gutter": "clamp(1.25rem, 5vw, 2.5rem)"
+			}
+		},
+		"border": { "customColor": false },
+		"shadow": { "defaultPresets": false }
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--surface)",
+			"text": "var(--wp--preset--color--body)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--sans)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontWeight": "400",
+			"lineHeight": "1.6"
+		},
+		"spacing": {
+			"padding": {
+				"left": "var(--wp--custom--content--gutter)",
+				"right": "var(--wp--custom--content--gutter)"
+			},
+			"blockGap": "var(--wp--preset--spacing--40)"
+		},
+		"elements": {
+			"heading": {
+				"color": { "text": "var(--wp--preset--color--ink)" },
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--display)",
+					"fontWeight": "600",
+					"lineHeight": "1.1"
+				}
+			},
+			"h1": { "typography": { "fontSize": "var(--wp--preset--font-size--hero)" } },
+			"h2": { "typography": { "fontSize": "var(--wp--preset--font-size--xx-large)" } },
+			"h3": { "typography": { "fontSize": "var(--wp--preset--font-size--x-large)" } },
+			"link": {
+				"color": { "text": "var(--wp--custom--color--link)" },
+				"typography": { "textDecoration": "underline" },
+				":hover": { "color": { "text": "var(--wp--preset--color--ink)" } }
+			}
+		}
+	}
+}

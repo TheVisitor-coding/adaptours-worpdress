@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/devis-form",
+	"title": "Devis — formulaire",
+	"category": "adaptours",
+	"icon": "feedback",
+	"description": "Le formulaire de demande de devis. Sa structure est gérée par l'équipe Adaptours ; rien à régler ici.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

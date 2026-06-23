@@ -1,0 +1,250 @@
+// Single destination — coque figée : hero + bande méta. Desktop-first.
+// Hero full-bleed (le <main>.container borne à 1280px); header transparent posé par-dessus
+// (.has-transparent-header, cf. _header.scss). Typos plafonnées via clamp.
+
+@use "abstracts" as *;
+
+.single-destination {
+
+	// HERO
+	&__hero {
+		@include full-bleed;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		min-height: min(46.875rem, 92vh); // plafonné à la hauteur d'écran
+		overflow: hidden;
+		color: var(--wp--preset--color--surface);
+		background-color: var(--wp--preset--color--dark); // repli si pas d'image à la une
+
+		@include bp(mobile) {
+			min-height: min(34rem, 88vh);
+		}
+	}
+
+	// Image plein cadre + dégradé sombre pour la lisibilité du texte blanc.
+	&__hero-media {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+	}
+
+	&__hero-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__hero-overlay {
+		position: absolute;
+		inset: 0;
+		// Léger voile en haut (lisibilité du header blanc) + renforcé en bas (textes).
+		background: linear-gradient(
+			180deg,
+			rgba(27, 29, 42, 0.35) 0%,
+			rgba(27, 29, 42, 0.05) 32%,
+			rgba(27, 29, 42, 0.55) 100%
+		);
+	}
+
+	&__hero-inner {
+		position: relative; // au-dessus du média
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--wp--preset--spacing--40); // 24px
+		width: 100%;
+		padding-block: clamp(7rem, 12vw, 10rem) var(--wp--preset--spacing--60);
+	}
+
+	// Fil d'ariane (style eyebrow)
+	&__breadcrumb {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.625rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 600;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--surface);
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+			text-underline-offset: 0.2em;
+
+			&:hover,
+			&:focus-visible {
+				text-decoration-color: var(--wp--preset--color--highlight);
+			}
+		}
+	}
+
+	&__breadcrumb-sep {
+		opacity: 0.6;
+	}
+
+	&__breadcrumb-current {
+		opacity: 0.85;
+	}
+
+	// Ligne lieu (pin + texte)
+	&__location {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin: 0;
+	}
+
+	&__pin {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		width: 2.125rem; // 34px
+		height: 2.125rem;
+		border-radius: var(--wp--custom--radius--pill);
+		background-color: var(--wp--preset--color--highlight);
+		color: var(--wp--preset--color--surface);
+		box-shadow: 0 4px 8px rgba(232, 119, 95, 0.45);
+	}
+
+	&__location-text {
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.75rem; // 12px
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 85%, transparent);
+	}
+
+	// Titre + accent manuscrit
+	&__title-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		gap: var(--wp--preset--spacing--40);
+		width: 100%;
+	}
+
+	&__title {
+		margin: 0;
+		color: var(--wp--preset--color--surface);
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 400; // override du 600 des titres (theme.json)
+		font-size: clamp(3rem, 9vw, 7rem); // plafonné
+		line-height: 0.95;
+		letter-spacing: -0.04em;
+		text-shadow: 0 2px 30px rgba(27, 29, 42, 0.25);
+	}
+
+	// Petite phrase manuscrite dorée (couleur hors palette theme.json, valeur en dur).
+	// Police Caveat (accent), légèrement inclinée.
+	&__handwritten {
+		font-family: var(--wp--preset--font-family--accent);
+		font-size: clamp(1.5rem, 3vw, 2.5rem);
+		line-height: 1;
+		color: #ffe6a8;
+		transform: rotate(-5deg);
+		text-shadow: 0 1px 12px rgba(27, 29, 42, 0.4);
+		margin-bottom: 0.5rem; // aligne sur la ligne de base du grand titre
+	}
+
+	// Phrase d'introduction
+	&__lead {
+		max-width: 34rem;
+		margin: 0;
+		font-size: 1.0625rem; // 17px
+		font-weight: 500;
+		line-height: 1.6;
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 90%, transparent);
+	}
+
+	// BANDE MÉTA
+	&__meta {
+		@include full-bleed;
+		background-color: var(--wp--preset--color--surface);
+		border-bottom: 1px solid var(--wp--preset--color--line);
+	}
+
+	&__meta-inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--wp--preset--spacing--40);
+		padding-block: var(--wp--preset--spacing--40); // 24px
+	}
+
+	&__meta-cell {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		flex: 1 1 auto;
+		min-width: 8rem;
+
+		// Filets verticaux entre cellules (desktop). La 1re n'en a pas; la cellule
+		// prix est repoussée à droite (voir --price).
+		& + & {
+			padding-left: var(--wp--preset--spacing--40);
+			border-left: 1px solid var(--wp--preset--color--line);
+		}
+
+		@include bp(mobile) {
+			flex-basis: 45%;
+			& + & {
+				padding-left: 0;
+				border-left: 0;
+			}
+		}
+	}
+
+	&__meta-cell--price {
+		flex: 0 0 auto;
+		text-align: right;
+		margin-left: auto; // colle le prix + CTA à droite
+
+		@include bp(tablet) {
+			margin-left: 0;
+			text-align: left;
+		}
+	}
+
+	&__meta-eyebrow {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 600;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	// Valeur : police de titre, encre. Traitement uniforme (pas de découpe de
+	// sous-chaîne pour colorer certains chiffres).
+	&__meta-value {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-size: 1.5rem; // ~24px
+		font-weight: 400;
+		line-height: 1.1;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__meta-sub {
+		margin: 0;
+		font-size: var(--wp--preset--font-size--small); // 13px
+		color: var(--wp--preset--color--body);
+	}
+
+	&__meta-cta {
+		flex: 0 0 auto;
+
+		@include bp(mobile) {
+			flex-basis: 100%;
+			.button { width: 100%; justify-content: center; }
+		}
+	}
+}

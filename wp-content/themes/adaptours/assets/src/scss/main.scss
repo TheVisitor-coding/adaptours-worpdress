@@ -1,0 +1,115 @@
+// main.scss — feuille de styles globale du thème (base, reset léger, utilitaires).
+// Compilée vers assets/build/main.css. Les styles des blocks vivent dans
+// blocks/*/style.scss (chargés à la demande via block.json), PAS ici.
+// Tokens : theme.json (var(--wp--preset--*) / var(--wp--custom--*)).
+
+@use "abstracts" as *;
+
+// Composants & layout partagés (sortie CSS)
+@use "components/button";
+@use "components/card-destination";
+@use "components/card-avis";
+@use "layout/header";
+@use "layout/prefooter";
+@use "layout/footer";
+@use "layout/single-destination";
+@use "layout/archive-destination";
+
+// Reset léger
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body { margin: 0; }
+
+img,
+svg,
+video { max-width: 100%; height: auto; }
+
+img { display: block; }
+
+// Accessibilité : focus visible (token highlightStrong, contrasté sur fond clair).
+:focus-visible {
+	outline: 2px solid var(--wp--custom--color--highlight-strong);
+	outline-offset: 2px;
+}
+// Ne pas montrer l'outline au clic souris (uniquement clavier).
+:focus:not(:focus-visible) { outline: none; }
+
+// Texte réservé aux lecteurs d'écran (visuellement masqué)
+// Utilitaire standard WP : libellés/contexte annoncés aux technologies d'assistance
+// sans occuper d'espace visuel. Reste focusable (skip-link-like) si rendu actionnable.
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+// Lien d'évitement (skip link)
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 1000;
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+	background: var(--wp--preset--color--ink);
+	color: var(--wp--preset--color--surface);
+	border-radius: 0 0 var(--wp--custom--radius--media) 0;
+
+	&:focus { left: 0; }
+}
+
+// Utilitaires partagés
+
+// Conteneur 1280px réutilisable hors blocks (templates, parts).
+.container { @include container; }
+
+// Anti-scroll horizontal pour les sections full-bleed (width: 100vw > largeur
+// visible à cause de la barre de défilement). À poser sur la RACINE, JAMAIS sur
+// `.site-main` (qui est le conteneur 1280px : un clip là re-rognerait les sections
+// pleine largeur à 1280px → bords blancs). `clip` ne crée pas de conteneur de
+// défilement → n'altère pas le `position: sticky` du header.
+html {
+	overflow-x: clip;
+}
+
+// Eyebrow / overline (ex. « VOYAGES ACCESSIBLES · DEPUIS 2011 »).
+.eyebrow {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 600;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	text-transform: uppercase;
+	color: var(--wp--preset--color--eyebrow);
+}
+
+// Accent manuscrit (ex. « d'ici jusqu'à Bali », « ~ 30 min d'échange »).
+.accent {
+	font-family: var(--wp--preset--font-family--accent);
+	color: var(--wp--preset--color--highlight);
+}
+
+// Titres bichromes : adaptours_bichrome enveloppe l'accent dans <span class="accent">.
+// Dans un titre, l'accent doit garder la police du titre (display) — la police
+// manuscrite (Caveat) ci-dessus est réservée aux accents décoratifs hors-titre.
+:where(h1, h2, h3, h4, h5, h6) .accent {
+	font-family: inherit;
+}
+
+// Réduction de mouvement globale
+@include reduced-motion {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

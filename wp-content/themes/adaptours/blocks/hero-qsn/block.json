@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/hero-qsn",
+	"title": "Qui sommes-nous — en-tête",
+	"category": "adaptours",
+	"icon": "cover-image",
+	"description": "En-tête de la page Qui sommes-nous : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction, un bouton et une grande photo.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Qui sommes-nous" },
+		"title_part_1": { "type": "string", "default": "On n’organise pas des voyages, on rend des" },
+		"title_part_2": { "type": "string", "default": "envies" },
+		"title_script": { "type": "string", "default": "possibles." },
+		"description": { "type": "string", "default": "Adaptours, c’est douze personnes basées en France, une trentaine de partenaires sur place, et une seule conviction : tout le monde a le droit de partir. Même quand on vous a dit le contraire." },
+		"cta_label": { "type": "string", "default": "Rencontrer l’équipe" },
+		"cta_url": { "type": "string", "default": "#equipe" },
+		"main_image": { "type": "integer", "default": 0 }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

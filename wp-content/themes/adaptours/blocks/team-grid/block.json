@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/team-grid",
+	"title": "Qui sommes-nous — l'équipe",
+	"category": "adaptours",
+	"icon": "groups",
+	"description": "Section équipe : surtitre, titre, description et une grille de personnes (à ajouter une par une), avec une bande « on recrute ? » en bas.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "L’équipe" },
+		"title_part_1": { "type": "string", "default": "Des personnes" },
+		"title_part_2": { "type": "string", "default": "expérimentées et motivées" },
+		"description": { "type": "string", "default": "On ne recrute pas sur un CV. On recrute sur une histoire : quelqu’un qui a déjà aidé un proche à voyager, qui sait ce que ça veut dire d’attendre une réponse. Voici qui décroche quand vous appelez." },
+		"band_text": { "type": "string", "default": "on recrute, par curiosité ?" },
+		"cta_label": { "type": "string", "default": "Voir les conditions" },
+		"cta_url": { "type": "string", "default": "#recrutement" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

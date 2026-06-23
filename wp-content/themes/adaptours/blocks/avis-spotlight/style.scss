@@ -1,0 +1,183 @@
+// Bloc adaptours/avis-spotlight — section témoignage sombre (single destination).
+// Layout dédié (pas de réutilisation de card-avis) : polaroïd + citation côte à côte.
+// BEM scopé.avis-spotlight. Desktop-first.
+
+@use "abstracts" as *;
+
+.wp-block-adaptours-avis-spotlight {
+	@include full-bleed; // fond sombre pleine largeur (déborde le <main> 1280px)
+	overflow: hidden;
+	padding-block: clamp(4rem, 6vw, 5.5rem); // réduit pour la hauteur d'écran
+	background-color: var(--wp--preset--color--dark); // #1B1D2A
+	color: var(--wp--preset--color--surface);
+}
+
+// Halos décoratifs (jamais dans le flux).
+.avis-spotlight__decor {
+	@include decor;
+	border-radius: 50%;
+
+	&--warm {
+		top: -12.5rem; // -200px
+		right: -6.25rem; // -100px
+		width: 38.75rem; // 620px
+		height: 40.75rem; // 652px
+		background: radial-gradient(circle, rgb(232 119 95 / 0.35), rgb(232 119 95 / 0) 70%);
+	}
+
+	&--cool {
+		bottom: -12.5rem;
+		left: -6.25rem;
+		width: 31.25rem; // 500px
+		height: 31.25rem;
+		background: radial-gradient(circle, rgb(138 180 202 / 0.18), rgb(138 180 202 / 0) 70%);
+	}
+}
+
+.avis-spotlight__inner {
+	@include container;
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: minmax(0, 487fr) minmax(0, 633fr);
+	gap: 3.75rem; // 60px
+	align-items: center;
+}
+
+// Polaroïd
+.avis-spotlight__media {
+	position: relative;
+	overflow: hidden;
+	aspect-ratio: 487 / 609;
+	border-radius: 12.5rem 12.5rem 1.25rem 1.25rem; // arche 200/200/20/20
+	box-shadow: 0 30px 60px rgb(0 0 0 / 0.3);
+	background-color: var(--wp--preset--color--highlight-soft);
+	margin: 0;
+
+	&--placeholder {
+		display: grid;
+		place-items: center;
+	}
+}
+
+.avis-spotlight__photo {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.avis-spotlight__photo-label {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.625rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--ink);
+}
+
+// Citation
+.avis-spotlight__quote-block {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.avis-spotlight__quote-mark {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 4.5rem;
+	line-height: 0.6;
+	color: var(--wp--preset--color--highlight);
+	opacity: 0.6;
+}
+
+.avis-spotlight__quote {
+	margin: 1.5rem 0 0;
+	padding: 0;
+	border: 0;
+	max-width: 33.25rem; // 532px
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: clamp(1.25rem, 1rem + 1.1vw, 1.625rem); // 20 → 26px (cap usabilité)
+	line-height: 1.4;
+	letter-spacing: -0.01em;
+	color: var(--wp--preset--color--surface);
+
+	p {
+		margin: 0;
+	}
+}
+
+.avis-spotlight__stars {
+	margin: 2.5rem 0 0;
+	font-size: 0.875rem; // 14px
+	line-height: 1;
+	letter-spacing: 0.28em; // ≈ 4px
+	color: var(--wp--preset--color--highlight);
+}
+
+.avis-spotlight__author {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 2.25rem 0 0;
+}
+
+.avis-spotlight__avatar {
+	flex-shrink: 0;
+	display: grid;
+	place-items: center;
+	width: 3.75rem; // 60px
+	height: 3.75rem;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--highlight);
+	color: var(--wp--preset--color--surface);
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 1.375rem; // 22px
+	line-height: 1;
+}
+
+.avis-spotlight__identity {
+	display: flex;
+	flex-direction: column;
+	gap: 0.125rem;
+	min-width: 0;
+}
+
+.avis-spotlight__name {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 1.0625rem; // 17px
+	color: var(--wp--preset--color--surface);
+}
+
+.avis-spotlight__meta {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.8125rem; // 13px
+	color: rgb(255 253 248 / 0.65);
+}
+
+// Indice éditeur (rendu uniquement dans Gutenberg).
+.avis-spotlight__editor-hint {
+	margin: 0 0 0.75rem;
+	font-size: 0.75rem;
+	font-style: italic;
+	opacity: 0.7;
+}
+
+// Responsive (desktop-first)
+@include bp(tablet) {
+	.avis-spotlight__inner {
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+
+	.avis-spotlight__media {
+		max-width: 24rem;
+	}
+}
+
+@include bp(mobile) {
+	.avis-spotlight__quote-mark {
+		font-size: 3.5rem;
+	}
+}

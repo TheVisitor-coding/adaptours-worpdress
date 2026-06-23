@@ -1,0 +1,159 @@
+// Footer du site — desktop-first.
+// Fond clair (surface-alt). 4 colonnes (brand 2fr + 3×1fr) + barre légale.
+
+@use "abstracts" as *;
+
+.site-footer {
+	background-color: var(--wp--preset--color--surface-alt);
+	color: var(--wp--preset--color--body);
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr 1fr; // brand = 464px ≈ 2× les colonnes 232px
+		gap: 2.5rem;
+		padding-top: var(--wp--preset--spacing--70);
+	}
+
+	// Colonne brand
+	&__logo {
+		display: inline-block;
+		margin-bottom: var(--wp--preset--spacing--40);
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 700;
+		font-size: var(--wp--preset--font-size--x-large);
+		color: var(--wp--preset--color--highlight);
+		text-decoration: none;
+	}
+
+	&__tagline {
+		margin: 0 0 var(--wp--preset--spacing--40);
+		max-width: 20rem; // 320px
+		font-size: 0.875rem; // 14px
+		line-height: 1.5;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--20);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: var(--wp--preset--font-size--small); // 13px
+	}
+
+	&__email { font-weight: 700; }
+
+	&__email,
+	&__tel {
+		color: var(--wp--preset--color--body);
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--wp--preset--color--ink);
+			text-decoration: underline;
+		}
+	}
+
+	// Colonnes de liens
+	&__col-title {
+		margin: 0 0 var(--wp--preset--spacing--40);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.875rem; // 14px
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem; // py-4 par item ≈ 8px d'écart
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0.875rem; // 14px
+
+		a {
+			color: var(--wp--preset--color--body);
+			text-decoration: none;
+
+			&:hover,
+			&:focus-visible {
+				color: var(--wp--preset--color--ink);
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// Réseaux sociaux (icônes nues, sans pastille)
+	&__social-list {
+		display: flex;
+		gap: 1.25rem; // 20px
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__social-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.6875rem; // 27px
+		height: 1.6875rem;
+		color: var(--wp--preset--color--ink);
+
+		svg { width: 100%; height: 100%; }
+
+		&:hover,
+		&:focus-visible { color: var(--wp--preset--color--highlight); }
+	}
+
+	// Barre légale
+	&__legal {
+		margin-top: var(--wp--preset--spacing--60);
+		border-top: 1px solid var(--wp--preset--color--line);
+	}
+
+	&__legal-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--wp--preset--spacing--40);
+		padding-block: var(--wp--preset--spacing--40) var(--wp--preset--spacing--40);
+		font-size: 0.75rem; // 12px
+		color: var(--wp--preset--color--body);
+	}
+
+	&__copyright { margin: 0; }
+
+	&__legal-links a {
+		color: var(--wp--preset--color--body);
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--wp--preset--color--ink);
+			text-decoration: underline;
+		}
+	}
+
+	// Responsive
+	@include bp(tablet) {
+		&__inner { grid-template-columns: 1fr 1fr; }
+	}
+
+	@include bp(mobile) {
+		&__inner {
+			grid-template-columns: 1fr;
+			gap: var(--wp--preset--spacing--60);
+		}
+
+		&__legal-inner {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--wp--preset--spacing--30);
+		}
+	}
+}

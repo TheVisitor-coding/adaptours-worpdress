@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/legal-info",
+	"title": "Contact — informations légales",
+	"category": "adaptours",
+	"icon": "info-outline",
+	"description": "Bandeau des mentions légales (forme juridique, SIRET, NAF, RCS, TVA, Atout France, APST). Contenu repris des réglages du site.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,214 @@
+// Bloc adaptours/process — « Du premier mot au dernier souvenir ».
+// Section full-bleed (fond crème), en-tête centré + 3 étapes (la 3e en thème sombre).
+// Numérotation par position. Desktop-first.
+
+@use "abstracts" as *;
+
+.process {
+	@include full-bleed;
+	position: relative;
+	overflow: hidden;
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface-alt);
+
+	&__inner {
+		@include container;
+		position: relative;
+		z-index: 1;
+	}
+
+	// En-tête centré
+	&__head {
+		max-width: 40rem;
+		margin: 0 auto var(--wp--preset--spacing--70);
+		text-align: center;
+	}
+
+	&__eyebrow {
+		margin: 0 0 var(--wp--preset--spacing--30);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0 0 var(--wp--preset--spacing--40);
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.04;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2rem, 4vw, 3.25rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__desc {
+		margin: 0 auto;
+		max-width: 36rem;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--wp--preset--color--body);
+	}
+
+	// 3 étapes
+	&__steps {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--wp--preset--spacing--40);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		// Ligne de liaison pointillée derrière la rangée des numéros (décor).
+		&::before {
+			content: "";
+			position: absolute;
+			top: 5.25rem;
+			inset-inline: 12%;
+			border-top: 2px dashed color-mix(in srgb, var(--wp--preset--color--ink) 18%, transparent);
+			z-index: 0;
+		}
+	}
+
+	&__step {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--30);
+		padding: var(--wp--preset--spacing--50);
+		border: 1px solid var(--wp--preset--color--line);
+		border-radius: var(--wp--custom--radius--card);
+		background-color: var(--wp--preset--color--surface);
+		box-shadow: var(--wp--custom--shadow--card);
+
+		&--dark {
+			border-color: transparent;
+			background-color: var(--wp--preset--color--dark);
+			color: var(--wp--preset--color--surface);
+		}
+	}
+
+	&__step-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__step-number {
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		font-size: 3rem; // 48px
+		line-height: 1;
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	&__step--dark &__step-number { color: var(--wp--preset--color--highlight-soft); }
+
+	&__step-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 3.5rem; // 56px
+		height: 3.5rem;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--wp--preset--color--highlight) 14%, transparent);
+		color: var(--wp--custom--color--highlight-strong);
+
+		svg { width: 1.625rem; height: 1.625rem; } // 26px
+	}
+
+	&__step--dark &__step-icon {
+		background: color-mix(in srgb, var(--wp--preset--color--surface) 12%, transparent);
+		color: var(--wp--preset--color--highlight-soft);
+	}
+
+	&__step-title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		font-size: 1.3125rem; // 21px
+		line-height: 1.2;
+		color: inherit;
+	}
+
+	&__step--dark &__step-title { color: var(--wp--preset--color--surface); }
+
+	&__step-desc {
+		margin: 0;
+		font-size: 0.9375rem; // 15px
+		line-height: 1.55;
+		color: var(--wp--preset--color--body);
+	}
+
+	&__step--dark &__step-desc { color: color-mix(in srgb, var(--wp--preset--color--surface) 80%, transparent); }
+
+	&__step-features {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin: var(--wp--preset--spacing--20) 0 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0.875rem; // 14px
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__step--dark &__step-features { color: color-mix(in srgb, var(--wp--preset--color--surface) 88%, transparent); }
+
+	&__step-feature {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+
+	&__step-check {
+		display: inline-flex;
+		flex-shrink: 0;
+		margin-top: 0.1em;
+		color: var(--wp--custom--color--highlight-strong);
+
+		svg { width: 0.75rem; height: 0.75rem; }
+	}
+
+	&__step--dark &__step-check { color: var(--wp--preset--color--highlight-soft); }
+
+	&__step-meta {
+		margin: auto 0 0; // colle en bas de la card
+		padding-top: var(--wp--preset--spacing--30);
+		font-family: var(--wp--preset--font-family--accent);
+		font-size: 1.125rem; // 18px (manuscrit)
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	&__step--dark &__step-meta { color: var(--wp--preset--color--highlight-soft); }
+
+	&__step-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin-top: var(--wp--preset--spacing--20);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.875rem;
+		font-weight: 500;
+		color: var(--wp--custom--color--link);
+		text-decoration: underline;
+	}
+
+	&__step--dark &__step-cta { color: var(--wp--preset--color--highlight-soft); }
+
+	// Responsive (desktop-first)
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+
+		&__steps {
+			grid-template-columns: 1fr;
+			&::before { display: none; }
+		}
+	}
+}

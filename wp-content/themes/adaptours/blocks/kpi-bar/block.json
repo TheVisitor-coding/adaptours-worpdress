@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/kpi-bar",
+	"title": "KPI bar",
+	"category": "adaptours",
+	"icon": "chart-bar",
+	"description": "Barre de chiffres clés (valeur + libellé). Longueur figée à 4 colonnes via l'attribut d'insertion verrouillé columns.",
+	"textdomain": "adaptours",
+	"supports": {
+		"align": ["full"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"columns": { "type": "number", "default": 4 },
+		"kpi_1_value": { "type": "string", "default": "" },
+		"kpi_1_label": { "type": "string", "default": "" },
+		"kpi_2_value": { "type": "string", "default": "" },
+		"kpi_2_label": { "type": "string", "default": "" },
+		"kpi_3_value": { "type": "string", "default": "" },
+		"kpi_3_label": { "type": "string", "default": "" },
+		"kpi_4_value": { "type": "string", "default": "" },
+		"kpi_4_label": { "type": "string", "default": "" },
+		"kpi_5_value": { "type": "string", "default": "" },
+		"kpi_5_label": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,238 @@
+// Bloc adaptours/itinerary (+ étapes adaptours/itinerary-step) — « le programme ».
+// Tout le layout vit ici (le bloc enfant n'a pas de CSS propre), chargé dès que le parent
+// est présent (front + éditeur). BEM scopé.itinerary. Desktop-first.
+
+@use "abstracts" as *;
+
+.wp-block-adaptours-itinerary {
+	@include full-bleed;
+	padding-block: clamp(4rem, 6vw, 6rem);
+	background-color: var(--wp--preset--color--surface-alt);
+}
+
+.itinerary__inner {
+	@include container;
+	display: flex;
+	flex-direction: column;
+	gap: 3.75rem; // 60px
+}
+
+// Header
+.itinerary__head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.itinerary__eyebrow {
+	margin: 0 0 0.8125rem;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.6875rem; // 11px
+	font-weight: 600;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	text-transform: uppercase;
+	color: var(--wp--preset--color--eyebrow);
+}
+
+.itinerary__title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 400;
+	font-size: clamp(2rem, 1.2rem + 2.4vw, 3rem);
+	line-height: 1.02;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--ink);
+}
+
+.itinerary__desc {
+	margin: 0;
+	max-width: 22.5rem; // 360px
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 1rem;
+	line-height: 1.55;
+	text-align: right;
+	color: var(--wp--preset--color--body);
+}
+
+// Liste d'étapes
+.itinerary__list {
+	position: relative;
+	counter-reset: step;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem; // 16px
+	margin: 0;
+	padding: 0 0 0 4.375rem; // 70px : gouttière des pastilles « jour »
+	list-style: none;
+
+	// Trait reliant les pastilles (décoratif).
+	&::before {
+		content: "";
+		position: absolute;
+		left: 1.6875rem; // centre des pastilles (27px)
+		top: 3.5rem;
+		bottom: 3.5rem;
+		width: 2px;
+		background-color: var(--wp--preset--color--highlight-soft);
+		z-index: 0;
+	}
+}
+
+.itinerary__step {
+	counter-increment: step;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	min-height: 7.8125rem; // 125px
+	padding: 1.25rem 1.625rem; // 20px / 26px
+	border-radius: 1.125rem; // 18px
+	background-color: var(--wp--preset--color--surface);
+	box-shadow: var(--wp--custom--shadow--card);
+}
+
+// Pastille « JOUR N » (à gauche, dans la gouttière).
+.itinerary__badge {
+	position: absolute;
+	left: -4.375rem; // -70px
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 3.5rem; // 56px
+	height: 3.5rem;
+	border: 2px solid var(--wp--preset--color--highlight);
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--surface);
+	line-height: 1;
+}
+
+.itinerary__badge-label {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.5rem; // 8px
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--eyebrow);
+}
+
+.itinerary__badge-num {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 1.375rem; // 22px
+	color: var(--wp--preset--color--highlight);
+
+	&::before {
+		content: counter(step);
+	}
+}
+
+// Dernière étape : pastille pleine orange.
+.itinerary__step:last-child .itinerary__badge {
+	background-color: var(--wp--preset--color--highlight);
+	box-shadow: 0 8px 10px rgb(232 119 95 / 0.35);
+}
+
+.itinerary__step:last-child .itinerary__badge-label,
+.itinerary__step:last-child .itinerary__badge-num {
+	color: var(--wp--preset--color--surface);
+}
+
+// Contenu (titre + description).
+.itinerary__content {
+	flex: 1 1 0;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.375rem; // 6px
+}
+
+.itinerary__step-title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 400;
+	font-size: 1.25rem; // 20px
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+	color: var(--wp--preset--color--ink);
+}
+
+.itinerary__step-desc {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.875rem; // 14px
+	line-height: 1.5;
+	color: var(--wp--preset--color--body);
+}
+
+// Vignette (droite).
+.itinerary__thumb {
+	flex-shrink: 0;
+	width: 5rem; // 80px
+	height: 5rem;
+	border-radius: 1rem; // 16px
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+}
+
+// Vignette en mode édition (bouton médiathèque) — affordance simple.
+.itinerary__thumb--button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	cursor: pointer;
+	border: 1px dashed var(--wp--preset--color--line);
+	background-color: var(--wp--preset--color--surface-alt);
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.75rem;
+	color: var(--wp--preset--color--body);
+}
+
+// Responsive (desktop-first)
+@include bp(tablet) {
+	.itinerary__head {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.itinerary__desc {
+		text-align: left;
+		max-width: none;
+	}
+}
+
+@include bp(mobile) {
+	.itinerary__list {
+		padding-left: 3.25rem; // 52px
+	}
+
+	.itinerary__list::before {
+		left: 1.25rem;
+	}
+
+	.itinerary__badge {
+		left: -3.25rem;
+		width: 2.75rem;
+		height: 2.75rem;
+	}
+
+	.itinerary__step {
+		flex-wrap: wrap;
+		padding: 1.125rem 1.25rem;
+	}
+
+	.itinerary__thumb {
+		display: none; // on masque la vignette en mobile (place réduite)
+	}
+}

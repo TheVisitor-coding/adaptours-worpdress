@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/hero-contact",
+	"title": "Contact — en-tête",
+	"category": "adaptours",
+	"icon": "email",
+	"description": "En-tête de la page Contact : surtitre, titre (avec mot(s) en orange) et texte d'introduction.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "CONTACT" },
+		"title_part_1": { "type": "string", "default": "Écrivez-nous," },
+		"title_part_2": { "type": "string", "default": "appelez," },
+		"title_part_3": { "type": "string", "default": "ou passez nous voir." },
+		"description": { "type": "string", "default": "Une question, un projet, une envie de discuter — on répond personnellement, généralement dans la journée." }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,9 @@
+# Dépendances
+/node_modules/
+
+# Sortie de build (générée par `npm run build`)
+/assets/build/
+
+# Divers
+.DS_Store
+*.log

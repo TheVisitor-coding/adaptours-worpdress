@@ -1,0 +1,225 @@
+// Bloc adaptours/section-promise — « Le voyage, pensé autour de vous ».
+// Section full-bleed (fond crème surface-alt), 2 colonnes : collage photos / texte + atouts.
+// Desktop-first.
+
+@use "abstracts" as *;
+
+.section-promise {
+	@include full-bleed;
+	position: relative;
+	overflow: hidden;
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface-alt);
+
+	// Halo décoratif orange (haut droite).
+	&__blob {
+		position: absolute;
+		top: -7.5rem;
+		right: -6rem;
+		width: 35rem;
+		height: 37rem;
+		border-radius: 11.25rem;
+		background: radial-gradient(
+			closest-side,
+			color-mix(in srgb, var(--wp--preset--color--highlight) 20%, transparent),
+			transparent 70%
+		);
+		pointer-events: none;
+	}
+
+	&__inner {
+		@include container;
+		position: relative;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: 0.9fr 1fr;
+		gap: var(--wp--preset--spacing--70);
+		align-items: center;
+	}
+
+	// Colonne média (collage décoratif)
+	&__media {
+		position: relative;
+		min-height: 27rem;
+	}
+
+	&__scribble {
+		position: absolute;
+		top: -1.5rem;
+		left: -1rem;
+		z-index: 3;
+		font-family: var(--wp--preset--font-family--accent);
+		font-size: 2rem; // 32px
+		color: var(--wp--preset--color--highlight);
+		transform: rotate(-5deg);
+	}
+
+	&__photo {
+		display: block;
+		border-radius: var(--wp--custom--radius--card);
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--wp--preset--color--highlight) 18%, var(--wp--preset--color--surface)) 0%,
+			color-mix(in srgb, var(--wp--preset--color--ink) 12%, var(--wp--preset--color--surface)) 100%
+		);
+
+		&--main {
+			position: relative;
+			width: 88%;
+			aspect-ratio: 5 / 4;
+			box-shadow: 0 30px 70px rgba(27, 29, 42, 0.18);
+		}
+
+		&--inset {
+			position: absolute;
+			right: 0;
+			bottom: -2.5rem;
+			width: 12.5rem; // 200px
+			height: 15rem; // 240px
+			border: 8px solid var(--wp--preset--color--surface-alt);
+			border-radius: 1.125rem;
+			box-shadow: 0 24px 60px rgba(27, 29, 42, 0.22);
+			transform: rotate(4deg);
+		}
+	}
+
+	// Tampon « Depuis 2011 » (cercle estampillé).
+	&__stamp {
+		position: absolute;
+		top: 0.75rem;
+		right: 0.75rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.1rem;
+		width: 8.125rem; // 130px
+		height: 8.125rem;
+		border: 2px solid #c85a3f;
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--wp--preset--color--surface-alt) 70%, transparent);
+		color: #c85a3f;
+		text-align: center;
+		transform: rotate(8deg);
+	}
+
+	&__stamp-top,
+	&__stamp-name {
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.53rem; // ~8.5px
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+	}
+
+	&__stamp-year {
+		font-family: var(--wp--preset--font-family--display);
+		font-size: 1.375rem; // 22px
+		line-height: 1;
+	}
+
+	// Colonne texte
+	&__eyebrow {
+		margin: 0 0 var(--wp--preset--spacing--30);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0 0 var(--wp--preset--spacing--40);
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.06;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2rem, 4vw, 3.25rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__text {
+		max-width: 34rem;
+		color: var(--wp--preset--color--body);
+		font-size: 1.0625rem; // 17px
+		line-height: 1.65;
+
+		p { margin: 0 0 var(--wp--preset--spacing--30); }
+		p:last-child { margin-bottom: 0; }
+	}
+
+	// 4 atouts (2 × 2)
+	&__features {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
+		margin: var(--wp--preset--spacing--50) 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__feature {
+		display: flex;
+		gap: 0.875rem; // 14px
+		align-items: flex-start;
+	}
+
+	&__feature-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 2.25rem; // 36px
+		height: 2.25rem;
+		border-radius: 0.625rem; // 10px
+		background: var(--wp--preset--color--highlight-soft);
+		color: var(--wp--custom--color--highlight-strong);
+
+		svg { width: 1.125rem; height: 1.125rem; } // 18px
+	}
+
+	&__feature-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	&__feature-title {
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		font-size: 0.9375rem; // 15px
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__feature-desc {
+		font-size: 0.84375rem; // 13.5px
+		line-height: 1.45;
+		color: var(--wp--preset--color--body);
+	}
+
+	// Responsive (desktop-first)
+	@include bp(tablet) {
+		&__inner { gap: var(--wp--preset--spacing--60); }
+		&__photo--inset { width: 10rem; height: 12rem; }
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+
+		&__inner {
+			grid-template-columns: 1fr;
+			gap: var(--wp--preset--spacing--80);
+		}
+
+		&__media { min-height: 0; }
+
+		// Collage simplifié : on garde la photo principale, on retire les superpositions.
+		&__photo--main { width: 100%; aspect-ratio: 4 / 3; }
+		&__photo--inset,
+		&__scribble { display: none; }
+
+		&__features { grid-template-columns: 1fr; }
+	}
+}

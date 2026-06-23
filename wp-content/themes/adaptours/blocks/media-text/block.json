@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/media-text",
+	"title": "Texte + image",
+	"category": "adaptours",
+	"icon": "align-pull-left",
+	"description": "Deux colonnes : un texte (surtitre, titre, paragraphes, boutons) et une image, à droite ou à gauche.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "" },
+		"title_part_1": { "type": "string", "default": "Titre de la" },
+		"title_part_2": { "type": "string", "default": "section" },
+		"body": { "type": "string", "default": "<p>Une trentaine de guides, chauffeurs et hôtes répartis sur trois continents. On les rencontre tous, on dort chez eux, on goûte leur cuisine avant de vous les recommander.</p>" },
+		"cta_primary_label": { "type": "string", "default": "" },
+		"cta_primary_url": { "type": "string", "default": "" },
+		"cta_secondary_label": { "type": "string", "default": "" },
+		"cta_secondary_url": { "type": "string", "default": "" },
+		"image_id": { "type": "integer", "default": 0 },
+		"image_url": { "type": "string", "default": "" },
+		"image_alt": { "type": "string", "default": "" },
+		"media_position": { "type": "string", "default": "right" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

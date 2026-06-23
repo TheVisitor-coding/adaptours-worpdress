@@ -1,0 +1,134 @@
+// Bloc hero-devis — en-tête de la page Devis.
+// Hero full-bleed : photo de fond + dégradé sombre, contenu blanc centré.
+// Typo titre plafonnée via clamp. Desktop-first.
+
+@use "abstracts" as *;
+
+.hero-devis {
+	@include full-bleed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: min(28rem, 70vh);
+	padding: var(--wp--preset--spacing--70) var(--wp--custom--content--gutter);
+	overflow: hidden;
+	color: var(--wp--preset--color--surface);
+	background-color: var(--wp--preset--color--dark); // repli si pas d'image
+
+	&__media {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+
+		// Dégradé sombre pour la lisibilité du texte blanc.
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				180deg,
+				color-mix(in srgb, var(--wp--preset--color--dark) 15%, transparent) 0%,
+				color-mix(in srgb, var(--wp--preset--color--dark) 55%, transparent) 100%
+			);
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 50rem;
+	}
+
+	// Surtitre + tirets décoratifs
+	&__eyebrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem; // 12px
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 400;
+		letter-spacing: 0.22em; // ~2.42px sur 11px
+		text-transform: uppercase;
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 75%, transparent);
+
+		&::before,
+		&::after {
+			content: "";
+			width: 1.75rem; // 28px
+			height: 1px;
+			background: color-mix(in srgb, var(--wp--preset--color--surface) 40%, transparent);
+		}
+	}
+
+	// Titre bichrome
+	&__title {
+		margin: var(--wp--preset--spacing--40) 0 0;
+		max-width: 16ch;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 400;
+		line-height: 1.04;
+		letter-spacing: -0.03em;
+		color: var(--wp--preset--color--surface);
+		font-size: clamp(2.25rem, 5vw, 4rem);
+
+		.accent { color: #ffcca6; } // peach light-on-dark (hors palette)
+	}
+
+	// Description
+	&__desc {
+		margin: var(--wp--preset--spacing--30) 0 0;
+		max-width: 34rem; // ~540px
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1.0625rem; // 17px
+		line-height: 1.55;
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 90%, transparent);
+	}
+
+	// Trust points
+	&__trust {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem 1.5rem; // 8px / 24px
+		margin: var(--wp--preset--spacing--40) 0 0;
+		padding: 0;
+		list-style: none;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.8125rem; // 13px
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 85%, transparent);
+	}
+
+	&__trust-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem; // 8px
+	}
+
+	&__trust-icon {
+		display: inline-flex;
+
+		svg {
+			width: 0.9375rem; // 15px
+			height: 0.9375rem;
+		}
+	}
+
+	@include bp(mobile) {
+		min-height: min(24rem, 72vh);
+		padding: var(--wp--preset--spacing--50) var(--wp--custom--content--gutter);
+	}
+}

@@ -1,0 +1,67 @@
+// Abstracts — outils SCSS partagés, sans sortie CSS.
+// Consommé partout via : @use "abstracts" as *; (load-path = assets/src/scss)
+//
+// Les TOKENS (couleurs, typo, spacing, radius, ombres) viennent de theme.json et se
+// consomment via var(--wp--preset--*) / var(--wp--custom--*). Ici, uniquement ce qui
+// ne peut PAS être une variable CSS : breakpoints (media queries) et helpers de layout.
+// Responsive = DESKTOP-FIRST → media queries `max-width`.
+
+@use "sass:map";
+
+// Breakpoints (desktop-first)
+$breakpoints: (
+	tablet: 1024px, // grilles : réduire le nombre de colonnes
+	mobile: 768px,  // passage en 1 colonne, stack
+	small: 480px,   // ajustements fins
+);
+
+@mixin bp($name) {
+	@if not map.has-key($breakpoints, $name) {
+		@error "Breakpoint inconnu : #{$name}. Valeurs : #{map.keys($breakpoints)}.";
+	}
+	@media (max-width: map.get($breakpoints, $name)) {
+		@content;
+	}
+}
+
+// Conteneur (1280px)
+// Contenu centré, borné à contentSize (theme.json : 80rem), gouttières fluides.
+@mixin container {
+	max-width: 80rem; // = theme.json settings.layout.contentSize
+	margin-inline: auto;
+	padding-inline: var(--wp--custom--content--gutter);
+}
+
+// Section pleine largeur (« full-bleed »)
+// Toute SECTION à fond coloré doit déborder le conteneur 1280px de <main>
+// (`.site-main.container`) pour toucher les bords de l'écran, sinon bords blancs.
+// À poser sur la RACINE du bloc; le CONTENU reste borné via `@include container`
+// sur un enfant `__inner`. Repère le centre du parent (= centre du viewport pour un
+// conteneur centré) → alignement exact quelles que soient les gouttières.
+// Nécessite `overflow-x: clip` sur `html` (jamais sur `.site-main` qui EST le
+// conteneur 1280px : un clip là re-rognerait la section à 1280px → bords blancs).
+@mixin full-bleed {
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+// Décor (formes/images en absolu, clippées dans la section)
+// À poser sur un pseudo-élément ou un enfant décoratif d'un parent
+// `position: relative; overflow: hidden`. Le markup porte aria-hidden="true".
+@mixin decor {
+	position: absolute;
+	pointer-events: none;
+	z-index: 0;
+	@include bp(mobile) { display: none; } // décor simplifié en mobile par défaut
+}
+
+// Réduction de mouvement
+@mixin reduced-motion {
+	@media (prefers-reduced-motion: reduce) {
+		@content;
+	}
+}

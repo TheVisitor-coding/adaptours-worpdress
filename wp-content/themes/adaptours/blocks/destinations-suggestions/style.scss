@@ -1,0 +1,118 @@
+// Bloc adaptours/destinations-suggestions — « vous aimerez aussi ».
+// Layout de section uniquement : les cards sont stylées par components/_card-destination
+// (variante --overlay). Desktop-first.
+
+@use "abstracts" as *;
+
+.wp-block-adaptours-destinations-suggestions {
+	@include full-bleed;
+	padding-block: clamp(4rem, 6vw, 6rem);
+	background-color: var(--wp--preset--color--surface);
+}
+
+.destinations-suggestions__inner {
+	@include container;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem; // 48px
+}
+
+// Header
+.destinations-suggestions__head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.destinations-suggestions__eyebrow {
+	margin: 0 0 0.8125rem;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.6875rem; // 11px
+	font-weight: 600;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	text-transform: uppercase;
+	color: var(--wp--preset--color--eyebrow);
+}
+
+.destinations-suggestions__title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 400;
+	font-size: clamp(2rem, 1.2rem + 2.4vw, 3rem);
+	line-height: 1.02;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--ink);
+}
+
+.destinations-suggestions__aside {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 1.25rem;
+	max-width: 22.5rem; // 360px
+	text-align: right;
+}
+
+.destinations-suggestions__desc {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--wp--preset--color--body);
+}
+
+.destinations-suggestions__cta {
+	display: inline-flex;
+	align-items: center;
+	flex-shrink: 0;
+	padding: 0.6875rem 1.1875rem; // 11px / 19px
+	border: 1px solid var(--wp--preset--color--ink);
+	border-radius: var(--wp--custom--radius--pill);
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.8125rem; // 13px
+	color: var(--wp--preset--color--ink);
+	text-decoration: none;
+	transition: background-color 0.2s ease, color 0.2s ease;
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--wp--preset--color--ink);
+		color: var(--wp--preset--color--surface);
+	}
+
+	@include reduced-motion {
+		transition: none;
+	}
+}
+
+// Grille de cards
+.destinations-suggestions__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem; // 16px
+}
+
+// Responsive (desktop-first)
+@include bp(tablet) {
+	.destinations-suggestions__head {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.destinations-suggestions__aside {
+		align-items: flex-start;
+		max-width: none;
+		text-align: left;
+	}
+
+	.destinations-suggestions__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@include bp(mobile) {
+	.destinations-suggestions__grid {
+		grid-template-columns: 1fr;
+	}
+}

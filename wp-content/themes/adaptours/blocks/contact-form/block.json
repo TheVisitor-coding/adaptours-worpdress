@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/contact-form",
+	"title": "Contact — coordonnées + formulaire",
+	"category": "adaptours",
+	"icon": "feedback",
+	"description": "Deux colonnes : coordonnées (adresse, téléphone, e-mail repris des réglages) et formulaire de contact.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"form_eyebrow": { "type": "string", "default": "FORMULAIRE DE CONTACT" },
+		"form_title_part_1": { "type": "string", "default": "Quelques mots" },
+		"form_title_part_2": { "type": "string", "default": "suffisent." }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

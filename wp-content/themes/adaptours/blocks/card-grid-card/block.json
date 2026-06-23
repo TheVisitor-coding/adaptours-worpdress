@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/card-grid-card",
+	"title": "Carte illustrée",
+	"category": "adaptours",
+	"icon": "format-image",
+	"description": "Une carte illustrée : image, titre, texte et lien facultatif. À utiliser dans le bloc « Grille de cartes ».",
+	"textdomain": "adaptours",
+	"parent": ["adaptours/card-grid"],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"image_id": { "type": "integer", "default": 0 },
+		"image_url": { "type": "string", "default": "" },
+		"image_alt": { "type": "string", "default": "" },
+		"card_title": { "type": "string", "default": "" },
+		"text": { "type": "string", "default": "" },
+		"url": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js"
+}

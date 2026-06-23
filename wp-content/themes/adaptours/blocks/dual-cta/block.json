@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/dual-cta",
+	"title": "Qui sommes-nous — double appel",
+	"category": "adaptours",
+	"icon": "columns",
+	"description": "Deux cartes d'appel à l'action côte à côte (voyager / nous rejoindre), chacune avec surtitre, titre, texte et bouton.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"card_1_eyebrow": { "type": "string", "default": "Voyager avec nous" },
+		"card_1_title_1": { "type": "string", "default": "Et si on commençait par" },
+		"card_1_title_2": { "type": "string", "default": "vous ?" },
+		"card_1_description": { "type": "string", "default": "Un projet, une envie, une destination qui vous trotte dans la tête depuis trop longtemps. Dites-nous tout, on s’occupe du reste." },
+		"card_1_cta_label": { "type": "string", "default": "Demander mon devis" },
+		"card_1_cta_url": { "type": "string", "default": "" },
+		"card_2_eyebrow": { "type": "string", "default": "Nous rejoindre" },
+		"card_2_title_1": { "type": "string", "default": "On recherche des" },
+		"card_2_title_2": { "type": "string", "default": "accompagnateurs." },
+		"card_2_description": { "type": "string", "default": "Sensible au handicap, disponible, auto-entrepreneur·e. Envoyez-nous votre CV directement, on lit chaque message." },
+		"card_2_cta_label": { "type": "string", "default": "" },
+		"card_2_cta_url": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

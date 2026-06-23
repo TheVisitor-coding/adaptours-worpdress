@@ -1,0 +1,63 @@
+// adaptours/page-header — styles front (clé "style" du block.json → style-index.css).
+// En-tête de page modulaire : fond dégardé full-bleed, contenu borné à 1280px, aligné
+// à gauche. Standards : tokens theme.json, sizing rem, BEM scopé, desktop-first.
+
+@use "abstracts" as *;
+
+.page-header {
+	@include full-bleed; // fond pleine largeur (sinon bords blancs : <main> borné à 1280px)
+	padding-block: var(--wp--preset--spacing--90) var(--wp--preset--spacing--80);
+	// Dégradé crème → pêche reproduit en CSS.
+	background-image: linear-gradient(
+		105deg,
+		var(--wp--preset--color--highlight-soft) 0%,
+		var(--wp--preset--color--surface) 55%,
+		var(--wp--preset--color--surface-alt) 100%
+	);
+
+	&__inner {
+		@include container;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--wp--preset--spacing--40);
+	}
+
+	&__eyebrow {
+		margin: 0;
+	}
+
+	&__title {
+		margin: 0;
+		max-width: 16ch;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.03em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2.5rem, 6vw, 4.5rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__desc {
+		margin: 0;
+		max-width: 40rem;
+		color: var(--wp--preset--color--body);
+		font-size: var(--wp--preset--font-size--large);
+		line-height: 1.55;
+
+		a { color: var(--wp--custom--color--link); }
+	}
+
+	&__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wp--preset--spacing--30);
+		margin-top: var(--wp--preset--spacing--20);
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--70) var(--wp--preset--spacing--60);
+	}
+}

@@ -1,0 +1,184 @@
+// Bloc adaptours/hero-home — en-tête de la page d'accueil.
+// Section full-bleed (fond dégradé crème → pêche), contenu centré borné à 1280px. Desktop-first.
+
+@use "abstracts" as *;
+
+.hero-home {
+	@include full-bleed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	padding-block: var(--wp--preset--spacing--80);
+	padding-inline: var(--wp--custom--content--gutter);
+	background: linear-gradient(
+		110deg,
+		var(--wp--preset--color--surface-alt) 0%,
+		var(--wp--preset--color--highlight-soft) 100%
+	);
+
+	// Contenu centré
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--wp--preset--spacing--40); // ~24px ; titre/desc espacés au besoin
+		max-width: 50rem;
+		text-align: center;
+	}
+
+	// Surtitre + filets latéraux
+	&__eyebrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem; // 12px
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+
+		&::before,
+		&::after {
+			content: "";
+			width: 3.125rem; // 50px
+			height: 1px;
+			background: color-mix(in srgb, var(--wp--preset--color--ink) 40%, transparent);
+		}
+	}
+
+	// Titre (bichrome + ligne manuscrite)
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.08;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__title-lead {
+		display: block;
+		font-size: clamp(2.75rem, 6vw, 5.5rem);
+	}
+
+	&__title .accent {
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	// Ligne manuscrite (Caveat), couleur encre.
+	&__title-script {
+		display: block;
+		margin-top: 0.1em;
+		font-family: var(--wp--preset--font-family--accent);
+		font-weight: 400;
+		line-height: 1.2;
+		font-size: clamp(1.75rem, 3.2vw, 3rem);
+		color: var(--wp--preset--color--ink);
+	}
+
+	// Description
+	&__desc {
+		margin: 0;
+		max-width: 50rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1.1875rem; // 19px
+		font-weight: 500;
+		line-height: 1.55;
+		color: var(--wp--preset--color--body);
+	}
+
+	// Boutons
+	&__cta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: var(--wp--preset--spacing--30); // 16px → token 1rem
+	}
+
+	&__cta-arrow {
+		font-size: 1em;
+		line-height: 1;
+	}
+
+	// Trust strip
+	&__trust {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem 2.25rem; // 8px / 36px
+		margin: var(--wp--preset--spacing--20) 0 0;
+		padding-top: var(--wp--preset--spacing--40);
+		width: 100%;
+		max-width: 50rem;
+		border-top: 1px solid var(--wp--preset--color--line);
+		list-style: none;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.8125rem; // 13px
+		font-weight: 500;
+		color: var(--wp--preset--color--body);
+	}
+
+	&__trust-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	&__trust-icon {
+		display: inline-flex;
+		color: var(--wp--custom--color--highlight-strong);
+
+		svg {
+			width: 1.375rem; // 22px
+			height: 1.375rem;
+		}
+	}
+
+	// Collage décoratif (polaroïds)
+	// Cadres placeholder : la cliente fournira les photos (background-image).
+	// Décoratif → masqué ≤ tablette.
+	&__decor {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+	}
+
+	&__polaroid {
+		position: absolute;
+		display: block;
+		border: 6px solid var(--wp--preset--color--surface);
+		border-radius: 2px;
+		background:
+			linear-gradient(
+				135deg,
+				color-mix(in srgb, var(--wp--preset--color--highlight) 22%, var(--wp--preset--color--surface)) 0%,
+				color-mix(in srgb, var(--wp--preset--color--ink) 12%, var(--wp--preset--color--surface)) 100%
+			);
+		box-shadow: 0 4px 12px rgba(27, 29, 42, 0.08), 0 24px 60px rgba(27, 29, 42, 0.18);
+
+		&--1 { top: 8%; left: 3%; width: 11.25rem; height: 13.125rem; transform: rotate(-5deg); }
+		&--2 { top: 6%; right: 3%; width: 13.125rem; height: 10rem; transform: rotate(4deg); }
+		&--3 { top: 46%; left: 5%; width: 10.3125rem; height: 12.5rem; transform: rotate(3deg); }
+		&--4 { top: 44%; right: 4%; width: 12.25rem; height: 13.375rem; transform: rotate(-4deg); }
+	}
+
+	// Responsive (desktop-first)
+	@include bp(tablet) {
+		&__polaroid { display: none; } // collage masqué : place au contenu
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--70);
+
+		&__trust { gap: 0.5rem 1.25rem; }
+	}
+}

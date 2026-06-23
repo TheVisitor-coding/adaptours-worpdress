@@ -1,0 +1,153 @@
+// Bloc adaptours/section-practical (+ cartes adaptours/practical-card) — « ce qu'il faut savoir ».
+// Tout le layout vit ici (la carte enfant n'a pas de CSS propre). BEM scopé.section-practical.
+// Desktop-first.
+
+@use "abstracts" as *;
+
+.wp-block-adaptours-section-practical {
+	@include full-bleed;
+	padding-block: clamp(4rem, 6vw, 6rem);
+	background-color: var(--wp--preset--color--surface);
+}
+
+.section-practical__inner {
+	@include container;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem; // 48px
+}
+
+// Header
+.section-practical__head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.section-practical__eyebrow {
+	margin: 0 0 0.8125rem;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.6875rem; // 11px
+	font-weight: 600;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	text-transform: uppercase;
+	color: var(--wp--preset--color--eyebrow);
+}
+
+.section-practical__title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--display);
+	font-weight: 400;
+	font-size: clamp(2rem, 1.2rem + 2.4vw, 3rem);
+	line-height: 1.02;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--ink);
+}
+
+.section-practical__desc {
+	margin: 0;
+	max-width: 22.5rem; // 360px
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 1rem;
+	line-height: 1.55;
+	text-align: right;
+	color: var(--wp--preset--color--body);
+}
+
+// Grille de cartes
+.section-practical__grid {
+	counter-reset: card;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.125rem; // 18px
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.section-practical__card {
+	counter-increment: card;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem; // 10px
+	padding: 1.625rem 1.75rem; // 26px / 28px
+	border-radius: 1.125rem; // 18px
+	background-color: var(--wp--preset--color--surface-alt);
+}
+
+.section-practical__card-top {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+
+.section-practical__card-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem; // 44px
+	height: 2.75rem;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--surface);
+	color: var(--wp--preset--color--highlight);
+
+	svg {
+		width: 1.375rem; // 22px
+		height: 1.375rem;
+	}
+}
+
+.section-practical__card-num {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 2.25rem; // 36px
+	line-height: 1;
+	color: var(--wp--preset--color--highlight);
+	opacity: 0.5;
+
+	&::before {
+		content: counter(card, decimal-leading-zero);
+	}
+}
+
+.section-practical__card-title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 1.125rem; // 18px
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	color: var(--wp--preset--color--ink);
+}
+
+.section-practical__card-desc {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.875rem; // 14px
+	line-height: 1.5;
+	color: var(--wp--preset--color--body);
+}
+
+// Responsive (desktop-first)
+@include bp(tablet) {
+	.section-practical__head {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+	}
+
+	.section-practical__desc {
+		text-align: left;
+		max-width: none;
+	}
+
+	.section-practical__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@include bp(mobile) {
+	.section-practical__grid {
+		grid-template-columns: 1fr;
+	}
+}

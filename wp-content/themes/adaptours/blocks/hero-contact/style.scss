@@ -1,0 +1,31 @@
+@use "abstracts" as *;
+
+.hero-contact {
+	padding-top: var(--wp--preset--spacing--70);
+
+	&__title {
+		margin: var(--wp--preset--spacing--40) 0 0;
+		max-width: 18ch;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 400;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2.25rem, 4.5vw, 4rem);
+
+		.accent { color: var(--wp--preset--color--highlight); }
+	}
+
+	&__desc {
+		margin: var(--wp--preset--spacing--30) 0 0;
+		max-width: 35rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1.0625rem; // entre les tokens medium/large
+		line-height: 1.6;
+		color: var(--wp--preset--color--body);
+	}
+
+	@include bp(mobile) {
+		padding-top: var(--wp--preset--spacing--50);
+	}
+}

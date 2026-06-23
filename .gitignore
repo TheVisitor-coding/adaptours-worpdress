@@ -1,0 +1,17 @@
+# Infra de session (non publiée)
+/.claude/
+/CC-Session-Logs/
+
+# Note de cadrage interne (remplacée par CAHIER-DES-CHARGES.md)
+/specifications-techniques-adaptours.md
+
+# Scripts de seed/recette locaux (non publiés)
+wp-content/themes/adaptours/_*.php
+
+# Dépendances & build du thème
+node_modules/
+wp-content/themes/adaptours/assets/build/
+
+# OS / logs
+.DS_Store
+*.log

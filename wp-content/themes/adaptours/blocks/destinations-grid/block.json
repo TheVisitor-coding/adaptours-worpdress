@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/destinations-grid",
+	"title": "Accueil — destinations",
+	"category": "adaptours",
+	"icon": "grid-view",
+	"description": "Section « Des destinations variées » : surtitre, titre, texte, bouton et une sélection de 4 destinations (la 1re en grand).",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Destinations" },
+		"title_part_1": { "type": "string", "default": "Des destinations" },
+		"title_part_2": { "type": "string", "default": "variées" },
+		"description": { "type": "string", "default": "Chaque séjour est pensé pour une mobilité, un rythme, une envie particulière. On s’adapte, vous profitez." },
+		"cta_label": { "type": "string", "default": "Toutes les destinations" },
+		"cta_url": { "type": "string", "default": "" },
+		"destinations": { "type": "array", "default": [], "items": { "type": "number" } }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

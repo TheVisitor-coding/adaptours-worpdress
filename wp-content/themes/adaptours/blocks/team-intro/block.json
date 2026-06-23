@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/team-intro",
+	"title": "Accueil — l'équipe",
+	"category": "adaptours",
+	"icon": "groups",
+	"description": "Section de présentation de l'équipe : surtitre, titre, deux paragraphes, bouton et un visuel.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "L’équipe" },
+		"title_part_1": { "type": "string", "default": "Caroline," },
+		"title_part_2": { "type": "string", "default": "et 15 ans à repenser le voyage." },
+		"paragraph_1": { "type": "string", "default": "Adaptours est née d’un constat simple : voyager avec un handicap, ou accompagner un proche dépendant, c’était jusqu’ici un parcours du combattant. On a décidé que ça n’avait plus lieu d’être." },
+		"paragraph_2": { "type": "string", "default": "Aujourd’hui, c’est une équipe de 12 personnes, 14 destinations validées, et chaque voyage pensé un par un. On ne fait pas de volume. On fait du juste." },
+		"cta_label": { "type": "string", "default": "Voir l’équipe" },
+		"cta_url": { "type": "string", "default": "" },
+		"main_image": { "type": "integer", "default": 0 }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

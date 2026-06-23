@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/hero-home",
+	"title": "Accueil — en-tête",
+	"category": "adaptours",
+	"icon": "cover-image",
+	"description": "Grand en-tête de la page d'accueil : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction et deux boutons.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Voyages accessibles · depuis 2011" },
+		"title_part_1": { "type": "string", "default": "Voyagez" },
+		"title_part_2": { "type": "string", "default": "sans limites," },
+		"title_script": { "type": "string", "default": "d’ici jusqu’à Bali." },
+		"description": { "type": "string", "default": "Séjours sur mesure, 100% accessibles. Hébergements vérifiés, matériel médical, équipe formée sur place. Vous rêvez, on organise." },
+		"cta_primary_label": { "type": "string", "default": "Commencer mon voyage" },
+		"cta_primary_url": { "type": "string", "default": "" },
+		"cta_secondary_label": { "type": "string", "default": "Découvrir les destinations" },
+		"cta_secondary_url": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

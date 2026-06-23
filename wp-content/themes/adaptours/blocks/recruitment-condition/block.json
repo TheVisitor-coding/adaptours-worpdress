@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/recruitment-condition",
+	"title": "Condition de recrutement",
+	"category": "adaptours",
+	"icon": "yes-alt",
+	"description": "Une condition : titre court et explication. La numérotation se calcule toute seule. À utiliser dans le bloc « Recrutement ».",
+	"textdomain": "adaptours",
+	"parent": ["adaptours/recruitment"],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"title": { "type": "string", "default": "" },
+		"description": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js"
+}

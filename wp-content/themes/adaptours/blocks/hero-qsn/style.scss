@@ -1,0 +1,146 @@
+// Bloc adaptours/hero-qsn — en-tête de la page Qui sommes-nous.
+// Section full-bleed (dégradé crème → pêche), contenu borné à 1280px.
+// Deux colonnes : texte à gauche, grande photo en arche à droite. Desktop-first.
+
+@use "abstracts" as *;
+
+.hero-qsn {
+	@include full-bleed;
+	overflow: hidden;
+	padding-block: var(--wp--preset--spacing--80);
+	padding-inline: var(--wp--custom--content--gutter);
+	background: linear-gradient(
+		110deg,
+		var(--wp--preset--color--surface-alt) 0%,
+		var(--wp--preset--color--highlight-soft) 100%
+	);
+
+	&__inner {
+		@include container;
+		display: grid;
+		grid-template-columns: 1.25fr 1fr;
+		gap: clamp(2rem, 5vw, 5rem);
+		align-items: center;
+	}
+
+	// Colonne texte
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--wp--preset--spacing--40);
+	}
+
+	&__eyebrow {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__title-lead {
+		display: block;
+		font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+	}
+
+	&__title .accent {
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	// Mot manuscrit (Caveat), en orange.
+	&__title-script {
+		display: inline-block;
+		margin-top: 0.05em;
+		font-family: var(--wp--preset--font-family--accent);
+		font-weight: 400;
+		line-height: 1.1;
+		font-size: clamp(1.75rem, 3vw, 2.75rem);
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	&__desc {
+		margin: 0;
+		max-width: 34rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1.125rem; // 18px
+		font-weight: 500;
+		line-height: 1.6;
+		color: var(--wp--preset--color--body);
+	}
+
+	&__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wp--preset--spacing--30);
+	}
+
+	&__cta-arrow {
+		font-size: 1em;
+		line-height: 1;
+	}
+
+	// Colonne photo (arche)
+	&__media {
+		position: relative;
+		margin: 0;
+		width: 100%;
+		max-width: 33.3125rem;
+		margin-inline-start: auto;
+		aspect-ratio: 533 / 667;
+		// Arche : grands arrondis en haut, légers en bas.
+		border-radius: 12.5rem 12.5rem 1.125rem 1.125rem; // 200/200/18/18 px
+		overflow: hidden;
+		box-shadow: 0 1.875rem 5rem rgba(27, 29, 42, 0.18); // 0 30px 80px
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// Cadre décoratif quand aucune photo n'est choisie.
+	&__media--placeholder {
+		background: linear-gradient(
+			145deg,
+			color-mix(in srgb, var(--wp--preset--color--highlight) 24%, var(--wp--preset--color--surface)) 0%,
+			color-mix(in srgb, var(--wp--preset--color--ink) 12%, var(--wp--preset--color--surface)) 100%
+		);
+	}
+
+	// Responsive (desktop-first)
+	@include bp(tablet) {
+		&__inner {
+			grid-template-columns: 1fr;
+			gap: var(--wp--preset--spacing--60);
+		}
+
+		&__media {
+			order: -1; // photo au-dessus du texte sur petits écrans
+			max-width: 26rem;
+			margin-inline: auto;
+		}
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--70);
+
+		&__media {
+			max-width: 20rem;
+			border-radius: 9rem 9rem 1rem 1rem;
+		}
+	}
+}

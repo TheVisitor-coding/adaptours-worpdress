@@ -1,0 +1,72 @@
+/**
+ * Bloc adaptours/section-accessibility — composant d'édition.
+ *
+ * Textes éditoriaux (surtitre / titre) dans le panneau latéral ; texte d'intro et 4
+ * cartes lus côté serveur depuis la fiche destination. Aperçu via ServerSideRender.
+ */
+
+import { registerBlockType } from '@wordpress/blocks';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
+import ServerSideRender from '@wordpress/server-side-render';
+import { useSelect } from '@wordpress/data';
+import { __ } from '@wordpress/i18n';
+import metadata from './block.json';
+
+// NE PAS retirer : déclenche la compilation du SCSS en 'style-index.css' (clé "style").
+import './style.scss';
+
+registerBlockType( metadata.name, {
+	edit: ( { attributes, setAttributes } ) => {
+		const blockProps = useBlockProps();
+
+		const postId = useSelect(
+			( select ) => select( 'core/editor' )?.getCurrentPostId(),
+			[]
+		);
+
+		return (
+			<>
+				<InspectorControls>
+					<PanelBody title={ __( 'Textes', 'adaptours' ) }>
+						<TextControl
+							label={ __( 'Surtitre', 'adaptours' ) }
+							value={ attributes.eyebrow }
+							onChange={ ( v ) => setAttributes( { eyebrow: v } ) }
+							help={ __( 'Petit texte au-dessus du titre.', 'adaptours' ) }
+						/>
+						<TextControl
+							label={ __( 'Titre', 'adaptours' ) }
+							value={ attributes.title }
+							onChange={ ( v ) => setAttributes( { title: v } ) }
+						/>
+						<TextControl
+							label={ __( 'Mot(s) en orange', 'adaptours' ) }
+							value={ attributes.title_accent }
+							onChange={ ( v ) => setAttributes( { title_accent: v } ) }
+							help={ __(
+								'Le ou les mots du titre à mettre en orange.',
+								'adaptours'
+							) }
+						/>
+						<p className="adaptours-editor-note">
+							{ __(
+								'Le texte d’introduction et les 4 cartes se remplissent dans la fiche de cette destination.',
+								'adaptours'
+							) }
+						</p>
+					</PanelBody>
+				</InspectorControls>
+
+				<div { ...blockProps }>
+					<ServerSideRender
+						block={ metadata.name }
+						attributes={ attributes }
+						urlQueryArgs={ postId ? { post_id: postId } : undefined }
+					/>
+				</div>
+			</>
+		);
+	},
+	save: () => null,
+} );

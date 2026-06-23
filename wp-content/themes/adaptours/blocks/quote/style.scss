@@ -1,0 +1,61 @@
+// adaptours/quote — styles front (clé "style" du block.json → style-index.css).
+// Citation centrée : guillemet décoratif orange, texte en police de titre, attribution
+// en surtitre. Tokens theme.json, sizing rem, BEM scopé, desktop-first.
+
+@use "abstracts" as *;
+
+.quote {
+	padding-block: var(--wp--preset--spacing--80);
+
+	&__inner {
+		@include container;
+		max-width: 56rem;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: var(--wp--preset--spacing--40);
+	}
+
+	// Guillemet décoratif.
+	&__mark {
+		font-family: var(--wp--preset--font-family--display);
+		font-size: clamp(3rem, 6vw, 4.5rem);
+		line-height: 0.5;
+		color: var(--wp--custom--color--highlight-strong);
+	}
+
+	&__text {
+		margin: 0;
+
+		p {
+			margin: 0;
+			font-family: var(--wp--preset--font-family--display);
+			font-weight: 600;
+			line-height: 1.25;
+			letter-spacing: -0.01em;
+			color: var(--wp--preset--color--ink);
+			font-size: clamp(1.375rem, 3vw, 1.625rem);
+		}
+
+		// Extrait mis en avant : police de titre (pas le manuscrit), en orange.
+		.accent {
+			font-family: inherit;
+			color: var(--wp--custom--color--highlight-strong);
+		}
+	}
+
+	&__author {
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--small);
+		font-weight: 600;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+	}
+}

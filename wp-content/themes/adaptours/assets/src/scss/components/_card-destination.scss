@@ -1,0 +1,255 @@
+// Card destination — composant partagé : source unique de style d'une card, réutilisée par
+// destinations-grid, l'archive et destinations-suggestions. Chargée dans le CSS global
+// (main.css) car elle sert aussi un template PHP. BEM scopé.card-destination. Desktop-first.
+
+@use "abstracts" as *;
+
+.card-destination {
+	position: relative; // ancre du « stretched link »
+	display: flex;
+	flex-direction: column;
+	background-color: var(--wp--preset--color--surface);
+	border: 1px solid var(--wp--preset--color--line);
+	border-radius: var(--wp--custom--radius--card);
+	overflow: hidden;
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+	&:hover {
+		box-shadow: var(--wp--custom--shadow--card);
+		transform: translateY(-2px);
+	}
+
+	// Card entière cliquable : focus clavier matérialisé sur la card (le lien étend
+	// sa zone via ::after). Pas de second lien fantôme.
+	&:focus-within {
+		outline: 2px solid var(--wp--custom--color--highlight-strong);
+		outline-offset: 2px;
+	}
+
+	@include reduced-motion {
+		transition: none;
+		&:hover { transform: none; }
+	}
+}
+
+// Média (haut) : image plein cadre + dégradé + titre superposé
+.card-destination__media {
+	position: relative;
+	aspect-ratio: 411 / 327; // anti-CLS
+	overflow: hidden;
+	background-color: var(--wp--preset--color--surface-alt);
+
+	// Sans image : fond sombre pour garder le titre blanc lisible (pas de balise cassée).
+	&--placeholder {
+		background-color: var(--wp--preset--color--body);
+	}
+}
+
+.card-destination__img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-destination__overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to bottom, rgba(27, 29, 42, 0) 55%, rgba(27, 29, 42, 0.45) 100%);
+}
+
+.card-destination__heading {
+	position: absolute;
+	inset-inline: 1.125rem 1.25rem;
+	bottom: 1rem; // 16px
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.375rem; // 6px
+}
+
+.card-destination__title {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 1.75rem; // 28px
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -0.02em;
+	color: var(--wp--preset--color--surface);
+}
+
+.card-destination__link {
+	color: inherit;
+	text-decoration: none;
+
+	// Stretched link : étend la zone cliquable sur toute la card.
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+	}
+}
+
+.card-destination__meta {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.625rem; // 10px
+	text-transform: uppercase;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	color: var(--wp--preset--color--surface);
+	opacity: 0.85;
+}
+
+// Corps (bas) : description, badge, ligne prix + flèche
+.card-destination__body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	gap: 0.75rem; // 12px
+	padding: 1.125rem 1.25rem 1.25rem; // valeurs UI hors échelle de tokens
+}
+
+.card-destination__desc {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.875rem; // ≈ 13,5px
+	line-height: 1.5;
+	color: var(--wp--preset--color--body);
+}
+
+// Badge coup de cœur — rendu conditionnel (masqué tant qu'il n'est pas activé).
+.card-destination__badge {
+	align-self: flex-start;
+	margin: 0;
+	padding: 0.25rem 0.625rem;
+	border-radius: var(--wp--custom--radius--pill);
+	background-color: var(--wp--preset--color--highlight-soft);
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.625rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	color: var(--wp--custom--color--highlight-strong);
+}
+
+.card-destination__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--wp--preset--spacing--30);
+	margin-top: auto; // colle la ligne prix en bas de la card
+}
+
+.card-destination__price {
+	display: flex;
+	flex-direction: column;
+	gap: 0.125rem;
+	margin: 0;
+}
+
+.card-destination__price-label {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.5625rem; // 9px
+	text-transform: uppercase;
+	letter-spacing: var(--wp--custom--tracking--eyebrow);
+	color: var(--wp--preset--color--body);
+}
+
+.card-destination__price-value {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 1.375rem; // 22px
+	line-height: 1;
+	color: var(--wp--preset--color--ink);
+}
+
+.card-destination__arrow {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	width: 2.375rem; // 38px
+	height: 2.375rem;
+	border-radius: var(--wp--custom--radius--pill);
+	background-color: var(--wp--preset--color--surface-alt);
+	color: var(--wp--preset--color--ink);
+}
+
+// Variante « overlay » (suggestions)
+// Card compacte tout-image : pas de corps, titre + durée + prix superposés en bas.
+.card-destination--overlay {
+	aspect-ratio: 318 / 424;
+	border: 0;
+	border-radius: 1.125rem;
+
+	&:hover { transform: none; box-shadow: none; }
+
+	.card-destination__media {
+		position: absolute;
+		inset: 0;
+		aspect-ratio: auto;
+		height: 100%;
+	}
+
+	.card-destination__overlay {
+		background: linear-gradient(to bottom, rgba(27, 29, 42, 0) 40%, rgba(27, 29, 42, 0.78));
+	}
+
+	.card-destination__heading {
+		inset-inline: 1.25rem 1.25rem; // 20px
+		bottom: 1.1875rem; // 19px
+		gap: 0.375rem;
+	}
+
+	.card-destination__title {
+		font-size: 1.625rem;
+		line-height: 1;
+	}
+}
+
+.card-destination__overlay-foot {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 0.75rem;
+}
+
+.card-destination__duration {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.625rem; // 10px
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	text-decoration: underline;
+	color: var(--wp--preset--color--surface);
+	opacity: 0.85;
+}
+
+.card-destination__price-inline {
+	display: flex;
+	align-items: baseline;
+	gap: 0.4375rem; // 7px
+	margin: 0;
+}
+
+.card-destination__price-pre,
+.card-destination__price-unit {
+	font-family: var(--wp--preset--font-family--sans);
+	font-size: 0.625rem; // 10px
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	color: var(--wp--preset--color--surface);
+}
+
+.card-destination__price-amount {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 1.0625rem; // 17px
+	line-height: 1;
+	color: var(--wp--preset--color--highlight);
+}
+
+// Dégradation responsive
+// La card est fluide (100 % de sa cellule de grille) : l'aspect-ratio gère le média.
+// On allège seulement la typo du titre sur très petits écrans.
+@include bp(small) {
+	.card-destination__title { font-size: 1.5rem; } // 24px
+}

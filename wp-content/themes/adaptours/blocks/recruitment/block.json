@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/recruitment",
+	"title": "Qui sommes-nous — recrutement",
+	"category": "adaptours",
+	"icon": "id",
+	"description": "Section recrutement : présentation et adresse pour les CV à gauche, liste des conditions (à ajouter une par une) à droite.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Nous rejoindre" },
+		"title_part_1": { "type": "string", "default": "Adaptours recherche des" },
+		"title_part_2": { "type": "string", "default": "accompagnateurs." },
+		"description": { "type": "string", "default": "Vous partez quelques jours, parfois quelques semaines, avec un petit groupe. Vous veillez à ce que tout se passe bien, du transfert aéroport jusqu’au dernier verre, le soir, sur la terrasse. C’est exigeant, c’est humain, et ça ne ressemble à aucun autre métier." },
+		"cv_email": { "type": "string", "default": "" },
+		"conditions_eyebrow": { "type": "string", "default": "Conditions" },
+		"conditions_title_1": { "type": "string", "default": "Vous remplissez impérativement" },
+		"conditions_title_2": { "type": "string", "default": "ces conditions." },
+		"conditions_subtitle": { "type": "string", "default": "Pas un CV-type, mais quelques points sur lesquels on ne transige pas." }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

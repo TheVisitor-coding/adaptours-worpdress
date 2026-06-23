@@ -1,0 +1,218 @@
+// Bloc adaptours/destinations-grid — « Des destinations variées ».
+// Grille asymétrique : 1 card arche (sur 2 rangs) + 2 cards + 1 card large. Cards tout-image,
+// titre + prix « dès » superposés. Desktop-first.
+
+@use "abstracts" as *;
+
+.destinations-grid {
+	padding-block: var(--wp--preset--spacing--80);
+
+	&__inner {
+		@include container;
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--50);
+	}
+
+	// En-tête (titre à gauche, texte + bouton à droite)
+	&__head {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		align-items: flex-end;
+		gap: var(--wp--preset--spacing--50);
+	}
+
+	&__eyebrow {
+		margin: 0 0 var(--wp--preset--spacing--30);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__head-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: var(--wp--preset--spacing--30);
+		max-width: 24rem;
+		text-align: right;
+	}
+
+	&__desc {
+		margin: 0;
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--wp--preset--color--body);
+	}
+
+	&__cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.6875rem 1.1875rem; // 11px / 19px
+		border: 1px solid var(--wp--preset--color--ink);
+		border-radius: var(--wp--custom--radius--pill);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.8125rem; // 13px
+		font-weight: 500;
+		color: var(--wp--preset--color--ink);
+		text-decoration: none;
+		transition: background-color 0.2s ease, color 0.2s ease;
+
+		&:hover {
+			background-color: var(--wp--preset--color--ink);
+			color: var(--wp--preset--color--surface);
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--wp--preset--color--ink);
+			outline-offset: 2px;
+		}
+	}
+
+	// Grille asymétrique
+	&__grid {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr 1fr; // hero 512 : 366 : 366
+		grid-auto-rows: 20rem; // ~320px
+		gap: 1.125rem; // 18px
+	}
+
+	// Card
+	&__card {
+		position: relative;
+		overflow: hidden;
+		border-radius: 1.125rem; // 18px
+		background: var(--wp--preset--color--surface-alt);
+
+		&--hero {
+			grid-column: 1;
+			grid-row: span 2;
+			border-radius: 15rem 15rem 1.125rem 1.125rem; // arche (top 240px)
+		}
+
+		&--top-a { grid-column: 2; grid-row: 1; }
+		&--top-b { grid-column: 3; grid-row: 1; }
+		&--wide  { grid-column: 2 / 4; grid-row: 2; }
+
+		&--empty {
+			background: color-mix(in srgb, var(--wp--preset--color--ink) 6%, var(--wp--preset--color--surface-alt));
+		}
+	}
+
+	&__card-link {
+		display: block;
+		position: relative;
+		height: 100%;
+		color: var(--wp--preset--color--surface);
+		text-decoration: none;
+
+		&:focus-visible {
+			outline: 3px solid var(--wp--preset--color--ink);
+			outline-offset: -3px;
+		}
+	}
+
+	&__card-media {
+		position: absolute;
+		inset: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&--placeholder {
+			background: linear-gradient(
+				135deg,
+				color-mix(in srgb, var(--wp--preset--color--highlight) 25%, var(--wp--preset--color--surface)) 0%,
+				color-mix(in srgb, var(--wp--preset--color--ink) 22%, var(--wp--preset--color--surface)) 100%
+			);
+		}
+	}
+
+	&__card-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to bottom, rgba(27, 29, 42, 0) 40%, rgba(27, 29, 42, 0.7) 100%);
+	}
+
+	&__card-foot {
+		position: absolute;
+		inset-inline: 1.5rem 1.5rem; // 24px
+		bottom: 1.4375rem; // 23px
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+
+	&__card-title {
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1;
+		letter-spacing: -0.02em;
+		font-size: 1.5rem;
+	}
+
+	&__card--hero &__card-title { font-size: 1.875rem; } // hero plus grand
+
+	&__card-price {
+		margin: 0;
+		flex-shrink: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1rem; // 16px
+		opacity: 0.92;
+	}
+
+	// Responsive (desktop-first)
+	@include bp(tablet) {
+		&__grid {
+			grid-template-columns: 1fr 1fr;
+			grid-auto-rows: 15rem;
+		}
+		&__card--hero {
+			grid-column: 1 / 3;
+			grid-row: auto;
+			border-radius: 1.125rem;
+		}
+		&__card--top-a { grid-column: 1; grid-row: auto; }
+		&__card--top-b { grid-column: 2; grid-row: auto; }
+		&__card--wide  { grid-column: 1 / 3; grid-row: auto; }
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+
+		&__head {
+			grid-template-columns: 1fr;
+			align-items: flex-start;
+		}
+		&__head-right { align-items: flex-start; text-align: left; }
+
+		&__grid {
+			grid-template-columns: 1fr;
+			grid-auto-rows: 14rem;
+		}
+		&__card--hero,
+		&__card--top-a,
+		&__card--top-b,
+		&__card--wide { grid-column: 1; }
+	}
+}

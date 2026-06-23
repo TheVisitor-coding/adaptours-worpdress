@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/section-accessibility",
+	"title": "Accessibilité",
+	"category": "adaptours",
+	"icon": "universal-access-alt",
+	"description": "Section « pensé pour tous » : titre, texte d’introduction et 4 cartes d’accessibilité (icône + titre + description). Le texte et les cartes viennent de la fiche destination.",
+	"textdomain": "adaptours",
+	"supports": {
+		"align": ["full"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Accessibilité" },
+		"title": { "type": "string", "default": "Pensé pour tous, quel que soit votre rythme." },
+		"title_accent": { "type": "string", "default": "tous" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

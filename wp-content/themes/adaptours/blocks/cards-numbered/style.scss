@@ -1,0 +1,108 @@
+// adaptours/cards-numbered — styles front (clé "style" du block.json → style-index.css).
+// En-tête (titre bichrome gauche / description droite) + grille de cartes numérotées
+// 01..NN (compteur CSS). Fond surface-alt full-bleed, cartes claires. Le layout des
+// cartes (enfants) est porté ici. Tokens theme.json, rem, BEM scopé, desktop-first.
+
+@use "abstracts" as *;
+
+.cards-numbered {
+	@include full-bleed; // fond pleine largeur (sinon bords blancs : <main> borné à 1280px)
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface-alt);
+
+	&__inner {
+		@include container;
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--60);
+	}
+
+	&__head {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		gap: var(--wp--preset--spacing--50);
+	}
+
+	&__eyebrow { margin: 0 0 var(--wp--preset--spacing--20); }
+
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2rem, 4vw, 3.25rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__desc {
+		margin: 0;
+		max-width: 26rem;
+		text-align: right;
+		color: var(--wp--preset--color--body);
+		font-size: var(--wp--preset--font-size--medium);
+		line-height: 1.6;
+	}
+
+	// Grille de cartes
+	&__grid {
+		counter-reset: card;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--wp--preset--spacing--40);
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__card {
+		counter-increment: card;
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--30);
+		padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--40);
+		border-radius: 1.125rem;
+		background-color: var(--wp--preset--color--surface);
+		box-shadow: 0 8px 12px rgba(27, 29, 42, 0.05);
+	}
+
+	&__num {
+		font-family: var(--wp--preset--font-family--display);
+		font-size: 2.25rem;
+		line-height: 1;
+		color: var(--wp--custom--color--highlight-strong);
+
+		&::before { content: counter(card, decimal-leading-zero); }
+	}
+
+	&__card-title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-size: var(--wp--preset--font-size--x-large);
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		line-height: 1.2;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__card-desc {
+		margin: 0;
+		color: var(--wp--preset--color--body);
+		font-size: var(--wp--preset--font-size--medium);
+		line-height: 1.55;
+	}
+
+	@include bp(tablet) {
+		&__head { flex-direction: column; align-items: flex-start; gap: var(--wp--preset--spacing--30); }
+		&__desc { text-align: left; max-width: none; }
+		&__grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+		&__grid { grid-template-columns: 1fr; }
+	}
+}

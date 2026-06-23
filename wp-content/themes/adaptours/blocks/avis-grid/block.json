@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/avis-grid",
+	"title": "Avis clients (grille)",
+	"category": "adaptours",
+	"icon": "format-quote",
+	"description": "Section « avis clients » : avis du mois (grande card sombre) + 2 derniers avis + badge note Google + bande CTA. Avis lus depuis le CPT avis.",
+	"textdomain": "adaptours",
+	"supports": {
+		"align": ["full"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Avis clients" },
+		"title": { "type": "string", "default": "Ils sont partis avec nous." },
+		"title_accent": { "type": "string", "default": "avec nous" },
+		"description": { "type": "string", "default": "Plus de 800 voyageurs accompagnés depuis 2011. Voici ce qu'ils en disent." },
+		"featured_avis_id": { "type": "number", "default": 0 },
+		"band_text": { "type": "string", "default": "Rejoignez +800 voyageurs qui ont fait le pas." },
+		"cta_label": { "type": "string", "default": "Demander mon devis" },
+		"cta_url": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

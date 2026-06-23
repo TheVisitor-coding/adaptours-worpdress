@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/team-grid-member",
+	"title": "Membre de l'équipe",
+	"category": "adaptours",
+	"icon": "admin-users",
+	"description": "Une personne de l'équipe : photo, nom, poste et petite phrase. À utiliser dans le bloc « L'équipe ».",
+	"textdomain": "adaptours",
+	"parent": ["adaptours/team-grid"],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"photo_id": { "type": "integer", "default": 0 },
+		"name": { "type": "string", "default": "" },
+		"role": { "type": "string", "default": "" },
+		"tagline": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js"
+}

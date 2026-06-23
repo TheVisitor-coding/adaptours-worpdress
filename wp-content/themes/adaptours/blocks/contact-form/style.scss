@@ -1,0 +1,214 @@
+@use "abstracts" as *;
+
+.contact-form {
+	margin-top: var(--wp--preset--spacing--70);
+
+	&__inner {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--wp--preset--spacing--80);
+
+		@include bp(tablet) { gap: var(--wp--preset--spacing--60); }
+		@include bp(mobile) { flex-direction: column; }
+	}
+
+	// Colonne coordonnées
+	&__coords {
+		flex: 0 0 22.5rem; // 360px
+
+		@include bp(tablet) { flex-basis: 16rem; }
+		@include bp(mobile) { flex-basis: auto; width: 100%; }
+	}
+
+	&__coord {
+		& + & { margin-top: var(--wp--preset--spacing--50); }
+	}
+
+	&__coord-label {
+		margin: 0 0 0.75rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-weight: 600;
+		font-size: 0.625rem;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__coord-value {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--medium);
+		line-height: 1.6;
+		color: var(--wp--preset--color--ink);
+	}
+
+	// Liens tél/mail : encre, sans le soulignement global des liens.
+	&__coord-link {
+		color: var(--wp--preset--color--ink);
+		text-decoration: none;
+
+		&:hover,
+		&:focus-visible { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__coord-note {
+		margin: 0.375rem 0 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--small);
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	// Colonne formulaire
+	&__main { flex: 1 1 auto; min-width: 0; }
+
+	&__eyebrow {
+		margin: 0 0 0.75rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-weight: 600;
+		font-size: 0.625rem;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0 0 var(--wp--preset--spacing--50);
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 400;
+		line-height: 1.1;
+		letter-spacing: -0.01em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(1.5rem, 3vw, 1.75rem);
+
+		.accent { color: var(--wp--preset--color--highlight); }
+	}
+
+	// Champs CF7 (markup générique stylé à la charte)
+	&__grid {
+		display: flex;
+		gap: 1.125rem;
+
+		@include bp(small) { flex-direction: column; gap: 0; }
+
+		.contact-form__field { flex: 1 1 0; min-width: 0; }
+	}
+
+	&__field {
+		margin: 0 0 var(--wp--preset--spacing--40);
+
+		label {
+			display: block;
+			font-family: var(--wp--preset--font-family--sans);
+			font-weight: 500;
+			font-size: 0.8125rem;
+			color: var(--wp--preset--color--body);
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	select,
+	textarea {
+		width: 100%;
+		margin-top: 0.5rem;
+		padding: 0.5rem 0;
+		border: 0;
+		border-bottom: 1px solid var(--wp--preset--color--line);
+		border-radius: 0;
+		background-color: transparent;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--medium);
+		color: var(--wp--preset--color--ink);
+		transition: border-color 0.15s ease;
+
+		&::placeholder { color: var(--wp--preset--color--eyebrow); opacity: 1; }
+		&:focus {
+			outline: none;
+			border-bottom-color: var(--wp--custom--color--highlight-strong);
+		}
+	}
+
+	textarea {
+		min-height: 6.5rem;
+		line-height: 1.5;
+		resize: vertical;
+	}
+
+	select {
+		appearance: none;
+		cursor: pointer;
+		padding-right: 1.5rem;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231b1d2a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 0 center;
+	}
+
+	// Consentement RGPD
+	&__consent {
+		display: flex;
+		gap: 0.8125rem;
+		align-items: flex-start;
+		margin: 0 0 var(--wp--preset--spacing--40);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.8125rem;
+		line-height: 1.5;
+		color: var(--wp--preset--color--body);
+
+		input[type="checkbox"] { margin-top: 0.15rem; flex-shrink: 0; }
+		.wpcf7-list-item { margin: 0; }
+		a {
+			color: var(--wp--custom--color--highlight-strong);
+			text-decoration: underline;
+		}
+	}
+
+	// Honeypot : champ caché (rejet silencieux des robots).
+	&__hp {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+
+	// Bouton d'envoi (input submit CF7) → pill orange de la charte.
+	.wpcf7-submit {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.75rem 1.75rem;
+		border: 0;
+		border-radius: var(--wp--custom--radius--pill);
+		background-color: var(--wp--custom--color--button-primary);
+		color: var(--wp--preset--color--surface);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--small);
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 0.15s ease;
+
+		&:hover,
+		&:focus-visible { background-color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	// Messages CF7 (validation / confirmation) à la charte.
+	.wpcf7-response-output {
+		margin: var(--wp--preset--spacing--30) 0 0;
+		padding: 0.75rem 1rem;
+		border-radius: var(--wp--custom--radius--media);
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--small);
+	}
+
+	.wpcf7-not-valid-tip {
+		margin-top: 0.25rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--small);
+		color: #b3261e;
+	}
+
+	&__fallback {
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: var(--wp--preset--font-size--medium);
+		color: var(--wp--preset--color--body);
+	}
+}

@@ -1,0 +1,171 @@
+// Bloc adaptours/founder-story — récit de la fondatrice.
+// Deux colonnes : texte à gauche, collage de 3 polaroïds (rotés, ruban orange) à droite.
+// Fond clair (surface). Contenu borné à 1280px. Desktop-first.
+
+@use "abstracts" as *;
+
+.founder-story {
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface);
+
+	&__inner {
+		@include container;
+		display: grid;
+		grid-template-columns: minmax(0, 552fr) minmax(0, 560fr);
+		gap: clamp(2rem, 5vw, 6rem);
+		align-items: center;
+	}
+
+	// Colonne texte
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--40);
+	}
+
+	&__eyebrow {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		font-size: clamp(2rem, 3.6vw, 3rem);
+		color: var(--wp--preset--color--ink);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__intro,
+	&__outro {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1.0625rem; // 17px
+		line-height: 1.65;
+		color: var(--wp--preset--color--body);
+	}
+
+	// Citation mise en avant : filet orange à gauche + guillemets décoratifs.
+	&__quote {
+		margin: 0;
+		padding-inline-start: 1.5rem;
+		border-inline-start: 3px solid var(--wp--custom--color--highlight-strong);
+
+		p {
+			margin: 0;
+			font-family: var(--wp--preset--font-family--display);
+			font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+			line-height: 1.4;
+			color: var(--wp--preset--color--ink);
+
+			&::before { content: "“ "; }
+			&::after { content: " ”"; }
+		}
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__signature {
+		margin-top: var(--wp--preset--spacing--20);
+	}
+
+	&__signature-name {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--accent);
+		font-weight: 700;
+		font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__signature-role {
+		margin: 0.25rem 0 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	// Collage de polaroïds
+	&__gallery {
+		position: relative;
+		width: 100%;
+		min-height: 37.5rem;
+	}
+
+	&__polaroid {
+		position: absolute;
+		margin: 0;
+		padding: 0.875rem 0.875rem 1.625rem; // cadre blanc (bas plus épais)
+		background: var(--wp--preset--color--surface);
+		border: 6px solid var(--wp--preset--color--surface);
+		box-shadow: 0 4px 12px rgba(27, 29, 42, 0.08), 0 24px 60px rgba(27, 29, 42, 0.18);
+
+		&--1 { top: 9%; left: 8%; width: 32%; transform: rotate(-5deg); }
+		&--2 { top: 62%; left: 11%; width: 32%; transform: rotate(12deg); }
+		&--3 { top: 37%; left: 59%; width: 37%; transform: rotate(4deg); }
+	}
+
+	// Ruban adhésif orange au-dessus de chaque polaroïd.
+	&__tape {
+		position: absolute;
+		top: -0.5rem;
+		left: 50%;
+		width: 2.75rem;
+		height: 1.125rem;
+		transform: translateX(-50%) rotate(-3deg);
+		background: color-mix(in srgb, var(--wp--preset--color--highlight) 55%, transparent);
+		border-radius: 2px;
+		box-shadow: 0 2px 4px rgba(27, 29, 42, 0.15);
+	}
+
+	&__photo {
+		display: block;
+		width: 100%;
+		aspect-ratio: 4 / 5;
+		object-fit: cover;
+	}
+
+	&__photo--placeholder {
+		background: linear-gradient(
+			145deg,
+			color-mix(in srgb, var(--wp--preset--color--highlight) 22%, var(--wp--preset--color--surface)) 0%,
+			color-mix(in srgb, var(--wp--preset--color--ink) 12%, var(--wp--preset--color--surface)) 100%
+		);
+	}
+
+	// Responsive (desktop-first)
+	@include bp(tablet) {
+		&__inner {
+			grid-template-columns: 1fr;
+			gap: var(--wp--preset--spacing--60);
+		}
+
+		&__gallery {
+			min-height: 30rem;
+			max-width: 30rem;
+			margin-inline: auto;
+		}
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--70);
+
+		&__gallery { min-height: 26rem; }
+		&__polaroid {
+			&--1 { width: 42%; }
+			&--2 { width: 42%; }
+			&--3 { width: 46%; }
+		}
+	}
+}

@@ -1,0 +1,327 @@
+// Bloc devis-form — formulaire de demande de devis.
+// Style la sortie CF7 (champs, radios « pills », steppers, consentement, bouton submit).
+// Conteneur étroit centré (~694px). Desktop-first.
+
+@use "abstracts" as *;
+
+.devis-form {
+	padding-block: var(--wp--preset--spacing--60);
+
+	&__inner {
+		max-width: 43.375rem; // ~694px
+		margin-inline: auto;
+	}
+
+	&__fallback {
+		text-align: center;
+		color: var(--wp--preset--color--body);
+	}
+
+	// Sections (fieldset + legend filet)
+	.devis-form__section {
+		margin: 0 0 var(--wp--preset--spacing--50);
+		padding: 0;
+		border: 0;
+	}
+
+	&__legend {
+		display: flex;
+		align-items: center;
+		gap: 0.625rem; // 10px
+		width: 100%;
+		margin-bottom: var(--wp--preset--spacing--30);
+		padding: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.875rem; // 14px
+		font-weight: 500;
+		letter-spacing: 0.04em; // ~0.56px
+		text-transform: uppercase;
+		color: var(--wp--preset--color--eyebrow);
+
+		&::after {
+			content: "";
+			flex: 1 0 0;
+			height: 1px;
+			background: var(--wp--preset--color--line);
+		}
+	}
+
+	// Champs (label + input/select/textarea)
+	&__field {
+		margin: 0 0 0.875rem; // 14px
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 0.375rem; // 6px
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.875rem; // 14px
+		font-weight: 500;
+		color: var(--wp--preset--color--ink);
+	}
+
+	&__sublabel {
+		display: block;
+		margin-top: 0.125rem;
+		font-weight: 400;
+		font-size: 0.8125rem; // 13px
+		color: var(--wp--preset--color--body);
+	}
+
+	&__optional {
+		font-weight: 400;
+		font-size: 0.75rem; // 12px
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem; // 16px
+	}
+
+	// Champs natifs CF7.
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="number"],
+	select,
+	textarea {
+		width: 100%;
+		min-height: 2.8125rem; // 45px
+		padding: 0.8125rem 0.875rem; // 13px 14px
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.9375rem; // 15px
+		color: var(--wp--preset--color--ink);
+		background-color: var(--wp--preset--color--surface);
+		border: 1px solid var(--wp--preset--color--line);
+		border-radius: var(--wp--custom--radius--media);
+		transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+		&::placeholder { color: color-mix(in srgb, var(--wp--preset--color--ink) 45%, transparent); }
+
+		&:focus {
+			outline: none;
+			border-color: var(--wp--custom--color--button-primary);
+			box-shadow: 0 0 0 3px color-mix(in srgb, var(--wp--custom--color--button-primary) 18%, transparent);
+		}
+	}
+
+	textarea {
+		min-height: 6rem;
+		resize: vertical;
+	}
+
+	// Radios « pills »
+	&__pills .wpcf7-form-control-wrap { display: block; }
+
+	&__pills .wpcf7-radio {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem; // 8px
+	}
+
+	&__pills .wpcf7-list-item {
+		flex: 1 1 auto;
+		margin: 0;
+	}
+
+	&__pills .wpcf7-list-item > label {
+		display: block;
+		height: 100%;
+	}
+
+	&__pills input[type="radio"] {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	&__pills .wpcf7-list-item-label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.4375rem; // 39px
+		padding: 0.6875rem 0.9375rem; // 11px 15px
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.875rem; // 14px
+		font-weight: 500;
+		text-align: center;
+		color: var(--wp--preset--color--body);
+		background-color: var(--wp--preset--color--surface);
+		border: 1px solid var(--wp--preset--color--line);
+		border-radius: var(--wp--custom--radius--media);
+		cursor: pointer;
+		transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+	}
+
+	&__pills .wpcf7-list-item-label:hover {
+		border-color: color-mix(in srgb, var(--wp--preset--color--ink) 30%, transparent);
+	}
+
+	&__pills input[type="radio"]:checked + .wpcf7-list-item-label {
+		color: var(--wp--preset--color--surface);
+		background-color: var(--wp--preset--color--ink);
+		border-color: var(--wp--preset--color--ink);
+	}
+
+	&__pills input[type="radio"]:focus-visible + .wpcf7-list-item-label {
+		outline: 2px solid var(--wp--custom--color--button-primary);
+		outline-offset: 2px;
+	}
+
+	&__pills--binary .wpcf7-list-item { flex: 1 1 0; }
+
+	// Steppers (−/+) : décorés en JS (assets/js/devis-form.js)
+	&__stepper-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding-block: 0.875rem; // 14px
+		border-bottom: 1px solid color-mix(in srgb, var(--wp--preset--color--ink) 6%, transparent);
+
+		.devis-form__label { margin-bottom: 0; }
+	}
+
+	// Repli sans JS : input number visible et utilisable, largeur réduite.
+	&__stepper input[type="number"] { width: 7.875rem; text-align: center; }
+
+	// UI stepper injectée par le JS.
+	.devis-stepper {
+		display: inline-flex;
+		align-items: center;
+		width: 7.875rem; // 126px
+		height: 2.75rem; // 44px
+		background-color: var(--wp--preset--color--surface);
+		border: 1px solid var(--wp--preset--color--line);
+		border-radius: var(--wp--custom--radius--media);
+		overflow: hidden;
+	}
+
+	.devis-stepper__btn {
+		flex: 0 0 2.5rem; // 40px
+		height: 100%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		font-size: 1.125rem; // 18px
+		line-height: 1;
+		color: var(--wp--preset--color--ink);
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+
+		&:disabled { opacity: 0.35; cursor: default; }
+		&:focus-visible { outline: 2px solid var(--wp--custom--color--button-primary); outline-offset: -2px; }
+	}
+
+	.devis-stepper__value {
+		flex: 1 1 auto;
+		text-align: center;
+		font-size: 0.9375rem; // 15px
+		color: var(--wp--preset--color--ink);
+		border-inline: 1px solid var(--wp--preset--color--line);
+		align-self: stretch;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// Consentement RGPD
+	&__consent {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.6875rem; // 11px
+		margin: 0 0 var(--wp--preset--spacing--40);
+		padding-top: 0.8125rem;
+		border-top: 1px solid var(--wp--preset--color--line);
+		font-size: 0.78125rem; // 12.5px
+		line-height: 1.5;
+		color: var(--wp--preset--color--body);
+
+		.wpcf7-list-item { margin: 0; }
+
+		input[type="checkbox"] {
+			width: 1rem;
+			height: 1rem;
+			margin-top: 0.15rem;
+			accent-color: var(--wp--custom--color--button-primary);
+			flex: 0 0 auto;
+		}
+
+		a { color: var(--wp--custom--color--link); }
+	}
+
+	// Bouton submit + note
+	&__submit {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.875rem; // 14px
+		margin: 0;
+	}
+
+	&__submit-note {
+		font-size: 0.78125rem; // 12.5px
+		color: var(--wp--preset--color--eyebrow);
+	}
+
+	.wpcf7-submit {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 2.9375rem; // 47px
+		padding: 0.875rem 1.625rem; // 14px 26px
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.9375rem; // 15px
+		font-weight: 500;
+		color: var(--wp--preset--color--surface);
+		background-color: var(--wp--custom--color--button-primary);
+		border: 1px solid transparent;
+		border-radius: var(--wp--custom--radius--pill);
+		cursor: pointer;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+		&:hover { box-shadow: var(--wp--custom--shadow--card); transform: translateY(-1px); }
+		&:focus-visible { outline: 2px solid var(--wp--preset--color--ink); outline-offset: 2px; }
+	}
+
+	// Honeypot (champ caché anti-spam).
+	&__hp {
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+
+	// Retours CF7 (validation, spinner)
+	.wpcf7-not-valid-tip {
+		margin-top: 0.25rem;
+		font-size: 0.8125rem;
+		color: #b32d2e;
+	}
+
+	.wpcf7-response-output {
+		margin: var(--wp--preset--spacing--30) 0 0;
+		padding: 0.75rem 1rem;
+		border-radius: var(--wp--custom--radius--media);
+		font-size: 0.875rem;
+	}
+
+	// Responsive
+	@include bp(mobile) {
+		&__row { grid-template-columns: 1fr; }
+		&__pills .wpcf7-radio { flex-direction: column; }
+		&__stepper-row { flex-wrap: wrap; }
+	}
+}

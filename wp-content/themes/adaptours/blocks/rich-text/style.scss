@@ -1,0 +1,99 @@
+// adaptours/rich-text — styles front (clé "style" du block.json → style-index.css).
+// Prose éditoriale : en-tête bichrome + corps libre (paragraphes / sous-titres /
+// listes à puces orange). Tokens theme.json, sizing rem, BEM scopé, desktop-first.
+
+@use "abstracts" as *;
+
+.rich-text {
+	padding-block: var(--wp--preset--spacing--80);
+
+	&__inner {
+		@include container;
+	}
+
+	&__head {
+		margin-bottom: var(--wp--preset--spacing--40);
+	}
+
+	&__eyebrow {
+		margin: 0 0 var(--wp--preset--spacing--20);
+	}
+
+	&__title {
+		margin: 0;
+		max-width: 24ch;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(1.875rem, 4vw, 3.25rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	// Corps éditorial (InnerBlocks : paragraphes, sous-titres, listes)
+	&__body {
+		max-width: 46rem; // confort de lecture
+		color: var(--wp--preset--color--body);
+		font-size: var(--wp--preset--font-size--large);
+		line-height: 1.7;
+
+		> * { margin-block: 0; }
+		> * + * { margin-top: var(--wp--preset--spacing--30); }
+
+		p { margin: 0; }
+
+		a {
+			color: var(--wp--custom--color--link);
+			text-decoration: underline;
+		}
+
+		// Sous-titres internes (core/heading) — police de titre, encre.
+		h2, h3, h4, h5, h6 {
+			font-family: var(--wp--preset--font-family--display);
+			font-weight: 600;
+			line-height: 1.2;
+			color: var(--wp--preset--color--ink);
+			margin-top: var(--wp--preset--spacing--40);
+		}
+		h2 { font-size: clamp(1.5rem, 2.6vw, 1.875rem); }
+		h3 { font-size: clamp(1.375rem, 2.2vw, 1.625rem); }
+		h4, h5, h6 { font-size: var(--wp--preset--font-size--x-large); }
+
+		// Listes à puces : carré orange arrondi + fin séparateur entre items.
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			position: relative;
+			padding: var(--wp--preset--spacing--20) 0 var(--wp--preset--spacing--20) 2rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0.25rem;
+				top: 1.05em;
+				width: 0.5rem;
+				height: 0.5rem;
+				border-radius: 0.25rem;
+				background-color: var(--wp--preset--color--highlight);
+			}
+
+			& + li { border-top: 1px solid var(--wp--preset--color--line); }
+		}
+
+		// Listes ordonnées : style natif sobre.
+		ol {
+			margin: 0;
+			padding-left: 1.25rem;
+			li + li { margin-top: var(--wp--preset--spacing--20); }
+		}
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+	}
+}

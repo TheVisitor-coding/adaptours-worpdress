@@ -1,0 +1,98 @@
+// adaptours/media-text — styles front (clé "style" du block.json → style-index.css).
+// Deux colonnes texte + image, image à droite (défaut) ou à gauche. Fond surface-alt
+// full-bleed. Tokens theme.json, sizing rem, BEM scopé, desktop-first.
+
+@use "abstracts" as *;
+
+.media-text {
+	@include full-bleed; // fond pleine largeur (sinon bords blancs : <main> borné à 1280px)
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface-alt);
+
+	&__inner {
+		@include container;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--wp--preset--spacing--70);
+		align-items: center;
+	}
+
+	// Image à gauche : on inverse l'ordre des 2 colonnes (le DOM reste texte → image).
+	&--media-left &__body { order: 2; }
+	&--media-left &__media { order: 1; }
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--wp--preset--spacing--30);
+	}
+
+	&__eyebrow { margin: 0; }
+
+	&__title {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.08;
+		letter-spacing: -0.02em;
+		color: var(--wp--preset--color--ink);
+		font-size: clamp(2rem, 4vw, 3.25rem);
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	&__text {
+		color: var(--wp--preset--color--body);
+		font-size: var(--wp--preset--font-size--large);
+		line-height: 1.65;
+
+		p { margin: 0; }
+		p + p { margin-top: var(--wp--preset--spacing--30); }
+		a { color: var(--wp--custom--color--link); text-decoration: underline; }
+	}
+
+	&__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wp--preset--spacing--30);
+		margin-top: var(--wp--preset--spacing--20);
+	}
+
+	&__media {
+		margin: 0;
+		border-radius: 1.125rem;
+		overflow: hidden;
+		box-shadow: 0 22px 50px rgba(27, 29, 42, 0.12);
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 4 / 5;
+		object-fit: cover;
+	}
+
+	&__media--placeholder {
+		aspect-ratio: 4 / 5;
+		background-color: color-mix(in srgb, var(--wp--preset--color--ink) 8%, transparent);
+		box-shadow: none;
+	}
+
+	@include bp(tablet) {
+		&__inner { gap: var(--wp--preset--spacing--50); }
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+
+		&__inner { grid-template-columns: 1fr; }
+		// En 1 colonne, le texte passe toujours au-dessus de l'image.
+		&--media-left &__body,
+		&__body { order: 1; }
+		&--media-left &__media,
+		&__media { order: 2; }
+		&__img { aspect-ratio: 4 / 3; }
+	}
+}

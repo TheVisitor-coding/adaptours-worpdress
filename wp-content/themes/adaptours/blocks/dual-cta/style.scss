@@ -1,0 +1,125 @@
+// Bloc adaptours/dual-cta — deux cartes d'appel à l'action côte à côte.
+// Carte 1 sombre (devis), carte 2 pêche (recrutement). Remplace le prefooter sur la page
+// Qui sommes-nous. Contenu borné à 1280px. Desktop-first.
+
+@use "abstracts" as *;
+
+.dual-cta {
+	padding-block: var(--wp--preset--spacing--60);
+	background-color: var(--wp--preset--color--surface);
+
+	&__inner {
+		@include container;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.5rem;
+	}
+
+	&__card {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--30);
+		padding: 3rem;
+		border-radius: 1.5rem; // 24px
+
+		// Halo décoratif.
+		&::before {
+			content: "";
+			position: absolute;
+			width: 18.75rem;
+			height: 18.75rem;
+			border-radius: 50%;
+			opacity: 0.4;
+			pointer-events: none;
+			background: radial-gradient(
+				circle,
+				color-mix(in srgb, var(--wp--preset--color--highlight) 50%, transparent) 0%,
+				transparent 70%
+			);
+		}
+	}
+
+	&__card--dark {
+		background-color: var(--wp--preset--color--ink);
+		color: var(--wp--preset--color--surface);
+
+		&::before { top: -7.5rem; right: -6.875rem; }
+	}
+
+	&__card--peach {
+		background-color: color-mix(in srgb, var(--wp--preset--color--highlight) 35%, var(--wp--preset--color--surface));
+		color: var(--wp--preset--color--ink);
+
+		&::before { bottom: -7.5rem; left: -5rem; }
+	}
+
+	&__eyebrow {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem;
+		font-weight: 500;
+		letter-spacing: var(--wp--custom--tracking--eyebrow);
+		text-transform: uppercase;
+		opacity: 0.55;
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+		color: inherit;
+
+		.accent { color: var(--wp--custom--color--highlight-strong); }
+	}
+
+	// Sur fond sombre, le highlight-strong (#D2563B) manque de contraste : on remonte
+	// vers le highlight de marque (#E8775F), lisible sur le navy.
+	&__card--dark &__title .accent { color: var(--wp--preset--color--highlight); }
+
+	&__desc {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		max-width: 24rem;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 1rem;
+		line-height: 1.55;
+		color: inherit;
+		opacity: 0.85;
+	}
+
+	&__cta {
+		position: relative;
+		z-index: 1;
+		margin-top: auto;
+		align-self: flex-start;
+	}
+
+	// Bouton sombre (carte pêche) : pastille encre, texte clair.
+	&__cta--ink {
+		background-color: var(--wp--preset--color--ink);
+		color: var(--wp--preset--color--surface);
+		border-color: var(--wp--preset--color--ink);
+
+		&:hover,
+		&:focus-visible {
+			background-color: color-mix(in srgb, var(--wp--preset--color--ink) 88%, #fff);
+			color: var(--wp--preset--color--surface);
+		}
+	}
+
+	// Responsive (desktop-first)
+	@include bp(mobile) {
+		&__inner { grid-template-columns: 1fr; }
+		&__card { padding: 2rem; }
+	}
+}

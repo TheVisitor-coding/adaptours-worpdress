@@ -1,0 +1,61 @@
+// Bloc adaptours/kpi-bar — styles front.
+// 4 ou 5 chiffres alignés (attribut `columns`, posé au templateLock : 4 sur la home,
+// 5 sur Qui sommes-nous), séparés par des filets verticaux 1px. Contenu borné à 1280px,
+// section full-bleed; séparateurs = bordures CSS. N colonnes → 2 → 1. Desktop-first.
+
+@use "abstracts" as *;
+
+.wp-block-adaptours-kpi-bar {
+	padding-block: var(--wp--preset--spacing--80);
+	background-color: var(--wp--preset--color--surface);
+
+	&__list {
+		@include container;
+		list-style: none;
+		margin: 0;
+		padding-block: 0; // container ne gère que l'inline
+		display: grid;
+		grid-template-columns: repeat(var(--adaptours-kpi-cols, 4), 1fr);
+
+		@include bp(tablet) { grid-template-columns: repeat(2, 1fr); }
+		@include bp(mobile) { grid-template-columns: 1fr; }
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: var(--wp--preset--spacing--20);
+		padding-inline: var(--wp--preset--spacing--40);
+
+		// Séparateur visuel = bordure (filet 1px), pas un nœud DOM dédié.
+		& + & { border-inline-start: 1px solid var(--wp--preset--color--line); }
+
+		// En 2 colonnes, retirer le filet en début de chaque rangée (items impairs).
+		@include bp(tablet) {
+			&:nth-child(2n + 1) { border-inline-start: 0; }
+		}
+		// En 1 colonne, plus aucun filet vertical.
+		@include bp(mobile) {
+			border-inline-start: 0;
+		}
+	}
+
+	&__value {
+		// Orange « fort » réservé au texte sur fond clair (token highlightStrong de theme.json).
+		color: var(--wp--custom--color--highlight-strong);
+		font-size: var(--wp--preset--font-size--display);
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	&__label {
+		color: var(--wp--preset--color--body); // « Texte secondaire » (theme.json n'a pas de slug « muted »)
+		font-size: var(--wp--preset--font-size--small);
+	}
+
+	@include bp(mobile) {
+		padding-block: var(--wp--preset--spacing--60);
+	}
+}

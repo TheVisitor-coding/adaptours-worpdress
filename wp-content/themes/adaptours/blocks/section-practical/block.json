@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/section-practical",
+	"title": "Ce qu’il faut savoir",
+	"category": "adaptours",
+	"icon": "info-outline",
+	"description": "Section « ce qu’il faut savoir » : titre, texte d’intro et cartes pratiques (visa, santé, budget…). Ajoutez autant de cartes que nécessaire.",
+	"textdomain": "adaptours",
+	"supports": {
+		"align": ["full"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Pratique" },
+		"title": { "type": "string", "default": "Ce qu’il faut savoir." },
+		"title_accent": { "type": "string", "default": "savoir" },
+		"description": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

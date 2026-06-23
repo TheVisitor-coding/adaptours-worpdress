@@ -1,0 +1,20 @@
+/*
+Theme Name: Adaptours
+Theme URI: https://adaptours.fr
+Author: Gulfstream Group
+Description: Thème custom Adaptours — blocs Gutenberg natifs, tokens design centralisés (theme.json), intégration desktop-first / WCAG 2.1 AA. Voir ARCHITECTURE.md.
+Version: 0.1.0
+Requires at least: 6.6
+Tested up to: 6.7
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: adaptours
+*/
+
+/*
+ * Ce fichier ne porte QUE l'en-tête de thème (obligatoire WordPress).
+ * Les styles globaux sont dans assets/src/scss/main.scss → compilés vers
+ * assets/build/main.css et chargés par inc/enqueue.php.
+ * Les styles des blocs vivent dans blocks/<bloc>/style.scss (chargés à la demande).
+ */

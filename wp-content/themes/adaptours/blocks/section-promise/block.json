@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/section-promise",
+	"title": "Accueil — la promesse",
+	"category": "adaptours",
+	"icon": "heart",
+	"description": "Section « Le voyage, pensé autour de vous » : surtitre, titre, texte de présentation et 4 atouts illustrés.",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "Pourquoi Adaptours" },
+		"title_part_1": { "type": "string", "default": "Le voyage, pensé" },
+		"title_part_2": { "type": "string", "default": "autour de vous." },
+		"description": { "type": "string", "default": "Adaptours, c’est d’abord des personnes. Des voyageurs en situation de handicap, des proches aidants, des familles, des seniors. Et derrière, une équipe qui croit qu’aucune mobilité ne devrait empêcher de partir.\n\nOn ne propose pas des voyages « adaptés » au sens médical du terme. On conçoit, avec vous, un séjour pensé pour votre rythme, votre matériel, vos envies et celles des personnes qui vous accompagnent." }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,128 @@
+// Prefooter — bande de conversion sur fond sombre. Desktop-first.
+
+@use "abstracts" as *;
+
+.prefooter {
+	position: relative;
+	overflow: hidden;
+	background-color: var(--wp--preset--color--dark);
+	color: var(--wp--preset--color--surface);
+	text-align: center;
+
+	// Halos décoratifs en absolu : halo orange haut-droite + halo bleu froid bas-gauche.
+	// Valeurs de gradient décoratives (non tokenisables proprement).
+	&::before,
+	&::after {
+		content: "";
+		@include decor;
+		border-radius: 15.625rem;
+	}
+
+	&::before {
+		top: -12.5rem;
+		right: -6.25rem;
+		width: 61.875rem;  // ~990px
+		height: 57.4375rem; // ~919px
+		background: radial-gradient(circle at 72% 28%, rgba(232, 119, 95, 0.30), rgba(232, 119, 95, 0) 55%);
+	}
+
+	&::after {
+		bottom: -12.5rem;
+		left: -6.25rem;
+		width: 41.0625rem; // ~657px
+		height: 38.75rem;  // ~620px
+		background: radial-gradient(circle at 28% 72%, rgba(138, 180, 202, 0.30), rgba(69, 90, 101, 0.15) 44%, rgba(0, 0, 0, 0) 87%);
+	}
+
+	&__inner {
+		position: relative; // au-dessus des halos
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--wp--preset--spacing--40);
+		max-width: 50rem;
+		padding-block: var(--wp--preset--spacing--90); // 120px
+	}
+
+	// Eyebrow : blanc 50%, 11px, tracking 0,2em, majuscules
+	&__eyebrow {
+		margin: 0;
+		font-family: var(--wp--preset--font-family--sans);
+		font-size: 0.6875rem; // 11px
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 50%, transparent);
+	}
+
+	// Titre bichrome : Bricolage 400, ~96px, lh 0,95, tracking serré
+	&__title {
+		margin: 0;
+		color: var(--wp--preset--color--surface);
+		font-weight: 400; // override du 600 des titres (theme.json)
+		font-size: clamp(2.5rem, 7vw, 6rem); // 96px desktop
+		line-height: 0.95;
+		letter-spacing: -0.04em;
+		//.accent (« un mot. ») : orange, et garde la police du titre (règle globale).
+	}
+
+	// Description : blanc 75%, 18px, lh 1,5
+	&__desc {
+		margin: 0;
+		max-width: 35rem; // 560px
+		font-size: 1.125rem; // 18px
+		line-height: 1.5;
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 75%, transparent);
+	}
+
+	// CTA
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--wp--preset--spacing--30); // 16px
+		margin-top: var(--wp--preset--spacing--20);
+	}
+
+	// Outline de focus des boutons : clair sur fond sombre (l'ink global serait
+	// invisible).
+	.button:focus-visible {
+		outline-color: var(--wp--preset--color--surface);
+	}
+
+	// Trust points : blanc 60%, 13px, ✓ inline
+	&__trust {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--wp--preset--spacing--50); // 32px
+		margin: var(--wp--preset--spacing--30) 0 0;
+		padding: 0;
+		list-style: none;
+		font-size: var(--wp--preset--font-size--small); // 13px
+		color: color-mix(in srgb, var(--wp--preset--color--surface) 60%, transparent);
+	}
+
+	&__trust-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4em;
+	}
+
+	&__trust-check {
+		color: var(--wp--preset--color--highlight);
+	}
+
+	// Override des liens texte sur fond sombre (le token `link` y est illisible).
+	// Défensif : aucun lien texte dans le markup actuel (les CTA sont des boutons).
+	a:not(.button) {
+		color: var(--wp--preset--color--highlight);
+		text-decoration: underline;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--wp--preset--color--highlight-soft);
+		}
+	}
+}

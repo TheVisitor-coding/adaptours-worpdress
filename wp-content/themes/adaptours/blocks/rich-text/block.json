@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/rich-text",
+	"title": "Texte enrichi",
+	"category": "adaptours",
+	"icon": "text",
+	"description": "Bloc de texte éditorial : surtitre, titre (avec mot(s) en orange) et un corps libre (paragraphes, sous-titres, listes à puces).",
+	"textdomain": "adaptours",
+	"supports": {
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"eyebrow": { "type": "string", "default": "" },
+		"title_part_1": { "type": "string", "default": "Titre de la" },
+		"title_part_2": { "type": "string", "default": "section" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

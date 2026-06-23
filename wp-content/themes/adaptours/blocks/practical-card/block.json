@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "adaptours/practical-card",
+	"title": "Carte pratique",
+	"category": "adaptours",
+	"icon": "index-card",
+	"description": "Une carte pratique (visa, santé, budget…) : icône, titre et description. À utiliser dans le bloc « Ce qu’il faut savoir ».",
+	"textdomain": "adaptours",
+	"parent": ["adaptours/section-practical"],
+	"supports": {
+		"html": false,
+		"reusable": false
+	},
+	"attributes": {
+		"icon": { "type": "string", "default": "" },
+		"card_title": { "type": "string", "default": "" },
+		"description": { "type": "string", "default": "" }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js"
+}
