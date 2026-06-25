@@ -5,13 +5,46 @@
  */
 
 import { registerBlockType } from '@wordpress/blocks';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, TextareaControl } from '@wordpress/components';
+import {
+	useBlockProps,
+	InspectorControls,
+	MediaUpload,
+	MediaUploadCheck,
+} from '@wordpress/block-editor';
+import { PanelBody, TextControl, TextareaControl, Button } from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import metadata from './block.json';
 
 import './style.scss';
+
+// Sélecteur d'image d'une vignette (mémorise l'ID, aperçu rendu côté serveur).
+const PolaroidControl = ( { index, value, onChange } ) => (
+	<MediaUploadCheck>
+		<MediaUpload
+			onSelect={ ( media ) => onChange( media.id ) }
+			allowedTypes={ [ 'image' ] }
+			value={ value }
+			render={ ( { open } ) => (
+				<div style={ { marginBottom: '12px' } }>
+					<p style={ { margin: '0 0 4px' } }>
+						{ sprintf( __( 'Vignette %d', 'adaptours' ), index ) }
+					</p>
+					<Button variant="secondary" onClick={ open }>
+						{ value
+							? __( 'Changer la photo', 'adaptours' )
+							: __( 'Choisir une photo', 'adaptours' ) }
+					</Button>
+					{ !! value && (
+						<Button variant="link" isDestructive onClick={ () => onChange( 0 ) }>
+							{ __( 'Retirer', 'adaptours' ) }
+						</Button>
+					) }
+				</div>
+			) }
+		/>
+	</MediaUploadCheck>
+);
 
 registerBlockType( metadata.name, {
 	edit: ( { attributes, setAttributes } ) => {
@@ -39,10 +72,16 @@ registerBlockType( metadata.name, {
 							help={ __( 'Le ou les mots du titre mis en avant.', 'adaptours' ) }
 						/>
 						<TextControl
-							label={ __( 'Ligne manuscrite', 'adaptours' ) }
+							label={ __( 'Ligne manuscrite — début', 'adaptours' ) }
 							value={ attributes.title_script }
 							onChange={ ( v ) => setAttributes( { title_script: v } ) }
-							help={ __( 'Dernière ligne du titre, en écriture manuscrite. Laissez vide pour la masquer.', 'adaptours' ) }
+							help={ __( 'Texte manuscrit avant les destinations qui défilent (ex. « d’ici »). Laissez vide pour masquer la ligne.', 'adaptours' ) }
+						/>
+						<TextareaControl
+							label={ __( 'Destinations qui défilent (une par ligne)', 'adaptours' ) }
+							value={ attributes.rotator_words }
+							onChange={ ( v ) => setAttributes( { rotator_words: v } ) }
+							help={ __( 'La première s’affiche, les suivantes défilent en boucle (ex. « jusqu’à Bali », « jusqu’au Kenya »). Laissez une seule ligne pour ne rien faire défiler.', 'adaptours' ) }
 						/>
 					</PanelBody>
 					<PanelBody title={ __( 'Introduction', 'adaptours' ) }>
@@ -75,6 +114,19 @@ registerBlockType( metadata.name, {
 							onChange={ ( v ) => setAttributes( { cta_secondary_url: v } ) }
 							help={ __( 'Laissez vide pour pointer vers la liste des destinations.', 'adaptours' ) }
 						/>
+					</PanelBody>
+					<PanelBody title={ __( 'Vignettes (collage)', 'adaptours' ) } initialOpen={ false }>
+						<p style={ { marginTop: 0 } }>
+							{ __( 'Les 4 photos du collage décoratif autour du titre. Affichées sur grand écran uniquement ; laissées vides, un fond de remplacement s’affiche.', 'adaptours' ) }
+						</p>
+						{ [ 1, 2, 3, 4 ].map( ( n ) => (
+							<PolaroidControl
+								key={ n }
+								index={ n }
+								value={ attributes[ `polaroid_${ n }` ] }
+								onChange={ ( id ) => setAttributes( { [ `polaroid_${ n }` ]: id } ) }
+							/>
+						) ) }
 					</PanelBody>
 				</InspectorControls>
 

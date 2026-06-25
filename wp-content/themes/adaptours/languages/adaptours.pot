@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-23T13:31:38+00:00\n"
+"POT-Creation-Date: 2026-06-25T08:39:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: adaptours\n"
@@ -291,7 +291,7 @@ msgid "Ville"
 msgstr ""
 
 #: inc/acf-config.php:68
-#: inc/helpers.php:276
+#: inc/helpers.php:301
 msgid "Durée"
 msgstr ""
 
@@ -350,7 +350,7 @@ msgid "Affiché sous la durée (ex. : 9 nuits sur place)."
 msgstr ""
 
 #: inc/acf-config.php:137
-#: inc/helpers.php:281
+#: inc/helpers.php:306
 msgid "Période idéale"
 msgstr ""
 
@@ -383,7 +383,7 @@ msgid "Taille de groupe maximum (ex. : 6)."
 msgstr ""
 
 #: inc/acf-config.php:169
-#: inc/helpers.php:291
+#: inc/helpers.php:316
 msgid "Temps de vol moyen"
 msgstr ""
 
@@ -408,7 +408,7 @@ msgid "Distance à vol d’oiseau, en kilomètres (ex. : 11868). Affichée sous 
 msgstr ""
 
 #: inc/acf-config.php:196
-#: inc/helpers.php:355
+#: inc/helpers.php:380
 #: inc/icons.php:23
 #: blocks/practical-card/index.js:24
 msgid "Décalage horaire"
@@ -419,7 +419,7 @@ msgid "Affiché dans la bande sous la carte (ex. : +6h en été)."
 msgstr ""
 
 #: inc/acf-config.php:203
-#: inc/helpers.php:359
+#: inc/helpers.php:384
 msgid "Visa"
 msgstr ""
 
@@ -428,7 +428,7 @@ msgid "Formalités d’entrée, en quelques mots (ex. : Sur place 35€)."
 msgstr ""
 
 #: inc/acf-config.php:210
-#: inc/helpers.php:363
+#: inc/helpers.php:388
 #: inc/icons.php:27
 #: blocks/practical-card/index.js:28
 msgid "Monnaie"
@@ -540,7 +540,7 @@ msgid "Contenu de l’avis"
 msgstr ""
 
 #: inc/acf-config.php:391
-#: inc/devis.php:181
+#: inc/devis.php:211
 msgid "Nom du voyageur"
 msgstr ""
 
@@ -657,129 +657,129 @@ msgstr ""
 msgid "« %s »"
 msgstr ""
 
-#: inc/blocks.php:127
+#: inc/blocks.php:135
 msgid "voyageurs accompagnés"
 msgstr ""
 
-#: inc/blocks.php:129
+#: inc/blocks.php:137
 msgid "personnes dans l’équipe"
 msgstr ""
 
-#: inc/blocks.php:131
+#: inc/blocks.php:139
 msgid "partenaires sur place"
 msgstr ""
 
-#: inc/blocks.php:133
+#: inc/blocks.php:141
 msgid "langues parlées au bureau"
 msgstr ""
 
-#: inc/blocks.php:135
+#: inc/blocks.php:143
 msgid "ans à dire oui"
 msgstr ""
 
-#: inc/cf7.php:60
+#: inc/cf7.php:194
 msgid "En savoir plus"
 msgstr ""
 
-#: inc/cf7.php:66
+#: inc/cf7.php:200
 msgid "Nom et prénom"
 msgstr ""
 
-#: inc/cf7.php:67
-#: inc/devis.php:175
+#: inc/cf7.php:201
+#: inc/devis.php:205
 msgid "Caroline Martin"
 msgstr ""
 
-#: inc/cf7.php:70
-#: inc/devis.php:358
+#: inc/cf7.php:204
+#: inc/devis.php:388
 msgid "E-mail"
 msgstr ""
 
-#: inc/cf7.php:71
-#: inc/devis.php:202
+#: inc/cf7.php:205
+#: inc/devis.php:232
 msgid "caroline@exemple.fr"
 msgstr ""
 
-#: inc/cf7.php:75
+#: inc/cf7.php:209
 msgid "Sujet"
 msgstr ""
 
-#: inc/cf7.php:76
+#: inc/cf7.php:210
 msgid "Une question générale"
 msgstr ""
 
-#: inc/cf7.php:76
+#: inc/cf7.php:210
 msgid "Demande de devis"
 msgstr ""
 
-#: inc/cf7.php:76
+#: inc/cf7.php:210
 msgid "Partenariat"
 msgstr ""
 
-#: inc/cf7.php:76
-#: inc/devis.php:405
+#: inc/cf7.php:210
+#: inc/devis.php:435
 msgid "Autre"
 msgstr ""
 
-#: inc/cf7.php:79
+#: inc/cf7.php:213
 msgid "Message"
 msgstr ""
 
-#: inc/cf7.php:80
+#: inc/cf7.php:214
 msgid "Dites-nous tout en quelques lignes…"
 msgstr ""
 
-#: inc/cf7.php:83
+#: inc/cf7.php:217
 msgid "J’accepte que mes informations soient utilisées pour me répondre."
 msgstr ""
 
-#: inc/cf7.php:84
+#: inc/cf7.php:218
 msgid "Envoyer"
 msgstr ""
 
-#: inc/cf7.php:87
+#: inc/cf7.php:221
 msgid "Sujet : [contact-sujet]"
 msgstr ""
 
-#: inc/cf7.php:88
+#: inc/cf7.php:222
 msgid "Nom : [contact-nom]"
 msgstr ""
 
-#: inc/cf7.php:89
+#: inc/cf7.php:223
 msgid "E-mail : [contact-email]"
 msgstr ""
 
-#: inc/cf7.php:90
+#: inc/cf7.php:224
 msgid "Message :"
 msgstr ""
 
-#: inc/cf7.php:93
+#: inc/cf7.php:227
 msgid "[Contact] [contact-sujet] — [contact-nom]"
 msgstr ""
 
-#: inc/cf7.php:103
+#: inc/cf7.php:237
 msgid "Bonjour [contact-nom],"
 msgstr ""
 
-#: inc/cf7.php:104
+#: inc/cf7.php:238
 msgid "Merci de nous avoir écrit. Nous avons bien reçu votre message et vous répondrons personnellement, généralement dans la journée."
 msgstr ""
 
-#: inc/cf7.php:105
-#: inc/devis.php:109
+#: inc/cf7.php:239
+#: inc/devis.php:134
 msgid "À très vite,"
 msgstr ""
 
-#: inc/cf7.php:105
-#: inc/devis.php:109
+#: inc/cf7.php:239
+#: inc/devis.php:134
 msgid "L’équipe Adaptours"
 msgstr ""
 
-#: inc/cf7.php:109
+#: inc/cf7.php:243
 msgid "Nous avons bien reçu votre message — Adaptours"
 msgstr ""
 
-#: inc/cf7.php:128
+#: inc/cf7.php:262
 msgid "Contact (FR)"
 msgstr ""
 
@@ -921,8 +921,8 @@ msgid "Particulier"
 msgstr ""
 
 #: inc/devis.php:67
-#: inc/devis.php:186
-#: inc/devis.php:351
+#: inc/devis.php:216
+#: inc/devis.php:381
 msgid "Agence / revendeur"
 msgstr ""
 
@@ -930,347 +930,347 @@ msgstr ""
 msgid "Partenaire (asso, MDPH…)"
 msgstr ""
 
-#: inc/devis.php:89
+#: inc/devis.php:114
 msgid "politique de confidentialité"
 msgstr ""
 
-#: inc/devis.php:96
+#: inc/devis.php:121
 msgid "[Devis] [devis-destination] — [devis-nom-prenom][devis-nom-client]"
 msgstr ""
 
-#: inc/devis.php:106
+#: inc/devis.php:131
 msgid "Bonjour [devis-nom-prenom][devis-nom-client],"
 msgstr ""
 
-#: inc/devis.php:107
+#: inc/devis.php:132
 msgid "Merci pour votre demande de devis concernant : [devis-destination]."
 msgstr ""
 
-#: inc/devis.php:108
+#: inc/devis.php:133
 msgid "Nous avons bien reçu toutes vos informations et revenons vers vous sous 48 h ouvrées avec une proposition sur mesure."
 msgstr ""
 
-#: inc/devis.php:113
+#: inc/devis.php:138
 msgid "Votre demande de devis Adaptours — bien reçue"
 msgstr ""
 
-#: inc/devis.php:130
+#: inc/devis.php:155
 msgid "Merci ! Votre demande est arrivée. On revient vers vous sous 48 h ouvrées avec un devis sur mesure."
 msgstr ""
 
-#: inc/devis.php:133
+#: inc/devis.php:158
 msgid "Devis (FR)"
 msgstr ""
 
-#: inc/devis.php:168
-#: inc/devis.php:349
+#: inc/devis.php:198
+#: inc/devis.php:379
 msgid "Vous êtes"
 msgstr ""
 
-#: inc/devis.php:174
+#: inc/devis.php:204
 msgid "Votre nom et prénom"
 msgstr ""
 
-#: inc/devis.php:180
+#: inc/devis.php:210
 msgid "Nom du client"
 msgstr ""
 
-#: inc/devis.php:187
+#: inc/devis.php:217
 msgid "Nom de l’agence"
 msgstr ""
 
-#: inc/devis.php:192
-#: inc/devis.php:352
+#: inc/devis.php:222
+#: inc/devis.php:382
 msgid "Structure partenaire"
 msgstr ""
 
-#: inc/devis.php:193
+#: inc/devis.php:223
 msgid "Association, MDPH…"
 msgstr ""
 
-#: inc/devis.php:199
+#: inc/devis.php:229
 msgid "Vos coordonnées"
 msgstr ""
 
-#: inc/devis.php:201
+#: inc/devis.php:231
 msgid "Adresse e-mail"
 msgstr ""
 
-#: inc/devis.php:206
-#: inc/devis.php:359
+#: inc/devis.php:236
+#: inc/devis.php:389
 msgid "Portable"
 msgstr ""
 
-#: inc/devis.php:207
+#: inc/devis.php:237
 msgid "06 12 34 56 78"
 msgstr ""
 
-#: inc/devis.php:210
-#: inc/devis.php:360
+#: inc/devis.php:240
+#: inc/devis.php:390
 msgid "Téléphone fixe"
 msgstr ""
 
-#: inc/devis.php:210
-#: inc/devis.php:315
+#: inc/devis.php:240
+#: inc/devis.php:345
 msgid "facultatif"
 msgstr ""
 
-#: inc/devis.php:211
+#: inc/devis.php:241
 msgid "04 12 34 56 78"
 msgstr ""
 
-#: inc/devis.php:217
+#: inc/devis.php:247
 msgid "Votre voyage"
 msgstr ""
 
-#: inc/devis.php:219
+#: inc/devis.php:249
 msgid "Destination choisie"
 msgstr ""
 
-#: inc/devis.php:220
-#: inc/devis.php:513
+#: inc/devis.php:250
+#: inc/devis.php:543
 msgid "— Choisir une destination —"
 msgstr ""
 
-#: inc/devis.php:223
-#: inc/devis.php:367
+#: inc/devis.php:253
+#: inc/devis.php:397
 msgid "Vol et transport"
 msgstr ""
 
-#: inc/devis.php:225
+#: inc/devis.php:255
 msgid "Avion"
 msgstr ""
 
-#: inc/devis.php:225
+#: inc/devis.php:255
 msgid "Train"
 msgstr ""
 
-#: inc/devis.php:225
+#: inc/devis.php:255
 msgid "Voiture"
 msgstr ""
 
-#: inc/devis.php:225
+#: inc/devis.php:255
 msgid "À voir ensemble"
 msgstr ""
 
-#: inc/devis.php:230
-#: inc/devis.php:368
+#: inc/devis.php:260
+#: inc/devis.php:398
 msgid "Ville de départ"
 msgstr ""
 
-#: inc/devis.php:231
+#: inc/devis.php:261
 msgid "ex. Lyon"
 msgstr ""
 
-#: inc/devis.php:234
+#: inc/devis.php:264
 msgid "Dates ou période souhaitée"
 msgstr ""
 
-#: inc/devis.php:235
+#: inc/devis.php:265
 msgid "ex. 12 → 22 mars"
 msgstr ""
 
-#: inc/devis.php:241
+#: inc/devis.php:271
 msgid "Les voyageurs"
 msgstr ""
 
-#: inc/devis.php:243
+#: inc/devis.php:273
 msgid "Nombre total de personnes"
 msgstr ""
 
-#: inc/devis.php:247
-#: inc/devis.php:376
+#: inc/devis.php:277
+#: inc/devis.php:406
 msgid "Dont enfants"
 msgstr ""
 
-#: inc/devis.php:247
+#: inc/devis.php:277
 msgid "Moins de 18 ans"
 msgstr ""
 
-#: inc/devis.php:251
+#: inc/devis.php:281
 msgid "Budget par personne"
 msgstr ""
 
-#: inc/devis.php:251
+#: inc/devis.php:281
 msgid "indicatif"
 msgstr ""
 
-#: inc/devis.php:252
+#: inc/devis.php:282
 msgid "ex. 2 500 €"
 msgstr ""
 
-#: inc/devis.php:257
-#: inc/devis.php:381
+#: inc/devis.php:287
+#: inc/devis.php:411
 msgid "Mobilité"
 msgstr ""
 
-#: inc/devis.php:259
+#: inc/devis.php:289
 msgid "Fauteuils roulants manuels"
 msgstr ""
 
-#: inc/devis.php:263
+#: inc/devis.php:293
 msgid "Fauteuils roulants électriques"
 msgstr ""
 
-#: inc/devis.php:267
+#: inc/devis.php:297
 msgid "Véhicule adapté (avec rampe) sur place"
 msgstr ""
 
-#: inc/devis.php:269
+#: inc/devis.php:299
 msgid "Indispensable"
 msgstr ""
 
-#: inc/devis.php:269
-#: inc/devis.php:295
-#: inc/devis.php:301
-#: inc/devis.php:307
+#: inc/devis.php:299
+#: inc/devis.php:325
+#: inc/devis.php:331
+#: inc/devis.php:337
 msgid "Non"
 msgstr ""
 
-#: inc/devis.php:269
+#: inc/devis.php:299
 msgid "À voir"
 msgstr ""
 
-#: inc/devis.php:275
-#: inc/devis.php:389
+#: inc/devis.php:305
+#: inc/devis.php:419
 msgid "Matériel sur place"
 msgstr ""
 
-#: inc/devis.php:277
-#: inc/devis.php:391
+#: inc/devis.php:307
+#: inc/devis.php:421
 msgid "Sièges de douche"
 msgstr ""
 
-#: inc/devis.php:281
-#: inc/devis.php:392
+#: inc/devis.php:311
+#: inc/devis.php:422
 msgid "Lits médicalisés"
 msgstr ""
 
-#: inc/devis.php:285
-#: inc/devis.php:393
+#: inc/devis.php:315
+#: inc/devis.php:423
 msgid "Lève-personnes"
 msgstr ""
 
-#: inc/devis.php:291
-#: inc/devis.php:397
+#: inc/devis.php:321
+#: inc/devis.php:427
 msgid "Accompagnement & soins"
 msgstr ""
 
-#: inc/devis.php:293
+#: inc/devis.php:323
 msgid "Accompagnateur fourni par Adaptours"
 msgstr ""
 
-#: inc/devis.php:293
+#: inc/devis.php:323
 msgid "Un membre de notre équipe vous accompagne sur tout le séjour."
 msgstr ""
 
-#: inc/devis.php:295
-#: inc/devis.php:301
-#: inc/devis.php:307
+#: inc/devis.php:325
+#: inc/devis.php:331
+#: inc/devis.php:337
 msgid "Oui"
 msgstr ""
 
-#: inc/devis.php:299
-#: inc/devis.php:400
+#: inc/devis.php:329
+#: inc/devis.php:430
 msgid "Soins d’auxiliaire de vie"
 msgstr ""
 
-#: inc/devis.php:305
-#: inc/devis.php:401
+#: inc/devis.php:335
+#: inc/devis.php:431
 msgid "Soins infirmiers"
 msgstr ""
 
-#: inc/devis.php:313
+#: inc/devis.php:343
 msgid "Autre chose ?"
 msgstr ""
 
-#: inc/devis.php:315
+#: inc/devis.php:345
 msgid "Besoins spécifiques ou demandes particulières"
 msgstr ""
 
-#: inc/devis.php:316
+#: inc/devis.php:346
 msgid "Allergie, anniversaire à fêter sur place, peur, rêve précis…"
 msgstr ""
 
 #. translators: %s: lien vers la politique de confidentialité.
-#: inc/devis.php:324
+#: inc/devis.php:354
 #, php-format
 msgid "J’accepte que mes données soient utilisées pour traiter ma demande de devis. Voir notre %s."
 msgstr ""
 
-#: inc/devis.php:328
+#: inc/devis.php:358
 msgid "Envoyer ma demande →"
 msgstr ""
 
-#: inc/devis.php:329
+#: inc/devis.php:359
 msgid "Réponse sous 48 h ouvrées · sans engagement"
 msgstr ""
 
-#: inc/devis.php:347
+#: inc/devis.php:377
 msgid "Profil"
 msgstr ""
 
-#: inc/devis.php:350
+#: inc/devis.php:380
 #: blocks/founder-story/index.js:96
 #: blocks/team-grid-member/index.js:57
 msgid "Nom"
 msgstr ""
 
-#: inc/devis.php:356
+#: inc/devis.php:386
 #: inc/options.php:37
 msgid "Coordonnées"
 msgstr ""
 
-#: inc/devis.php:364
+#: inc/devis.php:394
 msgid "Voyage"
 msgstr ""
 
-#: inc/devis.php:366
+#: inc/devis.php:396
 msgid "Destination"
 msgstr ""
 
-#: inc/devis.php:369
+#: inc/devis.php:399
 msgid "Dates / période"
 msgstr ""
 
-#: inc/devis.php:373
-#: inc/helpers.php:286
+#: inc/devis.php:403
+#: inc/helpers.php:311
 msgid "Voyageurs"
 msgstr ""
 
-#: inc/devis.php:375
+#: inc/devis.php:405
 msgid "Nombre total"
 msgstr ""
 
-#: inc/devis.php:377
+#: inc/devis.php:407
 msgid "Budget / personne"
 msgstr ""
 
-#: inc/devis.php:383
+#: inc/devis.php:413
 msgid "Fauteuils manuels"
 msgstr ""
 
-#: inc/devis.php:384
+#: inc/devis.php:414
 msgid "Fauteuils électriques"
 msgstr ""
 
-#: inc/devis.php:385
+#: inc/devis.php:415
 msgid "Véhicule adapté sur place"
 msgstr ""
 
-#: inc/devis.php:399
+#: inc/devis.php:429
 msgid "Accompagnateur Adaptours"
 msgstr ""
 
-#: inc/devis.php:407
+#: inc/devis.php:437
 msgid "Besoins / demandes"
 msgstr ""
 
-#: inc/devis.php:413
+#: inc/devis.php:443
 msgid "Nouvelle demande de devis"
 msgstr ""
 
-#: inc/devis.php:519
+#: inc/devis.php:549
 msgid "Sur-mesure / je ne sais pas encore"
 msgstr ""
 
@@ -1292,38 +1292,38 @@ msgid "Tout retirer"
 msgstr ""
 
 #. translators: %d: nombre de nuits sur place.
-#: inc/helpers.php:261
+#: inc/helpers.php:286
 #, php-format
 msgid "%d nuit sur place"
 msgid_plural "%d nuits sur place"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/helpers.php:288
+#: inc/helpers.php:313
 msgid "en petit comité"
 msgstr ""
 
-#: inc/helpers.php:318
+#: inc/helpers.php:343
 msgid "/ personne"
 msgstr ""
 
-#: inc/helpers.php:320
-#: parts/header.php:75
+#: inc/helpers.php:345
+#: parts/header.php:63
 msgid "Demander un devis"
 msgstr ""
 
-#: inc/helpers.php:350
+#: inc/helpers.php:375
 msgid "km à vol d’oiseau"
 msgstr ""
 
-#: inc/helpers.php:367
+#: inc/helpers.php:392
 #: inc/icons.php:26
 #: blocks/practical-card/index.js:27
 msgid "Langue"
 msgstr ""
 
 #. translators: %d: note de 1 à 5.
-#: inc/helpers.php:570
+#: inc/helpers.php:595
 #, php-format
 msgid "Note : %d sur 5"
 msgstr ""
@@ -1818,6 +1818,12 @@ msgstr ""
 
 #: template-parts/card-destination.php:104
 msgid "/ pers"
+msgstr ""
+
+#. translators: %s: nom de la langue active.
+#: template-parts/language-switcher.php:66
+#, php-format
+msgid "Choisir la langue — actuelle : %s"
 msgstr ""
 
 #. Template Name of the theme

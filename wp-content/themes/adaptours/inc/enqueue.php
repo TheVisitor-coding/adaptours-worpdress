@@ -137,6 +137,31 @@ function adaptours_enqueue_devis_form() {
 add_action( 'wp_enqueue_scripts', 'adaptours_enqueue_devis_form' );
 
 /**
+ * Charge le rotator du hero d'accueil, uniquement si le bloc hero-home est présent.
+ */
+function adaptours_enqueue_hero_home() {
+	if ( ! has_block( 'adaptours/hero-home' ) ) {
+		return;
+	}
+
+	$js      = '/assets/js/hero-home.js';
+	$js_path = ADAPTOURS_DIR . $js;
+
+	if ( ! file_exists( $js_path ) ) {
+		return;
+	}
+
+	wp_enqueue_script(
+		'adaptours-hero-home',
+		ADAPTOURS_URI . $js,
+		array(),
+		(string) filemtime( $js_path ),
+		true // in_footer
+	);
+}
+add_action( 'wp_enqueue_scripts', 'adaptours_enqueue_hero_home' );
+
+/**
  * Charge les styles globaux (main.css) côté éditeur de blocs.
  *
  * Les blocs à rendu serveur (ServerSideRender) réutilisent des composants partagés stylés

@@ -18,6 +18,19 @@ $part_2      = (string) ( $attributes['title_part_2'] ?? '' );
 $script_line = (string) ( $attributes['title_script'] ?? '' );
 $description = (string) ( $attributes['description'] ?? '' );
 
+$rotator_words = array();
+$rotator_raw   = (string) ( $attributes['rotator_words'] ?? '' );
+if ( '' !== trim( $rotator_raw ) ) {
+	$rotator_words = array_values(
+		array_filter(
+			array_map( 'trim', preg_split( '/\r\n|\r|\n/', $rotator_raw ) ),
+			static function ( $word ) {
+				return '' !== $word;
+			}
+		)
+	);
+}
+
 $cta_primary_label   = (string) ( $attributes['cta_primary_label'] ?? '' );
 $cta_primary_url     = (string) ( $attributes['cta_primary_url'] ?? '' );
 $cta_secondary_label = (string) ( $attributes['cta_secondary_label'] ?? '' );
@@ -56,10 +69,41 @@ $wrapper = get_block_wrapper_attributes( array( 'class' => 'hero-home' ) );
 ?>
 <section <?php echo $wrapper; // phpcs:ignore WordPress.Security.EscapeOutput ?>>
 	<div class="hero-home__decor" aria-hidden="true">
-		<span class="hero-home__polaroid hero-home__polaroid--1"></span>
-		<span class="hero-home__polaroid hero-home__polaroid--2"></span>
-		<span class="hero-home__polaroid hero-home__polaroid--3"></span>
-		<span class="hero-home__polaroid hero-home__polaroid--4"></span>
+		<?php
+		for ( $i = 1; $i <= 4; $i++ ) :
+			$polaroid_id = (int) ( $attributes[ "polaroid_{$i}" ] ?? 0 );
+			$empty_class = $polaroid_id > 0 ? '' : ' hero-home__polaroid--empty';
+			?>
+			<span class="hero-home__polaroid hero-home__polaroid--<?php echo (int) $i . esc_attr( $empty_class ); ?>">
+				<?php
+				if ( $polaroid_id > 0 ) {
+					echo wp_get_attachment_image(
+						$polaroid_id,
+						'medium_large',
+						false,
+						array(
+							'class' => 'hero-home__polaroid-img',
+							'alt'   => '', // collage décoratif (conteneur aria-hidden)
+						)
+					);
+				}
+				?>
+				<span class="hero-home__polaroid-tape"></span>
+			</span>
+		<?php endfor; ?>
+
+		<?php
+		$hero_doodles = array( 'sun', 'coconut', 'chevron' );
+		foreach ( $hero_doodles as $doodle ) :
+			?>
+			<img
+				class="hero-home__doodle hero-home__doodle--<?php echo esc_attr( $doodle ); ?>"
+				src="<?php echo esc_url( get_theme_file_uri( "assets/decor/hero-{$doodle}.svg" ) ); ?>"
+				alt=""
+				aria-hidden="true"
+				decoding="async"
+			>
+		<?php endforeach; ?>
 	</div>
 
 	<div class="hero-home__inner">
@@ -74,8 +118,13 @@ $wrapper = get_block_wrapper_attributes( array( 'class' => 'hero-home' ) );
 						<?php echo adaptours_bichrome( trim( $part_1 . ' ' . $part_2 ), $part_2 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 					</span>
 				<?php endif; ?>
-				<?php if ( '' !== trim( $script_line ) ) : ?>
-					<span class="hero-home__title-script"><?php echo esc_html( $script_line ); ?></span>
+				<?php if ( '' !== trim( $script_line ) || ! empty( $rotator_words ) ) : ?>
+					<span class="hero-home__title-script">
+						<?php echo esc_html( $script_line ); ?>
+						<?php if ( ! empty( $rotator_words ) ) : ?>
+							<span class="hero-home__rotator" data-rotator="<?php echo esc_attr( wp_json_encode( $rotator_words ) ); ?>"><span class="hero-home__rotator-word"><?php echo esc_html( $rotator_words[0] ); ?></span></span>
+						<?php endif; ?>
+					</span>
 				<?php endif; ?>
 			</h1>
 		<?php endif; ?>

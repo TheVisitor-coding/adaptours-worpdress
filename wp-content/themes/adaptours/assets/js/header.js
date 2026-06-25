@@ -2,10 +2,12 @@
  * Header du site — interactions front.
  *
  * Vanilla, sans dépendance ni build (fichier statique enqueué par inc/enqueue.php).
- * Deux responsabilités :
+ * Trois responsabilités :
  *   1. Burger mobile : ouverture/fermeture du drawer (aria-expanded + classe body),
  *      fermeture par Échap ou clic hors-zone.
- *   2. Variante transparente (single-destination) : si <body> porte
+ *   2. Sélecteur de langue : ouverture/fermeture du dropdown (aria-expanded + classe
+ *      .site-header__lang--open), fermeture par Échap ou clic hors-zone.
+ *   3. Variante transparente (single-destination) : si <body> porte
  *      .has-transparent-header, bascule .site-header--solid au scroll
  *      (IntersectionObserver sur le hero, repli sur scrollY). No-op sinon.
  */
@@ -50,7 +52,39 @@
 		} );
 	}
 
-	// 2. Variante transparente (single-destination)
+	// 2. Sélecteur de langue (dropdown)
+	var langSwitcher = header.querySelector( '[data-lang-switcher]' );
+	var langToggle = langSwitcher && langSwitcher.querySelector( '.site-header__lang-toggle' );
+
+	if ( langSwitcher && langToggle ) {
+		var closeLang = function () {
+			langToggle.setAttribute( 'aria-expanded', 'false' );
+			langSwitcher.classList.remove( 'site-header__lang--open' );
+		};
+
+		langToggle.addEventListener( 'click', function () {
+			var isOpen = langToggle.getAttribute( 'aria-expanded' ) === 'true';
+			langToggle.setAttribute( 'aria-expanded', String( ! isOpen ) );
+			langSwitcher.classList.toggle( 'site-header__lang--open', ! isOpen );
+		} );
+
+		document.addEventListener( 'keydown', function ( event ) {
+			if ( 'Escape' === event.key ) {
+				closeLang();
+			}
+		} );
+
+		document.addEventListener( 'click', function ( event ) {
+			if (
+				langSwitcher.classList.contains( 'site-header__lang--open' ) &&
+				! langSwitcher.contains( event.target )
+			) {
+				closeLang();
+			}
+		} );
+	}
+
+	// 3. Variante transparente (single-destination)
 	if ( ! document.body.classList.contains( 'has-transparent-header' ) ) {
 		return;
 	}

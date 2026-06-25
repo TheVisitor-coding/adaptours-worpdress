@@ -57,19 +57,7 @@ $devis_url = adaptours_get_option( 'url_devis', home_url( '/devis' ) );
 			</nav>
 
 			<div class="site-header__actions">
-				<?php if ( function_exists( 'pll_the_languages' ) ) : ?>
-					<div class="site-header__lang">
-						<?php
-						pll_the_languages(
-							array(
-								'dropdown'   => 0,
-								'show_flags' => 1,
-								'show_names' => 1,
-							)
-						);
-						?>
-					</div>
-				<?php endif; ?>
+				<?php get_template_part( 'template-parts/language-switcher' ); ?>
 
 				<a class="button button--primary site-header__cta" href="<?php echo esc_url( $devis_url ); ?>">
 					<?php esc_html_e( 'Demander un devis', 'adaptours' ); ?>

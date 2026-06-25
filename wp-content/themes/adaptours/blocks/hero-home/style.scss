@@ -11,11 +11,12 @@
 	overflow: hidden;
 	padding-block: var(--wp--preset--spacing--80);
 	padding-inline: var(--wp--custom--content--gutter);
-	background: linear-gradient(
-		110deg,
-		var(--wp--preset--color--surface-alt) 0%,
-		var(--wp--preset--color--highlight-soft) 100%
-	);
+	background:
+		repeating-radial-gradient(circle at 30% 20%, rgba(27, 29, 42, 0.012) 0 1px, transparent 1px 3px),
+		repeating-radial-gradient(circle at 70% 80%, rgba(27, 29, 42, 0.018) 0 1px, transparent 1px 4px),
+		radial-gradient(60% 55% at 85% 12%, rgba(232, 119, 95, 0.3) 0%, rgba(232, 119, 95, 0) 60%),
+		radial-gradient(62% 62% at 12% 92%, rgba(138, 180, 202, 0.22) 0%, rgba(138, 180, 202, 0) 62%),
+		linear-gradient(110deg, var(--wp--preset--color--surface-alt) 0%, var(--wp--preset--color--highlight-soft) 100%);
 
 	// Contenu centré
 	&__inner {
@@ -28,6 +29,12 @@
 		max-width: 50rem;
 		text-align: center;
 	}
+
+	&__eyebrow { animation: hero-rise 0.6s ease both 0.05s; }
+	&__title   { animation: hero-rise 0.6s ease both 0.15s; }
+	&__desc    { animation: hero-rise 0.6s ease both 0.3s; }
+	&__cta     { animation: hero-rise 0.6s ease both 0.45s; }
+	&__trust   { animation: hero-rise 0.6s ease both 0.55s; }
 
 	// Surtitre + filets latéraux
 	&__eyebrow {
@@ -80,6 +87,17 @@
 		line-height: 1.2;
 		font-size: clamp(1.75rem, 3.2vw, 3rem);
 		color: var(--wp--preset--color--ink);
+	}
+
+	&__rotator {
+		display: inline-block;
+		white-space: nowrap;
+		transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+	}
+
+	&__rotator-word {
+		display: inline-block;
+		will-change: opacity, transform;
 	}
 
 	// Description
@@ -142,9 +160,7 @@
 		}
 	}
 
-	// Collage décoratif (polaroïds)
-	// Cadres placeholder : la cliente fournira les photos (background-image).
-	// Décoratif → masqué ≤ tablette.
+	// Collage décoratif (polaroïds éditables + doodles). Décoratif → masqué ≤ tablette.
 	&__decor {
 		position: absolute;
 		inset: 0;
@@ -157,23 +173,65 @@
 		display: block;
 		border: 6px solid var(--wp--preset--color--surface);
 		border-radius: 2px;
-		background:
-			linear-gradient(
-				135deg,
-				color-mix(in srgb, var(--wp--preset--color--highlight) 22%, var(--wp--preset--color--surface)) 0%,
-				color-mix(in srgb, var(--wp--preset--color--ink) 12%, var(--wp--preset--color--surface)) 100%
-			);
+		background-color: var(--wp--preset--color--surface-alt);
 		box-shadow: 0 4px 12px rgba(27, 29, 42, 0.08), 0 24px 60px rgba(27, 29, 42, 0.18);
 
-		&--1 { top: 8%; left: 3%; width: 11.25rem; height: 13.125rem; transform: rotate(-5deg); }
-		&--2 { top: 6%; right: 3%; width: 13.125rem; height: 10rem; transform: rotate(4deg); }
-		&--3 { top: 46%; left: 5%; width: 10.3125rem; height: 12.5rem; transform: rotate(3deg); }
-		&--4 { top: 44%; right: 4%; width: 12.25rem; height: 13.375rem; transform: rotate(-4deg); }
+		animation-name: hero-fade, hero-float;
+		animation-timing-function: ease, ease-in-out;
+		animation-iteration-count: 1, infinite;
+		animation-fill-mode: both, none;
+		animation-duration: 0.7s, 6.5s;
+
+		&--1 { top: 8%; left: 3%; width: 11.25rem; height: 13.125rem; rotate: -5deg; animation-delay: 0.2s, 0s; animation-duration: 0.7s, 6s; }
+		&--2 { top: 6%; right: 3%; width: 13.125rem; height: 10rem; rotate: 4deg; animation-delay: 0.3s, 0.8s; animation-duration: 0.7s, 7.2s; }
+		&--3 { top: 46%; left: 5%; width: 10.3125rem; height: 12.5rem; rotate: 3deg; animation-delay: 0.4s, 1.4s; animation-duration: 0.7s, 6.6s; }
+		&--4 { top: 44%; right: 4%; width: 12.25rem; height: 13.375rem; rotate: -4deg; animation-delay: 0.5s, 0.5s; animation-duration: 0.7s, 7.6s; }
+
+		&--empty {
+			background:
+				linear-gradient(
+					135deg,
+					color-mix(in srgb, var(--wp--preset--color--highlight) 22%, var(--wp--preset--color--surface)) 0%,
+					color-mix(in srgb, var(--wp--preset--color--ink) 12%, var(--wp--preset--color--surface)) 100%
+				);
+		}
 	}
 
-	// Responsive (desktop-first)
+	&__polaroid-img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: inherit;
+	}
+
+	&__polaroid-tape {
+		position: absolute;
+		top: -0.5rem;
+		left: 50%;
+		z-index: 1;
+		width: 2.8rem;
+		height: 1.05rem;
+		background: rgba(232, 119, 95, 0.55);
+		border-radius: 2px;
+		box-shadow: 0 2px 4px rgba(27, 29, 42, 0.15);
+		transform: translateX(-50%) rotate(-3deg);
+	}
+
+	&__doodle {
+		position: absolute;
+		z-index: 0;
+		height: auto;
+
+		&--sun     { top: 12%; left: 60%; width: 3.5rem; animation: hero-spin 26s linear infinite; }
+		&--coconut { top: 47%; right: 9%; width: 3.25rem; }
+		&--chevron { top: 33%; left: 7%; width: 3.75rem; }
+	}
+
 	@include bp(tablet) {
-		&__polaroid { display: none; } // collage masqué : place au contenu
+		&__polaroid,
+		&__doodle { display: none; }
 	}
 
 	@include bp(mobile) {
@@ -181,4 +239,45 @@
 
 		&__trust { gap: 0.5rem 1.25rem; }
 	}
+}
+
+@keyframes hero-spin {
+	to { transform: rotate(360deg); }
+}
+
+@keyframes hero-float {
+	0%, 100% { translate: 0 0; }
+	50% { translate: 0 -12px; }
+}
+
+@keyframes hero-rise {
+	from { opacity: 0; translate: 0 16px; }
+	to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes hero-fade {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@include reduced-motion {
+	.hero-home {
+		&__eyebrow,
+		&__title,
+		&__desc,
+		&__cta,
+		&__trust,
+		&__polaroid,
+		&__doodle--sun {
+			animation: none;
+			opacity: 1;
+			translate: 0;
+		}
+
+		&__rotator-word { transition: none; }
+	}
+}
+
+.editor-styles-wrapper .hero-home * {
+	animation: none !important;
 }

@@ -2096,3 +2096,7 @@ msgctxt "Space size name"
 msgid "4XL"
 msgstr "4XL"
 
+
+#, php-format
+msgid "Choisir la langue — actuelle : %s"
+msgstr "Choose language — current: %s"

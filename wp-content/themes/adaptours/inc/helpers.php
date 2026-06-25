@@ -134,6 +134,25 @@ function adaptours_icon_svg( $slug ) {
 }
 
 /**
+ * Rend le drapeau SVG inline d'une langue (sélecteur de langue du header).
+ *
+ * @param string $flag_code Code drapeau Polylang (sera assaini en [a-z]{2,3}).
+ * @return string SVG inline échappé, ou '' si introuvable.
+ */
+function adaptours_flag_svg( $flag_code ) {
+	$code = strtolower( preg_replace( '/[^a-z]/i', '', (string) $flag_code ) );
+	if ( '' === $code ) {
+		return '';
+	}
+	$path = ADAPTOURS_DIR . '/assets/flags/' . $code . '.svg';
+	if ( ! is_readable( $path ) ) {
+		return '';
+	}
+	$svg = (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	return wp_kses( $svg, adaptours_svg_allowed_tags() );
+}
+
+/**
  * Lit une méta de destination (ACF si actif, sinon post meta brute).
  *
  * Les champs ACF sont stockés en post meta sous leur `name` : la lecture via
