@@ -4,7 +4,8 @@
 		"https://downloads.wordpress.org/plugin/advanced-custom-fields.6.8.4.zip",
 		"https://downloads.wordpress.org/plugin/contact-form-7.zip",
 		"https://downloads.wordpress.org/plugin/cf7-conditional-fields.zip",
-		"https://downloads.wordpress.org/plugin/flamingo.zip"
+		"https://downloads.wordpress.org/plugin/flamingo.zip",
+		"https://downloads.wordpress.org/plugin/polylang.zip"
 	],
 	"config": {
 		"WP_DEBUG": true,

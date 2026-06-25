@@ -1,0 +1,2098 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Adaptours\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: adaptours\n"
+
+msgid "Adaptours"
+msgstr "Adaptours"
+
+msgid "https://adaptours.fr"
+msgstr "https://adaptours.fr"
+
+msgid "Thème custom Adaptours — blocs Gutenberg natifs, tokens design centralisés (theme.json), intégration desktop-first / WCAG 2.1 AA. Voir ARCHITECTURE.md."
+msgstr "Custom Adaptours theme — native Gutenberg blocks, centralized design tokens (theme.json), desktop-first integration / WCAG 2.1 AA. See ARCHITECTURE.md."
+
+msgid "Gulfstream Group"
+msgstr "Gulfstream Group"
+
+msgid "Rechercher une destination"
+msgstr "Search for a destination"
+
+msgid "Continent"
+msgstr "Continent"
+
+msgid "Budget"
+msgstr "Budget"
+
+msgid "Filtrer"
+msgstr "Filter"
+
+msgid "%s destination correspond"
+msgid_plural "%s destinations correspondent"
+msgstr[0] "%s destination matches"
+msgstr[1] "%s destinations match"
+
+msgid "— retirer ce filtre"
+msgstr "— remove this filter"
+
+msgid "Tout effacer"
+msgstr "Clear all"
+
+msgid "Aucune destination ne correspond à votre recherche."
+msgstr "No destination matches your search."
+
+msgid "Avis clients"
+msgstr "Customer reviews"
+
+msgid "%s avis"
+msgstr "%s reviews"
+
+msgid "Témoignage en avant"
+msgstr "Featured testimonial"
+
+msgid "PHOTO"
+msgstr "PHOTO"
+
+msgid "Adresse"
+msgstr "Address"
+
+msgid "Par téléphone"
+msgstr "By phone"
+
+msgid "Par e-mail"
+msgstr "By e-mail"
+
+msgid "Le formulaire de contact sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
+msgstr "The contact form will be available very soon. In the meantime, write to us directly by e-mail."
+
+msgid "Galerie"
+msgstr "Gallery"
+
+msgid "Photo de la galerie"
+msgstr "Gallery photo"
+
+msgid "Agrandir : %s"
+msgstr "Enlarge: %s"
+
+msgid "Voir la photo"
+msgstr "View the photo"
+
+msgid "dès %s"
+msgstr "from %s"
+
+msgid "Destinations suggérées"
+msgstr "Suggested destinations"
+
+msgid "Le formulaire de devis sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
+msgstr "The quote form will be available very soon. In the meantime, write to us directly by e-mail."
+
+msgid "Nous écrire"
+msgstr "Write to us"
+
+msgid "Réponse sous 48h"
+msgstr "Reply within 48h"
+
+msgid "Gratuit, sans engagement"
+msgstr "Free, no obligation"
+
+msgid "Données protégées"
+msgstr "Protected data"
+
+msgid "15 ans d’expérience"
+msgstr "15 years of experience"
+
+msgid "Hébergements vérifiés"
+msgstr "Verified accommodations"
+
+msgid "Matériel médical inclus"
+msgstr "Medical equipment included"
+
+msgid "100% sur mesure"
+msgstr "100% tailor-made"
+
+msgid "Jour"
+msgstr "Day"
+
+msgid "Programme du voyage"
+msgstr "Trip itinerary"
+
+msgid "Chiffres clés"
+msgstr "Key figures"
+
+msgid "Forme juridique"
+msgstr "Legal form"
+
+msgid "SIRET"
+msgstr "SIRET"
+
+msgid "NAF"
+msgstr "NAF"
+
+msgid "RCS"
+msgstr "RCS"
+
+msgid "TVA intracommunautaire"
+msgstr "Intra-community VAT"
+
+msgid "Atout France"
+msgstr "Atout France"
+
+msgid "Informations légales"
+msgstr "Legal information"
+
+msgid "Merci d’envoyer votre CV à"
+msgstr "Please send your CV to"
+
+msgid "Accessibilité"
+msgstr "Accessibility"
+
+msgid "Carte du voyage"
+msgstr "Trip map"
+
+msgid "Ce qu’il faut savoir"
+msgstr "What you need to know"
+
+msgid "L’humain d’abord"
+msgstr "People first"
+
+msgid "Un interlocuteur dédié du devis au retour."
+msgstr "A dedicated contact from quote to return."
+
+msgid "Vérifié sur le terrain"
+msgstr "Verified on the ground"
+
+msgid "Chaque hébergement testé par notre équipe."
+msgstr "Every accommodation tested by our team."
+
+msgid "Matériel inclus"
+msgstr "Equipment included"
+
+msgid "Fauteuil de plage, lève-personne, matériel médical."
+msgstr "Beach wheelchair, patient lift, medical equipment."
+
+msgid "Présents 24/7"
+msgstr "Available 24/7"
+
+msgid "Une équipe joignable, même à l’autre bout du monde."
+msgstr "A team you can reach, even on the other side of the world."
+
+msgid "Détails de la destination"
+msgstr "Destination details"
+
+msgid "Ville"
+msgstr "City"
+
+msgid "Durée"
+msgstr "Duration"
+
+msgid "Prix à partir de (€)"
+msgstr "Price from (€)"
+
+msgid "Montant numérique (sert au filtre budget de l’archive)."
+msgstr "Numeric amount (used by the budget filter on the archive)."
+
+msgid "Coup de cœur"
+msgstr "Our favorite"
+
+msgid "Avis mis en avant"
+msgstr "Featured review"
+
+msgid "Avis client à mettre en avant sur cette destination. Laissez vide pour ne rien afficher."
+msgstr "Customer review to feature on this destination. Leave empty to show nothing."
+
+msgid "Coordonnées GPS"
+msgstr "GPS coordinates"
+
+msgid "Affichées sous le titre, à côté de la ville (ex. : 8°25′S 115°11′E). Facultatif."
+msgstr "Shown under the title, next to the city (e.g. 8°25′S 115°11′E). Optional."
+
+msgid "Petite phrase manuscrite"
+msgstr "Short handwritten phrase"
+
+msgid "Courte phrase écrite à la main affichée près du titre (ex. : l’île qui s’adapte). Facultatif."
+msgstr "Short handwritten phrase shown near the title (e.g. the island that adapts). Optional."
+
+msgid "Phrase d’introduction"
+msgstr "Introduction sentence"
+
+msgid "Quelques lignes de présentation affichées sous le titre, en haut de la page."
+msgstr "A few introductory lines shown under the title, at the top of the page."
+
+msgid "Nombre de nuits sur place"
+msgstr "Number of nights on site"
+
+msgid "Affiché sous la durée (ex. : 9 nuits sur place)."
+msgstr "Shown under the duration (e.g. 9 nights on site)."
+
+msgid "Période idéale"
+msgstr "Best time to go"
+
+msgid "Meilleure période pour partir (ex. : Mai → Sep)."
+msgstr "Best time to travel (e.g. May → Sep)."
+
+msgid "Précision sur la saison"
+msgstr "Season detail"
+
+msgid "Petit complément affiché sous la période (ex. : saison sèche)."
+msgstr "Small note shown under the period (e.g. dry season)."
+
+msgid "Nombre de voyageurs (minimum)"
+msgstr "Number of travelers (minimum)"
+
+msgid "Taille de groupe minimum (ex. : 1)."
+msgstr "Minimum group size (e.g. 1)."
+
+msgid "Nombre de voyageurs (maximum)"
+msgstr "Number of travelers (maximum)"
+
+msgid "Taille de groupe maximum (ex. : 6)."
+msgstr "Maximum group size (e.g. 6)."
+
+msgid "Temps de vol moyen"
+msgstr "Average flight time"
+
+msgid "Durée de vol indicative (ex. : 2h)."
+msgstr "Indicative flight duration (e.g. 2h)."
+
+msgid "Carte de la destination"
+msgstr "Destination map"
+
+msgid "Image de la carte affichée dans le bloc « Carte du voyage ». Facultatif."
+msgstr "Map image shown in the “Trip map” block. Optional."
+
+msgid "Distance depuis Paris (km)"
+msgstr "Distance from Paris (km)"
+
+msgid "Distance à vol d’oiseau, en kilomètres (ex. : 11868). Affichée sous le texte de vol."
+msgstr "As-the-crow-flies distance, in kilometers (e.g. 11868). Shown under the flight text."
+
+msgid "Décalage horaire"
+msgstr "Time difference"
+
+msgid "Affiché dans la bande sous la carte (ex. : +6h en été)."
+msgstr "Shown in the bar under the map (e.g. +6h in summer)."
+
+msgid "Visa"
+msgstr "Visa"
+
+msgid "Formalités d’entrée, en quelques mots (ex. : Sur place 35€)."
+msgstr "Entry requirements, in a few words (e.g. On arrival €35)."
+
+msgid "Monnaie"
+msgstr "Currency"
+
+msgid "Nom de la monnaie locale (ex. : Rupiah)."
+msgstr "Name of the local currency (e.g. Rupiah)."
+
+msgid "Code de la monnaie"
+msgstr "Currency code"
+
+msgid "Code court de la monnaie (ex. : IDR). Facultatif."
+msgstr "Short currency code (e.g. IDR). Optional."
+
+msgid "Langue(s)"
+msgstr "Language(s)"
+
+msgid "Langue(s) parlée(s) sur place (ex. : Bahasa + anglais)."
+msgstr "Language(s) spoken locally (e.g. Bahasa + English)."
+
+msgid "Accessibilité — texte d’introduction"
+msgstr "Accessibility — introduction text"
+
+msgid "Quelques lignes affichées à gauche, à côté des cartes d’accessibilité."
+msgstr "A few lines shown on the left, next to the accessibility cards."
+
+msgid "Carte 1 — icône"
+msgstr "Card 1 — icon"
+
+msgid "Choisissez une icône pour cette carte."
+msgstr "Choose an icon for this card."
+
+msgid "Carte 1 — titre"
+msgstr "Card 1 — title"
+
+msgid "Titre court de la carte (ex. : Fauteuil roulant)."
+msgstr "Short card title (e.g. Wheelchair)."
+
+msgid "Carte 1 — description"
+msgstr "Card 1 — description"
+
+msgid "Une phrase de détail. Laissez les 3 champs de la carte vides pour la masquer."
+msgstr "A detail sentence. Leave the card’s 3 fields empty to hide it."
+
+msgid "Carte 2 — icône"
+msgstr "Card 2 — icon"
+
+msgid "Carte 2 — titre"
+msgstr "Card 2 — title"
+
+msgid "Carte 2 — description"
+msgstr "Card 2 — description"
+
+msgid "Carte 3 — icône"
+msgstr "Card 3 — icon"
+
+msgid "Carte 3 — titre"
+msgstr "Card 3 — title"
+
+msgid "Carte 3 — description"
+msgstr "Card 3 — description"
+
+msgid "Carte 4 — icône"
+msgstr "Card 4 — icon"
+
+msgid "Carte 4 — titre"
+msgstr "Card 4 — title"
+
+msgid "Carte 4 — description"
+msgstr "Card 4 — description"
+
+msgid "Jusqu’à 4 destinations affichées en bas de page (« Vous aimerez aussi »). Laissez vide pour ne rien afficher."
+msgstr "Up to 4 destinations shown at the bottom of the page (“You may also like”). Leave empty to show nothing."
+
+msgid "Contenu de l’avis"
+msgstr "Review content"
+
+msgid "Nom du voyageur"
+msgstr "Traveler name"
+
+msgid "Nom affiché sous l’avis (ex. : Claire M.)."
+msgstr "Name shown under the review (e.g. Claire M.)."
+
+msgid "Témoignage"
+msgstr "Testimonial"
+
+msgid "Le texte de l’avis."
+msgstr "The review text."
+
+msgid "Contexte"
+msgstr "Context"
+
+msgid "Petite précision affichée sous le nom (ex. : Voyage en famille)."
+msgstr "Small note shown under the name (e.g. Family trip)."
+
+msgid "Mois du voyage"
+msgstr "Month of travel"
+
+msgid "Mois et année du voyage."
+msgstr "Month and year of the trip."
+
+msgid "Note (sur 5)"
+msgstr "Rating (out of 5)"
+
+msgid "Note de 1 à 5 étoiles."
+msgstr "Rating from 1 to 5 stars."
+
+msgid "Destination liée"
+msgstr "Linked destination"
+
+msgid "Destination concernée par cet avis."
+msgstr "Destination this review relates to."
+
+msgid "Photo du voyageur"
+msgstr "Traveler photo"
+
+msgid "Photo du voyageur (facultatif)."
+msgstr "Traveler photo (optional)."
+
+msgid "Avis du mois"
+msgstr "Review of the month"
+
+msgid "Affiche cet avis comme « avis du mois » sur la page d’accueil."
+msgstr "Show this review as the “review of the month” on the homepage."
+
+msgid "Galerie Adaptours"
+msgstr "Adaptours gallery"
+
+msgid "Badge « jour »"
+msgstr "“Day” badge"
+
+msgid "Petit badge affiché sur la photo dans la galerie (ex. : Jour 2). Laissez vide pour ne rien afficher."
+msgstr "Small badge shown on the photo in the gallery (e.g. Day 2). Leave empty to show nothing."
+
+msgid "Moins de 2 000 €"
+msgstr "Under €2,000"
+
+msgid "2 000 – 3 000 €"
+msgstr "€2,000 – €3,000"
+
+msgid "Plus de 3 000 €"
+msgstr "Over €3,000"
+
+msgid "{n} voyages prêts à partir"
+msgstr "{n} trips ready to go"
+
+msgid "CATALOGUE"
+msgstr "CATALOG"
+
+msgid "Destinations"
+msgstr "Destinations"
+
+msgid "accessibles."
+msgstr "accessible."
+
+msgid "Toutes nos destinations sont repérées, testées et validées par notre équipe. Chaque fiche détaille les conditions d’accessibilité."
+msgstr "All our destinations are scouted, tested and validated by our team. Each page details the accessibility conditions."
+
+msgid "« %s »"
+msgstr "“%s”"
+
+msgid "voyageurs accompagnés"
+msgstr "travelers accompanied"
+
+msgid "personnes dans l’équipe"
+msgstr "people on the team"
+
+msgid "partenaires sur place"
+msgstr "local partners"
+
+msgid "langues parlées au bureau"
+msgstr "languages spoken at the office"
+
+msgid "ans à dire oui"
+msgstr "years of saying yes"
+
+msgid "En savoir plus"
+msgstr "Learn more"
+
+msgid "Nom et prénom"
+msgstr "Full name"
+
+msgid "Caroline Martin"
+msgstr "Caroline Martin"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "caroline@exemple.fr"
+msgstr "caroline@example.com"
+
+msgid "Sujet"
+msgstr "Subject"
+
+msgid "Une question générale"
+msgstr "A general question"
+
+msgid "Demande de devis"
+msgstr "Quote request"
+
+msgid "Partenariat"
+msgstr "Partnership"
+
+msgid "Autre"
+msgstr "Other"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Dites-nous tout en quelques lignes…"
+msgstr "Tell us everything in a few lines…"
+
+msgid "J’accepte que mes informations soient utilisées pour me répondre."
+msgstr "I agree that my information may be used to reply to me."
+
+msgid "Envoyer"
+msgstr "Send"
+
+msgid "Sujet : [contact-sujet]"
+msgstr "Subject: [contact-sujet]"
+
+msgid "Nom : [contact-nom]"
+msgstr "Name: [contact-nom]"
+
+msgid "E-mail : [contact-email]"
+msgstr "E-mail: [contact-email]"
+
+msgid "Message :"
+msgstr "Message:"
+
+msgid "[Contact] [contact-sujet] — [contact-nom]"
+msgstr "[Contact] [contact-sujet] — [contact-nom]"
+
+msgid "Bonjour [contact-nom],"
+msgstr "Hello [contact-nom],"
+
+msgid "Merci de nous avoir écrit. Nous avons bien reçu votre message et vous répondrons personnellement, généralement dans la journée."
+msgstr "Thank you for writing to us. We have received your message and will reply personally, usually within the day."
+
+msgid "À très vite,"
+msgstr "See you soon,"
+
+msgid "L’équipe Adaptours"
+msgstr "The Adaptours team"
+
+msgid "Nous avons bien reçu votre message — Adaptours"
+msgstr "We have received your message — Adaptours"
+
+msgid "Contact (FR)"
+msgstr "Contact (EN)"
+
+msgctxt "post type general name"
+msgid "Destinations"
+msgstr "Destinations"
+
+msgctxt "post type singular name"
+msgid "Destination"
+msgstr "Destination"
+
+msgctxt "admin menu"
+msgid "Destinations"
+msgstr "Destinations"
+
+msgctxt "add new on admin bar"
+msgid "Destination"
+msgstr "Destination"
+
+msgid "Ajouter"
+msgstr "Add New"
+
+msgid "Ajouter une destination"
+msgstr "Add Destination"
+
+msgid "Nouvelle destination"
+msgstr "New Destination"
+
+msgid "Modifier la destination"
+msgstr "Edit Destination"
+
+msgid "Voir la destination"
+msgstr "View Destination"
+
+msgid "Toutes les destinations"
+msgstr "All Destinations"
+
+msgid "Aucune destination trouvée."
+msgstr "No destination found."
+
+msgid "Aucune destination dans la corbeille."
+msgstr "No destination in the trash."
+
+msgid "Image principale"
+msgstr "Featured image"
+
+msgid "Définir l'image principale"
+msgstr "Set featured image"
+
+msgid "Retirer l'image principale"
+msgstr "Remove featured image"
+
+msgid "Utiliser comme image principale"
+msgstr "Use as featured image"
+
+msgid "Liste des destinations"
+msgstr "Destinations list"
+
+msgid "Archives des destinations"
+msgstr "Destinations archive"
+
+msgctxt "post type general name"
+msgid "Avis"
+msgstr "Reviews"
+
+msgctxt "post type singular name"
+msgid "Avis"
+msgstr "Review"
+
+msgctxt "admin menu"
+msgid "Avis"
+msgstr "Reviews"
+
+msgctxt "add new on admin bar"
+msgid "Avis"
+msgstr "Review"
+
+msgid "Ajouter un avis"
+msgstr "Add Review"
+
+msgid "Nouvel avis"
+msgstr "New Review"
+
+msgid "Modifier l'avis"
+msgstr "Edit Review"
+
+msgid "Voir l'avis"
+msgstr "View Review"
+
+msgid "Tous les avis"
+msgstr "All Reviews"
+
+msgid "Rechercher un avis"
+msgstr "Search reviews"
+
+msgid "Aucun avis trouvé."
+msgstr "No review found."
+
+msgid "Aucun avis dans la corbeille."
+msgstr "No review in the trash."
+
+msgid "Liste des avis"
+msgstr "Reviews list"
+
+msgid "Particulier"
+msgstr "Individual"
+
+msgid "Agence / revendeur"
+msgstr "Agency / reseller"
+
+msgid "Partenaire (asso, MDPH…)"
+msgstr "Partner (association, MDPH…)"
+
+msgid "politique de confidentialité"
+msgstr "privacy policy"
+
+msgid "[Devis] [devis-destination] — [devis-nom-prenom][devis-nom-client]"
+msgstr "[Quote] [devis-destination] — [devis-nom-prenom][devis-nom-client]"
+
+msgid "Bonjour [devis-nom-prenom][devis-nom-client],"
+msgstr "Hello [devis-nom-prenom][devis-nom-client],"
+
+msgid "Merci pour votre demande de devis concernant : [devis-destination]."
+msgstr "Thank you for your quote request regarding: [devis-destination]."
+
+msgid "Nous avons bien reçu toutes vos informations et revenons vers vous sous 48 h ouvrées avec une proposition sur mesure."
+msgstr "We have received all your information and will get back to you within 48 business hours with a tailor-made proposal."
+
+msgid "Votre demande de devis Adaptours — bien reçue"
+msgstr "Your Adaptours quote request — received"
+
+msgid "Merci ! Votre demande est arrivée. On revient vers vous sous 48 h ouvrées avec un devis sur mesure."
+msgstr "Thank you! Your request has arrived. We’ll get back to you within 48 business hours with a tailor-made quote."
+
+msgid "Devis (FR)"
+msgstr "Quote (EN)"
+
+msgid "Vous êtes"
+msgstr "You are"
+
+msgid "Votre nom et prénom"
+msgstr "Your full name"
+
+msgid "Nom du client"
+msgstr "Client name"
+
+msgid "Nom de l’agence"
+msgstr "Agency name"
+
+msgid "Structure partenaire"
+msgstr "Partner organization"
+
+msgid "Association, MDPH…"
+msgstr "Association, MDPH…"
+
+msgid "Vos coordonnées"
+msgstr "Your contact details"
+
+msgid "Adresse e-mail"
+msgstr "E-mail address"
+
+msgid "Portable"
+msgstr "Mobile"
+
+msgid "06 12 34 56 78"
+msgstr "06 12 34 56 78"
+
+msgid "Téléphone fixe"
+msgstr "Landline"
+
+msgid "facultatif"
+msgstr "optional"
+
+msgid "04 12 34 56 78"
+msgstr "04 12 34 56 78"
+
+msgid "Votre voyage"
+msgstr "Your trip"
+
+msgid "Destination choisie"
+msgstr "Chosen destination"
+
+msgid "— Choisir une destination —"
+msgstr "— Choose a destination —"
+
+msgid "Vol et transport"
+msgstr "Flight and transport"
+
+msgid "Avion"
+msgstr "Plane"
+
+msgid "Train"
+msgstr "Train"
+
+msgid "Voiture"
+msgstr "Car"
+
+msgid "À voir ensemble"
+msgstr "To discuss together"
+
+msgid "Ville de départ"
+msgstr "Departure city"
+
+msgid "ex. Lyon"
+msgstr "e.g. Lyon"
+
+msgid "Dates ou période souhaitée"
+msgstr "Preferred dates or period"
+
+msgid "ex. 12 → 22 mars"
+msgstr "e.g. 12 → 22 March"
+
+msgid "Les voyageurs"
+msgstr "The travelers"
+
+msgid "Nombre total de personnes"
+msgstr "Total number of people"
+
+msgid "Dont enfants"
+msgstr "Of which children"
+
+msgid "Moins de 18 ans"
+msgstr "Under 18"
+
+msgid "Budget par personne"
+msgstr "Budget per person"
+
+msgid "indicatif"
+msgstr "indicative"
+
+msgid "ex. 2 500 €"
+msgstr "e.g. €2,500"
+
+msgid "Mobilité"
+msgstr "Mobility"
+
+msgid "Fauteuils roulants manuels"
+msgstr "Manual wheelchairs"
+
+msgid "Fauteuils roulants électriques"
+msgstr "Electric wheelchairs"
+
+msgid "Véhicule adapté (avec rampe) sur place"
+msgstr "Adapted vehicle (with ramp) on site"
+
+msgid "Indispensable"
+msgstr "Essential"
+
+msgid "Non"
+msgstr "No"
+
+msgid "À voir"
+msgstr "To be discussed"
+
+msgid "Matériel sur place"
+msgstr "Equipment on site"
+
+msgid "Sièges de douche"
+msgstr "Shower seats"
+
+msgid "Lits médicalisés"
+msgstr "Medical beds"
+
+msgid "Lève-personnes"
+msgstr "Patient lifts"
+
+msgid "Accompagnement & soins"
+msgstr "Support & care"
+
+msgid "Accompagnateur fourni par Adaptours"
+msgstr "Guide provided by Adaptours"
+
+msgid "Un membre de notre équipe vous accompagne sur tout le séjour."
+msgstr "A member of our team accompanies you throughout the stay."
+
+msgid "Oui"
+msgstr "Yes"
+
+msgid "Soins d’auxiliaire de vie"
+msgstr "Care assistant services"
+
+msgid "Soins infirmiers"
+msgstr "Nursing care"
+
+msgid "Autre chose ?"
+msgstr "Anything else?"
+
+msgid "Besoins spécifiques ou demandes particulières"
+msgstr "Specific needs or special requests"
+
+msgid "Allergie, anniversaire à fêter sur place, peur, rêve précis…"
+msgstr "Allergy, birthday to celebrate on site, a fear, a specific dream…"
+
+msgid "J’accepte que mes données soient utilisées pour traiter ma demande de devis. Voir notre %s."
+msgstr "I agree that my data may be used to process my quote request. See our %s."
+
+msgid "Envoyer ma demande →"
+msgstr "Send my request →"
+
+msgid "Réponse sous 48 h ouvrées · sans engagement"
+msgstr "Reply within 48 business hours · no obligation"
+
+msgid "Profil"
+msgstr "Profile"
+
+msgid "Nom"
+msgstr "Name"
+
+msgid "Coordonnées"
+msgstr "Contact details"
+
+msgid "Voyage"
+msgstr "Trip"
+
+msgid "Destination"
+msgstr "Destination"
+
+msgid "Dates / période"
+msgstr "Dates / period"
+
+msgid "Voyageurs"
+msgstr "Travelers"
+
+msgid "Nombre total"
+msgstr "Total number"
+
+msgid "Budget / personne"
+msgstr "Budget / person"
+
+msgid "Fauteuils manuels"
+msgstr "Manual wheelchairs"
+
+msgid "Fauteuils électriques"
+msgstr "Electric wheelchairs"
+
+msgid "Véhicule adapté sur place"
+msgstr "Adapted vehicle on site"
+
+msgid "Accompagnateur Adaptours"
+msgstr "Adaptours guide"
+
+msgid "Besoins / demandes"
+msgstr "Needs / requests"
+
+msgid "Nouvelle demande de devis"
+msgstr "New quote request"
+
+msgid "Sur-mesure / je ne sais pas encore"
+msgstr "Tailor-made / I don’t know yet"
+
+msgid "Galerie de la destination"
+msgstr "Destination gallery"
+
+msgid "Sélectionnez les images de la galerie depuis la médiathèque. L'ordre est conservé."
+msgstr "Select the gallery images from the media library. The order is kept."
+
+msgid "Sélectionner des images"
+msgstr "Select images"
+
+msgid "Tout retirer"
+msgstr "Remove all"
+
+msgid "%d nuit sur place"
+msgid_plural "%d nuits sur place"
+msgstr[0] "%d night on site"
+msgstr[1] "%d nights on site"
+
+msgid "en petit comité"
+msgstr "in a small group"
+
+msgid "/ personne"
+msgstr "/ person"
+
+msgid "Demander un devis"
+msgstr "Request a quote"
+
+msgid "km à vol d’oiseau"
+msgstr "km as the crow flies"
+
+msgid "Langue"
+msgstr "Language"
+
+msgid "Note : %d sur 5"
+msgstr "Rating: %d out of 5"
+
+msgid "Visa / formalités"
+msgstr "Visa / formalities"
+
+msgid "Santé"
+msgstr "Health"
+
+msgid "Vol"
+msgstr "Flight"
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Rythme adapté"
+msgstr "Adapted pace"
+
+msgid "Accompagnement"
+msgstr "Support"
+
+msgid "Confort"
+msgstr "Comfort"
+
+msgid "Nature"
+msgstr "Nature"
+
+msgid "Temps fort"
+msgstr "Highlight"
+
+msgid "Culture"
+msgstr "Culture"
+
+msgid "Bien-être"
+msgstr "Well-being"
+
+msgid "Spirituel"
+msgstr "Spiritual"
+
+msgid "Eau"
+msgstr "Water"
+
+msgid "Faune"
+msgstr "Wildlife"
+
+msgid "Marche"
+msgstr "Walking"
+
+msgid "Menu principal"
+msgstr "Main menu"
+
+msgid "Footer — Colonne 1"
+msgstr "Footer — Column 1"
+
+msgid "Footer — Colonne 2"
+msgstr "Footer — Column 2"
+
+msgid "Téléphone (affichage)"
+msgstr "Phone (display)"
+
+msgid "Format humain, ex. « 04 XX XX XX XX »."
+msgstr "Human format, e.g. “04 XX XX XX XX”."
+
+msgid "Téléphone (lien tel:)"
+msgstr "Phone (tel: link)"
+
+msgid "Format international, ex. « +33XXXXXXXXX »."
+msgstr "International format, e.g. “+33XXXXXXXXX”."
+
+msgid "Horaires d’appel"
+msgstr "Calling hours"
+
+msgid "Ex. « Lundi – Vendredi · 9h → 18h ». Traduisible (Polylang)."
+msgstr "E.g. “Monday – Friday · 9am → 6pm”. Translatable (Polylang)."
+
+msgid "Email de contact"
+msgstr "Contact e-mail"
+
+msgid "Délai de réponse"
+msgstr "Response time"
+
+msgid "Ex. « Réponse sous 24h ouvrées ». Traduisible (Polylang)."
+msgstr "E.g. “Reply within 24 business hours”. Translatable (Polylang)."
+
+msgid "Adresse postale"
+msgstr "Postal address"
+
+msgid "Liens internes"
+msgstr "Internal links"
+
+msgid "URL page Devis"
+msgstr "Quote page URL"
+
+msgid "URL page Contact"
+msgstr "Contact page URL"
+
+msgid "URL CGV"
+msgstr "Terms of sale URL"
+
+msgid "URL Mentions légales"
+msgstr "Legal notice URL"
+
+msgid "URL Politique de confidentialité"
+msgstr "Privacy policy URL"
+
+msgid "Réseaux sociaux"
+msgstr "Social networks"
+
+msgid "URL Facebook"
+msgstr "Facebook URL"
+
+msgid "URL Instagram"
+msgstr "Instagram URL"
+
+msgid "URL LinkedIn"
+msgstr "LinkedIn URL"
+
+msgid "Avis Google"
+msgstr "Google reviews"
+
+msgid "Note Google (★)"
+msgstr "Google rating (★)"
+
+msgid "Saisie manuelle, ex. « 4.9 ». Fallback si pas d’API."
+msgstr "Manual entry, e.g. “4.9”. Fallback if no API."
+
+msgid "Nombre d’avis Google"
+msgstr "Number of Google reviews"
+
+msgid "Page Destinations"
+msgstr "Destinations page"
+
+msgid "Surtitre"
+msgstr "Small heading"
+
+msgid "Petit mot affiché au-dessus du titre. Laissez vide pour afficher « CATALOGUE »."
+msgstr "Small text shown above the title. Leave empty to show “CATALOG”."
+
+msgid "Titre"
+msgstr "Title"
+
+msgid "Début du grand titre de la page. Laissez vide pour « Destinations »."
+msgstr "Start of the page’s main title. Leave empty for “Destinations”."
+
+msgid "Mot(s) en orange"
+msgstr "Word(s) in orange"
+
+msgid "Mot(s) affiché(s) en orange, à la suite du titre. Laissez vide pour « accessibles. »."
+msgstr "Word(s) shown in orange, after the title. Leave empty for “accessible.”."
+
+msgid "Texte d’introduction"
+msgstr "Introduction text"
+
+msgid "Court texte de présentation, à droite du titre."
+msgstr "Short introductory text, to the right of the title."
+
+msgid "Phrase manuscrite"
+msgstr "Handwritten phrase"
+
+msgid "Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir »."
+msgstr "Small handwritten phrase. Write {n} where the number of trips should appear, e.g. “{n} trips ready to go”."
+
+msgid "Ex. « SARL au capital de 10 000 € »."
+msgstr "E.g. “LLC with capital of €10,000”."
+
+msgid "Code NAF"
+msgstr "NAF code"
+
+msgid "N° Atout France"
+msgstr "Atout France no."
+
+msgid "Garantie APST"
+msgstr "APST guarantee"
+
+msgid "Ligne « Adhérent APST — … »."
+msgstr "Line “APST member — …”."
+
+msgid "Coordonnées & liens"
+msgstr "Contact details & links"
+
+msgid "Cliente"
+msgstr "Client"
+
+msgctxt "taxonomy general name"
+msgid "Zones géographiques"
+msgstr "Geographic zones"
+
+msgctxt "taxonomy singular name"
+msgid "Zone géographique"
+msgstr "Geographic zone"
+
+msgid "Zones géographiques"
+msgstr "Geographic zones"
+
+msgid "Toutes les zones"
+msgstr "All zones"
+
+msgid "Modifier la zone"
+msgstr "Edit zone"
+
+msgid "Voir la zone"
+msgstr "View zone"
+
+msgid "Mettre à jour la zone"
+msgstr "Update zone"
+
+msgid "Ajouter une zone"
+msgstr "Add new zone"
+
+msgid "Nom de la nouvelle zone"
+msgstr "New zone name"
+
+msgid "Rechercher une zone"
+msgstr "Search zones"
+
+msgid "Aucune zone trouvée."
+msgstr "No zone found."
+
+msgid "Aucun contenu pour le moment."
+msgstr "No content yet."
+
+msgid "Instagram"
+msgstr "Instagram"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "CGV"
+msgstr "Terms of sale"
+
+msgid "Mentions légales"
+msgstr "Legal notice"
+
+msgid "Confidentialité"
+msgstr "Privacy"
+
+msgid "Séjours accessibles, sur mesure, depuis 2011. Voyagez sans limites, où que vous soyez."
+msgstr "Accessible, tailor-made trips since 2011. Travel without limits, wherever you are."
+
+msgid "À propos"
+msgstr "About"
+
+msgid "Nous suivre"
+msgstr "Follow us"
+
+msgid "© %s Adaptours · Tous droits réservés"
+msgstr "© %s Adaptours · All rights reserved"
+
+msgid "Liens légaux"
+msgstr "Legal links"
+
+msgid "Aller au contenu"
+msgstr "Skip to content"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Votre prochain voyage commence par un mot."
+msgstr "Your next trip starts with a word."
+
+msgid "un mot."
+msgstr "a word."
+
+msgid "Devis gratuit"
+msgstr "Free quote"
+
+msgid "Sans engagement"
+msgstr "No obligation"
+
+msgid "9h–18h, lun–ven"
+msgstr "9am–6pm, Mon–Fri"
+
+msgid "ET SI C’ÉTAIT VOTRE TOUR ?"
+msgstr "WHAT IF IT WERE YOUR TURN?"
+
+msgid "Dites-nous où vous rêvez d’aller, on s’occupe du reste. Premier échange gratuit, sans engagement. Réponse sous 48h."
+msgstr "Tell us where you dream of going, we’ll take care of the rest. First chat free, no obligation. Reply within 48h."
+
+msgid "Demander mon devis"
+msgstr "Request my quote"
+
+msgid "Nous appeler · %s"
+msgstr "Call us · %s"
+
+msgid "Fil d’Ariane"
+msgstr "Breadcrumb"
+
+msgid "Accueil"
+msgstr "Home"
+
+msgid "Informations clés"
+msgstr "Key information"
+
+msgid "À partir de"
+msgstr "From"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Devis"
+msgstr "Quote"
+
+msgid "Page de contenu riche"
+msgstr "Rich content page"
+
+msgid "— Avis du mois"
+msgstr "— Review of the month"
+
+msgid "/ pers"
+msgstr "/ pp"
+
+msgid "Qui sommes-nous"
+msgstr "About us"
+
+msgid "Automatique (avis du mois)"
+msgstr "Automatic (review of the month)"
+
+msgid "Textes"
+msgstr "Texts"
+
+msgid "Petit texte au-dessus du titre."
+msgstr "Small text above the title."
+
+msgid "Le ou les mots du titre à mettre en orange."
+msgstr "The word(s) of the title to put in orange."
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Texte d’introduction, à droite du titre."
+msgstr "Introduction text, to the right of the title."
+
+msgid "Avis affiché en grand"
+msgstr "Review shown large"
+
+msgid "Sur « Automatique », c’est l’avis marqué « avis du mois » qui s’affiche."
+msgstr "On “Automatic”, the review marked “review of the month” is shown."
+
+msgid "Bande du bas"
+msgstr "Bottom bar"
+
+msgid "Texte"
+msgstr "Text"
+
+msgid "Phrase affichée en bas de la section."
+msgstr "Sentence shown at the bottom of the section."
+
+msgid "Texte du bouton"
+msgstr "Button text"
+
+msgid "Lien du bouton"
+msgstr "Button link"
+
+msgid "Laissez vide pour aller vers la page Devis."
+msgstr "Leave empty to go to the Quote page."
+
+msgid "L’avis affiché ici se choisit dans la fiche de cette destination, champ « Avis mis en avant »."
+msgstr "The review shown here is chosen on this destination’s page, in the “Featured review” field."
+
+msgid "Lien de la carte"
+msgstr "Card link"
+
+msgid "Image"
+msgstr "Image"
+
+msgid "Texte court…"
+msgstr "Short text…"
+
+msgid "Mise en page"
+msgstr "Layout"
+
+msgid "Nombre de colonnes"
+msgstr "Number of columns"
+
+msgid "Surtitre (optionnel)"
+msgstr "Small heading (optional)"
+
+msgid "Titre…"
+msgstr "Title…"
+
+msgid "mot(s) en orange"
+msgstr "word(s) in orange"
+
+msgid "Titre de la carte"
+msgstr "Card title"
+
+msgid "Description…"
+msgstr "Description…"
+
+msgid "Texte à droite du titre (optionnel)"
+msgstr "Text to the right of the title (optional)"
+
+msgid "Titre du formulaire"
+msgstr "Form title"
+
+msgid "Petit texte au-dessus du titre du formulaire."
+msgstr "Small text above the form title."
+
+msgid "Titre — début"
+msgstr "Title — start"
+
+msgid "Le ou les mots du titre mis en avant en orange."
+msgstr "The word(s) of the title highlighted in orange."
+
+msgid "Changer la photo %d"
+msgstr "Change photo %d"
+
+msgid "Choisir la photo %d"
+msgstr "Choose photo %d"
+
+msgid "Retirer"
+msgstr "Remove"
+
+msgid "Surtitre (facultatif)"
+msgstr "Small heading (optional)"
+
+msgid "Laissez une ligne vide entre deux paragraphes."
+msgstr "Leave an empty line between two paragraphs."
+
+msgid "Photos"
+msgstr "Photos"
+
+msgid "Affichée à droite du titre, en écriture manuscrite."
+msgstr "Shown to the right of the title, in handwriting."
+
+msgid "Les photos se choisissent dans « Galerie de la destination », sur la fiche."
+msgstr "The photos are chosen in “Destination gallery”, on the destination page."
+
+msgid "Destination en grand (1re)"
+msgstr "Large destination (1st)"
+
+msgid "Destination 2"
+msgstr "Destination 2"
+
+msgid "Destination 3"
+msgstr "Destination 3"
+
+msgid "Destination 4 (large)"
+msgstr "Destination 4 (wide)"
+
+msgid "— Aucune —"
+msgstr "— None —"
+
+msgid "Laissez vide pour aller vers la liste des destinations."
+msgstr "Leave empty to go to the destinations list."
+
+msgid "Destinations affichées"
+msgstr "Displayed destinations"
+
+msgid "Choisissez %d destinations. La 1re s’affiche en grand à gauche."
+msgstr "Choose %d destinations. The 1st is shown large on the left."
+
+msgid "Texte affiché à droite du titre."
+msgstr "Text shown to the right of the title."
+
+msgid "Bouton"
+msgstr "Button"
+
+msgid "Laissez vide pour aller vers la liste de toutes les destinations."
+msgstr "Leave empty to go to the list of all destinations."
+
+msgid "Les destinations affichées se choisissent dans la fiche, champ « Destinations suggérées »."
+msgstr "The displayed destinations are chosen on the destination page, in the “Suggested destinations” field."
+
+msgid "Formulaire de devis"
+msgstr "Quote form"
+
+msgid "Le formulaire et les questions sont gérés par l’équipe Adaptours. Il n’y a rien à régler ici."
+msgstr "The form and its questions are managed by the Adaptours team. There is nothing to set here."
+
+msgid "Carte 1 — Voyager"
+msgstr "Card 1 — Travel"
+
+msgid "Bouton — texte"
+msgstr "Button — text"
+
+msgid "Bouton — lien"
+msgstr "Button — link"
+
+msgid "Laissez vide pour pointer vers la page Devis."
+msgstr "Leave empty to point to the Quote page."
+
+msgid "Carte 2 — Nous rejoindre"
+msgstr "Card 2 — Join us"
+
+msgid "Laissez vide pour afficher l’e-mail général du site."
+msgstr "Leave empty to show the site’s general e-mail."
+
+msgid "Laissez vide pour écrire à l’e-mail général du site."
+msgstr "Leave empty to write to the site’s general e-mail."
+
+msgid "Paragraphe d’introduction"
+msgstr "Introduction paragraph"
+
+msgid "Citation — début"
+msgstr "Quote — start"
+
+msgid "Citation — fin en orange"
+msgstr "Quote — end in orange"
+
+msgid "Derniers mots de la citation, mis en avant."
+msgstr "Last words of the quote, highlighted."
+
+msgid "Paragraphe de conclusion"
+msgstr "Closing paragraph"
+
+msgid "Signature"
+msgstr "Signature"
+
+msgid "Rôle"
+msgstr "Role"
+
+msgid "En-tête"
+msgstr "Header"
+
+msgid "Titre — fin"
+msgstr "Title — end"
+
+msgid "Laissez vide si le titre se termine par le mot en orange."
+msgstr "Leave empty if the title ends with the orange word."
+
+msgid "Le ou les mots du titre mis en avant."
+msgstr "The word(s) of the title highlighted."
+
+msgid "Photo de fond"
+msgstr "Background photo"
+
+msgid "Changer la photo"
+msgstr "Change photo"
+
+msgid "Choisir une photo"
+msgstr "Choose a photo"
+
+msgid "Ligne manuscrite"
+msgstr "Handwritten line"
+
+msgid "Dernière ligne du titre, en écriture manuscrite. Laissez vide pour la masquer."
+msgstr "Last line of the title, in handwriting. Leave empty to hide it."
+
+msgid "Introduction"
+msgstr "Introduction"
+
+msgid "Boutons"
+msgstr "Buttons"
+
+msgid "Bouton principal — texte"
+msgstr "Primary button — text"
+
+msgid "Bouton principal — lien"
+msgstr "Primary button — link"
+
+msgid "Bouton secondaire — texte"
+msgstr "Secondary button — text"
+
+msgid "Bouton secondaire — lien"
+msgstr "Secondary button — link"
+
+msgid "Laissez vide pour pointer vers la liste des destinations."
+msgstr "Leave empty to point to the destinations list."
+
+msgid "Par défaut, mène à la section Équipe plus bas dans la page."
+msgstr "By default, leads to the Team section further down the page."
+
+msgid "Photo principale"
+msgstr "Main photo"
+
+msgid "Étape"
+msgstr "Step"
+
+msgid "Le ou les mots du titre de l’étape à mettre en orange (facultatif)."
+msgstr "The word(s) of the step title to put in orange (optional)."
+
+msgid "Titre de l’étape…"
+msgstr "Step title…"
+
+msgid "Que se passe-t-il ce jour-là ?"
+msgstr "What happens that day?"
+
+msgid "Le ou les mots du titre à mettre en orange (facultatif)."
+msgstr "The word(s) of the title to put in orange (optional)."
+
+msgid "Chiffre"
+msgstr "Figure"
+
+msgid "Libellé"
+msgstr "Label"
+
+msgid "Ces informations se modifient dans Réglages → Coordonnées & liens (section « Informations légales »)."
+msgstr "This information is edited in Settings → Contact details & links (the “Legal information” section)."
+
+msgid "Largeur"
+msgstr "Width"
+
+msgid "Pleine largeur"
+msgstr "Full width"
+
+msgid "Cadrée"
+msgstr "Contained"
+
+msgid "Description de l’image"
+msgstr "Image description"
+
+msgid "Décrivez l’image en quelques mots (pour l’accessibilité)."
+msgstr "Describe the image in a few words (for accessibility)."
+
+msgid "Légende (optionnelle)"
+msgstr "Caption (optional)"
+
+msgid "Position de l’image"
+msgstr "Image position"
+
+msgid "À droite"
+msgstr "Right"
+
+msgid "À gauche"
+msgstr "Left"
+
+msgid "Lien du bouton principal"
+msgstr "Primary button link"
+
+msgid "Lien du bouton secondaire"
+msgstr "Secondary button link"
+
+msgid "Votre texte…"
+msgstr "Your text…"
+
+msgid "Bouton principal"
+msgstr "Primary button"
+
+msgid "Bouton secondaire"
+msgstr "Secondary button"
+
+msgid "Texte d’introduction…"
+msgstr "Introduction text…"
+
+msgid "Carte"
+msgstr "Card"
+
+msgid "Icône"
+msgstr "Icon"
+
+msgid "Titre (ex. : Visa & formalités)"
+msgstr "Title (e.g. Visa & formalities)"
+
+msgid "Détail pratique…"
+msgstr "Practical detail…"
+
+msgid "Étape %d"
+msgstr "Step %d"
+
+msgid "Points clés"
+msgstr "Key points"
+
+msgid "Un point par ligne (chaque ligne s’affiche avec une coche)."
+msgstr "One point per line (each line is shown with a check mark)."
+
+msgid "Durée indicative"
+msgstr "Indicative duration"
+
+msgid "Ex. « ~ 48 h ». Laissez vide pour masquer."
+msgstr "E.g. “~ 48 h”. Leave empty to hide."
+
+msgid "Bouton — texte (facultatif)"
+msgstr "Button — text (optional)"
+
+msgid "Bouton — lien (facultatif)"
+msgstr "Button — link (optional)"
+
+msgid "Mise en avant"
+msgstr "Highlight"
+
+msgid "Recopiez ici un court extrait de la citation à souligner. Laissez vide pour aucun."
+msgstr "Copy here a short excerpt of the quote to underline. Leave empty for none."
+
+msgid "Votre citation…"
+msgstr "Your quote…"
+
+msgid "Auteur — contexte"
+msgstr "Author — context"
+
+msgid "Titre de la condition"
+msgstr "Requirement title"
+
+msgid "Explication…"
+msgstr "Explanation…"
+
+msgid "Candidatures"
+msgstr "Applications"
+
+msgid "Adresse e-mail pour les CV"
+msgstr "E-mail address for CVs"
+
+msgid "Laissez vide pour utiliser l’e-mail général du site."
+msgstr "Leave empty to use the site’s general e-mail."
+
+msgid "Présentation du poste…"
+msgstr "Job description…"
+
+msgid "(e-mail général du site)"
+msgstr "(site’s general e-mail)"
+
+msgid "Sous-titre…"
+msgstr "Subtitle…"
+
+msgid "Le texte d’introduction et les 4 cartes se remplissent dans la fiche de cette destination."
+msgstr "The introduction text and the 4 cards are filled in on this destination’s page."
+
+msgid "Par exemple « De Paris à ». Le mot suivant (la destination) se met en orange ci-dessous."
+msgstr "For example “From Paris to”. The next word (the destination) goes in orange below."
+
+msgid "Le nom de la destination, mis en orange à la fin du titre (ex. : Denpasar)."
+msgstr "The destination name, shown in orange at the end of the title (e.g. Denpasar)."
+
+msgid "Texte sur le vol"
+msgstr "Flight text"
+
+msgid "Quelques lignes sur le trajet, affichées à droite du titre."
+msgstr "A few lines about the journey, shown to the right of the title."
+
+msgid "Distance"
+msgstr "Distance"
+
+msgid "Laissez vide pour calculer automatiquement la distance à partir de la fiche destination."
+msgstr "Leave empty to compute the distance automatically from the destination page."
+
+msgid "La fin du titre, mise en avant en orange."
+msgstr "The end of the title, highlighted in orange."
+
+msgid "Texte de présentation"
+msgstr "Introduction text"
+
+msgid "Photo"
+msgstr "Photo"
+
+msgid "Poste"
+msgstr "Position"
+
+msgid "Petite phrase"
+msgstr "Short sentence"
+
+msgid "Bouton « on recrute ? »"
+msgstr "“We’re hiring?” button"
+
+msgid "Par défaut, mène à la section Recrutement plus bas dans la page."
+msgstr "By default, leads to the Recruitment section further down the page."
+
+msgid "Texte à droite du titre"
+msgstr "Text to the right of the title"
+
+msgid "on recrute, par curiosité ?"
+msgstr "we’re hiring, curious?"
+
+msgid "Paragraphe 1"
+msgstr "Paragraph 1"
+
+msgid "Paragraphe 2"
+msgstr "Paragraph 2"
+
+msgid "Laissez vide pour aller vers la page « Qui sommes-nous »."
+msgstr "Leave empty to go to the “About us” page."
+
+msgid "Visuel"
+msgstr "Visual"
+
+msgid "Changer le visuel"
+msgstr "Change the visual"
+
+msgid "Choisir un visuel"
+msgstr "Choose a visual"
+
+msgctxt "block title"
+msgid "Avis clients (grille)"
+msgstr "Customer reviews (grid)"
+
+msgctxt "block description"
+msgid "Section « avis clients » : avis du mois (grande card sombre) + 2 derniers avis + badge note Google + bande CTA. Avis lus depuis le CPT avis."
+msgstr "“Customer reviews” section: review of the month (large dark card) + 2 latest reviews + Google rating badge + CTA bar. Reviews read from the reviews CPT."
+
+msgctxt "block title"
+msgid "Avis en avant (single destination)"
+msgstr "Featured review (single destination)"
+
+msgctxt "block description"
+msgid "Section témoignage sombre du single destination : met en avant l'avis choisi sur la destination (champ « Avis mis en avant »). Aucun réglage : tout vient du CPT avis."
+msgstr "Dark testimonial section of the single destination: highlights the review chosen on the destination (“Featured review” field). No settings: everything comes from the reviews CPT."
+
+msgctxt "block title"
+msgid "Carte illustrée"
+msgstr "Illustrated card"
+
+msgctxt "block description"
+msgid "Une carte illustrée : image, titre, texte et lien facultatif. À utiliser dans le bloc « Grille de cartes »."
+msgstr "An illustrated card: image, title, text and optional link. Use it inside the “Card grid” block."
+
+msgctxt "block title"
+msgid "Grille de cartes"
+msgstr "Card grid"
+
+msgctxt "block description"
+msgid "En-tête (surtitre, titre) et une grille de cartes illustrées (image, titre, texte, lien facultatif). Ajoutez autant de cartes que nécessaire."
+msgstr "Header (small heading, title) and a grid of illustrated cards (image, title, text, optional link). Add as many cards as needed."
+
+msgctxt "block title"
+msgid "Carte numérotée"
+msgstr "Numbered card"
+
+msgctxt "block description"
+msgid "Une carte numérotée : titre et description. À utiliser dans le bloc « Cartes numérotées »."
+msgstr "A numbered card: title and description. Use it inside the “Numbered cards” block."
+
+msgctxt "block title"
+msgid "Cartes numérotées"
+msgstr "Numbered cards"
+
+msgctxt "block description"
+msgid "En-tête (surtitre, titre, texte) et une série de cartes numérotées automatiquement. Ajoutez autant de cartes que nécessaire."
+msgstr "Header (small heading, title, text) and a series of automatically numbered cards. Add as many cards as needed."
+
+msgctxt "block title"
+msgid "Contact — coordonnées + formulaire"
+msgstr "Contact — details + form"
+
+msgctxt "block description"
+msgid "Deux colonnes : coordonnées (adresse, téléphone, e-mail repris des réglages) et formulaire de contact."
+msgstr "Two columns: contact details (address, phone, e-mail taken from the settings) and the contact form."
+
+msgctxt "block title"
+msgid "Contenu — texte + polaroïds"
+msgstr "Content — text + polaroids"
+
+msgctxt "block description"
+msgid "Bloc éditorial réutilisable : surtitre, titre, texte à gauche et 3 photos « polaroïd » à droite."
+msgstr "Reusable editorial block: small heading, title, text on the left and 3 “polaroid” photos on the right."
+
+msgctxt "block title"
+msgid "Galerie de la destination"
+msgstr "Destination gallery"
+
+msgctxt "block description"
+msgid "Section « ce que vous allez voir » : titre et grille de photos (clic = agrandissement plein écran). Les photos viennent de la galerie de la fiche destination."
+msgstr "“What you’ll see” section: title and photo grid (click = full-screen enlargement). The photos come from the destination page’s gallery."
+
+msgctxt "block title"
+msgid "Accueil — destinations"
+msgstr "Home — destinations"
+
+msgctxt "block description"
+msgid "Section « Des destinations variées » : surtitre, titre, texte, bouton et une sélection de 4 destinations (la 1re en grand)."
+msgstr "“A variety of destinations” section: small heading, title, text, button and a selection of 4 destinations (the 1st shown large)."
+
+msgctxt "block title"
+msgid "Destinations suggérées"
+msgstr "Suggested destinations"
+
+msgctxt "block description"
+msgid "Section « vous aimerez aussi » : titre, texte d’intro, bouton et jusqu’à 4 destinations. Les destinations se choisissent dans la fiche."
+msgstr "“You may also like” section: title, intro text, button and up to 4 destinations. The destinations are chosen on the destination page."
+
+msgctxt "block title"
+msgid "Devis — formulaire"
+msgstr "Quote — form"
+
+msgctxt "block description"
+msgid "Le formulaire de demande de devis. Sa structure est gérée par l'équipe Adaptours ; rien à régler ici."
+msgstr "The quote request form. Its structure is managed by the Adaptours team; nothing to set here."
+
+msgctxt "block title"
+msgid "Qui sommes-nous — double appel"
+msgstr "About us — dual CTA"
+
+msgctxt "block description"
+msgid "Deux cartes d'appel à l'action côte à côte (voyager / nous rejoindre), chacune avec surtitre, titre, texte et bouton."
+msgstr "Two call-to-action cards side by side (travel / join us), each with small heading, title, text and button."
+
+msgctxt "block title"
+msgid "Qui sommes-nous — histoire"
+msgstr "About us — story"
+
+msgctxt "block description"
+msgid "Récit de la fondatrice : titre, paragraphe d'intro, citation mise en avant, paragraphe de conclusion, signature et trois photos en polaroïd."
+msgstr "The founder’s story: title, intro paragraph, highlighted quote, closing paragraph, signature and three polaroid photos."
+
+msgctxt "block title"
+msgid "Contact — en-tête"
+msgstr "Contact — header"
+
+msgctxt "block description"
+msgid "En-tête de la page Contact : surtitre, titre (avec mot(s) en orange) et texte d'introduction."
+msgstr "Contact page header: small heading, title (with word(s) in orange) and introduction text."
+
+msgctxt "block title"
+msgid "Devis — en-tête"
+msgstr "Quote — header"
+
+msgctxt "block description"
+msgid "En-tête de la page Devis : surtitre, titre (avec mot(s) en orange), texte d'introduction et photo de fond."
+msgstr "Quote page header: small heading, title (with word(s) in orange), introduction text and background photo."
+
+msgctxt "block title"
+msgid "Accueil — en-tête"
+msgstr "Home — header"
+
+msgctxt "block description"
+msgid "Grand en-tête de la page d'accueil : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction et deux boutons."
+msgstr "Large homepage header: small heading, title (with word(s) in orange and a handwritten line), introduction text and two buttons."
+
+msgctxt "block title"
+msgid "Qui sommes-nous — en-tête"
+msgstr "About us — header"
+
+msgctxt "block description"
+msgid "En-tête de la page Qui sommes-nous : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction, un bouton et une grande photo."
+msgstr "About us page header: small heading, title (with word(s) in orange and a handwritten line), introduction text, a button and a large photo."
+
+msgctxt "block title"
+msgid "Étape du programme"
+msgstr "Itinerary step"
+
+msgctxt "block description"
+msgid "Une étape (un jour) du programme : titre, description et image. À utiliser dans le bloc « Le programme »."
+msgstr "A step (a day) of the itinerary: title, description and image. Use it inside the “Itinerary” block."
+
+msgctxt "block title"
+msgid "Le programme"
+msgstr "The itinerary"
+
+msgctxt "block description"
+msgid "Section « le programme » : titre, texte d’intro et liste d’étapes (jour par jour). Ajoutez une étape par jour."
+msgstr "“The itinerary” section: title, intro text and a list of steps (day by day). Add one step per day."
+
+msgctxt "block title"
+msgid "KPI bar"
+msgstr "KPI bar"
+
+msgctxt "block description"
+msgid "Barre de chiffres clés (valeur + libellé). Longueur figée à 4 colonnes via l'attribut d'insertion verrouillé columns."
+msgstr "Bar of key figures (value + label). Length fixed at 4 columns via the locked columns insertion attribute."
+
+msgctxt "block title"
+msgid "Contact — informations légales"
+msgstr "Contact — legal information"
+
+msgctxt "block description"
+msgid "Bandeau des mentions légales (forme juridique, SIRET, NAF, RCS, TVA, Atout France, APST). Contenu repris des réglages du site."
+msgstr "Legal notice banner (legal form, SIRET, NAF, RCS, VAT, Atout France, APST). Content taken from the site settings."
+
+msgctxt "block title"
+msgid "Image en grand"
+msgstr "Large image"
+
+msgctxt "block description"
+msgid "Une grande image, pleine largeur ou cadrée, avec une légende facultative."
+msgstr "A large image, full width or contained, with an optional caption."
+
+msgctxt "block title"
+msgid "Texte + image"
+msgstr "Text + image"
+
+msgctxt "block description"
+msgid "Deux colonnes : un texte (surtitre, titre, paragraphes, boutons) et une image, à droite ou à gauche."
+msgstr "Two columns: text (small heading, title, paragraphs, buttons) and an image, on the right or left."
+
+msgctxt "block title"
+msgid "En-tête de page"
+msgstr "Page header"
+
+msgctxt "block description"
+msgid "En-tête de page sur fond dégradé : surtitre, titre (avec mot(s) en orange), texte d'introduction et deux boutons."
+msgstr "Page header on a gradient background: small heading, title (with word(s) in orange), introduction text and two buttons."
+
+msgctxt "block title"
+msgid "Carte pratique"
+msgstr "Practical card"
+
+msgctxt "block description"
+msgid "Une carte pratique (visa, santé, budget…) : icône, titre et description. À utiliser dans le bloc « Ce qu’il faut savoir »."
+msgstr "A practical card (visa, health, budget…): icon, title and description. Use it inside the “What you need to know” block."
+
+msgctxt "block title"
+msgid "Accueil — étapes"
+msgstr "Home — steps"
+
+msgctxt "block description"
+msgid "Section « Du premier mot au dernier souvenir » : surtitre, titre, texte et 3 étapes (la 3e en fond sombre)."
+msgstr "“From the first word to the last memory” section: small heading, title, text and 3 steps (the 3rd on a dark background)."
+
+msgctxt "block title"
+msgid "Citation"
+msgstr "Quote"
+
+msgctxt "block description"
+msgid "Une citation mise en avant, centrée, avec son auteur. Un extrait peut être souligné en orange."
+msgstr "A highlighted, centered quote with its author. An excerpt can be underlined in orange."
+
+msgctxt "block title"
+msgid "Condition de recrutement"
+msgstr "Recruitment requirement"
+
+msgctxt "block description"
+msgid "Une condition : titre court et explication. La numérotation se calcule toute seule. À utiliser dans le bloc « Recrutement »."
+msgstr "A requirement: short title and explanation. The numbering is computed automatically. Use it inside the “Recruitment” block."
+
+msgctxt "block title"
+msgid "Qui sommes-nous — recrutement"
+msgstr "About us — recruitment"
+
+msgctxt "block description"
+msgid "Section recrutement : présentation et adresse pour les CV à gauche, liste des conditions (à ajouter une par une) à droite."
+msgstr "Recruitment section: introduction and CV address on the left, list of requirements (added one by one) on the right."
+
+msgctxt "block title"
+msgid "Texte enrichi"
+msgstr "Rich text"
+
+msgctxt "block description"
+msgid "Bloc de texte éditorial : surtitre, titre (avec mot(s) en orange) et un corps libre (paragraphes, sous-titres, listes à puces)."
+msgstr "Editorial text block: small heading, title (with word(s) in orange) and a free body (paragraphs, subheadings, bulleted lists)."
+
+msgctxt "block title"
+msgid "Accessibilité"
+msgstr "Accessibility"
+
+msgctxt "block description"
+msgid "Section « pensé pour tous » : titre, texte d’introduction et 4 cartes d’accessibilité (icône + titre + description). Le texte et les cartes viennent de la fiche destination."
+msgstr "“Designed for everyone” section: title, introduction text and 4 accessibility cards (icon + title + description). The text and cards come from the destination page."
+
+msgctxt "block title"
+msgid "Carte du voyage"
+msgstr "Trip map"
+
+msgctxt "block description"
+msgid "Section « sur la carte » : titre, texte de vol, carte de la destination et bande d’infos (décalage, visa, monnaie, langue). La carte et les infos viennent de la fiche destination."
+msgstr "“On the map” section: title, flight text, destination map and an info bar (time difference, visa, currency, language). The map and info come from the destination page."
+
+msgctxt "block title"
+msgid "Ce qu’il faut savoir"
+msgstr "What you need to know"
+
+msgctxt "block description"
+msgid "Section « ce qu’il faut savoir » : titre, texte d’intro et cartes pratiques (visa, santé, budget…). Ajoutez autant de cartes que nécessaire."
+msgstr "“What you need to know” section: title, intro text and practical cards (visa, health, budget…). Add as many cards as needed."
+
+msgctxt "block title"
+msgid "Accueil — la promesse"
+msgstr "Home — the promise"
+
+msgctxt "block description"
+msgid "Section « Le voyage, pensé autour de vous » : surtitre, titre, texte de présentation et 4 atouts illustrés."
+msgstr "“Travel, designed around you” section: small heading, title, introductory text and 4 illustrated strengths."
+
+msgctxt "block title"
+msgid "Membre de l'équipe"
+msgstr "Team member"
+
+msgctxt "block description"
+msgid "Une personne de l'équipe : photo, nom, poste et petite phrase. À utiliser dans le bloc « L'équipe »."
+msgstr "A team member: photo, name, position and short sentence. Use it inside the “Team” block."
+
+msgctxt "block title"
+msgid "Qui sommes-nous — l'équipe"
+msgstr "About us — the team"
+
+msgctxt "block description"
+msgid "Section équipe : surtitre, titre, description et une grille de personnes (à ajouter une par une), avec une bande « on recrute ? » en bas."
+msgstr "Team section: small heading, title, description and a grid of people (added one by one), with a “we’re hiring?” bar at the bottom."
+
+msgctxt "block title"
+msgid "Accueil — l'équipe"
+msgstr "Home — the team"
+
+msgctxt "block description"
+msgid "Section de présentation de l'équipe : surtitre, titre, deux paragraphes, bouton et un visuel."
+msgstr "Team introduction section: small heading, title, two paragraphs, button and a visual."
+
+msgctxt "Color name"
+msgid "Encre"
+msgstr "Ink"
+
+msgctxt "Color name"
+msgid "Orange highlight"
+msgstr "Orange highlight"
+
+msgctxt "Color name"
+msgid "Pêche"
+msgstr "Peach"
+
+msgctxt "Color name"
+msgid "Texte secondaire"
+msgstr "Secondary text"
+
+msgctxt "Color name"
+msgid "Eyebrow"
+msgstr "Eyebrow"
+
+msgctxt "Color name"
+msgid "Surface"
+msgstr "Surface"
+
+msgctxt "Color name"
+msgid "Surface alt"
+msgstr "Surface alt"
+
+msgctxt "Color name"
+msgid "Fond sombre"
+msgstr "Dark background"
+
+msgctxt "Color name"
+msgid "Filet"
+msgstr "Hairline"
+
+msgctxt "Font family name"
+msgid "Bricolage Grotesque (titres)"
+msgstr "Bricolage Grotesque (headings)"
+
+msgctxt "Font family name"
+msgid "Inter (corps & UI)"
+msgstr "Inter (body & UI)"
+
+msgctxt "Font family name"
+msgid "Caveat (accent manuscrit)"
+msgstr "Caveat (handwritten accent)"
+
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Small"
+
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Medium"
+
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Large"
+
+msgctxt "Font size name"
+msgid "X-Large"
+msgstr "X-Large"
+
+msgctxt "Font size name"
+msgid "XX-Large"
+msgstr "XX-Large"
+
+msgctxt "Font size name"
+msgid "Display"
+msgstr "Display"
+
+msgctxt "Font size name"
+msgid "Hero"
+msgstr "Hero"
+
+msgctxt "Space size name"
+msgid "XS"
+msgstr "XS"
+
+msgctxt "Space size name"
+msgid "S"
+msgstr "S"
+
+msgctxt "Space size name"
+msgid "M"
+msgstr "M"
+
+msgctxt "Space size name"
+msgid "L"
+msgstr "L"
+
+msgctxt "Space size name"
+msgid "XL"
+msgstr "XL"
+
+msgctxt "Space size name"
+msgid "2XL"
+msgstr "2XL"
+
+msgctxt "Space size name"
+msgid "3XL"
+msgstr "3XL"
+
+msgctxt "Space size name"
+msgid "4XL"
+msgstr "4XL"
+

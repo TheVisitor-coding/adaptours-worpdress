@@ -1,0 +1,3067 @@
+# Copyright (C) 2026 Gulfstream Group
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Adaptours 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/adaptours\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-23T13:31:38+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: adaptours\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/blocks.php:31
+msgid "Adaptours"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://adaptours.fr"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Thème custom Adaptours — blocs Gutenberg natifs, tokens design centralisés (theme.json), intégration desktop-first / WCAG 2.1 AA. Voir ARCHITECTURE.md."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Gulfstream Group"
+msgstr ""
+
+#: archive-destination.php:75
+#: archive-destination.php:85
+#: inc/cpt.php:31
+msgid "Rechercher une destination"
+msgstr ""
+
+#: archive-destination.php:89
+#: archive-destination.php:91
+msgid "Continent"
+msgstr ""
+
+#: archive-destination.php:99
+#: archive-destination.php:101
+#: inc/icons.php:25
+#: blocks/practical-card/index.js:26
+msgid "Budget"
+msgstr ""
+
+#: archive-destination.php:109
+msgid "Filtrer"
+msgstr ""
+
+#. translators: %s = nombre de destinations (mis en valeur).
+#: archive-destination.php:117
+#, php-format
+msgid "%s destination correspond"
+msgid_plural "%s destinations correspondent"
+msgstr[0] ""
+msgstr[1] ""
+
+#: archive-destination.php:126
+msgid "— retirer ce filtre"
+msgstr ""
+
+#: archive-destination.php:132
+#: archive-destination.php:157
+msgid "Tout effacer"
+msgstr ""
+
+#: archive-destination.php:155
+msgid "Aucune destination ne correspond à votre recherche."
+msgstr ""
+
+#: blocks/avis-grid/render.php:85
+msgid "Avis clients"
+msgstr ""
+
+#. translators: %s: nombre d'avis Google.
+#: blocks/avis-grid/render.php:121
+#, php-format
+msgid "%s avis"
+msgstr ""
+
+#: blocks/avis-spotlight/render.php:43
+msgid "Témoignage en avant"
+msgstr ""
+
+#: blocks/avis-spotlight/render.php:67
+#: template-parts/card-avis.php:106
+msgid "PHOTO"
+msgstr ""
+
+#: blocks/contact-form/render.php:37
+msgid "Adresse"
+msgstr ""
+
+#: blocks/contact-form/render.php:44
+msgid "Par téléphone"
+msgstr ""
+
+#: blocks/contact-form/render.php:60
+msgid "Par e-mail"
+msgstr ""
+
+#: blocks/contact-form/render.php:86
+msgid "Le formulaire de contact sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
+msgstr ""
+
+#: blocks/destination-gallery/render.php:46
+msgid "Galerie"
+msgstr ""
+
+#. translators: %s: légende de la photo.
+#: blocks/destination-gallery/render.php:70
+#: blocks/destination-gallery/render.php:105
+msgid "Photo de la galerie"
+msgstr ""
+
+#. translators: %s: légende de la photo.
+#: blocks/destination-gallery/render.php:77
+#: blocks/destination-gallery/render.php:105
+#, php-format
+msgid "Agrandir : %s"
+msgstr ""
+
+#. translators: %s: légende de la photo.
+#: blocks/destination-gallery/render.php:106
+msgid "Voir la photo"
+msgstr ""
+
+#. translators: %s = prix formaté, ex. « 2 490€ ».
+#: blocks/destinations-grid/render.php:81
+#, php-format
+msgid "dès %s"
+msgstr ""
+
+#: blocks/destinations-suggestions/render.php:45
+#: inc/acf-config.php:346
+msgid "Destinations suggérées"
+msgstr ""
+
+#: blocks/devis-form/render.php:25
+msgid "Le formulaire de devis sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
+msgstr ""
+
+#: blocks/dual-cta/render.php:44
+msgid "Nous écrire"
+msgstr ""
+
+#: blocks/hero-devis/render.php:43
+#: parts/prefooter.php:25
+msgid "Réponse sous 48h"
+msgstr ""
+
+#: blocks/hero-devis/render.php:47
+msgid "Gratuit, sans engagement"
+msgstr ""
+
+#: blocks/hero-devis/render.php:51
+msgid "Données protégées"
+msgstr ""
+
+#: blocks/hero-home/render.php:38
+msgid "15 ans d’expérience"
+msgstr ""
+
+#: blocks/hero-home/render.php:42
+msgid "Hébergements vérifiés"
+msgstr ""
+
+#: blocks/hero-home/render.php:46
+msgid "Matériel médical inclus"
+msgstr ""
+
+#: blocks/hero-home/render.php:50
+msgid "100% sur mesure"
+msgstr ""
+
+#: blocks/itinerary-step/render.php:28
+#: blocks/itinerary-step/index.js:58
+msgid "Jour"
+msgstr ""
+
+#: blocks/itinerary/render.php:27
+msgid "Programme du voyage"
+msgstr ""
+
+#: blocks/kpi-bar/render.php:41
+msgid "Chiffres clés"
+msgstr ""
+
+#: blocks/legal-info/render.php:16
+#: inc/options.php:159
+msgid "Forme juridique"
+msgstr ""
+
+#: blocks/legal-info/render.php:17
+#: inc/options.php:164
+msgid "SIRET"
+msgstr ""
+
+#: blocks/legal-info/render.php:18
+msgid "NAF"
+msgstr ""
+
+#: blocks/legal-info/render.php:19
+#: inc/options.php:172
+msgid "RCS"
+msgstr ""
+
+#: blocks/legal-info/render.php:20
+#: inc/options.php:176
+msgid "TVA intracommunautaire"
+msgstr ""
+
+#: blocks/legal-info/render.php:21
+msgid "Atout France"
+msgstr ""
+
+#: blocks/legal-info/render.php:40
+#: blocks/legal-info/render.php:41
+#: inc/options.php:156
+#: blocks/legal-info/index.js:17
+msgid "Informations légales"
+msgstr ""
+
+#: blocks/recruitment/render.php:63
+#: blocks/recruitment/index.js:93
+msgid "Merci d’envoyer votre CV à"
+msgstr ""
+
+#: blocks/section-accessibility/render.php:34
+#: inc/icons.php:29
+#: blocks/practical-card/index.js:30
+msgid "Accessibilité"
+msgstr ""
+
+#: blocks/section-map/render.php:42
+msgid "Carte du voyage"
+msgstr ""
+
+#: blocks/section-practical/render.php:27
+msgid "Ce qu’il faut savoir"
+msgstr ""
+
+#: blocks/section-promise/render.php:24
+msgid "L’humain d’abord"
+msgstr ""
+
+#: blocks/section-promise/render.php:25
+msgid "Un interlocuteur dédié du devis au retour."
+msgstr ""
+
+#: blocks/section-promise/render.php:29
+msgid "Vérifié sur le terrain"
+msgstr ""
+
+#: blocks/section-promise/render.php:30
+msgid "Chaque hébergement testé par notre équipe."
+msgstr ""
+
+#: blocks/section-promise/render.php:34
+msgid "Matériel inclus"
+msgstr ""
+
+#: blocks/section-promise/render.php:35
+msgid "Fauteuil de plage, lève-personne, matériel médical."
+msgstr ""
+
+#: blocks/section-promise/render.php:39
+msgid "Présents 24/7"
+msgstr ""
+
+#: blocks/section-promise/render.php:40
+msgid "Une équipe joignable, même à l’autre bout du monde."
+msgstr ""
+
+#: inc/acf-config.php:58
+msgid "Détails de la destination"
+msgstr ""
+
+#: inc/acf-config.php:62
+msgid "Ville"
+msgstr ""
+
+#: inc/acf-config.php:68
+#: inc/helpers.php:276
+msgid "Durée"
+msgstr ""
+
+#: inc/acf-config.php:74
+msgid "Prix à partir de (€)"
+msgstr ""
+
+#: inc/acf-config.php:79
+msgid "Montant numérique (sert au filtre budget de l’archive)."
+msgstr ""
+
+#: inc/acf-config.php:83
+#: template-parts/card-destination.php:117
+msgid "Coup de cœur"
+msgstr ""
+
+#: inc/acf-config.php:90
+msgid "Avis mis en avant"
+msgstr ""
+
+#: inc/acf-config.php:98
+msgid "Avis client à mettre en avant sur cette destination. Laissez vide pour ne rien afficher."
+msgstr ""
+
+#: inc/acf-config.php:104
+msgid "Coordonnées GPS"
+msgstr ""
+
+#: inc/acf-config.php:107
+msgid "Affichées sous le titre, à côté de la ville (ex. : 8°25′S 115°11′E). Facultatif."
+msgstr ""
+
+#: inc/acf-config.php:111
+#: blocks/destination-gallery/index.js:53
+msgid "Petite phrase manuscrite"
+msgstr ""
+
+#: inc/acf-config.php:114
+msgid "Courte phrase écrite à la main affichée près du titre (ex. : l’île qui s’adapte). Facultatif."
+msgstr ""
+
+#: inc/acf-config.php:118
+msgid "Phrase d’introduction"
+msgstr ""
+
+#: inc/acf-config.php:123
+msgid "Quelques lignes de présentation affichées sous le titre, en haut de la page."
+msgstr ""
+
+#: inc/acf-config.php:128
+msgid "Nombre de nuits sur place"
+msgstr ""
+
+#: inc/acf-config.php:133
+msgid "Affiché sous la durée (ex. : 9 nuits sur place)."
+msgstr ""
+
+#: inc/acf-config.php:137
+#: inc/helpers.php:281
+msgid "Période idéale"
+msgstr ""
+
+#: inc/acf-config.php:140
+msgid "Meilleure période pour partir (ex. : Mai → Sep)."
+msgstr ""
+
+#: inc/acf-config.php:144
+msgid "Précision sur la saison"
+msgstr ""
+
+#: inc/acf-config.php:147
+msgid "Petit complément affiché sous la période (ex. : saison sèche)."
+msgstr ""
+
+#: inc/acf-config.php:151
+msgid "Nombre de voyageurs (minimum)"
+msgstr ""
+
+#: inc/acf-config.php:156
+msgid "Taille de groupe minimum (ex. : 1)."
+msgstr ""
+
+#: inc/acf-config.php:160
+msgid "Nombre de voyageurs (maximum)"
+msgstr ""
+
+#: inc/acf-config.php:165
+msgid "Taille de groupe maximum (ex. : 6)."
+msgstr ""
+
+#: inc/acf-config.php:169
+#: inc/helpers.php:291
+msgid "Temps de vol moyen"
+msgstr ""
+
+#: inc/acf-config.php:172
+msgid "Durée de vol indicative (ex. : 2h)."
+msgstr ""
+
+#: inc/acf-config.php:177
+msgid "Carte de la destination"
+msgstr ""
+
+#: inc/acf-config.php:183
+msgid "Image de la carte affichée dans le bloc « Carte du voyage ». Facultatif."
+msgstr ""
+
+#: inc/acf-config.php:187
+msgid "Distance depuis Paris (km)"
+msgstr ""
+
+#: inc/acf-config.php:192
+msgid "Distance à vol d’oiseau, en kilomètres (ex. : 11868). Affichée sous le texte de vol."
+msgstr ""
+
+#: inc/acf-config.php:196
+#: inc/helpers.php:355
+#: inc/icons.php:23
+#: blocks/practical-card/index.js:24
+msgid "Décalage horaire"
+msgstr ""
+
+#: inc/acf-config.php:199
+msgid "Affiché dans la bande sous la carte (ex. : +6h en été)."
+msgstr ""
+
+#: inc/acf-config.php:203
+#: inc/helpers.php:359
+msgid "Visa"
+msgstr ""
+
+#: inc/acf-config.php:206
+msgid "Formalités d’entrée, en quelques mots (ex. : Sur place 35€)."
+msgstr ""
+
+#: inc/acf-config.php:210
+#: inc/helpers.php:363
+#: inc/icons.php:27
+#: blocks/practical-card/index.js:28
+msgid "Monnaie"
+msgstr ""
+
+#: inc/acf-config.php:213
+msgid "Nom de la monnaie locale (ex. : Rupiah)."
+msgstr ""
+
+#: inc/acf-config.php:217
+msgid "Code de la monnaie"
+msgstr ""
+
+#: inc/acf-config.php:220
+msgid "Code court de la monnaie (ex. : IDR). Facultatif."
+msgstr ""
+
+#: inc/acf-config.php:224
+msgid "Langue(s)"
+msgstr ""
+
+#: inc/acf-config.php:227
+msgid "Langue(s) parlée(s) sur place (ex. : Bahasa + anglais)."
+msgstr ""
+
+#: inc/acf-config.php:232
+msgid "Accessibilité — texte d’introduction"
+msgstr ""
+
+#: inc/acf-config.php:237
+msgid "Quelques lignes affichées à gauche, à côté des cartes d’accessibilité."
+msgstr ""
+
+#: inc/acf-config.php:241
+msgid "Carte 1 — icône"
+msgstr ""
+
+#: inc/acf-config.php:247
+#: inc/acf-config.php:273
+#: inc/acf-config.php:299
+#: inc/acf-config.php:325
+msgid "Choisissez une icône pour cette carte."
+msgstr ""
+
+#: inc/acf-config.php:251
+msgid "Carte 1 — titre"
+msgstr ""
+
+#: inc/acf-config.php:254
+#: inc/acf-config.php:280
+#: inc/acf-config.php:306
+#: inc/acf-config.php:332
+msgid "Titre court de la carte (ex. : Fauteuil roulant)."
+msgstr ""
+
+#: inc/acf-config.php:258
+msgid "Carte 1 — description"
+msgstr ""
+
+#: inc/acf-config.php:263
+#: inc/acf-config.php:289
+#: inc/acf-config.php:315
+#: inc/acf-config.php:341
+msgid "Une phrase de détail. Laissez les 3 champs de la carte vides pour la masquer."
+msgstr ""
+
+#: inc/acf-config.php:267
+msgid "Carte 2 — icône"
+msgstr ""
+
+#: inc/acf-config.php:277
+msgid "Carte 2 — titre"
+msgstr ""
+
+#: inc/acf-config.php:284
+msgid "Carte 2 — description"
+msgstr ""
+
+#: inc/acf-config.php:293
+msgid "Carte 3 — icône"
+msgstr ""
+
+#: inc/acf-config.php:303
+msgid "Carte 3 — titre"
+msgstr ""
+
+#: inc/acf-config.php:310
+msgid "Carte 3 — description"
+msgstr ""
+
+#: inc/acf-config.php:319
+msgid "Carte 4 — icône"
+msgstr ""
+
+#: inc/acf-config.php:329
+msgid "Carte 4 — titre"
+msgstr ""
+
+#: inc/acf-config.php:336
+msgid "Carte 4 — description"
+msgstr ""
+
+#: inc/acf-config.php:353
+msgid "Jusqu’à 4 destinations affichées en bas de page (« Vous aimerez aussi »). Laissez vide pour ne rien afficher."
+msgstr ""
+
+#: inc/acf-config.php:387
+msgid "Contenu de l’avis"
+msgstr ""
+
+#: inc/acf-config.php:391
+#: inc/devis.php:181
+msgid "Nom du voyageur"
+msgstr ""
+
+#: inc/acf-config.php:395
+msgid "Nom affiché sous l’avis (ex. : Claire M.)."
+msgstr ""
+
+#: inc/acf-config.php:399
+msgid "Témoignage"
+msgstr ""
+
+#: inc/acf-config.php:405
+msgid "Le texte de l’avis."
+msgstr ""
+
+#: inc/acf-config.php:409
+msgid "Contexte"
+msgstr ""
+
+#: inc/acf-config.php:412
+msgid "Petite précision affichée sous le nom (ex. : Voyage en famille)."
+msgstr ""
+
+#: inc/acf-config.php:416
+msgid "Mois du voyage"
+msgstr ""
+
+#: inc/acf-config.php:422
+msgid "Mois et année du voyage."
+msgstr ""
+
+#: inc/acf-config.php:426
+msgid "Note (sur 5)"
+msgstr ""
+
+#: inc/acf-config.php:433
+msgid "Note de 1 à 5 étoiles."
+msgstr ""
+
+#: inc/acf-config.php:437
+msgid "Destination liée"
+msgstr ""
+
+#: inc/acf-config.php:445
+msgid "Destination concernée par cet avis."
+msgstr ""
+
+#: inc/acf-config.php:449
+msgid "Photo du voyageur"
+msgstr ""
+
+#: inc/acf-config.php:455
+msgid "Photo du voyageur (facultatif)."
+msgstr ""
+
+#: inc/acf-config.php:459
+#: blocks/avis-grid/index.js:77
+msgid "Avis du mois"
+msgstr ""
+
+#: inc/acf-config.php:463
+msgid "Affiche cet avis comme « avis du mois » sur la page d’accueil."
+msgstr ""
+
+#: inc/acf-config.php:495
+msgid "Galerie Adaptours"
+msgstr ""
+
+#: inc/acf-config.php:499
+msgid "Badge « jour »"
+msgstr ""
+
+#: inc/acf-config.php:502
+msgid "Petit badge affiché sur la photo dans la galerie (ex. : Jour 2). Laissez vide pour ne rien afficher."
+msgstr ""
+
+#: inc/archive-destination.php:28
+msgid "Moins de 2 000 €"
+msgstr ""
+
+#: inc/archive-destination.php:33
+msgid "2 000 – 3 000 €"
+msgstr ""
+
+#: inc/archive-destination.php:38
+msgid "Plus de 3 000 €"
+msgstr ""
+
+#: inc/archive-destination.php:151
+msgid "{n} voyages prêts à partir"
+msgstr ""
+
+#: inc/archive-destination.php:154
+msgid "CATALOGUE"
+msgstr ""
+
+#: inc/archive-destination.php:155
+#: parts/footer.php:82
+#: single-destination.php:70
+msgid "Destinations"
+msgstr ""
+
+#: inc/archive-destination.php:156
+msgid "accessibles."
+msgstr ""
+
+#: inc/archive-destination.php:157
+msgid "Toutes nos destinations sont repérées, testées et validées par notre équipe. Chaque fiche détaille les conditions d’accessibilité."
+msgstr ""
+
+#. translators: %s = terme recherché.
+#: inc/archive-destination.php:198
+#, php-format
+msgid "« %s »"
+msgstr ""
+
+#: inc/blocks.php:127
+msgid "voyageurs accompagnés"
+msgstr ""
+
+#: inc/blocks.php:129
+msgid "personnes dans l’équipe"
+msgstr ""
+
+#: inc/blocks.php:131
+msgid "partenaires sur place"
+msgstr ""
+
+#: inc/blocks.php:133
+msgid "langues parlées au bureau"
+msgstr ""
+
+#: inc/blocks.php:135
+msgid "ans à dire oui"
+msgstr ""
+
+#: inc/cf7.php:60
+msgid "En savoir plus"
+msgstr ""
+
+#: inc/cf7.php:66
+msgid "Nom et prénom"
+msgstr ""
+
+#: inc/cf7.php:67
+#: inc/devis.php:175
+msgid "Caroline Martin"
+msgstr ""
+
+#: inc/cf7.php:70
+#: inc/devis.php:358
+msgid "E-mail"
+msgstr ""
+
+#: inc/cf7.php:71
+#: inc/devis.php:202
+msgid "caroline@exemple.fr"
+msgstr ""
+
+#: inc/cf7.php:75
+msgid "Sujet"
+msgstr ""
+
+#: inc/cf7.php:76
+msgid "Une question générale"
+msgstr ""
+
+#: inc/cf7.php:76
+msgid "Demande de devis"
+msgstr ""
+
+#: inc/cf7.php:76
+msgid "Partenariat"
+msgstr ""
+
+#: inc/cf7.php:76
+#: inc/devis.php:405
+msgid "Autre"
+msgstr ""
+
+#: inc/cf7.php:79
+msgid "Message"
+msgstr ""
+
+#: inc/cf7.php:80
+msgid "Dites-nous tout en quelques lignes…"
+msgstr ""
+
+#: inc/cf7.php:83
+msgid "J’accepte que mes informations soient utilisées pour me répondre."
+msgstr ""
+
+#: inc/cf7.php:84
+msgid "Envoyer"
+msgstr ""
+
+#: inc/cf7.php:87
+msgid "Sujet : [contact-sujet]"
+msgstr ""
+
+#: inc/cf7.php:88
+msgid "Nom : [contact-nom]"
+msgstr ""
+
+#: inc/cf7.php:89
+msgid "E-mail : [contact-email]"
+msgstr ""
+
+#: inc/cf7.php:90
+msgid "Message :"
+msgstr ""
+
+#: inc/cf7.php:93
+msgid "[Contact] [contact-sujet] — [contact-nom]"
+msgstr ""
+
+#: inc/cf7.php:103
+msgid "Bonjour [contact-nom],"
+msgstr ""
+
+#: inc/cf7.php:104
+msgid "Merci de nous avoir écrit. Nous avons bien reçu votre message et vous répondrons personnellement, généralement dans la journée."
+msgstr ""
+
+#: inc/cf7.php:105
+#: inc/devis.php:109
+msgid "À très vite,"
+msgstr ""
+
+#: inc/cf7.php:105
+#: inc/devis.php:109
+msgid "L’équipe Adaptours"
+msgstr ""
+
+#: inc/cf7.php:109
+msgid "Nous avons bien reçu votre message — Adaptours"
+msgstr ""
+
+#: inc/cf7.php:128
+msgid "Contact (FR)"
+msgstr ""
+
+#: inc/cpt.php:21
+msgctxt "post type general name"
+msgid "Destinations"
+msgstr ""
+
+#: inc/cpt.php:22
+msgctxt "post type singular name"
+msgid "Destination"
+msgstr ""
+
+#: inc/cpt.php:23
+msgctxt "admin menu"
+msgid "Destinations"
+msgstr ""
+
+#: inc/cpt.php:24
+msgctxt "add new on admin bar"
+msgid "Destination"
+msgstr ""
+
+#: inc/cpt.php:25
+#: inc/cpt.php:65
+msgid "Ajouter"
+msgstr ""
+
+#: inc/cpt.php:26
+msgid "Ajouter une destination"
+msgstr ""
+
+#: inc/cpt.php:27
+msgid "Nouvelle destination"
+msgstr ""
+
+#: inc/cpt.php:28
+msgid "Modifier la destination"
+msgstr ""
+
+#: inc/cpt.php:29
+msgid "Voir la destination"
+msgstr ""
+
+#: inc/cpt.php:30
+msgid "Toutes les destinations"
+msgstr ""
+
+#: inc/cpt.php:32
+msgid "Aucune destination trouvée."
+msgstr ""
+
+#: inc/cpt.php:33
+msgid "Aucune destination dans la corbeille."
+msgstr ""
+
+#: inc/cpt.php:34
+msgid "Image principale"
+msgstr ""
+
+#: inc/cpt.php:35
+msgid "Définir l'image principale"
+msgstr ""
+
+#: inc/cpt.php:36
+msgid "Retirer l'image principale"
+msgstr ""
+
+#: inc/cpt.php:37
+msgid "Utiliser comme image principale"
+msgstr ""
+
+#: inc/cpt.php:38
+msgid "Liste des destinations"
+msgstr ""
+
+#: inc/cpt.php:39
+msgid "Archives des destinations"
+msgstr ""
+
+#: inc/cpt.php:61
+msgctxt "post type general name"
+msgid "Avis"
+msgstr ""
+
+#: inc/cpt.php:62
+msgctxt "post type singular name"
+msgid "Avis"
+msgstr ""
+
+#: inc/cpt.php:63
+msgctxt "admin menu"
+msgid "Avis"
+msgstr ""
+
+#: inc/cpt.php:64
+msgctxt "add new on admin bar"
+msgid "Avis"
+msgstr ""
+
+#: inc/cpt.php:66
+msgid "Ajouter un avis"
+msgstr ""
+
+#: inc/cpt.php:67
+msgid "Nouvel avis"
+msgstr ""
+
+#: inc/cpt.php:68
+msgid "Modifier l'avis"
+msgstr ""
+
+#: inc/cpt.php:69
+msgid "Voir l'avis"
+msgstr ""
+
+#: inc/cpt.php:70
+msgid "Tous les avis"
+msgstr ""
+
+#: inc/cpt.php:71
+msgid "Rechercher un avis"
+msgstr ""
+
+#: inc/cpt.php:72
+msgid "Aucun avis trouvé."
+msgstr ""
+
+#: inc/cpt.php:73
+msgid "Aucun avis dans la corbeille."
+msgstr ""
+
+#: inc/cpt.php:74
+msgid "Liste des avis"
+msgstr ""
+
+#: inc/devis.php:66
+msgid "Particulier"
+msgstr ""
+
+#: inc/devis.php:67
+#: inc/devis.php:186
+#: inc/devis.php:351
+msgid "Agence / revendeur"
+msgstr ""
+
+#: inc/devis.php:68
+msgid "Partenaire (asso, MDPH…)"
+msgstr ""
+
+#: inc/devis.php:89
+msgid "politique de confidentialité"
+msgstr ""
+
+#: inc/devis.php:96
+msgid "[Devis] [devis-destination] — [devis-nom-prenom][devis-nom-client]"
+msgstr ""
+
+#: inc/devis.php:106
+msgid "Bonjour [devis-nom-prenom][devis-nom-client],"
+msgstr ""
+
+#: inc/devis.php:107
+msgid "Merci pour votre demande de devis concernant : [devis-destination]."
+msgstr ""
+
+#: inc/devis.php:108
+msgid "Nous avons bien reçu toutes vos informations et revenons vers vous sous 48 h ouvrées avec une proposition sur mesure."
+msgstr ""
+
+#: inc/devis.php:113
+msgid "Votre demande de devis Adaptours — bien reçue"
+msgstr ""
+
+#: inc/devis.php:130
+msgid "Merci ! Votre demande est arrivée. On revient vers vous sous 48 h ouvrées avec un devis sur mesure."
+msgstr ""
+
+#: inc/devis.php:133
+msgid "Devis (FR)"
+msgstr ""
+
+#: inc/devis.php:168
+#: inc/devis.php:349
+msgid "Vous êtes"
+msgstr ""
+
+#: inc/devis.php:174
+msgid "Votre nom et prénom"
+msgstr ""
+
+#: inc/devis.php:180
+msgid "Nom du client"
+msgstr ""
+
+#: inc/devis.php:187
+msgid "Nom de l’agence"
+msgstr ""
+
+#: inc/devis.php:192
+#: inc/devis.php:352
+msgid "Structure partenaire"
+msgstr ""
+
+#: inc/devis.php:193
+msgid "Association, MDPH…"
+msgstr ""
+
+#: inc/devis.php:199
+msgid "Vos coordonnées"
+msgstr ""
+
+#: inc/devis.php:201
+msgid "Adresse e-mail"
+msgstr ""
+
+#: inc/devis.php:206
+#: inc/devis.php:359
+msgid "Portable"
+msgstr ""
+
+#: inc/devis.php:207
+msgid "06 12 34 56 78"
+msgstr ""
+
+#: inc/devis.php:210
+#: inc/devis.php:360
+msgid "Téléphone fixe"
+msgstr ""
+
+#: inc/devis.php:210
+#: inc/devis.php:315
+msgid "facultatif"
+msgstr ""
+
+#: inc/devis.php:211
+msgid "04 12 34 56 78"
+msgstr ""
+
+#: inc/devis.php:217
+msgid "Votre voyage"
+msgstr ""
+
+#: inc/devis.php:219
+msgid "Destination choisie"
+msgstr ""
+
+#: inc/devis.php:220
+#: inc/devis.php:513
+msgid "— Choisir une destination —"
+msgstr ""
+
+#: inc/devis.php:223
+#: inc/devis.php:367
+msgid "Vol et transport"
+msgstr ""
+
+#: inc/devis.php:225
+msgid "Avion"
+msgstr ""
+
+#: inc/devis.php:225
+msgid "Train"
+msgstr ""
+
+#: inc/devis.php:225
+msgid "Voiture"
+msgstr ""
+
+#: inc/devis.php:225
+msgid "À voir ensemble"
+msgstr ""
+
+#: inc/devis.php:230
+#: inc/devis.php:368
+msgid "Ville de départ"
+msgstr ""
+
+#: inc/devis.php:231
+msgid "ex. Lyon"
+msgstr ""
+
+#: inc/devis.php:234
+msgid "Dates ou période souhaitée"
+msgstr ""
+
+#: inc/devis.php:235
+msgid "ex. 12 → 22 mars"
+msgstr ""
+
+#: inc/devis.php:241
+msgid "Les voyageurs"
+msgstr ""
+
+#: inc/devis.php:243
+msgid "Nombre total de personnes"
+msgstr ""
+
+#: inc/devis.php:247
+#: inc/devis.php:376
+msgid "Dont enfants"
+msgstr ""
+
+#: inc/devis.php:247
+msgid "Moins de 18 ans"
+msgstr ""
+
+#: inc/devis.php:251
+msgid "Budget par personne"
+msgstr ""
+
+#: inc/devis.php:251
+msgid "indicatif"
+msgstr ""
+
+#: inc/devis.php:252
+msgid "ex. 2 500 €"
+msgstr ""
+
+#: inc/devis.php:257
+#: inc/devis.php:381
+msgid "Mobilité"
+msgstr ""
+
+#: inc/devis.php:259
+msgid "Fauteuils roulants manuels"
+msgstr ""
+
+#: inc/devis.php:263
+msgid "Fauteuils roulants électriques"
+msgstr ""
+
+#: inc/devis.php:267
+msgid "Véhicule adapté (avec rampe) sur place"
+msgstr ""
+
+#: inc/devis.php:269
+msgid "Indispensable"
+msgstr ""
+
+#: inc/devis.php:269
+#: inc/devis.php:295
+#: inc/devis.php:301
+#: inc/devis.php:307
+msgid "Non"
+msgstr ""
+
+#: inc/devis.php:269
+msgid "À voir"
+msgstr ""
+
+#: inc/devis.php:275
+#: inc/devis.php:389
+msgid "Matériel sur place"
+msgstr ""
+
+#: inc/devis.php:277
+#: inc/devis.php:391
+msgid "Sièges de douche"
+msgstr ""
+
+#: inc/devis.php:281
+#: inc/devis.php:392
+msgid "Lits médicalisés"
+msgstr ""
+
+#: inc/devis.php:285
+#: inc/devis.php:393
+msgid "Lève-personnes"
+msgstr ""
+
+#: inc/devis.php:291
+#: inc/devis.php:397
+msgid "Accompagnement & soins"
+msgstr ""
+
+#: inc/devis.php:293
+msgid "Accompagnateur fourni par Adaptours"
+msgstr ""
+
+#: inc/devis.php:293
+msgid "Un membre de notre équipe vous accompagne sur tout le séjour."
+msgstr ""
+
+#: inc/devis.php:295
+#: inc/devis.php:301
+#: inc/devis.php:307
+msgid "Oui"
+msgstr ""
+
+#: inc/devis.php:299
+#: inc/devis.php:400
+msgid "Soins d’auxiliaire de vie"
+msgstr ""
+
+#: inc/devis.php:305
+#: inc/devis.php:401
+msgid "Soins infirmiers"
+msgstr ""
+
+#: inc/devis.php:313
+msgid "Autre chose ?"
+msgstr ""
+
+#: inc/devis.php:315
+msgid "Besoins spécifiques ou demandes particulières"
+msgstr ""
+
+#: inc/devis.php:316
+msgid "Allergie, anniversaire à fêter sur place, peur, rêve précis…"
+msgstr ""
+
+#. translators: %s: lien vers la politique de confidentialité.
+#: inc/devis.php:324
+#, php-format
+msgid "J’accepte que mes données soient utilisées pour traiter ma demande de devis. Voir notre %s."
+msgstr ""
+
+#: inc/devis.php:328
+msgid "Envoyer ma demande →"
+msgstr ""
+
+#: inc/devis.php:329
+msgid "Réponse sous 48 h ouvrées · sans engagement"
+msgstr ""
+
+#: inc/devis.php:347
+msgid "Profil"
+msgstr ""
+
+#: inc/devis.php:350
+#: blocks/founder-story/index.js:96
+#: blocks/team-grid-member/index.js:57
+msgid "Nom"
+msgstr ""
+
+#: inc/devis.php:356
+#: inc/options.php:37
+msgid "Coordonnées"
+msgstr ""
+
+#: inc/devis.php:364
+msgid "Voyage"
+msgstr ""
+
+#: inc/devis.php:366
+msgid "Destination"
+msgstr ""
+
+#: inc/devis.php:369
+msgid "Dates / période"
+msgstr ""
+
+#: inc/devis.php:373
+#: inc/helpers.php:286
+msgid "Voyageurs"
+msgstr ""
+
+#: inc/devis.php:375
+msgid "Nombre total"
+msgstr ""
+
+#: inc/devis.php:377
+msgid "Budget / personne"
+msgstr ""
+
+#: inc/devis.php:383
+msgid "Fauteuils manuels"
+msgstr ""
+
+#: inc/devis.php:384
+msgid "Fauteuils électriques"
+msgstr ""
+
+#: inc/devis.php:385
+msgid "Véhicule adapté sur place"
+msgstr ""
+
+#: inc/devis.php:399
+msgid "Accompagnateur Adaptours"
+msgstr ""
+
+#: inc/devis.php:407
+msgid "Besoins / demandes"
+msgstr ""
+
+#: inc/devis.php:413
+msgid "Nouvelle demande de devis"
+msgstr ""
+
+#: inc/devis.php:519
+msgid "Sur-mesure / je ne sais pas encore"
+msgstr ""
+
+#: inc/gallery-metabox.php:25
+#: inc/gallery-metabox.php:164
+msgid "Galerie de la destination"
+msgstr ""
+
+#: inc/gallery-metabox.php:47
+msgid "Sélectionnez les images de la galerie depuis la médiathèque. L'ordre est conservé."
+msgstr ""
+
+#: inc/gallery-metabox.php:61
+msgid "Sélectionner des images"
+msgstr ""
+
+#: inc/gallery-metabox.php:64
+msgid "Tout retirer"
+msgstr ""
+
+#. translators: %d: nombre de nuits sur place.
+#: inc/helpers.php:261
+#, php-format
+msgid "%d nuit sur place"
+msgid_plural "%d nuits sur place"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/helpers.php:288
+msgid "en petit comité"
+msgstr ""
+
+#: inc/helpers.php:318
+msgid "/ personne"
+msgstr ""
+
+#: inc/helpers.php:320
+#: parts/header.php:75
+msgid "Demander un devis"
+msgstr ""
+
+#: inc/helpers.php:350
+msgid "km à vol d’oiseau"
+msgstr ""
+
+#: inc/helpers.php:367
+#: inc/icons.php:26
+#: blocks/practical-card/index.js:27
+msgid "Langue"
+msgstr ""
+
+#. translators: %d: note de 1 à 5.
+#: inc/helpers.php:570
+#, php-format
+msgid "Note : %d sur 5"
+msgstr ""
+
+#: inc/icons.php:21
+#: blocks/practical-card/index.js:22
+msgid "Visa / formalités"
+msgstr ""
+
+#: inc/icons.php:22
+#: blocks/practical-card/index.js:23
+msgid "Santé"
+msgstr ""
+
+#: inc/icons.php:24
+#: inc/itinerary-tags.php:21
+#: blocks/practical-card/index.js:25
+msgid "Vol"
+msgstr ""
+
+#: inc/icons.php:28
+#: inc/itinerary-tags.php:22
+#: blocks/practical-card/index.js:29
+msgid "Transport"
+msgstr ""
+
+#: inc/icons.php:30
+#: blocks/practical-card/index.js:31
+msgid "Rythme adapté"
+msgstr ""
+
+#: inc/icons.php:31
+#: blocks/practical-card/index.js:32
+msgid "Accompagnement"
+msgstr ""
+
+#: inc/icons.php:32
+#: blocks/practical-card/index.js:33
+msgid "Confort"
+msgstr ""
+
+#: inc/itinerary-tags.php:23
+msgid "Nature"
+msgstr ""
+
+#: inc/itinerary-tags.php:24
+msgid "Temps fort"
+msgstr ""
+
+#: inc/itinerary-tags.php:25
+msgid "Culture"
+msgstr ""
+
+#: inc/itinerary-tags.php:26
+msgid "Bien-être"
+msgstr ""
+
+#: inc/itinerary-tags.php:27
+msgid "Spirituel"
+msgstr ""
+
+#: inc/itinerary-tags.php:28
+msgid "Eau"
+msgstr ""
+
+#: inc/itinerary-tags.php:29
+msgid "Faune"
+msgstr ""
+
+#: inc/itinerary-tags.php:30
+msgid "Marche"
+msgstr ""
+
+#: inc/menus.php:20
+#: parts/header.php:45
+msgid "Menu principal"
+msgstr ""
+
+#: inc/menus.php:21
+msgid "Footer — Colonne 1"
+msgstr ""
+
+#: inc/menus.php:22
+msgid "Footer — Colonne 2"
+msgstr ""
+
+#: inc/options.php:40
+msgid "Téléphone (affichage)"
+msgstr ""
+
+#: inc/options.php:42
+msgid "Format humain, ex. « 04 XX XX XX XX »."
+msgstr ""
+
+#: inc/options.php:45
+msgid "Téléphone (lien tel:)"
+msgstr ""
+
+#: inc/options.php:47
+msgid "Format international, ex. « +33XXXXXXXXX »."
+msgstr ""
+
+#: inc/options.php:50
+msgid "Horaires d’appel"
+msgstr ""
+
+#: inc/options.php:52
+msgid "Ex. « Lundi – Vendredi · 9h → 18h ». Traduisible (Polylang)."
+msgstr ""
+
+#: inc/options.php:55
+msgid "Email de contact"
+msgstr ""
+
+#: inc/options.php:59
+msgid "Délai de réponse"
+msgstr ""
+
+#: inc/options.php:61
+msgid "Ex. « Réponse sous 24h ouvrées ». Traduisible (Polylang)."
+msgstr ""
+
+#: inc/options.php:64
+msgid "Adresse postale"
+msgstr ""
+
+#: inc/options.php:70
+msgid "Liens internes"
+msgstr ""
+
+#: inc/options.php:73
+msgid "URL page Devis"
+msgstr ""
+
+#: inc/options.php:77
+msgid "URL page Contact"
+msgstr ""
+
+#: inc/options.php:81
+msgid "URL CGV"
+msgstr ""
+
+#: inc/options.php:85
+msgid "URL Mentions légales"
+msgstr ""
+
+#: inc/options.php:89
+msgid "URL Politique de confidentialité"
+msgstr ""
+
+#: inc/options.php:95
+msgid "Réseaux sociaux"
+msgstr ""
+
+#: inc/options.php:98
+msgid "URL Facebook"
+msgstr ""
+
+#: inc/options.php:102
+msgid "URL Instagram"
+msgstr ""
+
+#: inc/options.php:106
+msgid "URL LinkedIn"
+msgstr ""
+
+#: inc/options.php:112
+msgid "Avis Google"
+msgstr ""
+
+#: inc/options.php:115
+msgid "Note Google (★)"
+msgstr ""
+
+#: inc/options.php:117
+msgid "Saisie manuelle, ex. « 4.9 ». Fallback si pas d’API."
+msgstr ""
+
+#: inc/options.php:120
+msgid "Nombre d’avis Google"
+msgstr ""
+
+#: inc/options.php:126
+msgid "Page Destinations"
+msgstr ""
+
+#: inc/options.php:129
+#: blocks/avis-grid/index.js:50
+#: blocks/contact-form/index.js:19
+#: blocks/destination-gallery/index.js:33
+#: blocks/destinations-grid/index.js:64
+#: blocks/destinations-suggestions/index.js:32
+#: blocks/dual-cta/index.js:25
+#: blocks/dual-cta/index.js:59
+#: blocks/hero-contact/index.js:19
+#: blocks/hero-devis/index.js:24
+#: blocks/hero-home/index.js:25
+#: blocks/hero-qsn/index.js:30
+#: blocks/itinerary/index.js:48
+#: blocks/process/index.js:66
+#: blocks/recruitment/index.js:64
+#: blocks/recruitment/index.js:107
+#: blocks/section-accessibility/index.js:33
+#: blocks/section-map/index.js:36
+#: blocks/section-practical/index.js:50
+#: blocks/section-promise/index.js:25
+#: blocks/team-grid/index.js:67
+#: blocks/team-intro/index.js:29
+msgid "Surtitre"
+msgstr ""
+
+#: inc/options.php:131
+msgid "Petit mot affiché au-dessus du titre. Laissez vide pour afficher « CATALOGUE »."
+msgstr ""
+
+#: inc/options.php:134
+#: blocks/avis-grid/index.js:56
+#: blocks/card-grid-card/index.js:86
+#: blocks/destination-gallery/index.js:39
+#: blocks/destinations-suggestions/index.js:38
+#: blocks/founder-story/index.js:52
+#: blocks/hero-home/index.js:23
+#: blocks/hero-qsn/index.js:28
+#: blocks/itinerary/index.js:54
+#: blocks/process/index.js:21
+#: blocks/process/index.js:64
+#: blocks/section-accessibility/index.js:39
+#: blocks/section-map/index.js:42
+#: blocks/section-practical/index.js:56
+#: blocks/section-promise/index.js:23
+msgid "Titre"
+msgstr ""
+
+#: inc/options.php:136
+msgid "Début du grand titre de la page. Laissez vide pour « Destinations »."
+msgstr ""
+
+#: inc/options.php:139
+#: blocks/avis-grid/index.js:61
+#: blocks/contact-form/index.js:30
+#: blocks/content-storytelling/index.js:63
+#: blocks/destination-gallery/index.js:44
+#: blocks/destinations-grid/index.js:74
+#: blocks/destinations-suggestions/index.js:43
+#: blocks/dual-cta/index.js:35
+#: blocks/dual-cta/index.js:69
+#: blocks/founder-story/index.js:64
+#: blocks/hero-contact/index.js:30
+#: blocks/hero-devis/index.js:35
+#: blocks/hero-home/index.js:36
+#: blocks/hero-qsn/index.js:41
+#: blocks/itinerary-step/index.js:44
+#: blocks/itinerary/index.js:59
+#: blocks/process/index.js:76
+#: blocks/quote/index.js:27
+#: blocks/section-accessibility/index.js:44
+#: blocks/section-map/index.js:51
+#: blocks/section-practical/index.js:61
+#: blocks/section-promise/index.js:36
+#: blocks/team-intro/index.js:39
+msgid "Mot(s) en orange"
+msgstr ""
+
+#: inc/options.php:141
+msgid "Mot(s) affiché(s) en orange, à la suite du titre. Laissez vide pour « accessibles. »."
+msgstr ""
+
+#: inc/options.php:144
+#: blocks/hero-contact/index.js:42
+#: blocks/hero-devis/index.js:41
+#: blocks/hero-home/index.js:50
+#: blocks/hero-qsn/index.js:55
+msgid "Texte d’introduction"
+msgstr ""
+
+#: inc/options.php:146
+msgid "Court texte de présentation, à droite du titre."
+msgstr ""
+
+#: inc/options.php:149
+msgid "Phrase manuscrite"
+msgstr ""
+
+#: inc/options.php:151
+msgid "Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir »."
+msgstr ""
+
+#: inc/options.php:161
+msgid "Ex. « SARL au capital de 10 000 € »."
+msgstr ""
+
+#: inc/options.php:168
+msgid "Code NAF"
+msgstr ""
+
+#: inc/options.php:180
+msgid "N° Atout France"
+msgstr ""
+
+#: inc/options.php:184
+msgid "Garantie APST"
+msgstr ""
+
+#: inc/options.php:186
+msgid "Ligne « Adhérent APST — … »."
+msgstr ""
+
+#: inc/options.php:213
+#: inc/options.php:214
+msgid "Coordonnées & liens"
+msgstr ""
+
+#: inc/roles.php:61
+msgid "Cliente"
+msgstr ""
+
+#: inc/taxonomies.php:20
+msgctxt "taxonomy general name"
+msgid "Zones géographiques"
+msgstr ""
+
+#: inc/taxonomies.php:21
+msgctxt "taxonomy singular name"
+msgid "Zone géographique"
+msgstr ""
+
+#: inc/taxonomies.php:22
+msgid "Zones géographiques"
+msgstr ""
+
+#: inc/taxonomies.php:23
+msgid "Toutes les zones"
+msgstr ""
+
+#: inc/taxonomies.php:24
+msgid "Modifier la zone"
+msgstr ""
+
+#: inc/taxonomies.php:25
+msgid "Voir la zone"
+msgstr ""
+
+#: inc/taxonomies.php:26
+msgid "Mettre à jour la zone"
+msgstr ""
+
+#: inc/taxonomies.php:27
+msgid "Ajouter une zone"
+msgstr ""
+
+#: inc/taxonomies.php:28
+msgid "Nom de la nouvelle zone"
+msgstr ""
+
+#: inc/taxonomies.php:29
+msgid "Rechercher une zone"
+msgstr ""
+
+#: inc/taxonomies.php:30
+msgid "Aucune zone trouvée."
+msgstr ""
+
+#: index.php:27
+msgid "Aucun contenu pour le moment."
+msgstr ""
+
+#: parts/footer.php:28
+msgid "Instagram"
+msgstr ""
+
+#: parts/footer.php:32
+msgid "Facebook"
+msgstr ""
+
+#: parts/footer.php:36
+msgid "LinkedIn"
+msgstr ""
+
+#: parts/footer.php:42
+msgid "CGV"
+msgstr ""
+
+#: parts/footer.php:43
+msgid "Mentions légales"
+msgstr ""
+
+#: parts/footer.php:44
+msgid "Confidentialité"
+msgstr ""
+
+#: parts/footer.php:52
+msgid "Séjours accessibles, sur mesure, depuis 2011. Voyagez sans limites, où que vous soyez."
+msgstr ""
+
+#: parts/footer.php:90
+msgid "À propos"
+msgstr ""
+
+#: parts/footer.php:96
+msgid "Nous suivre"
+msgstr ""
+
+#. translators: %s: année courante.
+#: parts/footer.php:127
+#, php-format
+msgid "© %s Adaptours · Tous droits réservés"
+msgstr ""
+
+#: parts/footer.php:142
+msgid "Liens légaux"
+msgstr ""
+
+#: parts/header.php:28
+msgid "Aller au contenu"
+msgstr ""
+
+#: parts/header.php:39
+msgid "Menu"
+msgstr ""
+
+#: parts/prefooter.php:21
+msgid "Votre prochain voyage commence par un mot."
+msgstr ""
+
+#: parts/prefooter.php:22
+msgid "un mot."
+msgstr ""
+
+#: parts/prefooter.php:26
+msgid "Devis gratuit"
+msgstr ""
+
+#: parts/prefooter.php:27
+msgid "Sans engagement"
+msgstr ""
+
+#: parts/prefooter.php:28
+msgid "9h–18h, lun–ven"
+msgstr ""
+
+#: parts/prefooter.php:33
+msgid "ET SI C’ÉTAIT VOTRE TOUR ?"
+msgstr ""
+
+#: parts/prefooter.php:43
+msgid "Dites-nous où vous rêvez d’aller, on s’occupe du reste. Premier échange gratuit, sans engagement. Réponse sous 48h."
+msgstr ""
+
+#: parts/prefooter.php:48
+msgid "Demander mon devis"
+msgstr ""
+
+#. translators: %s: numéro de téléphone affiché.
+#: parts/prefooter.php:56
+#, php-format
+msgid "Nous appeler · %s"
+msgstr ""
+
+#: single-destination.php:66
+msgid "Fil d’Ariane"
+msgstr ""
+
+#: single-destination.php:67
+msgid "Accueil"
+msgstr ""
+
+#: single-destination.php:96
+msgid "Informations clés"
+msgstr ""
+
+#: single-destination.php:110
+#: template-parts/card-destination.php:102
+#: template-parts/card-destination.php:127
+msgid "À partir de"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Contact"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Devis"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Page de contenu riche"
+msgstr ""
+
+#: template-parts/card-avis.php:74
+msgid "— Avis du mois"
+msgstr ""
+
+#: template-parts/card-destination.php:104
+msgid "/ pers"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Qui sommes-nous"
+msgstr ""
+
+#: blocks/avis-grid/index.js:37
+msgid "Automatique (avis du mois)"
+msgstr ""
+
+#: blocks/avis-grid/index.js:48
+#: blocks/destination-gallery/index.js:31
+#: blocks/destinations-grid/index.js:62
+#: blocks/destinations-suggestions/index.js:30
+#: blocks/itinerary/index.js:46
+#: blocks/section-accessibility/index.js:31
+#: blocks/section-map/index.js:34
+#: blocks/section-practical/index.js:48
+msgid "Textes"
+msgstr ""
+
+#: blocks/avis-grid/index.js:53
+#: blocks/destination-gallery/index.js:36
+#: blocks/destinations-suggestions/index.js:35
+#: blocks/hero-contact/index.js:22
+#: blocks/hero-devis/index.js:27
+#: blocks/hero-home/index.js:28
+#: blocks/hero-qsn/index.js:33
+#: blocks/itinerary/index.js:51
+#: blocks/section-accessibility/index.js:36
+#: blocks/section-map/index.js:39
+#: blocks/section-practical/index.js:53
+#: blocks/section-promise/index.js:28
+msgid "Petit texte au-dessus du titre."
+msgstr ""
+
+#: blocks/avis-grid/index.js:64
+#: blocks/destination-gallery/index.js:47
+#: blocks/destinations-suggestions/index.js:46
+#: blocks/section-accessibility/index.js:47
+#: blocks/section-practical/index.js:64
+msgid "Le ou les mots du titre à mettre en orange."
+msgstr ""
+
+#: blocks/avis-grid/index.js:70
+#: blocks/destinations-suggestions/index.js:52
+#: blocks/itinerary/index.js:68
+#: blocks/section-practical/index.js:70
+msgid "Description"
+msgstr ""
+
+#: blocks/avis-grid/index.js:73
+msgid "Texte d’introduction, à droite du titre."
+msgstr ""
+
+#: blocks/avis-grid/index.js:79
+msgid "Avis affiché en grand"
+msgstr ""
+
+#: blocks/avis-grid/index.js:87
+msgid "Sur « Automatique », c’est l’avis marqué « avis du mois » qui s’affiche."
+msgstr ""
+
+#: blocks/avis-grid/index.js:94
+msgid "Bande du bas"
+msgstr ""
+
+#: blocks/avis-grid/index.js:96
+#: blocks/content-storytelling/index.js:51
+#: blocks/content-storytelling/index.js:68
+#: blocks/destinations-grid/index.js:79
+#: blocks/dual-cta/index.js:40
+#: blocks/dual-cta/index.js:74
+#: blocks/founder-story/index.js:69
+#: blocks/process/index.js:26
+#: blocks/process/index.js:81
+#: blocks/section-promise/index.js:42
+#: blocks/team-intro/index.js:27
+msgid "Texte"
+msgstr ""
+
+#: blocks/avis-grid/index.js:99
+msgid "Phrase affichée en bas de la section."
+msgstr ""
+
+#: blocks/avis-grid/index.js:102
+#: blocks/destinations-grid/index.js:84
+#: blocks/destinations-suggestions/index.js:60
+#: blocks/hero-qsn/index.js:62
+#: blocks/team-grid/index.js:114
+#: blocks/team-intro/index.js:56
+msgid "Texte du bouton"
+msgstr ""
+
+#: blocks/avis-grid/index.js:107
+#: blocks/destinations-grid/index.js:89
+#: blocks/destinations-suggestions/index.js:65
+#: blocks/hero-qsn/index.js:67
+#: blocks/team-grid/index.js:49
+#: blocks/team-intro/index.js:61
+msgid "Lien du bouton"
+msgstr ""
+
+#: blocks/avis-grid/index.js:111
+msgid "Laissez vide pour aller vers la page Devis."
+msgstr ""
+
+#: blocks/avis-spotlight/index.js:25
+msgid "L’avis affiché ici se choisit dans la fiche de cette destination, champ « Avis mis en avant »."
+msgstr ""
+
+#: blocks/card-grid-card/index.js:42
+msgid "Lien de la carte"
+msgstr ""
+
+#: blocks/card-grid-card/index.js:73
+#: blocks/itinerary-step/index.js:96
+#: blocks/media-full/index.js:40
+#: blocks/media-full/index.js:92
+#: blocks/media-text/index.js:175
+msgid "Image"
+msgstr ""
+
+#: blocks/card-grid-card/index.js:94
+msgid "Texte court…"
+msgstr ""
+
+#: blocks/card-grid/index.js:52
+#: blocks/media-text/index.js:54
+msgid "Mise en page"
+msgstr ""
+
+#: blocks/card-grid/index.js:54
+msgid "Nombre de colonnes"
+msgstr ""
+
+#: blocks/card-grid/index.js:75
+#: blocks/cards-numbered/index.js:53
+#: blocks/media-text/index.js:117
+#: blocks/page-header/index.js:67
+#: blocks/rich-text/index.js:37
+msgid "Surtitre (optionnel)"
+msgstr ""
+
+#: blocks/card-grid/index.js:83
+#: blocks/cards-numbered/index.js:61
+#: blocks/media-text/index.js:125
+#: blocks/page-header/index.js:76
+#: blocks/recruitment/index.js:72
+#: blocks/recruitment/index.js:115
+#: blocks/rich-text/index.js:45
+#: blocks/team-grid/index.js:75
+msgid "Titre…"
+msgstr ""
+
+#: blocks/card-grid/index.js:91
+#: blocks/cards-numbered/index.js:69
+#: blocks/media-text/index.js:133
+#: blocks/page-header/index.js:84
+#: blocks/recruitment/index.js:80
+#: blocks/recruitment/index.js:123
+#: blocks/rich-text/index.js:53
+#: blocks/team-grid/index.js:83
+msgid "mot(s) en orange"
+msgstr ""
+
+#: blocks/cards-numbered-card/index.js:27
+msgid "Titre de la carte"
+msgstr ""
+
+#: blocks/cards-numbered-card/index.js:35
+msgid "Description…"
+msgstr ""
+
+#: blocks/cards-numbered/index.js:79
+msgid "Texte à droite du titre (optionnel)"
+msgstr ""
+
+#: blocks/contact-form/index.js:17
+msgid "Titre du formulaire"
+msgstr ""
+
+#: blocks/contact-form/index.js:22
+msgid "Petit texte au-dessus du titre du formulaire."
+msgstr ""
+
+#: blocks/contact-form/index.js:25
+#: blocks/content-storytelling/index.js:58
+#: blocks/destinations-grid/index.js:69
+#: blocks/dual-cta/index.js:30
+#: blocks/dual-cta/index.js:64
+#: blocks/founder-story/index.js:59
+#: blocks/hero-contact/index.js:25
+#: blocks/hero-devis/index.js:30
+#: blocks/hero-home/index.js:31
+#: blocks/hero-qsn/index.js:36
+#: blocks/process/index.js:71
+#: blocks/section-promise/index.js:31
+#: blocks/team-intro/index.js:34
+msgid "Titre — début"
+msgstr ""
+
+#: blocks/contact-form/index.js:33
+#: blocks/hero-contact/index.js:33
+msgid "Le ou les mots du titre mis en avant en orange."
+msgstr ""
+
+#. translators: %d = numéro de photo.
+#: blocks/content-storytelling/index.js:30
+#: blocks/founder-story/index.js:31
+#, js-format
+msgid "Changer la photo %d"
+msgstr ""
+
+#: blocks/content-storytelling/index.js:31
+#: blocks/founder-story/index.js:32
+#, js-format
+msgid "Choisir la photo %d"
+msgstr ""
+
+#: blocks/content-storytelling/index.js:35
+#: blocks/founder-story/index.js:36
+#: blocks/hero-devis/index.js:65
+#: blocks/hero-qsn/index.js:92
+#: blocks/team-intro/index.js:83
+msgid "Retirer"
+msgstr ""
+
+#: blocks/content-storytelling/index.js:53
+#: blocks/founder-story/index.js:54
+msgid "Surtitre (facultatif)"
+msgstr ""
+
+#: blocks/content-storytelling/index.js:72
+#: blocks/section-promise/index.js:48
+msgid "Laissez une ligne vide entre deux paragraphes."
+msgstr ""
+
+#: blocks/content-storytelling/index.js:75
+#: blocks/founder-story/index.js:106
+msgid "Photos"
+msgstr ""
+
+#: blocks/destination-gallery/index.js:56
+msgid "Affichée à droite du titre, en écriture manuscrite."
+msgstr ""
+
+#: blocks/destination-gallery/index.js:59
+msgid "Les photos se choisissent dans « Galerie de la destination », sur la fiche."
+msgstr ""
+
+#: blocks/destinations-grid/index.js:24
+msgid "Destination en grand (1re)"
+msgstr ""
+
+#: blocks/destinations-grid/index.js:25
+msgid "Destination 2"
+msgstr ""
+
+#: blocks/destinations-grid/index.js:26
+msgid "Destination 3"
+msgstr ""
+
+#: blocks/destinations-grid/index.js:27
+msgid "Destination 4 (large)"
+msgstr ""
+
+#: blocks/destinations-grid/index.js:46
+#: blocks/practical-card/index.js:21
+msgid "— Aucune —"
+msgstr ""
+
+#: blocks/destinations-grid/index.js:93
+msgid "Laissez vide pour aller vers la liste des destinations."
+msgstr ""
+
+#: blocks/destinations-grid/index.js:97
+msgid "Destinations affichées"
+msgstr ""
+
+#. translators: %d = nombre de destinations.
+#: blocks/destinations-grid/index.js:110
+#, js-format
+msgid "Choisissez %d destinations. La 1re s’affiche en grand à gauche."
+msgstr ""
+
+#: blocks/destinations-suggestions/index.js:55
+#: blocks/itinerary/index.js:71
+#: blocks/section-practical/index.js:73
+msgid "Texte affiché à droite du titre."
+msgstr ""
+
+#: blocks/destinations-suggestions/index.js:58
+#: blocks/hero-qsn/index.js:60
+msgid "Bouton"
+msgstr ""
+
+#: blocks/destinations-suggestions/index.js:69
+msgid "Laissez vide pour aller vers la liste de toutes les destinations."
+msgstr ""
+
+#: blocks/destinations-suggestions/index.js:75
+msgid "Les destinations affichées se choisissent dans la fiche, champ « Destinations suggérées »."
+msgstr ""
+
+#: blocks/devis-form/index.js:17
+msgid "Formulaire de devis"
+msgstr ""
+
+#: blocks/devis-form/index.js:19
+msgid "Le formulaire et les questions sont gérés par l’équipe Adaptours. Il n’y a rien à régler ici."
+msgstr ""
+
+#: blocks/dual-cta/index.js:23
+msgid "Carte 1 — Voyager"
+msgstr ""
+
+#: blocks/dual-cta/index.js:46
+#: blocks/dual-cta/index.js:80
+msgid "Bouton — texte"
+msgstr ""
+
+#: blocks/dual-cta/index.js:51
+#: blocks/dual-cta/index.js:86
+msgid "Bouton — lien"
+msgstr ""
+
+#: blocks/dual-cta/index.js:54
+#: blocks/hero-home/index.js:65
+msgid "Laissez vide pour pointer vers la page Devis."
+msgstr ""
+
+#: blocks/dual-cta/index.js:57
+msgid "Carte 2 — Nous rejoindre"
+msgstr ""
+
+#: blocks/dual-cta/index.js:83
+msgid "Laissez vide pour afficher l’e-mail général du site."
+msgstr ""
+
+#: blocks/dual-cta/index.js:89
+msgid "Laissez vide pour écrire à l’e-mail général du site."
+msgstr ""
+
+#: blocks/founder-story/index.js:71
+msgid "Paragraphe d’introduction"
+msgstr ""
+
+#: blocks/founder-story/index.js:77
+msgid "Citation — début"
+msgstr ""
+
+#: blocks/founder-story/index.js:82
+msgid "Citation — fin en orange"
+msgstr ""
+
+#: blocks/founder-story/index.js:85
+msgid "Derniers mots de la citation, mis en avant."
+msgstr ""
+
+#: blocks/founder-story/index.js:88
+msgid "Paragraphe de conclusion"
+msgstr ""
+
+#: blocks/founder-story/index.js:94
+msgid "Signature"
+msgstr ""
+
+#: blocks/founder-story/index.js:101
+msgid "Rôle"
+msgstr ""
+
+#: blocks/hero-contact/index.js:17
+#: blocks/hero-devis/index.js:22
+msgid "En-tête"
+msgstr ""
+
+#: blocks/hero-contact/index.js:36
+msgid "Titre — fin"
+msgstr ""
+
+#: blocks/hero-contact/index.js:39
+msgid "Laissez vide si le titre se termine par le mot en orange."
+msgstr ""
+
+#: blocks/hero-devis/index.js:38
+#: blocks/hero-home/index.js:39
+#: blocks/hero-qsn/index.js:44
+msgid "Le ou les mots du titre mis en avant."
+msgstr ""
+
+#: blocks/hero-devis/index.js:46
+msgid "Photo de fond"
+msgstr ""
+
+#: blocks/hero-devis/index.js:56
+#: blocks/hero-qsn/index.js:83
+msgid "Changer la photo"
+msgstr ""
+
+#: blocks/hero-devis/index.js:57
+#: blocks/hero-qsn/index.js:84
+msgid "Choisir une photo"
+msgstr ""
+
+#: blocks/hero-home/index.js:42
+#: blocks/hero-qsn/index.js:47
+msgid "Ligne manuscrite"
+msgstr ""
+
+#: blocks/hero-home/index.js:45
+#: blocks/hero-qsn/index.js:50
+msgid "Dernière ligne du titre, en écriture manuscrite. Laissez vide pour la masquer."
+msgstr ""
+
+#: blocks/hero-home/index.js:48
+#: blocks/hero-qsn/index.js:53
+msgid "Introduction"
+msgstr ""
+
+#: blocks/hero-home/index.js:55
+msgid "Boutons"
+msgstr ""
+
+#: blocks/hero-home/index.js:57
+msgid "Bouton principal — texte"
+msgstr ""
+
+#: blocks/hero-home/index.js:62
+msgid "Bouton principal — lien"
+msgstr ""
+
+#: blocks/hero-home/index.js:68
+msgid "Bouton secondaire — texte"
+msgstr ""
+
+#: blocks/hero-home/index.js:73
+msgid "Bouton secondaire — lien"
+msgstr ""
+
+#: blocks/hero-home/index.js:76
+msgid "Laissez vide pour pointer vers la liste des destinations."
+msgstr ""
+
+#: blocks/hero-qsn/index.js:70
+msgid "Par défaut, mène à la section Équipe plus bas dans la page."
+msgstr ""
+
+#: blocks/hero-qsn/index.js:73
+msgid "Photo principale"
+msgstr ""
+
+#: blocks/itinerary-step/index.js:42
+msgid "Étape"
+msgstr ""
+
+#: blocks/itinerary-step/index.js:47
+msgid "Le ou les mots du titre de l’étape à mettre en orange (facultatif)."
+msgstr ""
+
+#: blocks/itinerary-step/index.js:70
+msgid "Titre de l’étape…"
+msgstr ""
+
+#: blocks/itinerary-step/index.js:78
+msgid "Que se passe-t-il ce jour-là ?"
+msgstr ""
+
+#: blocks/itinerary/index.js:62
+msgid "Le ou les mots du titre à mettre en orange (facultatif)."
+msgstr ""
+
+#: blocks/kpi-bar/index.js:53
+msgid "Chiffre"
+msgstr ""
+
+#: blocks/kpi-bar/index.js:65
+msgid "Libellé"
+msgstr ""
+
+#: blocks/legal-info/index.js:19
+msgid "Ces informations se modifient dans Réglages → Coordonnées & liens (section « Informations légales »)."
+msgstr ""
+
+#: blocks/media-full/index.js:42
+msgid "Largeur"
+msgstr ""
+
+#: blocks/media-full/index.js:45
+msgid "Pleine largeur"
+msgstr ""
+
+#: blocks/media-full/index.js:46
+msgid "Cadrée"
+msgstr ""
+
+#: blocks/media-full/index.js:51
+#: blocks/media-text/index.js:65
+msgid "Description de l’image"
+msgstr ""
+
+#: blocks/media-full/index.js:52
+#: blocks/media-text/index.js:66
+msgid "Décrivez l’image en quelques mots (pour l’accessibilité)."
+msgstr ""
+
+#: blocks/media-full/index.js:86
+msgid "Légende (optionnelle)"
+msgstr ""
+
+#: blocks/media-text/index.js:56
+msgid "Position de l’image"
+msgstr ""
+
+#: blocks/media-text/index.js:59
+msgid "À droite"
+msgstr ""
+
+#: blocks/media-text/index.js:60
+msgid "À gauche"
+msgstr ""
+
+#: blocks/media-text/index.js:78
+#: blocks/page-header/index.js:37
+msgid "Lien du bouton principal"
+msgstr ""
+
+#: blocks/media-text/index.js:84
+#: blocks/page-header/index.js:43
+msgid "Lien du bouton secondaire"
+msgstr ""
+
+#: blocks/media-text/index.js:143
+#: blocks/rich-text/index.js:20
+msgid "Votre texte…"
+msgstr ""
+
+#: blocks/media-text/index.js:152
+#: blocks/page-header/index.js:104
+msgid "Bouton principal"
+msgstr ""
+
+#: blocks/media-text/index.js:160
+#: blocks/page-header/index.js:112
+msgid "Bouton secondaire"
+msgstr ""
+
+#: blocks/page-header/index.js:94
+msgid "Texte d’introduction…"
+msgstr ""
+
+#: blocks/practical-card/index.js:44
+msgid "Carte"
+msgstr ""
+
+#: blocks/practical-card/index.js:46
+msgid "Icône"
+msgstr ""
+
+#: blocks/practical-card/index.js:65
+msgid "Titre (ex. : Visa & formalités)"
+msgstr ""
+
+#: blocks/practical-card/index.js:73
+msgid "Détail pratique…"
+msgstr ""
+
+#. translators: %d = numéro d'étape.
+#: blocks/process/index.js:17
+#, js-format
+msgid "Étape %d"
+msgstr ""
+
+#: blocks/process/index.js:31
+msgid "Points clés"
+msgstr ""
+
+#: blocks/process/index.js:34
+msgid "Un point par ligne (chaque ligne s’affiche avec une coche)."
+msgstr ""
+
+#: blocks/process/index.js:38
+msgid "Durée indicative"
+msgstr ""
+
+#: blocks/process/index.js:41
+msgid "Ex. « ~ 48 h ». Laissez vide pour masquer."
+msgstr ""
+
+#: blocks/process/index.js:44
+msgid "Bouton — texte (facultatif)"
+msgstr ""
+
+#: blocks/process/index.js:49
+msgid "Bouton — lien (facultatif)"
+msgstr ""
+
+#: blocks/quote/index.js:25
+msgid "Mise en avant"
+msgstr ""
+
+#: blocks/quote/index.js:28
+msgid "Recopiez ici un court extrait de la citation à souligner. Laissez vide pour aucun."
+msgstr ""
+
+#: blocks/quote/index.js:44
+msgid "Votre citation…"
+msgstr ""
+
+#: blocks/quote/index.js:53
+msgid "Auteur — contexte"
+msgstr ""
+
+#: blocks/recruitment-condition/index.js:28
+msgid "Titre de la condition"
+msgstr ""
+
+#: blocks/recruitment-condition/index.js:36
+msgid "Explication…"
+msgstr ""
+
+#: blocks/recruitment/index.js:45
+msgid "Candidatures"
+msgstr ""
+
+#: blocks/recruitment/index.js:47
+msgid "Adresse e-mail pour les CV"
+msgstr ""
+
+#: blocks/recruitment/index.js:50
+msgid "Laissez vide pour utiliser l’e-mail général du site."
+msgstr ""
+
+#: blocks/recruitment/index.js:89
+msgid "Présentation du poste…"
+msgstr ""
+
+#: blocks/recruitment/index.js:95
+msgid "(e-mail général du site)"
+msgstr ""
+
+#: blocks/recruitment/index.js:132
+msgid "Sous-titre…"
+msgstr ""
+
+#: blocks/section-accessibility/index.js:53
+msgid "Le texte d’introduction et les 4 cartes se remplissent dans la fiche de cette destination."
+msgstr ""
+
+#: blocks/section-map/index.js:45
+msgid "Par exemple « De Paris à ». Le mot suivant (la destination) se met en orange ci-dessous."
+msgstr ""
+
+#: blocks/section-map/index.js:54
+msgid "Le nom de la destination, mis en orange à la fin du titre (ex. : Denpasar)."
+msgstr ""
+
+#: blocks/section-map/index.js:60
+msgid "Texte sur le vol"
+msgstr ""
+
+#: blocks/section-map/index.js:63
+msgid "Quelques lignes sur le trajet, affichées à droite du titre."
+msgstr ""
+
+#: blocks/section-map/index.js:69
+msgid "Distance"
+msgstr ""
+
+#: blocks/section-map/index.js:72
+msgid "Laissez vide pour calculer automatiquement la distance à partir de la fiche destination."
+msgstr ""
+
+#: blocks/section-promise/index.js:39
+msgid "La fin du titre, mise en avant en orange."
+msgstr ""
+
+#: blocks/section-promise/index.js:44
+msgid "Texte de présentation"
+msgstr ""
+
+#: blocks/team-grid-member/index.js:45
+msgid "Photo"
+msgstr ""
+
+#: blocks/team-grid-member/index.js:65
+msgid "Poste"
+msgstr ""
+
+#: blocks/team-grid-member/index.js:75
+msgid "Petite phrase"
+msgstr ""
+
+#: blocks/team-grid/index.js:47
+msgid "Bouton « on recrute ? »"
+msgstr ""
+
+#: blocks/team-grid/index.js:52
+msgid "Par défaut, mène à la section Recrutement plus bas dans la page."
+msgstr ""
+
+#: blocks/team-grid/index.js:93
+msgid "Texte à droite du titre"
+msgstr ""
+
+#: blocks/team-grid/index.js:106
+msgid "on recrute, par curiosité ?"
+msgstr ""
+
+#: blocks/team-intro/index.js:44
+msgid "Paragraphe 1"
+msgstr ""
+
+#: blocks/team-intro/index.js:50
+msgid "Paragraphe 2"
+msgstr ""
+
+#: blocks/team-intro/index.js:65
+msgid "Laissez vide pour aller vers la page « Qui sommes-nous »."
+msgstr ""
+
+#: blocks/team-intro/index.js:68
+msgid "Visuel"
+msgstr ""
+
+#: blocks/team-intro/index.js:78
+msgid "Changer le visuel"
+msgstr ""
+
+#: blocks/team-intro/index.js:79
+msgid "Choisir un visuel"
+msgstr ""
+
+#: blocks/avis-grid/block.json
+msgctxt "block title"
+msgid "Avis clients (grille)"
+msgstr ""
+
+#: blocks/avis-grid/block.json
+msgctxt "block description"
+msgid "Section « avis clients » : avis du mois (grande card sombre) + 2 derniers avis + badge note Google + bande CTA. Avis lus depuis le CPT avis."
+msgstr ""
+
+#: blocks/avis-spotlight/block.json
+msgctxt "block title"
+msgid "Avis en avant (single destination)"
+msgstr ""
+
+#: blocks/avis-spotlight/block.json
+msgctxt "block description"
+msgid "Section témoignage sombre du single destination : met en avant l'avis choisi sur la destination (champ « Avis mis en avant »). Aucun réglage : tout vient du CPT avis."
+msgstr ""
+
+#: blocks/card-grid-card/block.json
+msgctxt "block title"
+msgid "Carte illustrée"
+msgstr ""
+
+#: blocks/card-grid-card/block.json
+msgctxt "block description"
+msgid "Une carte illustrée : image, titre, texte et lien facultatif. À utiliser dans le bloc « Grille de cartes »."
+msgstr ""
+
+#: blocks/card-grid/block.json
+msgctxt "block title"
+msgid "Grille de cartes"
+msgstr ""
+
+#: blocks/card-grid/block.json
+msgctxt "block description"
+msgid "En-tête (surtitre, titre) et une grille de cartes illustrées (image, titre, texte, lien facultatif). Ajoutez autant de cartes que nécessaire."
+msgstr ""
+
+#: blocks/cards-numbered-card/block.json
+msgctxt "block title"
+msgid "Carte numérotée"
+msgstr ""
+
+#: blocks/cards-numbered-card/block.json
+msgctxt "block description"
+msgid "Une carte numérotée : titre et description. À utiliser dans le bloc « Cartes numérotées »."
+msgstr ""
+
+#: blocks/cards-numbered/block.json
+msgctxt "block title"
+msgid "Cartes numérotées"
+msgstr ""
+
+#: blocks/cards-numbered/block.json
+msgctxt "block description"
+msgid "En-tête (surtitre, titre, texte) et une série de cartes numérotées automatiquement. Ajoutez autant de cartes que nécessaire."
+msgstr ""
+
+#: blocks/contact-form/block.json
+msgctxt "block title"
+msgid "Contact — coordonnées + formulaire"
+msgstr ""
+
+#: blocks/contact-form/block.json
+msgctxt "block description"
+msgid "Deux colonnes : coordonnées (adresse, téléphone, e-mail repris des réglages) et formulaire de contact."
+msgstr ""
+
+#: blocks/content-storytelling/block.json
+msgctxt "block title"
+msgid "Contenu — texte + polaroïds"
+msgstr ""
+
+#: blocks/content-storytelling/block.json
+msgctxt "block description"
+msgid "Bloc éditorial réutilisable : surtitre, titre, texte à gauche et 3 photos « polaroïd » à droite."
+msgstr ""
+
+#: blocks/destination-gallery/block.json
+msgctxt "block title"
+msgid "Galerie de la destination"
+msgstr ""
+
+#: blocks/destination-gallery/block.json
+msgctxt "block description"
+msgid "Section « ce que vous allez voir » : titre et grille de photos (clic = agrandissement plein écran). Les photos viennent de la galerie de la fiche destination."
+msgstr ""
+
+#: blocks/destinations-grid/block.json
+msgctxt "block title"
+msgid "Accueil — destinations"
+msgstr ""
+
+#: blocks/destinations-grid/block.json
+msgctxt "block description"
+msgid "Section « Des destinations variées » : surtitre, titre, texte, bouton et une sélection de 4 destinations (la 1re en grand)."
+msgstr ""
+
+#: blocks/destinations-suggestions/block.json
+msgctxt "block title"
+msgid "Destinations suggérées"
+msgstr ""
+
+#: blocks/destinations-suggestions/block.json
+msgctxt "block description"
+msgid "Section « vous aimerez aussi » : titre, texte d’intro, bouton et jusqu’à 4 destinations. Les destinations se choisissent dans la fiche."
+msgstr ""
+
+#: blocks/devis-form/block.json
+msgctxt "block title"
+msgid "Devis — formulaire"
+msgstr ""
+
+#: blocks/devis-form/block.json
+msgctxt "block description"
+msgid "Le formulaire de demande de devis. Sa structure est gérée par l'équipe Adaptours ; rien à régler ici."
+msgstr ""
+
+#: blocks/dual-cta/block.json
+msgctxt "block title"
+msgid "Qui sommes-nous — double appel"
+msgstr ""
+
+#: blocks/dual-cta/block.json
+msgctxt "block description"
+msgid "Deux cartes d'appel à l'action côte à côte (voyager / nous rejoindre), chacune avec surtitre, titre, texte et bouton."
+msgstr ""
+
+#: blocks/founder-story/block.json
+msgctxt "block title"
+msgid "Qui sommes-nous — histoire"
+msgstr ""
+
+#: blocks/founder-story/block.json
+msgctxt "block description"
+msgid "Récit de la fondatrice : titre, paragraphe d'intro, citation mise en avant, paragraphe de conclusion, signature et trois photos en polaroïd."
+msgstr ""
+
+#: blocks/hero-contact/block.json
+msgctxt "block title"
+msgid "Contact — en-tête"
+msgstr ""
+
+#: blocks/hero-contact/block.json
+msgctxt "block description"
+msgid "En-tête de la page Contact : surtitre, titre (avec mot(s) en orange) et texte d'introduction."
+msgstr ""
+
+#: blocks/hero-devis/block.json
+msgctxt "block title"
+msgid "Devis — en-tête"
+msgstr ""
+
+#: blocks/hero-devis/block.json
+msgctxt "block description"
+msgid "En-tête de la page Devis : surtitre, titre (avec mot(s) en orange), texte d'introduction et photo de fond."
+msgstr ""
+
+#: blocks/hero-home/block.json
+msgctxt "block title"
+msgid "Accueil — en-tête"
+msgstr ""
+
+#: blocks/hero-home/block.json
+msgctxt "block description"
+msgid "Grand en-tête de la page d'accueil : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction et deux boutons."
+msgstr ""
+
+#: blocks/hero-qsn/block.json
+msgctxt "block title"
+msgid "Qui sommes-nous — en-tête"
+msgstr ""
+
+#: blocks/hero-qsn/block.json
+msgctxt "block description"
+msgid "En-tête de la page Qui sommes-nous : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction, un bouton et une grande photo."
+msgstr ""
+
+#: blocks/itinerary-step/block.json
+msgctxt "block title"
+msgid "Étape du programme"
+msgstr ""
+
+#: blocks/itinerary-step/block.json
+msgctxt "block description"
+msgid "Une étape (un jour) du programme : titre, description et image. À utiliser dans le bloc « Le programme »."
+msgstr ""
+
+#: blocks/itinerary/block.json
+msgctxt "block title"
+msgid "Le programme"
+msgstr ""
+
+#: blocks/itinerary/block.json
+msgctxt "block description"
+msgid "Section « le programme » : titre, texte d’intro et liste d’étapes (jour par jour). Ajoutez une étape par jour."
+msgstr ""
+
+#: blocks/kpi-bar/block.json
+msgctxt "block title"
+msgid "KPI bar"
+msgstr ""
+
+#: blocks/kpi-bar/block.json
+msgctxt "block description"
+msgid "Barre de chiffres clés (valeur + libellé). Longueur figée à 4 colonnes via l'attribut d'insertion verrouillé columns."
+msgstr ""
+
+#: blocks/legal-info/block.json
+msgctxt "block title"
+msgid "Contact — informations légales"
+msgstr ""
+
+#: blocks/legal-info/block.json
+msgctxt "block description"
+msgid "Bandeau des mentions légales (forme juridique, SIRET, NAF, RCS, TVA, Atout France, APST). Contenu repris des réglages du site."
+msgstr ""
+
+#: blocks/media-full/block.json
+msgctxt "block title"
+msgid "Image en grand"
+msgstr ""
+
+#: blocks/media-full/block.json
+msgctxt "block description"
+msgid "Une grande image, pleine largeur ou cadrée, avec une légende facultative."
+msgstr ""
+
+#: blocks/media-text/block.json
+msgctxt "block title"
+msgid "Texte + image"
+msgstr ""
+
+#: blocks/media-text/block.json
+msgctxt "block description"
+msgid "Deux colonnes : un texte (surtitre, titre, paragraphes, boutons) et une image, à droite ou à gauche."
+msgstr ""
+
+#: blocks/page-header/block.json
+msgctxt "block title"
+msgid "En-tête de page"
+msgstr ""
+
+#: blocks/page-header/block.json
+msgctxt "block description"
+msgid "En-tête de page sur fond dégradé : surtitre, titre (avec mot(s) en orange), texte d'introduction et deux boutons."
+msgstr ""
+
+#: blocks/practical-card/block.json
+msgctxt "block title"
+msgid "Carte pratique"
+msgstr ""
+
+#: blocks/practical-card/block.json
+msgctxt "block description"
+msgid "Une carte pratique (visa, santé, budget…) : icône, titre et description. À utiliser dans le bloc « Ce qu’il faut savoir »."
+msgstr ""
+
+#: blocks/process/block.json
+msgctxt "block title"
+msgid "Accueil — étapes"
+msgstr ""
+
+#: blocks/process/block.json
+msgctxt "block description"
+msgid "Section « Du premier mot au dernier souvenir » : surtitre, titre, texte et 3 étapes (la 3e en fond sombre)."
+msgstr ""
+
+#: blocks/quote/block.json
+msgctxt "block title"
+msgid "Citation"
+msgstr ""
+
+#: blocks/quote/block.json
+msgctxt "block description"
+msgid "Une citation mise en avant, centrée, avec son auteur. Un extrait peut être souligné en orange."
+msgstr ""
+
+#: blocks/recruitment-condition/block.json
+msgctxt "block title"
+msgid "Condition de recrutement"
+msgstr ""
+
+#: blocks/recruitment-condition/block.json
+msgctxt "block description"
+msgid "Une condition : titre court et explication. La numérotation se calcule toute seule. À utiliser dans le bloc « Recrutement »."
+msgstr ""
+
+#: blocks/recruitment/block.json
+msgctxt "block title"
+msgid "Qui sommes-nous — recrutement"
+msgstr ""
+
+#: blocks/recruitment/block.json
+msgctxt "block description"
+msgid "Section recrutement : présentation et adresse pour les CV à gauche, liste des conditions (à ajouter une par une) à droite."
+msgstr ""
+
+#: blocks/rich-text/block.json
+msgctxt "block title"
+msgid "Texte enrichi"
+msgstr ""
+
+#: blocks/rich-text/block.json
+msgctxt "block description"
+msgid "Bloc de texte éditorial : surtitre, titre (avec mot(s) en orange) et un corps libre (paragraphes, sous-titres, listes à puces)."
+msgstr ""
+
+#: blocks/section-accessibility/block.json
+msgctxt "block title"
+msgid "Accessibilité"
+msgstr ""
+
+#: blocks/section-accessibility/block.json
+msgctxt "block description"
+msgid "Section « pensé pour tous » : titre, texte d’introduction et 4 cartes d’accessibilité (icône + titre + description). Le texte et les cartes viennent de la fiche destination."
+msgstr ""
+
+#: blocks/section-map/block.json
+msgctxt "block title"
+msgid "Carte du voyage"
+msgstr ""
+
+#: blocks/section-map/block.json
+msgctxt "block description"
+msgid "Section « sur la carte » : titre, texte de vol, carte de la destination et bande d’infos (décalage, visa, monnaie, langue). La carte et les infos viennent de la fiche destination."
+msgstr ""
+
+#: blocks/section-practical/block.json
+msgctxt "block title"
+msgid "Ce qu’il faut savoir"
+msgstr ""
+
+#: blocks/section-practical/block.json
+msgctxt "block description"
+msgid "Section « ce qu’il faut savoir » : titre, texte d’intro et cartes pratiques (visa, santé, budget…). Ajoutez autant de cartes que nécessaire."
+msgstr ""
+
+#: blocks/section-promise/block.json
+msgctxt "block title"
+msgid "Accueil — la promesse"
+msgstr ""
+
+#: blocks/section-promise/block.json
+msgctxt "block description"
+msgid "Section « Le voyage, pensé autour de vous » : surtitre, titre, texte de présentation et 4 atouts illustrés."
+msgstr ""
+
+#: blocks/team-grid-member/block.json
+msgctxt "block title"
+msgid "Membre de l'équipe"
+msgstr ""
+
+#: blocks/team-grid-member/block.json
+msgctxt "block description"
+msgid "Une personne de l'équipe : photo, nom, poste et petite phrase. À utiliser dans le bloc « L'équipe »."
+msgstr ""
+
+#: blocks/team-grid/block.json
+msgctxt "block title"
+msgid "Qui sommes-nous — l'équipe"
+msgstr ""
+
+#: blocks/team-grid/block.json
+msgctxt "block description"
+msgid "Section équipe : surtitre, titre, description et une grille de personnes (à ajouter une par une), avec une bande « on recrute ? » en bas."
+msgstr ""
+
+#: blocks/team-intro/block.json
+msgctxt "block title"
+msgid "Accueil — l'équipe"
+msgstr ""
+
+#: blocks/team-intro/block.json
+msgctxt "block description"
+msgid "Section de présentation de l'équipe : surtitre, titre, deux paragraphes, bouton et un visuel."
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Encre"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Orange highlight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Pêche"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Texte secondaire"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Eyebrow"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Surface alt"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Fond sombre"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Filet"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Bricolage Grotesque (titres)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Inter (corps & UI)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Caveat (accent manuscrit)"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XX-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Hero"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "S"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "M"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "L"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4XL"
+msgstr ""

@@ -70,22 +70,47 @@ function adaptours_devis_statut_labels() {
 }
 
 /**
- * Crée le formulaire Devis FR s'il n'existe pas encore (idempotent).
+ * Crée les formulaires Devis (un par langue) et les lie comme traductions (idempotent).
  *
- * Déclenché en admin.
+ * Réutilise adaptours_cf7_ensure_translated_forms() (inc/cf7.php).
  */
 function adaptours_cf7_ensure_devis_form() {
 	if ( ! class_exists( 'WPCF7_ContactForm' ) ) {
 		return;
 	}
 
-	$existing = (int) get_option( 'adaptours_devis_form_id', 0 );
+	$email_to    = (string) adaptours_get_option( 'email', get_option( 'admin_email' ) );
+	$privacy_url = (string) adaptours_get_option( 'url_confidentialite', '#' );
+
+	adaptours_cf7_ensure_translated_forms(
+		'adaptours_devis_form_id',
+		static fn( $option, $locale ) => adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url )
+	);
+}
+add_action( 'admin_init', 'adaptours_cf7_ensure_devis_form' );
+
+/**
+ * Crée le formulaire Devis d'une langue s'il n'existe pas, pose ses règles conditionnelles, et renvoie son ID.
+ *
+ * Les libellés des profils et les règles conditionnelles sont générés dans la même locale :
+ * les `if_value` correspondent ainsi au caractère près aux valeurs des boutons radio rendus.
+ *
+ * @param string $option      Option mémorisant l'ID.
+ * @param string $locale      Locale de construction (vide = locale courante).
+ * @param string $email_to    Destinataire des e-mails.
+ * @param string $privacy_url URL de la politique de confidentialité.
+ * @return int
+ */
+function adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url ) {
+	$existing = (int) get_option( $option, 0 );
 	if ( $existing > 0 && 'wpcf7_contact_form' === get_post_type( $existing ) ) {
-		return;
+		return $existing;
 	}
 
-	$email_to     = (string) adaptours_get_option( 'email', get_option( 'admin_email' ) );
-	$privacy_url  = (string) adaptours_get_option( 'url_confidentialite', '#' );
+	if ( $locale ) {
+		switch_to_locale( $locale );
+	}
+
 	$privacy_link = '<a href="' . esc_url( $privacy_url ) . '">' . esc_html__( 'politique de confidentialité', 'adaptours' ) . '</a>';
 
 	$statut = adaptours_devis_statut_labels();
@@ -140,14 +165,19 @@ function adaptours_cf7_ensure_devis_form() {
 			'messages' => $messages,
 		)
 	);
-	$id = $form->save();
+	$id = (int) $form->save();
+
+	if ( $locale ) {
+		restore_previous_locale();
+	}
 
 	if ( $id ) {
-		update_option( 'adaptours_devis_form_id', (int) $id );
-		adaptours_devis_set_conditions( (int) $id, $statut );
+		update_option( $option, $id );
+		adaptours_devis_set_conditions( $id, $statut );
 	}
+
+	return $id;
 }
-add_action( 'admin_init', 'adaptours_cf7_ensure_devis_form' );
 
 /**
  * Corps du formulaire (balises CF7 + HTML de structure).

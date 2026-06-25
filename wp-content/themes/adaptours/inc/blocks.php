@@ -48,7 +48,15 @@ function adaptours_register_blocks() {
 
 	foreach ( (array) glob( $build_dir . '/*', GLOB_ONLYDIR ) as $dir ) {
 		if ( file_exists( $dir . '/block.json' ) ) {
-			register_block_type( $dir );
+			$type = register_block_type( $dir );
+
+			// Le JSON de traduction doit être nommé adaptours-<locale>-<handle>.json : WP teste ce nom
+			// par handle avant celui basé sur le md5 du chemin (qui diffère entre source et build).
+			if ( $type instanceof WP_Block_Type ) {
+				foreach ( (array) $type->editor_script_handles as $handle ) {
+					wp_set_script_translations( $handle, 'adaptours', ADAPTOURS_DIR . '/languages' );
+				}
+			}
 		}
 	}
 }
@@ -178,6 +186,32 @@ function adaptours_lock_map() {
 }
 
 /**
+ * Indique si la page (ou l'une de ses traductions) est la page d'accueil du site.
+ *
+ * La traduction de la page d'accueil a un ID distinct : la comparaison directe à `page_on_front`
+ * la manquerait, et la home traduite perdrait son template et son verrou.
+ *
+ * @param int $page_id ID de la page.
+ * @return bool
+ */
+function adaptours_is_front_page_in_any_language( $page_id ) {
+	$front = (int) get_option( 'page_on_front' );
+	if ( ! $front ) {
+		return false;
+	}
+	if ( $front === $page_id ) {
+		return true;
+	}
+	if ( function_exists( 'pll_get_post' ) && function_exists( 'pll_get_post_language' ) ) {
+		$lang = pll_get_post_language( $page_id );
+		if ( $lang && (int) pll_get_post( $front, $lang ) === $page_id ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
  * Détermine le contexte d'édition du post courant.
  *
  * @param WP_Post|null $post Post édité (depuis WP_Block_Editor_Context).
@@ -188,7 +222,7 @@ function adaptours_block_context( $post ) {
 		return '';
 	}
 
-	if ( 'page' === $post->post_type && (int) get_option( 'page_on_front' ) === (int) $post->ID ) {
+	if ( 'page' === $post->post_type && adaptours_is_front_page_in_any_language( (int) $post->ID ) ) {
 		return 'front-page';
 	}
 
@@ -265,6 +299,15 @@ function adaptours_block_editor_settings( $settings, $context ) {
 	}
 	if ( array_key_exists( 'lock', $config[ $key ] ) ) {
 		$settings['templateLock'] = $config[ $key ]['lock'];
+	}
+
+	// canLockBlocks (option « Déverrouiller ») et codeEditingEnabled (édition du markup brut)
+	// permettent de contourner templateLock. On les retire aux non-administrateurs sur les
+	// templates lock:'all' pour que la cliente ne puisse pas lever le verrou ; l'admin les garde.
+	$is_fully_locked = isset( $config[ $key ]['lock'] ) && 'all' === $config[ $key ]['lock'];
+	if ( $is_fully_locked && ! current_user_can( 'manage_options' ) ) {
+		$settings['canLockBlocks']      = false;
+		$settings['codeEditingEnabled'] = false;
 	}
 
 	return $settings;

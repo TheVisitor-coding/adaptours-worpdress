@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function adaptours_pll_post_types( $post_types ) {
 	$post_types['destination'] = 'destination';
 	$post_types['avis']        = 'avis';
+	// Nécessaire pour que pll_get_post() renvoie le formulaire de la langue courante.
+	$post_types['wpcf7_contact_form'] = 'wpcf7_contact_form';
 	return $post_types;
 }
 add_filter( 'pll_get_post_types', 'adaptours_pll_post_types' );
@@ -67,6 +69,31 @@ function adaptours_pll_copy_post_metas( $metas ) {
 	$metas[] = 'mois_voyage';
 	$metas[] = 'photo_voyageur';
 	$metas[] = 'is_featured';
+
+	// Le template de page conditionne le verrou (adaptours_block_context) : la traduction
+	// doit hériter du même template que l'original.
+	$metas[] = '_wp_page_template';
 	return $metas;
 }
 add_filter( 'pll_copy_post_metas', 'adaptours_pll_copy_post_metas' );
+
+/**
+ * Empêche la redirection canonique de la page d'accueil traduite vers son permalink.
+ *
+ * Pour une page d'accueil statique traduite, get_permalink() de la traduction renvoie son
+ * permalink (/en/home-en/) et non la racine de langue (/en/) ; redirect_canonical redirige
+ * alors /en/ vers ce permalink. La page reste servie à /en/.
+ *
+ * @param string|false $redirect_url  URL de redirection calculée par le core.
+ * @param string       $requested_url URL demandée.
+ * @return string|false
+ */
+function adaptours_keep_translated_front_page_url( $redirect_url, $requested_url ) {
+	if ( is_page()
+		&& function_exists( 'adaptours_is_front_page_in_any_language' )
+		&& adaptours_is_front_page_in_any_language( get_queried_object_id() ) ) {
+		return false;
+	}
+	return $redirect_url;
+}
+add_filter( 'redirect_canonical', 'adaptours_keep_translated_front_page_url', 10, 2 );
