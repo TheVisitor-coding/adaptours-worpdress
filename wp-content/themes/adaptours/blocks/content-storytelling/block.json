@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "adaptours/content-storytelling",
-	"title": "Contenu — texte + polaroïds",
+	"title": "Contenu — texte + photos",
 	"category": "adaptours",
 	"icon": "format-gallery",
-	"description": "Bloc éditorial réutilisable : surtitre, titre, texte à gauche et 3 photos « polaroïd » à droite.",
+	"description": "Contenu : surtitre, titre et texte à gauche, 3 photos façon Polaroïd à droite.",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

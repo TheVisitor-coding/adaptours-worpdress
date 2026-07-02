@@ -5,7 +5,7 @@
 	"title": "Qui sommes-nous — l'équipe",
 	"category": "adaptours",
 	"icon": "groups",
-	"description": "Section équipe : surtitre, titre, description et une grille de personnes (à ajouter une par une), avec une bande « on recrute ? » en bas.",
+	"description": "Section équipe : surtitre, titre, description et une grille de personnes (à ajouter une par une), avec un encart « on recrute ? » en bas.",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

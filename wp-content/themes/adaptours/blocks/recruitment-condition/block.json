@@ -5,7 +5,7 @@
 	"title": "Condition de recrutement",
 	"category": "adaptours",
 	"icon": "yes-alt",
-	"description": "Une condition : titre court et explication. La numérotation se calcule toute seule. À utiliser dans le bloc « Recrutement ».",
+	"description": "Une condition : titre court et explication. Le numéro est ajouté automatiquement. À utiliser dans le bloc « Recrutement ».",
 	"textdomain": "adaptours",
 	"parent": ["adaptours/recruitment"],
 	"supports": {

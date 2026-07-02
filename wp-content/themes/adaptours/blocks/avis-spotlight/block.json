@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "adaptours/avis-spotlight",
-	"title": "Avis en avant (single destination)",
+	"title": "Fiche destination — avis en avant",
 	"category": "adaptours",
 	"icon": "format-quote",
-	"description": "Section témoignage sombre du single destination : met en avant l'avis choisi sur la destination (champ « Avis mis en avant »). Aucun réglage : tout vient du CPT avis.",
+	"description": "Sur une fiche destination : met en avant l'avis choisi dans le champ « Avis mis en avant » de la destination. Aucun réglage ici, tout vient de la fiche.",
 	"textdomain": "adaptours",
 	"supports": {
 		"align": ["full"],

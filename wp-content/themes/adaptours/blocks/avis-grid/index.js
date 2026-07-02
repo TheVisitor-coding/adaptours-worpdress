@@ -91,7 +91,7 @@ registerBlockType( metadata.name, {
 						/>
 					</PanelBody>
 
-					<PanelBody title={ __( 'Bande du bas', 'adaptours' ) }>
+					<PanelBody title={ __( 'Encart du bas', 'adaptours' ) }>
 						<TextControl
 							label={ __( 'Texte', 'adaptours' ) }
 							value={ attributes.band_text }

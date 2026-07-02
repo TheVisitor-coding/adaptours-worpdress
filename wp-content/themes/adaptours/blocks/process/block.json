@@ -5,7 +5,7 @@
 	"title": "Accueil — étapes",
 	"category": "adaptours",
 	"icon": "list-view",
-	"description": "Section « Du premier mot au dernier souvenir » : surtitre, titre, texte et 3 étapes (la 3e en fond sombre).",
+	"description": "Section « Du premier mot au dernier souvenir » : surtitre, titre, texte et 3 étapes (la 3e sur fond sombre).",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

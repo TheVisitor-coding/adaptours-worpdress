@@ -28,7 +28,7 @@ const PolaroidControl = ( { index, value, onChange } ) => (
 			render={ ( { open } ) => (
 				<div style={ { marginBottom: '12px' } }>
 					<p style={ { margin: '0 0 4px' } }>
-						{ sprintf( __( 'Vignette %d', 'adaptours' ), index ) }
+						{ sprintf( __( 'Photo %d du collage', 'adaptours' ), index ) }
 					</p>
 					<Button variant="secondary" onClick={ open }>
 						{ value
@@ -115,7 +115,7 @@ registerBlockType( metadata.name, {
 							help={ __( 'Laissez vide pour pointer vers la liste des destinations.', 'adaptours' ) }
 						/>
 					</PanelBody>
-					<PanelBody title={ __( 'Vignettes (collage)', 'adaptours' ) } initialOpen={ false }>
+					<PanelBody title={ __( 'Photos du collage', 'adaptours' ) } initialOpen={ false }>
 						<p style={ { marginTop: 0 } }>
 							{ __( 'Les 4 photos du collage décoratif autour du titre. Affichées sur grand écran uniquement ; laissées vides, un fond de remplacement s’affiche.', 'adaptours' ) }
 						</p>

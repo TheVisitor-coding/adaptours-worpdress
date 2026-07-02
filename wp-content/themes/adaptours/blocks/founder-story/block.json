@@ -5,7 +5,7 @@
 	"title": "Qui sommes-nous — histoire",
 	"category": "adaptours",
 	"icon": "edit-page",
-	"description": "Récit de la fondatrice : titre, paragraphe d'intro, citation mise en avant, paragraphe de conclusion, signature et trois photos en polaroïd.",
+	"description": "Récit de la fondatrice : titre, paragraphe d'intro, citation mise en avant, paragraphe de conclusion, signature et trois photos façon Polaroïd.",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

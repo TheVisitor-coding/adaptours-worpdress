@@ -1,0 +1,8 @@
+**/node_modules
+wp-content/themes/adaptours/assets/build
+.git
+CC-Session-Logs
+docs
+deploy
+*.log
+.DS_Store

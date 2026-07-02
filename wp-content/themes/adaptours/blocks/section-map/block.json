@@ -5,7 +5,7 @@
 	"title": "Carte du voyage",
 	"category": "adaptours",
 	"icon": "location-alt",
-	"description": "Section « sur la carte » : titre, texte de vol, carte de la destination et bande d’infos (décalage, visa, monnaie, langue). La carte et les infos viennent de la fiche destination.",
+	"description": "Section « sur la carte » : titre, texte de vol, carte de la destination et bandeau d’infos (décalage, visa, monnaie, langue). La carte et les infos viennent de la fiche destination.",
 	"textdomain": "adaptours",
 	"supports": {
 		"align": ["full"],

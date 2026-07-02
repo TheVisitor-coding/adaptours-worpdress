@@ -37,14 +37,14 @@ function adaptours_options_schema() {
 			'title'  => __( 'Coordonnées', 'adaptours' ),
 			'fields' => array(
 				'tel_display'  => array(
-					'label' => __( 'Téléphone (affichage)', 'adaptours' ),
+					'label' => __( 'Téléphone (affiché sur le site)', 'adaptours' ),
 					'type'  => 'text',
-					'desc'  => __( 'Format humain, ex. « 04 XX XX XX XX ».', 'adaptours' ),
+					'desc'  => __( 'Numéro tel qu’il apparaît sur le site, ex. « 04 XX XX XX XX ».', 'adaptours' ),
 				),
 				'tel_link'     => array(
-					'label' => __( 'Téléphone (lien tel:)', 'adaptours' ),
+					'label' => __( 'Téléphone (numéro cliquable)', 'adaptours' ),
 					'type'  => 'text',
-					'desc'  => __( 'Format international, ex. « +33XXXXXXXXX ».', 'adaptours' ),
+					'desc'  => __( 'Au format international, sans espaces, ex. « +33XXXXXXXXX ». Permet d’appeler d’un clic depuis un mobile.', 'adaptours' ),
 				),
 				'tel_horaires' => array(
 					'label' => __( 'Horaires d’appel', 'adaptours' ),
@@ -70,23 +70,23 @@ function adaptours_options_schema() {
 			'title'  => __( 'Liens internes', 'adaptours' ),
 			'fields' => array(
 				'url_devis'             => array(
-					'label' => __( 'URL page Devis', 'adaptours' ),
+					'label' => __( 'Lien vers la page Devis', 'adaptours' ),
 					'type'  => 'url',
 				),
 				'url_contact'           => array(
-					'label' => __( 'URL page Contact', 'adaptours' ),
+					'label' => __( 'Lien vers la page Contact', 'adaptours' ),
 					'type'  => 'url',
 				),
 				'url_cgv'               => array(
-					'label' => __( 'URL CGV', 'adaptours' ),
+					'label' => __( 'Lien vers les CGV', 'adaptours' ),
 					'type'  => 'url',
 				),
 				'url_mentions_legales'  => array(
-					'label' => __( 'URL Mentions légales', 'adaptours' ),
+					'label' => __( 'Lien vers les Mentions légales', 'adaptours' ),
 					'type'  => 'url',
 				),
 				'url_confidentialite'   => array(
-					'label' => __( 'URL Politique de confidentialité', 'adaptours' ),
+					'label' => __( 'Lien vers la Politique de confidentialité', 'adaptours' ),
 					'type'  => 'url',
 				),
 			),
@@ -95,15 +95,15 @@ function adaptours_options_schema() {
 			'title'  => __( 'Réseaux sociaux', 'adaptours' ),
 			'fields' => array(
 				'url_facebook'  => array(
-					'label' => __( 'URL Facebook', 'adaptours' ),
+					'label' => __( 'Lien Facebook', 'adaptours' ),
 					'type'  => 'url',
 				),
 				'url_instagram' => array(
-					'label' => __( 'URL Instagram', 'adaptours' ),
+					'label' => __( 'Lien Instagram', 'adaptours' ),
 					'type'  => 'url',
 				),
 				'url_linkedin'  => array(
-					'label' => __( 'URL LinkedIn', 'adaptours' ),
+					'label' => __( 'Lien LinkedIn', 'adaptours' ),
 					'type'  => 'url',
 				),
 			),
@@ -148,7 +148,7 @@ function adaptours_options_schema() {
 				'dest_badge_label'  => array(
 					'label' => __( 'Phrase manuscrite', 'adaptours' ),
 					'type'  => 'text',
-					'desc'  => __( 'Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir ».', 'adaptours' ),
+					'desc'  => __( 'Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir » ; le {n} est remplacé automatiquement par le nombre réel.', 'adaptours' ),
 				),
 			),
 		),
@@ -167,14 +167,17 @@ function adaptours_options_schema() {
 				'legal_naf'             => array(
 					'label' => __( 'Code NAF', 'adaptours' ),
 					'type'  => 'text',
+					'desc'  => __( 'Code d’activité de l’entreprise, ex. « 7911Z ». Laissez vide pour ne pas l’afficher.', 'adaptours' ),
 				),
 				'legal_rcs'             => array(
 					'label' => __( 'RCS', 'adaptours' ),
 					'type'  => 'text',
+					'desc'  => __( 'Immatriculation au registre du commerce, ex. « Lyon B 123 456 789 ». Laissez vide pour ne pas l’afficher.', 'adaptours' ),
 				),
 				'legal_tva'             => array(
-					'label' => __( 'TVA intracommunautaire', 'adaptours' ),
+					'label' => __( 'Numéro de TVA', 'adaptours' ),
 					'type'  => 'text',
+					'desc'  => __( 'Numéro de TVA intracommunautaire, ex. « FR12 345678901 ». Laissez vide pour ne pas l’afficher.', 'adaptours' ),
 				),
 				'legal_atout_france'    => array(
 					'label' => __( 'N° Atout France', 'adaptours' ),
@@ -183,7 +186,7 @@ function adaptours_options_schema() {
 				'legal_apst'            => array(
 					'label' => __( 'Garantie APST', 'adaptours' ),
 					'type'  => 'text',
-					'desc'  => __( 'Ligne « Adhérent APST — … ».', 'adaptours' ),
+					'desc'  => __( 'Si vous êtes adhérent, ex. « Adhérent APST — … ». Laissez vide sinon.', 'adaptours' ),
 				),
 			),
 		),

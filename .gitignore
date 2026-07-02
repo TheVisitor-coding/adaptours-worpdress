@@ -12,6 +12,11 @@ wp-content/themes/adaptours/_*.php
 node_modules/
 wp-content/themes/adaptours/assets/build/
 
+# Déploiement (secrets + dumps de migration)
+deploy/.env
+deploy/*.sql
+deploy/uploads-dump/
+
 # OS / logs
 .DS_Store
 *.log

@@ -1,0 +1,68 @@
+name: adaptours-demo
+
+services:
+  db:
+    image: mariadb:lts
+    container_name: adaptours-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - internal
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  wordpress:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    image: adaptours-wp:demo
+    container_name: adaptours-wp
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${DB_NAME}
+      WORDPRESS_DB_USER: ${DB_USER}
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_TABLE_PREFIX: ${DB_PREFIX:-wp_}
+      WORDPRESS_DEBUG: "1"
+      WP_CLI_CACHE_DIR: /tmp/wp-cli
+      # $$ échappe l'interpolation Compose : $$_SERVER reste $_SERVER côté PHP.
+      # ${WP_DOMAIN} est bien interpolé depuis .env.
+      WORDPRESS_CONFIG_EXTRA: |
+        if ( isset( $$_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 'https' === $$_SERVER['HTTP_X_FORWARDED_PROTO'] ) {
+            $$_SERVER['HTTPS'] = 'on';
+        }
+        define( 'WP_HOME', 'https://${WP_DOMAIN}' );
+        define( 'WP_SITEURL', 'https://${WP_DOMAIN}' );
+        define( 'FORCE_SSL_ADMIN', true );
+        define( 'WP_DEBUG_LOG', true );
+        define( 'WP_DEBUG_DISPLAY', false );
+        @ini_set( 'display_errors', '0' );
+        define( 'DISALLOW_FILE_MODS', true );
+        define( 'AUTOMATIC_UPDATER_DISABLED', true );
+    volumes:
+      - uploads:/var/www/html/wp-content/uploads
+    networks:
+      - internal
+      - proxy
+
+volumes:
+  db_data:
+  uploads:
+
+networks:
+  internal:
+  proxy:
+    external: true

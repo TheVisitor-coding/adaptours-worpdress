@@ -5,7 +5,7 @@
 	"title": "Avis clients (grille)",
 	"category": "adaptours",
 	"icon": "format-quote",
-	"description": "Section « avis clients » : avis du mois (grande card sombre) + 2 derniers avis + badge note Google + bande CTA. Avis lus depuis le CPT avis.",
+	"description": "Section « avis clients » : l'avis du mois (grande carte sombre) + les 2 avis les plus récents + la note Google + un encart avec bouton. Les avis proviennent de la rubrique « Avis ».",
 	"textdomain": "adaptours",
 	"supports": {
 		"align": ["full"],

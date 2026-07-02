@@ -5,7 +5,7 @@
 	"title": "Texte enrichi",
 	"category": "adaptours",
 	"icon": "text",
-	"description": "Bloc de texte éditorial : surtitre, titre (avec mot(s) en orange) et un corps libre (paragraphes, sous-titres, listes à puces).",
+	"description": "Bloc de texte : surtitre, titre (avec mot(s) en orange) et une zone de texte libre (paragraphes, sous-titres, listes à puces).",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

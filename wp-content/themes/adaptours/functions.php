@@ -47,6 +47,7 @@ require ADAPTOURS_DIR . '/inc/menus.php';
 // Blocs et présentation.
 require ADAPTOURS_DIR . '/inc/blocks.php';
 require ADAPTOURS_DIR . '/inc/template-hooks.php';
+require ADAPTOURS_DIR . '/inc/seo.php';
 
 // Formulaires (Contact Form 7).
 require ADAPTOURS_DIR . '/inc/cf7.php';

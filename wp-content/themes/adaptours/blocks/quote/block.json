@@ -5,7 +5,7 @@
 	"title": "Citation",
 	"category": "adaptours",
 	"icon": "format-quote",
-	"description": "Une citation mise en avant, centrée, avec son auteur. Un extrait peut être souligné en orange.",
+	"description": "Une citation mise en avant, centrée, avec son auteur. Un extrait peut être mis en orange.",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

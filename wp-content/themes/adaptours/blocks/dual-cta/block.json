@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "adaptours/dual-cta",
-	"title": "Qui sommes-nous — double appel",
+	"title": "Qui sommes-nous — deux cartes-boutons",
 	"category": "adaptours",
 	"icon": "columns",
-	"description": "Deux cartes d'appel à l'action côte à côte (voyager / nous rejoindre), chacune avec surtitre, titre, texte et bouton.",
+	"description": "Deux cartes côte à côte (l'une pour voyager, l'autre pour nous rejoindre), chacune avec surtitre, titre, texte et bouton.",
 	"textdomain": "adaptours",
 	"supports": {
 		"html": false,

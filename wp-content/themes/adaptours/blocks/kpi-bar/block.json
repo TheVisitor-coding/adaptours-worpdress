@@ -2,10 +2,10 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "adaptours/kpi-bar",
-	"title": "KPI bar",
+	"title": "Chiffres clés (barre)",
 	"category": "adaptours",
 	"icon": "chart-bar",
-	"description": "Barre de chiffres clés (valeur + libellé). Longueur figée à 4 colonnes via l'attribut d'insertion verrouillé columns.",
+	"description": "Barre de chiffres clés : une valeur + un libellé par colonne (ex. « +800 voyageurs »). Le nombre de colonnes est fixé par le design.",
 	"textdomain": "adaptours",
 	"supports": {
 		"align": ["full"],
