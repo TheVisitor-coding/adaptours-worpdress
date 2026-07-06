@@ -8,8 +8,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-height: 80vh;
 	overflow: hidden;
-	padding-block: var(--wp--preset--spacing--80);
+	padding-block: var(--wp--preset--spacing--90);
 	padding-inline: var(--wp--custom--content--gutter);
 	background:
 		repeating-radial-gradient(circle at 30% 20%, rgba(27, 29, 42, 0.012) 0 1px, transparent 1px 3px),
@@ -182,10 +183,10 @@
 		animation-fill-mode: both, none;
 		animation-duration: 0.7s, 6.5s;
 
-		&--1 { top: 8%; left: 3%; width: 11.25rem; height: 13.125rem; rotate: -5deg; animation-delay: 0.2s, 0s; animation-duration: 0.7s, 6s; }
-		&--2 { top: 6%; right: 3%; width: 13.125rem; height: 10rem; rotate: 4deg; animation-delay: 0.3s, 0.8s; animation-duration: 0.7s, 7.2s; }
-		&--3 { top: 46%; left: 5%; width: 10.3125rem; height: 12.5rem; rotate: 3deg; animation-delay: 0.4s, 1.4s; animation-duration: 0.7s, 6.6s; }
-		&--4 { top: 44%; right: 4%; width: 12.25rem; height: 13.375rem; rotate: -4deg; animation-delay: 0.5s, 0.5s; animation-duration: 0.7s, 7.6s; }
+		&--1 { top: 14%; left: 3%; width: 11.25rem; height: 13.125rem; rotate: -5deg; animation-delay: 0.2s, 0s; animation-duration: 0.7s, 6s; }
+		&--2 { top: 14%; right: 3%; width: 13.125rem; height: 10rem; rotate: 4deg; animation-delay: 0.3s, 0.8s; animation-duration: 0.7s, 7.2s; }
+		&--3 { top: 55%; left: 5%; width: 10.3125rem; height: 12.5rem; rotate: 3deg; animation-delay: 0.4s, 1.4s; animation-duration: 0.7s, 6.6s; }
+		&--4 { top: 54%; right: 4%; width: 12.25rem; height: 13.375rem; rotate: -4deg; animation-delay: 0.5s, 0.5s; animation-duration: 0.7s, 7.6s; }
 
 		&--empty {
 			background:
@@ -224,8 +225,8 @@
 		z-index: 0;
 		height: auto;
 
-		&--sun     { top: 12%; left: 60%; width: 3.5rem; animation: hero-spin 26s linear infinite; }
-		&--coconut { top: 47%; right: 9%; width: 3.25rem; }
+		&--sun     { top: 8%; left: 60%; width: 3.5rem; animation: hero-spin 26s linear infinite; }
+		&--coconut { top: 47%; right: 18%; width: 3.25rem; }
 		&--chevron { top: 33%; left: 7%; width: 3.75rem; }
 	}
 

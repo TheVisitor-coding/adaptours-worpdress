@@ -10,11 +10,15 @@
 		"build:blocks": "wp-scripts build --webpack-src-dir=blocks --output-path=assets/build/blocks",
 		"start:blocks": "wp-scripts start --webpack-src-dir=blocks --output-path=assets/build/blocks",
 		"build": "npm run build:css && npm run build:blocks",
+		"dev": "concurrently -k -n css,blocks,sync -c blue,magenta,green \"npm:watch:css\" \"npm:start:blocks\" \"npm:sync\"",
+		"sync": "browser-sync start --config bs-config.js",
 		"lint:css": "wp-scripts lint-style \"assets/src/scss/**/*.scss\" \"blocks/**/*.scss\"",
 		"new-block": "node scripts/new-block.js"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.0.0",
+		"browser-sync": "^3.0.4",
+		"concurrently": "^10.0.3",
 		"sass": "^1.80.0"
 	},
 	"browserslist": [

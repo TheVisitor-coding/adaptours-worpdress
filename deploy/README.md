@@ -97,8 +97,8 @@ scp -r uploads-dump user@vps:/chemin/adaptours/deploy/
 ### 4.2 Import sur le VPS (dans `deploy/`)
 
 ```bash
-# 1) Base
-docker compose exec -T db sh -c 'exec mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"' < adaptours.sql
+# 1) Base (mariadb:lts : le client s'appelle `mariadb`, pas `mysql`)
+docker compose exec -T db sh -c 'exec mariadb -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"' < adaptours.sql
 
 # 2) Réécriture de l'URL (serialization-aware : gère blocs Gutenberg + métas ACF sérialisées)
 docker compose exec -u www-data wordpress \
@@ -153,7 +153,7 @@ MariaDB → MariaDB, versions PHP/WP à aligner sur l'offre Infomaniak (spec §4
 
 ```bash
 docker compose exec -u www-data wordpress wp <commande>   # wp-cli dans le conteneur
-docker compose exec -T db sh -c 'exec mysqldump -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"' > backup-$(date +%F).sql   # sauvegarde
+docker compose exec -T db sh -c 'exec mariadb-dump -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"' > backup-$(date +%F).sql   # sauvegarde
 docker compose down                # stop (conserve les volumes db_data / uploads)
 docker compose build && docker compose up -d   # redéploiement après modif du thème
 ```

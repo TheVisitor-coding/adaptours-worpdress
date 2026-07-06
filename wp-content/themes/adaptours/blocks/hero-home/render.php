@@ -107,10 +107,6 @@ $wrapper = get_block_wrapper_attributes( array( 'class' => 'hero-home' ) );
 	</div>
 
 	<div class="hero-home__inner">
-		<?php if ( '' !== trim( $eyebrow ) ) : ?>
-			<p class="hero-home__eyebrow"><span class="hero-home__eyebrow-text"><?php echo esc_html( $eyebrow ); ?></span></p>
-		<?php endif; ?>
-
 		<?php if ( '' !== trim( $part_1 . $part_2 . $script_line ) ) : ?>
 			<h1 class="hero-home__title">
 				<?php if ( '' !== trim( $part_1 . $part_2 ) ) : ?>

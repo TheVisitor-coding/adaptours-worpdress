@@ -56,6 +56,7 @@
 
 	&__photo {
 		display: block;
+		overflow: hidden;
 		border-radius: var(--wp--custom--radius--card);
 		background: linear-gradient(
 			135deg,
@@ -81,6 +82,14 @@
 			box-shadow: 0 24px 60px rgba(27, 29, 42, 0.22);
 			transform: rotate(4deg);
 		}
+	}
+
+	&__img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 
 	// Tampon « Depuis 2011 » (cercle estampillé).

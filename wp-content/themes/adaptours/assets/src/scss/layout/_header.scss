@@ -26,6 +26,12 @@
 		font-size: var(--wp--preset--font-size--x-large);
 		color: var(--wp--preset--color--highlight);
 		text-decoration: none;
+
+		img {
+			display: block;
+			width: auto;
+			height: 2.75rem; // ~44px
+		}
 	}
 
 	// Conteneur nav + actions : transparent au layout en desktop (display:contents)
@@ -53,21 +59,28 @@
 		font-weight: 500;
 
 		a {
+			position: relative;
 			color: var(--wp--preset--color--ink);
 			text-decoration: none;
 
-			// Affordance par soulignement seul.
-			&:hover,
-			&:focus-visible {
-				text-decoration: underline;
-				text-underline-offset: 0.25em;
+			// Soulignement animé révélé de gauche à droite (accent de marque).
+			&::after {
+				content: "";
+				position: absolute;
+				inset-inline: 0;
+				bottom: -0.35em;
+				height: 2px;
+				border-radius: var(--wp--custom--radius--pill);
+				background-color: var(--wp--preset--color--highlight);
+				transform: scaleX(0);
+				transform-origin: left center;
+				transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
 			}
-		}
 
-		.current-menu-item > a {
-			text-decoration: underline;
-			text-underline-offset: 0.25em;
-			text-decoration-color: var(--wp--preset--color--highlight);
+			&:hover::after,
+			&:focus-visible::after {
+				transform: scaleX(1);
+			}
 		}
 	}
 
@@ -233,10 +246,6 @@
 			.site-header__menu a,
 			.site-header__lang-toggle {
 				color: var(--wp--preset--color--surface);
-			}
-
-			.site-header__menu .current-menu-item > a {
-				text-decoration-color: var(--wp--preset--color--surface);
 			}
 		}
 	}

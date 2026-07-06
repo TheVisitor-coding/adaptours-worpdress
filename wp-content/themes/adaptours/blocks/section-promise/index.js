@@ -5,13 +5,50 @@
  */
 
 import { registerBlockType } from '@wordpress/blocks';
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, TextareaControl } from '@wordpress/components';
+import {
+	useBlockProps,
+	InspectorControls,
+	MediaUpload,
+	MediaUploadCheck,
+} from '@wordpress/block-editor';
+import {
+	PanelBody,
+	TextControl,
+	TextareaControl,
+	Button,
+	BaseControl,
+} from '@wordpress/components';
 import ServerSideRender from '@wordpress/server-side-render';
 import { __ } from '@wordpress/i18n';
 import metadata from './block.json';
 
 import './style.scss';
+
+const MediaField = ( { label, help, value, onChange } ) => (
+	<BaseControl label={ label } help={ help } __nextHasNoMarginBottom>
+		<div>
+			<MediaUploadCheck>
+				<MediaUpload
+					onSelect={ ( media ) => onChange( media.id ) }
+					allowedTypes={ [ 'image' ] }
+					value={ value }
+					render={ ( { open } ) => (
+						<Button variant="secondary" onClick={ open }>
+							{ value
+								? __( 'Changer l’image', 'adaptours' )
+								: __( 'Choisir une image', 'adaptours' ) }
+						</Button>
+					) }
+				/>
+			</MediaUploadCheck>
+			{ !! value && (
+				<Button variant="link" isDestructive onClick={ () => onChange( 0 ) }>
+					{ __( 'Retirer', 'adaptours' ) }
+				</Button>
+			) }
+		</div>
+	</BaseControl>
+);
 
 registerBlockType( metadata.name, {
 	edit: ( { attributes, setAttributes } ) => {
@@ -46,6 +83,20 @@ registerBlockType( metadata.name, {
 							onChange={ ( v ) => setAttributes( { description: v } ) }
 							rows={ 8 }
 							help={ __( 'Laissez une ligne vide entre deux paragraphes.', 'adaptours' ) }
+						/>
+					</PanelBody>
+					<PanelBody title={ __( 'Images', 'adaptours' ) }>
+						<MediaField
+							label={ __( 'Grande image', 'adaptours' ) }
+							help={ __( 'La grande carte du collage, à gauche.', 'adaptours' ) }
+							value={ attributes.image_main }
+							onChange={ ( id ) => setAttributes( { image_main: id } ) }
+						/>
+						<MediaField
+							label={ __( 'Petite image', 'adaptours' ) }
+							help={ __( 'La petite carte posée par-dessus, en bas à droite.', 'adaptours' ) }
+							value={ attributes.image_inset }
+							onChange={ ( id ) => setAttributes( { image_inset: id } ) }
 						/>
 					</PanelBody>
 				</InspectorControls>

@@ -2,8 +2,8 @@
 /**
  * Bloc adaptours/section-promise — « Le voyage, pensé autour de vous ».
  *
- * Éditable : surtitre, titre bichrome, texte de présentation.
- * Figé : 4 atouts (icône + titre + description) et collage photos (CSS).
+ * Éditable : surtitre, titre bichrome, texte de présentation, 2 images du collage.
+ * Figé : 4 atouts (icône + titre + description).
  *
  * @package Adaptours
  */
@@ -16,6 +16,15 @@ $eyebrow     = (string) ( $attributes['eyebrow'] ?? '' );
 $part_1      = (string) ( $attributes['title_part_1'] ?? '' );
 $part_2      = (string) ( $attributes['title_part_2'] ?? '' );
 $description = (string) ( $attributes['description'] ?? '' );
+
+// Collage décoratif (colonne aria-hidden) : chaque carte affiche l'image choisie,
+// sinon le dégradé de repli porté par le CSS.
+$image_main  = (int) ( $attributes['image_main'] ?? 0 );
+$image_inset = (int) ( $attributes['image_inset'] ?? 0 );
+
+$img_atts  = array( 'class' => 'section-promise__img', 'alt' => '', 'loading' => 'lazy' );
+$main_img  = $image_main > 0 ? wp_get_attachment_image( $image_main, 'large', false, $img_atts ) : '';
+$inset_img = $image_inset > 0 ? wp_get_attachment_image( $image_inset, 'large', false, $img_atts ) : '';
 
 // 4 atouts — figés (traductions .po). Icônes du jeu partagé (inc/icons.php).
 $features = array(
@@ -50,13 +59,16 @@ $wrapper = get_block_wrapper_attributes( array( 'class' => 'section-promise' ) )
 		<div class="section-promise__media" aria-hidden="true">
 			<span class="section-promise__scribble">vraiment pour tous ↓</span>
 			<span class="section-promise__photo section-promise__photo--main">
+				<?php echo $main_img; // phpcs:ignore WordPress.Security.EscapeOutput -- wp_get_attachment_image() échappé. ?>
 				<span class="section-promise__stamp">
 					<span class="section-promise__stamp-top">Depuis</span>
 					<span class="section-promise__stamp-year">2011</span>
 					<span class="section-promise__stamp-name">Adaptours</span>
 				</span>
 			</span>
-			<span class="section-promise__photo section-promise__photo--inset"></span>
+			<span class="section-promise__photo section-promise__photo--inset">
+				<?php echo $inset_img; // phpcs:ignore WordPress.Security.EscapeOutput -- wp_get_attachment_image() échappé. ?>
+			</span>
 		</div>
 
 		<div class="section-promise__body">
