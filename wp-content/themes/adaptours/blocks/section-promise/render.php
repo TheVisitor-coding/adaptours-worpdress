@@ -57,7 +57,7 @@ $wrapper = get_block_wrapper_attributes( array( 'class' => 'section-promise' ) )
 
 	<div class="section-promise__inner">
 		<div class="section-promise__media" aria-hidden="true">
-			<span class="section-promise__scribble">vraiment pour tous ↓</span>
+			<!-- <span class="section-promise__scribble">vraiment pour tous ↓</span> -->
 			<span class="section-promise__photo section-promise__photo--main">
 				<?php echo $main_img; // phpcs:ignore WordPress.Security.EscapeOutput -- wp_get_attachment_image() échappé. ?>
 				<span class="section-promise__stamp">

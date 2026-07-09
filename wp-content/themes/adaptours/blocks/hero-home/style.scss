@@ -238,7 +238,11 @@
 	@include bp(mobile) {
 		padding-block: var(--wp--preset--spacing--70);
 
-		&__trust { gap: 0.5rem 1.25rem; }
+		&__trust { 
+			gap: 0.5rem 1.25rem;
+			padding-inline-start: 0;
+			flex-direction: column;
+		}
 	}
 }
 

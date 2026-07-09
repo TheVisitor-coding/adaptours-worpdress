@@ -40,6 +40,8 @@
 		letter-spacing: -0.02em;
 		color: var(--wp--preset--color--ink);
 		font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+		display: flex;
+		flex-direction: column;
 
 		.accent { color: var(--wp--custom--color--highlight-strong); }
 	}
