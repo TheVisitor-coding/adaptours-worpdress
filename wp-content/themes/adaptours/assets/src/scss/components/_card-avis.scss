@@ -158,6 +158,8 @@
 	border-radius: 1.125rem; // 18px
 	background-color: var(--wp--preset--color--surface); // #FFFDF8
 	color: var(--wp--preset--color--ink);
+	height: 100%;
+	margin-block-end: 0;
 
 	.card-avis__head {
 		display: flex;
@@ -184,6 +186,7 @@
 
 	.card-avis__footer {
 		padding-top: 0.8125rem; // 13px
+		margin-block-start: auto;
 	}
 
 	.card-avis__name {
