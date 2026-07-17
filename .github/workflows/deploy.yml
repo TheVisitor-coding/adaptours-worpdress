@@ -1,0 +1,88 @@
+name: Déploiement thème → Infomaniak
+
+# Déclenchement MANUEL uniquement (pas d'auto-deploy).
+# Onglet Actions → « Déploiement thème → Infomaniak » → Run workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run rsync (aperçu, aucune écriture serveur)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: deploy-infomaniak
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build + rsync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: wp-content/themes/adaptours/package-lock.json
+
+      - name: Build des assets
+        working-directory: wp-content/themes/adaptours
+        run: |
+          npm ci
+          npm run build
+
+      - name: Vérifier le build
+        run: test -f wp-content/themes/adaptours/assets/build/main.css
+
+      - name: Charger la clé SSH de déploiement
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Ajouter l'hôte à known_hosts
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Déployer le thème (rsync)
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          RSYNC=(rsync -rltvz --delete --delete-after
+            --exclude='node_modules/' --exclude='.git/' --exclude='.github/'
+            --exclude='.gitignore' --exclude='CC-Session-Logs/'
+            --exclude='_*.php' --exclude='*.map' --exclude='.DS_Store'
+            -e "ssh -p ${SSH_PORT} -o StrictHostKeyChecking=accept-new"
+            wp-content/themes/adaptours/
+            "${SSH_USER}@${SSH_HOST}:${DEPLOY_PATH}/")
+          echo "▶ rsync (dry-run)"
+          "${RSYNC[@]}" -n
+          if [ "${DRY_RUN}" = "true" ]; then
+            echo "✔ Dry-run uniquement (input dry_run=true) — rien n'a été écrit."
+            exit 0
+          fi
+          echo "▶ rsync (réel)"
+          "${RSYNC[@]}"
+          echo "✔ Thème déployé."
+
+      - name: Vider le cache objet WordPress (non bloquant)
+        if: ${{ inputs.dry_run == false }}
+        continue-on-error: true
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          ssh -p "$SSH_PORT" -o StrictHostKeyChecking=accept-new \
+            "${SSH_USER}@${SSH_HOST}" \
+            '$HOME/bin/wp --path=$HOME/preprod cache flush || true'
