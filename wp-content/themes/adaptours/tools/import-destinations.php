@@ -55,6 +55,14 @@ $adaptours_acf_keys = array(
 	'temps_vol'        => 'field_adaptours_temps_vol',
 	'hero_accroche'    => 'field_adaptours_hero_accroche',
 	'coup_de_coeur'    => 'field_adaptours_coup_de_coeur',
+	'decalage_horaire' => 'field_adaptours_decalage_horaire',
+	'visa'             => 'field_adaptours_visa',
+	'monnaie_label'    => 'field_adaptours_monnaie_label',
+	'monnaie_code'     => 'field_adaptours_monnaie_code',
+	'langues_locales'  => 'field_adaptours_langues_locales',
+	'distance_km'      => 'field_adaptours_distance_km',
+	'periode_ideale'   => 'field_adaptours_periode_ideale',
+	'saison_label'     => 'field_adaptours_saison_label',
 );
 
 $adaptours_default_lang = function_exists( 'pll_default_language' ) ? pll_default_language() : 'fr';
@@ -226,6 +234,15 @@ foreach ( $adaptours_destinations as $record ) {
 		$adaptours_set_field( $post_id, 'duree', $adaptours_acf_keys['duree'], $record['duree'], $adaptours_import_force );
 		$adaptours_set_field( $post_id, 'temps_vol', $adaptours_acf_keys['temps_vol'], $record['temps_vol'], $adaptours_import_force );
 		$adaptours_set_field( $post_id, 'hero_accroche', $adaptours_acf_keys['hero_accroche'], $record['intro'], $adaptours_import_force );
+
+		$adaptours_set_field( $post_id, 'decalage_horaire', $adaptours_acf_keys['decalage_horaire'], $record['decalage_horaire'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'visa', $adaptours_acf_keys['visa'], $record['visa'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'monnaie_label', $adaptours_acf_keys['monnaie_label'], $record['monnaie_label'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'monnaie_code', $adaptours_acf_keys['monnaie_code'], $record['monnaie_code'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'langues_locales', $adaptours_acf_keys['langues_locales'], $record['langues_locales'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'distance_km', $adaptours_acf_keys['distance_km'], $record['distance_km'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'periode_ideale', $adaptours_acf_keys['periode_ideale'], $record['periode_ideale'], $adaptours_import_force );
+		$adaptours_set_field( $post_id, 'saison_label', $adaptours_acf_keys['saison_label'], $record['saison_label'], $adaptours_import_force );
 
 		$prix = (int) preg_replace( '/[^0-9]/', '', (string) $record['prix'] );
 		if ( $prix > 0 ) {
