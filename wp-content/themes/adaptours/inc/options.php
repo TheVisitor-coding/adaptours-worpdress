@@ -266,6 +266,20 @@ function adaptours_options_init() {
 add_action( 'admin_init', 'adaptours_options_init' );
 
 /**
+ * Autorise la capability custom à ENREGISTRER la page (pas seulement à la voir).
+ *
+ * Le handler cœur `wp-admin/options.php` exige `manage_options` par défaut pour sauvegarder un
+ * groupe de réglages, quelle que soit la capability du menu. Sans ce filtre, la cliente voit la
+ * page (cap du menu) mais la soumission est rejetée. On abaisse la cap requise à `manage_adaptours_options`.
+ *
+ * @return string
+ */
+function adaptours_options_page_capability() {
+	return ADAPTOURS_CAP_OPTIONS;
+}
+add_filter( 'option_page_capability_' . ADAPTOURS_OPTION_GROUP, 'adaptours_options_page_capability' );
+
+/**
  * Rend un champ du formulaire selon son type. Sortie échappée.
  *
  * @param array $args Contexte du champ (key, type, desc, label_for).
