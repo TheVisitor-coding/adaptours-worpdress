@@ -14,7 +14,8 @@
 	"attributes": {
 		"quote": { "type": "string", "default": "On nous a livré un voyage cousu main, jusqu’au moindre détail. Et surtout : on a senti une équipe qui répondait, vraiment, quand il y a eu un imprévu." },
 		"quote_accent": { "type": "string", "default": "cousu main" },
-		"author": { "type": "string", "default": "" }
+		"author": { "type": "string", "default": "" },
+		"background": { "type": "string", "default": "surface" }
 	},
 	"render": "file:./render.php",
 	"editorScript": "file:./index.js",

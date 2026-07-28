@@ -13,10 +13,10 @@
 	},
 	"attributes": {
 		"eyebrow": { "type": "string", "default": "L’équipe" },
-		"title_part_1": { "type": "string", "default": "Caroline," },
-		"title_part_2": { "type": "string", "default": "et 15 ans à repenser le voyage." },
+		"title_part_1": { "type": "string", "default": "Trois personnes," },
+		"title_part_2": { "type": "string", "default": "et 19 ans à repenser le voyage." },
 		"paragraph_1": { "type": "string", "default": "Adaptours est née d’un constat simple : voyager avec un handicap, ou accompagner un proche dépendant, c’était jusqu’ici un parcours du combattant. On a décidé que ça n’avait plus lieu d’être." },
-		"paragraph_2": { "type": "string", "default": "Aujourd’hui, c’est une équipe de 12 personnes, 14 destinations validées, et chaque voyage pensé un par un. On ne fait pas de volume. On fait du juste." },
+		"paragraph_2": { "type": "string", "default": "Adaptours a été fondée en 2007 par Hervé Guichard, puis reprise en 2024 par Caroline, qu’il a formée. Aujourd’hui l’équipe compte 3 personnes et une trentaine de destinations testées sur le terrain. Chaque voyage est pensé un par un : on ne fait pas de volume, on fait du juste." },
 		"cta_label": { "type": "string", "default": "Voir l’équipe" },
 		"cta_url": { "type": "string", "default": "" },
 		"main_image": { "type": "integer", "default": 0 }

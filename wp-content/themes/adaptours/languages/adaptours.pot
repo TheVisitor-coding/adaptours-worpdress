@@ -168,7 +168,7 @@ msgid "Données protégées"
 msgstr ""
 
 #: blocks/hero-home/render.php:38
-msgid "15 ans d’expérience"
+msgid "19 ans d’expérience"
 msgstr ""
 
 #: blocks/hero-home/render.php:42
@@ -947,7 +947,7 @@ msgid "Merci pour votre demande de devis concernant : [devis-destination]."
 msgstr ""
 
 #: inc/devis.php:133
-msgid "Nous avons bien reçu toutes vos informations et revenons vers vous sous 48 h ouvrées avec une proposition sur mesure."
+msgid "Nous avons bien reçu toutes vos informations et nous vous recontactons sous 48 h ouvrées pour un premier échange. Le devis demande un peu plus de temps : chaque voyage est construit sur mesure."
 msgstr ""
 
 #: inc/devis.php:138
@@ -955,7 +955,7 @@ msgid "Votre demande de devis Adaptours — bien reçue"
 msgstr ""
 
 #: inc/devis.php:155
-msgid "Merci ! Votre demande est arrivée. On revient vers vous sous 48 h ouvrées avec un devis sur mesure."
+msgid "Merci ! Votre demande est arrivée. On vous recontacte sous 48 h ouvrées pour un premier échange."
 msgstr ""
 
 #: inc/devis.php:158
@@ -1715,7 +1715,7 @@ msgid "Confidentialité"
 msgstr ""
 
 #: parts/footer.php:52
-msgid "Séjours accessibles, sur mesure, depuis 2011. Voyagez sans limites, où que vous soyez."
+msgid "Séjours accessibles, sur mesure, depuis 2007. Voyagez sans limites, où que vous soyez."
 msgstr ""
 
 #: parts/footer.php:90
@@ -3070,4 +3070,12 @@ msgstr ""
 #: theme.json
 msgctxt "Space size name"
 msgid "4XL"
+msgstr ""
+
+#: inc/blocks.php:143
+msgid "destinations testées"
+msgstr ""
+
+#: inc/blocks.php:145
+msgid "sur mesure"
 msgstr ""

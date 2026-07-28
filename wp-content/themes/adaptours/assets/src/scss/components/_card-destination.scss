@@ -163,6 +163,12 @@
 	color: var(--wp--preset--color--ink);
 }
 
+.card-destination__price-value .card-destination__price-unit {
+	font-size: 0.75rem; // 12px
+	font-weight: 500;
+	color: var(--wp--preset--color--body);
+}
+
 .card-destination__arrow {
 	display: inline-flex;
 	flex-shrink: 0;

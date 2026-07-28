@@ -15,7 +15,7 @@
 		"eyebrow": { "type": "string", "default": "" },
 		"title_part_1": { "type": "string", "default": "Des équipements" },
 		"title_part_2": { "type": "string", "default": "adaptés" },
-		"body": { "type": "string", "default": "Vous méritez un voyage à la hauteur de vos envies et de vos besoins ! Pour que nous puissions créer une expérience sur mesure, pensez à nous partager quelques détails essentiels : la destination qui vous fait rêver, votre ville de départ, le nombre de participants, et les dates qui vous conviennent le mieux." },
+		"body": { "type": "string", "default": "Un séjour accessible se prépare aussi dans les détails du quotidien. Fauteuil roulant, lit médicalisé, lève-personne ou fauteuil de douche : nous organisons la mise à disposition du matériel médical adapté directement sur votre lieu de séjour, pour que vous retrouviez vos repères dès l’arrivée. Vous voyagez plus léger, et vous profitez de votre voyage l’esprit tranquille." },
 		"photo_1": { "type": "integer", "default": 0 },
 		"photo_2": { "type": "integer", "default": 0 },
 		"photo_3": { "type": "integer", "default": 0 }

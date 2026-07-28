@@ -125,7 +125,10 @@ $has_image = (int) $args['image_id'] > 0;
 				<?php if ( '' !== trim( (string) $args['prix'] ) ) : ?>
 					<p class="card-destination__price">
 						<span class="card-destination__price-label"><?php esc_html_e( 'À partir de', 'adaptours' ); ?></span>
-						<span class="card-destination__price-value"><?php echo esc_html( $args['prix'] ); ?></span>
+						<span class="card-destination__price-value">
+							<?php echo esc_html( $args['prix'] ); ?>
+							<span class="card-destination__price-unit"><?php esc_html_e( '/ personne', 'adaptours' ); ?></span>
+						</span>
 					</p>
 				<?php endif; ?>
 

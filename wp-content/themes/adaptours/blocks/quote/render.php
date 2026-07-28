@@ -25,7 +25,10 @@ if ( '' === trim( $quote ) ) {
 	return;
 }
 
-$wrapper = get_block_wrapper_attributes( array( 'class' => 'quote' ) );
+$background = (string) ( $attributes['background'] ?? 'surface' );
+$background = in_array( $background, array( 'surface', 'surface-alt', 'highlight-soft' ), true ) ? $background : 'surface';
+
+$wrapper = get_block_wrapper_attributes( array( 'class' => 'quote quote--bg-' . $background ) );
 ?>
 <section <?php echo $wrapper; // phpcs:ignore WordPress.Security.EscapeOutput ?>>
 	<figure class="quote__inner">

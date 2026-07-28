@@ -130,7 +130,7 @@ function adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url 
 
 	$mail_2_body = __( 'Bonjour [devis-nom-prenom][devis-nom-client],', 'adaptours' ) . "\n\n"
 		. __( 'Merci pour votre demande de devis concernant : [devis-destination].', 'adaptours' ) . "\n\n"
-		. __( 'Nous avons bien reçu toutes vos informations et revenons vers vous sous 48 h ouvrées avec une proposition sur mesure.', 'adaptours' ) . "\n\n"
+		. __( 'Nous avons bien reçu toutes vos informations et nous vous recontactons sous 48 h ouvrées pour un premier échange. Le devis demande un peu plus de temps : chaque voyage est construit sur mesure.', 'adaptours' ) . "\n\n"
 		. __( 'À très vite,', 'adaptours' ) . "\n" . __( 'L’équipe Adaptours', 'adaptours' ) . "\n";
 
 	$mail_2 = array(
@@ -152,7 +152,7 @@ function adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url 
 			$messages[ $key ] = isset( $arr['default'] ) ? $arr['default'] : '';
 		}
 	}
-	$messages['mail_sent_ok'] = __( 'Merci ! Votre demande est arrivée. On revient vers vous sous 48 h ouvrées avec un devis sur mesure.', 'adaptours' );
+	$messages['mail_sent_ok'] = __( 'Merci ! Votre demande est arrivée. On vous recontacte sous 48 h ouvrées pour un premier échange.', 'adaptours' );
 
 	$form = WPCF7_ContactForm::get_template(
 		array( 'title' => __( 'Devis (FR)', 'adaptours' ) )

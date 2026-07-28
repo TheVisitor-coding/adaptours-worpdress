@@ -62,7 +62,7 @@ $wrapper = get_block_wrapper_attributes( array( 'class' => 'section-promise' ) )
 				<?php echo $main_img; // phpcs:ignore WordPress.Security.EscapeOutput -- wp_get_attachment_image() échappé. ?>
 				<span class="section-promise__stamp">
 					<span class="section-promise__stamp-top">Depuis</span>
-					<span class="section-promise__stamp-year">2011</span>
+					<span class="section-promise__stamp-year">2007</span>
 					<span class="section-promise__stamp-name">Adaptours</span>
 				</span>
 			</span>

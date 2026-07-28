@@ -80,6 +80,7 @@ $render_card = static function ( $id, $slot ) {
 						/* translators: %s = prix formaté, ex. « 2 490€ ». */
 						echo esc_html( sprintf( __( 'dès %s', 'adaptours' ), $args['prix'] ) );
 						?>
+						<span class="<?php echo esc_attr( $base . '-price-unit' ); ?>"><?php esc_html_e( '/ personne', 'adaptours' ); ?></span>
 					</span>
 				<?php endif; ?>
 			</span>

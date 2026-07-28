@@ -12,7 +12,7 @@
 		"anchor": true
 	},
 	"attributes": {
-		"eyebrow": { "type": "string", "default": "Voyages accessibles · depuis 2011" },
+		"eyebrow": { "type": "string", "default": "Voyages accessibles · depuis 2007" },
 		"title_part_1": { "type": "string", "default": "Voyagez" },
 		"title_part_2": { "type": "string", "default": "sans limites," },
 		"title_script": { "type": "string", "default": "d’ici" },

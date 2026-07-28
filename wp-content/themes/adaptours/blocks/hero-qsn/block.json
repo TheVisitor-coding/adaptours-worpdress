@@ -16,7 +16,7 @@
 		"title_part_1": { "type": "string", "default": "On n’organise pas des voyages, on rend des" },
 		"title_part_2": { "type": "string", "default": "envies" },
 		"title_script": { "type": "string", "default": "possibles." },
-		"description": { "type": "string", "default": "Adaptours, c’est douze personnes basées en France, une trentaine de partenaires sur place, et une seule conviction : tout le monde a le droit de partir. Même quand on vous a dit le contraire." },
+		"description": { "type": "string", "default": "Adaptours, c’est une équipe de trois personnes en France (Caroline, Célia et Élodie) et des partenaires de confiance sur place. Avec une conviction : tout le monde a le droit de partir. Même quand on vous a dit le contraire." },
 		"cta_label": { "type": "string", "default": "Rencontrer l’équipe" },
 		"cta_url": { "type": "string", "default": "#equipe" },
 		"main_image": { "type": "integer", "default": 0 }

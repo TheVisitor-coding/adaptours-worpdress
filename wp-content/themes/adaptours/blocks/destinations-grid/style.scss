@@ -184,6 +184,11 @@
 		opacity: 0.92;
 	}
 
+	&__card-price-unit {
+		font-size: 0.75rem; // 12px
+		opacity: 0.85;
+	}
+
 	// Responsive (desktop-first)
 	@include bp(tablet) {
 		&__grid {

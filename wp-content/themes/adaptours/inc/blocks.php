@@ -86,7 +86,11 @@ function adaptours_registered_block_names() {
  * Pour chaque contexte :
  *  - `lock`     : valeur de `templateLock` ('all' = figé, false = libre).
  *  - `template` : structure de blocs pré-insérée (liste ordonnée).
- *  - `allowed`  : 'adaptours' → palette restreinte aux blocs adaptours/* enregistrés.
+ *  - `allowed`  : liste exacte des blocs autorisés dans l'éditeur. Le filtre
+ *    `allowed_block_types_all` étant global, la liste doit inclure les blocs enfants
+ *    (`parent:` les tient hors de l'inserter racine) et les blocs core requis par des
+ *    InnerBlocks, sinon ils deviennent ininsérables à l'intérieur de leur parent.
+ *    Clé absente → palette complète (tous les adaptours/* + core texte).
  *
  * Les tableaux `template` ne doivent référencer que des blocs déjà enregistrés :
  * un bloc inexistant casse l'éditeur.
@@ -133,13 +137,13 @@ function adaptours_lock_map() {
 						'columns'     => 5,
 						'kpi_1_value' => '+800',
 						'kpi_1_label' => __( 'voyageurs accompagnés', 'adaptours' ),
-						'kpi_2_value' => '12',
+						'kpi_2_value' => '3',
 						'kpi_2_label' => __( 'personnes dans l’équipe', 'adaptours' ),
-						'kpi_3_value' => '32',
-						'kpi_3_label' => __( 'partenaires sur place', 'adaptours' ),
-						'kpi_4_value' => '9',
-						'kpi_4_label' => __( 'langues parlées au bureau', 'adaptours' ),
-						'kpi_5_value' => '15',
+						'kpi_3_value' => '30',
+						'kpi_3_label' => __( 'destinations testées', 'adaptours' ),
+						'kpi_4_value' => '100%',
+						'kpi_4_label' => __( 'sur mesure', 'adaptours' ),
+						'kpi_5_value' => '19',
 						'kpi_5_label' => __( 'ans à dire oui', 'adaptours' ),
 					),
 				),
@@ -157,11 +161,28 @@ function adaptours_lock_map() {
 				array( 'adaptours/legal-info' ),
 			),
 		),
-		// Page modulaire — libre, palette restreinte à adaptours/*. Démarrage avec un
-		// bloc « En-tête de page » pré-posé ; la cliente ajoute/retire/réordonne ensuite.
+		// Page modulaire — libre, palette limitée aux blocs de contenu riche (§9.10.1 :
+		// 7 blocs génériques + kpi-bar réutilisé). Les core texte servent de corps au bloc
+		// rich-text (InnerBlocks) ; core/list-item n'apparaît pas à la racine (parent core/list).
+		// Démarrage avec un « En-tête de page » pré-posé.
 		'template-page-modulaire'  => array(
 			'lock'     => false,
-			'allowed'  => 'adaptours',
+			'allowed'  => array(
+				'adaptours/page-header',
+				'adaptours/rich-text',
+				'adaptours/media-text',
+				'adaptours/media-full',
+				'adaptours/quote',
+				'adaptours/cards-numbered',
+				'adaptours/cards-numbered-card',
+				'adaptours/card-grid',
+				'adaptours/card-grid-card',
+				'adaptours/kpi-bar',
+				'core/paragraph',
+				'core/heading',
+				'core/list',
+				'core/list-item',
+			),
 			'template' => array(
 				array( 'adaptours/page-header' ),
 			),
@@ -170,7 +191,17 @@ function adaptours_lock_map() {
 		// pré-remplie avec les 7 sections, réordonnables et supprimables (lock false).
 		'single-destination'       => array(
 			'lock'     => false,
-			'allowed'  => 'adaptours',
+			'allowed'  => array(
+				'adaptours/section-map',
+				'adaptours/section-accessibility',
+				'adaptours/destination-gallery',
+				'adaptours/itinerary',
+				'adaptours/itinerary-step',
+				'adaptours/avis-spotlight',
+				'adaptours/section-practical',
+				'adaptours/practical-card',
+				'adaptours/destinations-suggestions',
+			),
 			'template' => array(
 				array( 'adaptours/section-map' ),
 				array( 'adaptours/section-accessibility' ),
@@ -263,11 +294,15 @@ function adaptours_allowed_block_types( $allowed, $context ) {
 		return $allowed;
 	}
 
-	// Pages figées (templateLock 'all') comme modulaires : palette = blocs adaptours/*.
-	// On ajoute les blocs de texte natifs (paragraphe / sous-titre / liste) : ils servent
-	// de corps libre au bloc adaptours/rich-text (InnerBlocks). Sans eux, la restriction
-	// globale les bloquerait aussi à l'intérieur du bloc. Conséquence assumée : ils sont
-	// également insérables à la racine d'une page modulaire (rendu correct).
+	// Contextes modulaires : liste exacte portée par la carte de lock.
+	if ( isset( $config[ $key ]['allowed'] ) && is_array( $config[ $key ]['allowed'] ) ) {
+		return $config[ $key ]['allowed'];
+	}
+
+	// Contextes figés (templateLock 'all') : l'inserter racine est verrouillé, mais la
+	// restriction globale intersecte aussi les `allowedBlocks` des InnerBlocks (repeaters
+	// de Qui sommes-nous, corps du rich-text). On laisse donc la palette complète : tous
+	// les adaptours/* + les blocs de texte natifs.
 	return array_merge(
 		adaptours_registered_block_names(),
 		array( 'core/paragraph', 'core/heading', 'core/list', 'core/list-item' )

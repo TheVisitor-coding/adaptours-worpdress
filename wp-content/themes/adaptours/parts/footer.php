@@ -49,7 +49,7 @@ $legal_links = array(
 		<div class="site-footer__brand">
 			<?php get_template_part( 'template-parts/site-logo', null, array( 'class' => 'site-footer__logo' ) ); ?>
 			<p class="site-footer__tagline">
-				<?php esc_html_e( 'Séjours accessibles, sur mesure, depuis 2011. Voyagez sans limites, où que vous soyez.', 'adaptours' ); ?>
+				<?php esc_html_e( 'Séjours accessibles, sur mesure, depuis 2007. Voyagez sans limites, où que vous soyez.', 'adaptours' ); ?>
 			</p>
 			<ul class="site-footer__contact">
 				<?php if ( $footer_email ) : ?>

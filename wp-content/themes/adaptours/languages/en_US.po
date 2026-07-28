@@ -103,8 +103,8 @@ msgstr "Free, no obligation"
 msgid "Données protégées"
 msgstr "Protected data"
 
-msgid "15 ans d’expérience"
-msgstr "15 years of experience"
+msgid "19 ans d’expérience"
+msgstr "19 years of experience"
 
 msgid "Hébergements vérifiés"
 msgstr "Verified accommodations"
@@ -654,14 +654,14 @@ msgstr "Hello [devis-nom-prenom][devis-nom-client],"
 msgid "Merci pour votre demande de devis concernant : [devis-destination]."
 msgstr "Thank you for your quote request regarding: [devis-destination]."
 
-msgid "Nous avons bien reçu toutes vos informations et revenons vers vous sous 48 h ouvrées avec une proposition sur mesure."
-msgstr "We have received all your information and will get back to you within 48 business hours with a tailor-made proposal."
+msgid "Nous avons bien reçu toutes vos informations et nous vous recontactons sous 48 h ouvrées pour un premier échange. Le devis demande un peu plus de temps : chaque voyage est construit sur mesure."
+msgstr "We have received all your information and will contact you within 48 business hours for a first conversation. The quote takes a little more time: each trip is entirely tailor-made."
 
 msgid "Votre demande de devis Adaptours — bien reçue"
 msgstr "Your Adaptours quote request — received"
 
-msgid "Merci ! Votre demande est arrivée. On revient vers vous sous 48 h ouvrées avec un devis sur mesure."
-msgstr "Thank you! Your request has arrived. We’ll get back to you within 48 business hours with a tailor-made quote."
+msgid "Merci ! Votre demande est arrivée. On vous recontacte sous 48 h ouvrées pour un premier échange."
+msgstr "Thank you! Your request has arrived. We’ll contact you within 48 business hours for a first conversation."
 
 msgid "Devis (FR)"
 msgstr "Quote (EN)"
@@ -1150,8 +1150,8 @@ msgstr "Legal notice"
 msgid "Confidentialité"
 msgstr "Privacy"
 
-msgid "Séjours accessibles, sur mesure, depuis 2011. Voyagez sans limites, où que vous soyez."
-msgstr "Accessible, tailor-made trips since 2011. Travel without limits, wherever you are."
+msgid "Séjours accessibles, sur mesure, depuis 2007. Voyagez sans limites, où que vous soyez."
+msgstr "Accessible, tailor-made trips since 2007. Travel without limits, wherever you are."
 
 msgid "À propos"
 msgstr "About"
@@ -2100,3 +2100,11 @@ msgstr "4XL"
 #, php-format
 msgid "Choisir la langue — actuelle : %s"
 msgstr "Choose language — current: %s"
+
+#: inc/blocks.php:143
+msgid "destinations testées"
+msgstr "tried-and-tested destinations"
+
+#: inc/blocks.php:145
+msgid "sur mesure"
+msgstr "tailor-made"

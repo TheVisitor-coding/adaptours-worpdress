@@ -48,7 +48,7 @@ if ( '' === trim( $cta_secondary_url ) ) {
 // Bande de réassurance figée (4 badges, icônes SVG inline).
 $trust = array(
 	array(
-		'label' => __( '15 ans d’expérience', 'adaptours' ),
+		'label' => __( '19 ans d’expérience', 'adaptours' ),
 		'svg'   => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="6"></circle><path d="M9 14.5 8 22l4-2.5 4 2.5-1-7.5"></path></svg>',
 	),
 	array(
