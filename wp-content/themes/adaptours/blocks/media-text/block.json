@@ -23,7 +23,8 @@
 		"image_id": { "type": "integer", "default": 0 },
 		"image_url": { "type": "string", "default": "" },
 		"image_alt": { "type": "string", "default": "" },
-		"media_position": { "type": "string", "default": "right" }
+		"media_position": { "type": "string", "default": "right" },
+		"background": { "type": "string", "default": "surface-alt" }
 	},
 	"render": "file:./render.php",
 	"editorScript": "file:./index.js",

@@ -29,7 +29,10 @@ if ( ! $has_head && ! $has_body ) {
 	return;
 }
 
-$wrapper = get_block_wrapper_attributes( array( 'class' => 'rich-text' ) );
+$background = (string) ( $attributes['background'] ?? 'surface' );
+$background = in_array( $background, array( 'surface', 'surface-alt', 'highlight-soft' ), true ) ? $background : 'surface';
+
+$wrapper = get_block_wrapper_attributes( array( 'class' => 'rich-text rich-text--bg-' . $background ) );
 ?>
 <section <?php echo $wrapper; // phpcs:ignore WordPress.Security.EscapeOutput ?>>
 	<div class="rich-text__inner">

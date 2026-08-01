@@ -1,43 +1,91 @@
 /**
  * Bloc adaptours/media-full — composant d'édition (côté éditeur). Archétype : média.
  *
- * Image choisie en place (MediaPlaceholder / Remplacer), légende éditée INLINE sous
- * l'image. Largeur (pleine / cadrée) et description (accessibilité) dans le panneau
- * latéral. Bloc dynamique : rendu FRONT dans render.php → save = null.
+ * Tous les champs s'éditent dans le panneau latéral (image, largeur, description,
+ * légende) ; le canvas affiche l'aperçu du rendu serveur, ou une invite tant
+ * qu'aucune image n'est choisie (render.php ne rend rien sans image).
+ * Bloc dynamique : rendu FRONT dans render.php → save = null.
  */
 
 import { registerBlockType } from '@wordpress/blocks';
 import {
 	useBlockProps,
-	RichText,
-	BlockControls,
 	InspectorControls,
-	MediaPlaceholder,
-	MediaReplaceFlow,
+	MediaUpload,
+	MediaUploadCheck,
 } from '@wordpress/block-editor';
-import { PanelBody, SelectControl, TextareaControl } from '@wordpress/components';
+import {
+	PanelBody,
+	SelectControl,
+	TextControl,
+	TextareaControl,
+	Button,
+	BaseControl,
+	Placeholder,
+} from '@wordpress/components';
+import ServerSideRender from '@wordpress/server-side-render';
 import { __ } from '@wordpress/i18n';
 import metadata from './block.json';
 
 // NE PAS retirer : déclenche la compilation du SCSS en 'style-index.css' (clé "style").
 import './style.scss';
 
+const MediaField = ( { label, help, value, onChange } ) => (
+	<BaseControl label={ label } help={ help } __nextHasNoMarginBottom>
+		<div>
+			<MediaUploadCheck>
+				<MediaUpload
+					onSelect={ ( media ) => onChange( media.id ) }
+					allowedTypes={ [ 'image' ] }
+					value={ value }
+					render={ ( { open } ) => (
+						<Button variant="secondary" onClick={ open }>
+							{ value
+								? __( 'Changer l’image', 'adaptours' )
+								: __( 'Choisir une image', 'adaptours' ) }
+						</Button>
+					) }
+				/>
+			</MediaUploadCheck>
+			{ !! value && (
+				<Button variant="link" isDestructive onClick={ () => onChange( 0 ) }>
+					{ __( 'Retirer', 'adaptours' ) }
+				</Button>
+			) }
+		</div>
+	</BaseControl>
+);
+
 registerBlockType( metadata.name, {
 	edit: ( { attributes, setAttributes } ) => {
+		const blockProps = useBlockProps();
 		const width = attributes.width === 'boxed' ? 'boxed' : 'full-bleed';
-		const blockProps = useBlockProps( { className: `media-full media-full--${ width }` } );
-
-		const onSelectImage = ( media ) =>
-			setAttributes( {
-				image_id: media.id,
-				image_url: media.url,
-				image_alt: media.alt || attributes.image_alt,
-			} );
 
 		return (
 			<>
 				<InspectorControls>
 					<PanelBody title={ __( 'Image', 'adaptours' ) }>
+						<MediaField
+							label={ __( 'Image', 'adaptours' ) }
+							help={ __( 'La grande image affichée par cette section.', 'adaptours' ) }
+							value={ attributes.image_id }
+							onChange={ ( image_id ) => setAttributes( { image_id } ) }
+						/>
+						<TextareaControl
+							label={ __( 'Description de l’image', 'adaptours' ) }
+							help={ __( 'Décrivez l’image en quelques mots (pour l’accessibilité).', 'adaptours' ) }
+							value={ attributes.image_alt }
+							onChange={ ( image_alt ) => setAttributes( { image_alt } ) }
+							rows={ 2 }
+						/>
+						<TextControl
+							label={ __( 'Légende', 'adaptours' ) }
+							help={ __( 'Petit texte affiché en bas de l’image. Laissez vide pour aucune.', 'adaptours' ) }
+							value={ attributes.caption }
+							onChange={ ( caption ) => setAttributes( { caption } ) }
+						/>
+					</PanelBody>
+					<PanelBody title={ __( 'Mise en page', 'adaptours' ) }>
 						<SelectControl
 							label={ __( 'Largeur', 'adaptours' ) }
 							value={ width }
@@ -47,55 +95,20 @@ registerBlockType( metadata.name, {
 							] }
 							onChange={ ( w ) => setAttributes( { width: w } ) }
 						/>
-						<TextareaControl
-							label={ __( 'Description de l’image', 'adaptours' ) }
-							help={ __( 'Décrivez l’image en quelques mots (pour l’accessibilité).', 'adaptours' ) }
-							value={ attributes.image_alt }
-							onChange={ ( image_alt ) => setAttributes( { image_alt } ) }
-							rows={ 2 }
-						/>
 					</PanelBody>
 				</InspectorControls>
 
-				{ !! attributes.image_url && (
-					<BlockControls>
-						<MediaReplaceFlow
-							mediaId={ attributes.image_id }
-							mediaURL={ attributes.image_url }
-							allowedTypes={ [ 'image' ] }
-							onSelect={ onSelectImage }
+				<div { ...blockProps }>
+					{ attributes.image_id > 0 ? (
+						<ServerSideRender block={ metadata.name } attributes={ attributes } />
+					) : (
+						<Placeholder
+							icon="format-image"
+							label={ __( 'Image en grand', 'adaptours' ) }
+							instructions={ __( 'Choisissez une image dans la colonne de droite.', 'adaptours' ) }
 						/>
-					</BlockControls>
-				) }
-
-				<section { ...blockProps }>
-					<figure className="media-full__figure">
-						{ attributes.image_url ? (
-							<>
-								<img
-									className="media-full__img"
-									src={ attributes.image_url }
-									alt={ attributes.image_alt }
-								/>
-								<RichText
-									tagName="figcaption"
-									className="media-full__caption"
-									value={ attributes.caption }
-									allowedFormats={ [] }
-									onChange={ ( caption ) => setAttributes( { caption } ) }
-									placeholder={ __( 'Légende (optionnelle)', 'adaptours' ) }
-								/>
-							</>
-						) : (
-							<MediaPlaceholder
-								icon="format-image"
-								labels={ { title: __( 'Image', 'adaptours' ) } }
-								allowedTypes={ [ 'image' ] }
-								onSelect={ onSelectImage }
-							/>
-						) }
-					</figure>
-				</section>
+					) }
+				</div>
 			</>
 		);
 	},

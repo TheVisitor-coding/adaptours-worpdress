@@ -26,7 +26,8 @@ WCAG 2.1 AA, SEO). Ce fichier ne fait que les enchaîner.
    - `style.scss` : `@use "abstracts" as *;`, `@include container`, **tokens `theme.json`** (zéro valeur en
      dur tokenisable), responsive desktop-first via `@include bp(...)`.
 4. **Verrou** — ajouter l'entrée du bloc dans **`adaptours_lock_map()`** (`inc/blocks.php`) selon le
-   contexte d'édition (page figée = `lock: all` + `template` ; page modulaire / single = `lock: false`
+   contexte d'édition, **et son slug dans la liste `allowed` du contexte** s'il doit être insérable
+   (les blocs enfants aussi : le filtre est global) (page figée = `lock: all` + `template` ; page modulaire / single = `lock: false`
    + palette `adaptours`).
 5. **Build** — `npm run build`. Le bloc n'apparaît dans l'éditeur **qu'après build** (enregistrement
    depuis `assets/build/blocks/*`, cf. `ARCHITECTURE §3`).
@@ -40,11 +41,11 @@ WCAG 2.1 AA, SEO). Ce fichier ne fait que les enchaîner.
 
 | Archétype | Quand | Édition | `save` / `render.php` | Repeater (§3.1) |
 |---|---|---|---|---|
-| **plat-texte** | titre + texte + CTA, structure fixe | RichText inline | `save: null`, markup depuis attributs | FP (attributs plats) |
-| **hero** | en-tête de page, décor en absolu | RichText inline + média | `save: null` | FP |
-| **media-texte** | image/illustration + bloc de texte (2 colonnes) | RichText + MediaUpload | `save: null` | FP |
-| **innerblocks verrouillés** | liste de longueur variable (items ajoutés par la cliente) | `<InnerBlocks>` (`allowedBlocks` = 1 enfant `*-item`, `templateLock`) | `save: <InnerBlocks.Content />`, `render.php` echo `$content` | IB |
-| **picker de relation** | sélection de posts existants (destinations, avis…) | `EntitySearchInput` / ACF Relationship | `save: null`, `render.php` requête par IDs | REL |
+| **plat-texte** | titre + texte + CTA, structure fixe | `InspectorControls` + aperçu `ServerSideRender` | `save: null`, markup depuis attributs | FP (attributs plats) |
+| **hero** | en-tête de page, décor en absolu | `InspectorControls` (+ `MediaField` sidebar) + SSR | `save: null` | FP |
+| **media-texte** | image/illustration + bloc de texte (2 colonnes) | `InspectorControls` (+ `MediaField` sidebar) + SSR | `save: null` | FP |
+| **innerblocks verrouillés** | liste de longueur variable (items ajoutés par la cliente) | **hybride** : champs parent en `InspectorControls` + aperçu statique canvas ; `<InnerBlocks>` (`allowedBlocks` = 1 enfant `*-item`) ; enfants édités via leur propre panneau latéral | `save: <InnerBlocks.Content />`, `render.php` echo `$content` | IB |
+| **picker de relation** | sélection de posts existants (destinations, avis…) | `EntitySearchInput` / ACF Relationship (Inspector) | `save: null`, `render.php` requête par IDs | REL |
 
 > Le générateur couvre `plat-texte` / `media-texte` / `innerblocks`. `hero` part de `plat-texte` (ajouter le
 > décor en CSS) ; `picker de relation` part de `plat-texte` (remplacer l'édition par un sélecteur d'entités).

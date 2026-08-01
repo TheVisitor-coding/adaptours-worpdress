@@ -33,8 +33,11 @@ $cta_secondary_url   = (string) ( $attributes['cta_secondary_url'] ?? '' );
 $has_title = '' !== trim( $part_1 . $part_2 );
 $has_cta   = '' !== trim( $cta_primary_label ) || '' !== trim( $cta_secondary_label );
 
+$background = (string) ( $attributes['background'] ?? 'surface-alt' );
+$background = in_array( $background, array( 'surface', 'surface-alt', 'highlight-soft' ), true ) ? $background : 'surface-alt';
+
 $wrapper = get_block_wrapper_attributes(
-	array( 'class' => 'media-text media-text--media-' . $position )
+	array( 'class' => 'media-text media-text--media-' . $position . ' media-text--bg-' . $background )
 );
 ?>
 <section <?php echo $wrapper; // phpcs:ignore WordPress.Security.EscapeOutput ?>>
@@ -49,7 +52,17 @@ $wrapper = get_block_wrapper_attributes(
 			<?php endif; ?>
 
 			<?php if ( '' !== trim( wp_strip_all_tags( $body ) ) ) : ?>
-				<div class="media-text__text"><?php echo wp_kses_post( $body ); ?></div>
+				<div class="media-text__text">
+					<?php
+					// Corps historique (édition inline) = HTML <p>…</p> rendu tel quel ;
+					// corps saisi dans le panneau latéral = texte brut, ligne vide = paragraphe.
+					if ( false !== strpos( $body, '<p' ) ) {
+						echo wp_kses_post( $body );
+					} else {
+						echo wpautop( esc_html( $body ) ); // phpcs:ignore WordPress.Security.EscapeOutput
+					}
+					?>
+				</div>
 			<?php endif; ?>
 
 			<?php if ( $has_cta ) : ?>

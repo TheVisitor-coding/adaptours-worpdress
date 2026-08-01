@@ -5,7 +5,20 @@
 @use "abstracts" as *;
 
 .rich-text {
+	@include full-bleed; // fond pleine largeur (sinon bords blancs : <main> borné à 1280px)
 	padding-block: var(--wp--preset--spacing--80);
+
+	&--bg-surface {
+		background-color: var(--wp--preset--color--surface);
+	}
+
+	&--bg-surface-alt {
+		background-color: var(--wp--preset--color--surface-alt);
+	}
+
+	&--bg-highlight-soft {
+		background-color: var(--wp--preset--color--highlight-soft);
+	}
 
 	&__inner {
 		@include container;

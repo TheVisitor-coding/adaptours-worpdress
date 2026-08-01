@@ -15,7 +15,8 @@
 		"eyebrow": { "type": "string", "default": "" },
 		"title_part_1": { "type": "string", "default": "Titre de la" },
 		"title_part_2": { "type": "string", "default": "section" },
-		"description": { "type": "string", "default": "" }
+		"description": { "type": "string", "default": "" },
+		"background": { "type": "string", "default": "surface-alt" }
 	},
 	"render": "file:./render.php",
 	"editorScript": "file:./index.js",

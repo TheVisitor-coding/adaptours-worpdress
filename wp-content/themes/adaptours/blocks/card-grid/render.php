@@ -30,9 +30,12 @@ if ( ! $has_cards ) {
 	return;
 }
 
+$background = (string) ( $attributes['background'] ?? 'surface' );
+$background = in_array( $background, array( 'surface', 'surface-alt', 'highlight-soft' ), true ) ? $background : 'surface';
+
 $wrapper = get_block_wrapper_attributes(
 	array(
-		'class' => 'card-grid is-cols-' . $columns,
+		'class' => 'card-grid is-cols-' . $columns . ' card-grid--bg-' . $background,
 		'style' => '--adaptours-card-grid-cols:' . $columns . ';',
 	)
 );

@@ -1,21 +1,21 @@
 /**
  * Bloc adaptours/card-grid — composant d'édition. Parent InnerBlocks.
  *
- * En-tête centré (surtitre / titre bichrome) édité INLINE via RichText ; nombre de
- * colonnes dans le panneau latéral ; les cartes sont des blocs enfants
- * « adaptours/card-grid-card ». save n'émet que les cartes ; render.php les enveloppe
- * dans la grille + ajoute l'en-tête.
+ * Hybride : l'en-tête centré (surtitre / titre bichrome), le nombre de colonnes et la
+ * couleur de fond s'éditent dans le panneau latéral (le canvas en affiche un aperçu
+ * statique) ; les cartes sont des blocs enfants « adaptours/card-grid-card » ajoutés/
+ * retirés dans le canvas. save n'émet que les cartes ; render.php les enveloppe dans la
+ * grille + ajoute l'en-tête.
  */
 
 import { registerBlockType } from '@wordpress/blocks';
 import {
 	useBlockProps,
 	useInnerBlocksProps,
-	RichText,
 	InnerBlocks,
 	InspectorControls,
 } from '@wordpress/block-editor';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { PanelBody, TextControl, SelectControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import metadata from './block.json';
 
@@ -29,11 +29,20 @@ const TEMPLATE = [
 	[ 'adaptours/card-grid-card', {} ],
 ];
 
+const BACKGROUND_OPTIONS = [
+	{ label: __( 'Blanc cassé', 'adaptours' ), value: 'surface' },
+	{ label: __( 'Beige', 'adaptours' ), value: 'surface-alt' },
+	{ label: __( 'Pêche', 'adaptours' ), value: 'highlight-soft' },
+];
+
 registerBlockType( metadata.name, {
 	edit: ( { attributes, setAttributes } ) => {
 		const columns = [ 2, 3, 4 ].includes( attributes.columns ) ? attributes.columns : 3;
+		const background = BACKGROUND_OPTIONS.some( ( o ) => o.value === attributes.background )
+			? attributes.background
+			: 'surface';
 		const blockProps = useBlockProps( {
-			className: `card-grid is-cols-${ columns }`,
+			className: `card-grid is-cols-${ columns } card-grid--bg-${ background }`,
 			style: { '--adaptours-card-grid-cols': columns },
 		} );
 		const innerProps = useInnerBlocksProps(
@@ -45,10 +54,30 @@ registerBlockType( metadata.name, {
 				orientation: 'horizontal',
 			}
 		);
+		const hasTitle = !! ( attributes.title_part_1 || attributes.title_part_2 );
 
 		return (
 			<>
 				<InspectorControls>
+					<PanelBody title={ __( 'Titre', 'adaptours' ) }>
+						<TextControl
+							label={ __( 'Surtitre', 'adaptours' ) }
+							help={ __( 'Petit texte au-dessus du titre. Laissez vide pour aucun.', 'adaptours' ) }
+							value={ attributes.eyebrow }
+							onChange={ ( eyebrow ) => setAttributes( { eyebrow } ) }
+						/>
+						<TextControl
+							label={ __( 'Titre — début', 'adaptours' ) }
+							value={ attributes.title_part_1 }
+							onChange={ ( title_part_1 ) => setAttributes( { title_part_1 } ) }
+						/>
+						<TextControl
+							label={ __( 'Mot(s) en orange', 'adaptours' ) }
+							help={ __( 'La fin du titre, affichée en orange.', 'adaptours' ) }
+							value={ attributes.title_part_2 }
+							onChange={ ( title_part_2 ) => setAttributes( { title_part_2 } ) }
+						/>
+					</PanelBody>
 					<PanelBody title={ __( 'Mise en page', 'adaptours' ) }>
 						<SelectControl
 							label={ __( 'Nombre de colonnes', 'adaptours' ) }
@@ -60,38 +89,31 @@ registerBlockType( metadata.name, {
 							] }
 							onChange={ ( v ) => setAttributes( { columns: parseInt( v, 10 ) } ) }
 						/>
+						<SelectControl
+							label={ __( 'Couleur de fond', 'adaptours' ) }
+							help={ __( 'La couleur derrière cette section.', 'adaptours' ) }
+							value={ background }
+							options={ BACKGROUND_OPTIONS }
+							onChange={ ( v ) => setAttributes( { background: v } ) }
+						/>
 					</PanelBody>
 				</InspectorControls>
 
 				<section { ...blockProps }>
 					<div className="card-grid__inner">
-						<header className="card-grid__head">
-							<RichText
-								tagName="p"
-								className="card-grid__eyebrow eyebrow"
-								value={ attributes.eyebrow }
-								allowedFormats={ [] }
-								onChange={ ( eyebrow ) => setAttributes( { eyebrow } ) }
-								placeholder={ __( 'Surtitre (optionnel)', 'adaptours' ) }
-							/>
-							<h2 className="card-grid__title">
-								<RichText
-									tagName="span"
-									value={ attributes.title_part_1 }
-									allowedFormats={ [] }
-									onChange={ ( title_part_1 ) => setAttributes( { title_part_1 } ) }
-									placeholder={ __( 'Titre…', 'adaptours' ) }
-								/>{ ' ' }
-								<RichText
-									tagName="span"
-									className="accent"
-									value={ attributes.title_part_2 }
-									allowedFormats={ [] }
-									onChange={ ( title_part_2 ) => setAttributes( { title_part_2 } ) }
-									placeholder={ __( 'mot(s) en orange', 'adaptours' ) }
-								/>
-							</h2>
-						</header>
+						{ ( !! attributes.eyebrow || hasTitle ) && (
+							<header className="card-grid__head">
+								{ !! attributes.eyebrow && (
+									<p className="card-grid__eyebrow eyebrow">{ attributes.eyebrow }</p>
+								) }
+								{ hasTitle && (
+									<h2 className="card-grid__title">
+										{ attributes.title_part_1 }{ ' ' }
+										<span className="accent">{ attributes.title_part_2 }</span>
+									</h2>
+								) }
+							</header>
+						) }
 						<ul { ...innerProps } />
 					</div>
 				</section>

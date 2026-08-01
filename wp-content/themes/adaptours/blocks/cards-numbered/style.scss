@@ -1,14 +1,25 @@
 // adaptours/cards-numbered — styles front (clé "style" du block.json → style-index.css).
 // En-tête (titre bichrome gauche / description droite) + grille de cartes numérotées
-// 01..NN (compteur CSS). Fond surface-alt full-bleed, cartes claires. Le layout des
-// cartes (enfants) est porté ici. Tokens theme.json, rem, BEM scopé, desktop-first.
+// 01..NN (compteur CSS). Fond au choix (beige par défaut) full-bleed, cartes claires.
+// Le layout des cartes (enfants) est porté ici. Tokens theme.json, rem, BEM, desktop-first.
 
 @use "abstracts" as *;
 
 .cards-numbered {
 	@include full-bleed; // fond pleine largeur (sinon bords blancs : <main> borné à 1280px)
 	padding-block: var(--wp--preset--spacing--80);
-	background-color: var(--wp--preset--color--surface-alt);
+
+	&--bg-surface {
+		background-color: var(--wp--preset--color--surface);
+	}
+
+	&--bg-surface-alt {
+		background-color: var(--wp--preset--color--surface-alt);
+	}
+
+	&--bg-highlight-soft {
+		background-color: var(--wp--preset--color--highlight-soft);
+	}
 
 	&__inner {
 		@include container;

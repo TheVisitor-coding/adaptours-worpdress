@@ -1,13 +1,24 @@
 // adaptours/media-text — styles front (clé "style" du block.json → style-index.css).
-// Deux colonnes texte + image, image à droite (défaut) ou à gauche. Fond surface-alt
-// full-bleed. Tokens theme.json, sizing rem, BEM scopé, desktop-first.
+// Deux colonnes texte + image, image à droite (défaut) ou à gauche. Fond au choix
+// (beige par défaut) full-bleed. Tokens theme.json, sizing rem, BEM scopé, desktop-first.
 
 @use "abstracts" as *;
 
 .media-text {
 	@include full-bleed; // fond pleine largeur (sinon bords blancs : <main> borné à 1280px)
 	padding-block: var(--wp--preset--spacing--80);
-	background-color: var(--wp--preset--color--surface-alt);
+
+	&--bg-surface {
+		background-color: var(--wp--preset--color--surface);
+	}
+
+	&--bg-surface-alt {
+		background-color: var(--wp--preset--color--surface-alt);
+	}
+
+	&--bg-highlight-soft {
+		background-color: var(--wp--preset--color--highlight-soft);
+	}
 
 	&__inner {
 		@include container;

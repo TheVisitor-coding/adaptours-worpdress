@@ -1,119 +1,111 @@
 /**
  * Bloc adaptours/page-header — composant d'édition (côté éditeur). Archétype : plat-texte.
  *
- * Édition INLINE dans le canvas (choix client) : surtitre, titre (2 parties, le 2e en
- * orange), introduction (italique + lien) se saisissent directement sur le bloc via
- * RichText. Les liens des boutons se posent via les boutons « lien » de la barre
- * d'outils du bloc. Bloc dynamique : le rendu FRONT est dans render.php → save = null.
+ * Tous les champs s'éditent dans le panneau latéral (surtitre, titre bichrome,
+ * introduction, boutons) ; le canvas affiche l'aperçu du rendu serveur (ServerSideRender).
+ * Bloc dynamique : le rendu FRONT est dans render.php → save = null.
  */
 
 import { registerBlockType } from '@wordpress/blocks';
-import {
-	useBlockProps,
-	RichText,
-	BlockControls,
-	__experimentalLinkControl as LinkControl,
-} from '@wordpress/block-editor';
-import { ToolbarGroup, ToolbarButton, Popover } from '@wordpress/components';
-import { useState } from '@wordpress/element';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl, TextareaControl } from '@wordpress/components';
+import ServerSideRender from '@wordpress/server-side-render';
 import { __ } from '@wordpress/i18n';
 import metadata from './block.json';
 
 // NE PAS retirer : déclenche la compilation du SCSS en 'style-index.css' (clé "style").
 import './style.scss';
 
+// L'introduction pouvait contenir du HTML (italique/lien de l'ancienne édition inline) :
+// on l'affiche en texte simple dans le champ ; le HTML d'origine reste rendu tel quel
+// tant que le champ n'est pas modifié.
+const htmlToPlainText = ( html ) =>
+	html
+		? html
+				.replace( /<\/p>\s*<p[^>]*>/gi, '\n\n' )
+				.replace( /<br\s*\/?>/gi, '\n' )
+				.replace( /<[^>]+>/g, '' )
+				.replace( /&nbsp;/g, ' ' )
+				.replace( /&#(\d+);/g, ( m, n ) => String.fromCharCode( n ) )
+				.replace( /&amp;/g, '&' )
+				.replace( /&lt;/g, '<' )
+				.replace( /&gt;/g, '>' )
+		: '';
+
 registerBlockType( metadata.name, {
 	edit: ( { attributes, setAttributes } ) => {
-		const blockProps = useBlockProps( { className: 'page-header' } );
-		const [ editingLink, setEditingLink ] = useState( null ); // 'primary' | 'secondary' | null
-		const urlKey = editingLink === 'primary' ? 'cta_primary_url' : 'cta_secondary_url';
+		const blockProps = useBlockProps();
 
 		return (
 			<>
-				<BlockControls>
-					<ToolbarGroup>
-						<ToolbarButton
-							icon="admin-links"
-							label={ __( 'Lien du bouton principal', 'adaptours' ) }
-							onClick={ () => setEditingLink( 'primary' ) }
-							isActive={ !! attributes.cta_primary_url }
-						/>
-						<ToolbarButton
-							icon="admin-links"
-							label={ __( 'Lien du bouton secondaire', 'adaptours' ) }
-							onClick={ () => setEditingLink( 'secondary' ) }
-							isActive={ !! attributes.cta_secondary_url }
-						/>
-					</ToolbarGroup>
-				</BlockControls>
-
-				{ editingLink && (
-					<Popover onClose={ () => setEditingLink( null ) }>
-						<LinkControl
-							value={ { url: attributes[ urlKey ] } }
-							onChange={ ( next ) => setAttributes( { [ urlKey ]: ( next && next.url ) || '' } ) }
-						/>
-					</Popover>
-				) }
-
-				<section { ...blockProps }>
-					<div className="page-header__inner">
-						<RichText
-							tagName="p"
-							className="page-header__eyebrow eyebrow"
+				<InspectorControls>
+					<PanelBody title={ __( 'Titre', 'adaptours' ) }>
+						<TextControl
+							label={ __( 'Surtitre', 'adaptours' ) }
+							help={ __( 'Petit texte au-dessus du titre. Laissez vide pour aucun.', 'adaptours' ) }
 							value={ attributes.eyebrow }
-							allowedFormats={ [] }
 							onChange={ ( eyebrow ) => setAttributes( { eyebrow } ) }
-							placeholder={ __( 'Surtitre (optionnel)', 'adaptours' ) }
 						/>
-
-						<h1 className="page-header__title">
-							<RichText
-								tagName="span"
-								value={ attributes.title_part_1 }
-								allowedFormats={ [] }
-								onChange={ ( title_part_1 ) => setAttributes( { title_part_1 } ) }
-								placeholder={ __( 'Titre…', 'adaptours' ) }
-							/>{ ' ' }
-							<RichText
-								tagName="span"
-								className="accent"
-								value={ attributes.title_part_2 }
-								allowedFormats={ [] }
-								onChange={ ( title_part_2 ) => setAttributes( { title_part_2 } ) }
-								placeholder={ __( 'mot(s) en orange', 'adaptours' ) }
-							/>
-						</h1>
-
-						<RichText
-							tagName="p"
-							className="page-header__desc"
-							value={ attributes.description }
-							allowedFormats={ [ 'core/italic', 'core/link' ] }
+						<TextControl
+							label={ __( 'Titre — début', 'adaptours' ) }
+							value={ attributes.title_part_1 }
+							onChange={ ( title_part_1 ) => setAttributes( { title_part_1 } ) }
+						/>
+						<TextControl
+							label={ __( 'Mot(s) en orange', 'adaptours' ) }
+							help={ __( 'La fin du titre, affichée en orange.', 'adaptours' ) }
+							value={ attributes.title_part_2 }
+							onChange={ ( title_part_2 ) => setAttributes( { title_part_2 } ) }
+						/>
+					</PanelBody>
+					<PanelBody title={ __( 'Texte d’introduction', 'adaptours' ) }>
+						<TextareaControl
+							label={ __( 'Introduction', 'adaptours' ) }
+							help={ __( 'Quelques phrases affichées sous le titre. Laissez vide pour aucune.', 'adaptours' ) }
+							value={ htmlToPlainText( attributes.description ) }
 							onChange={ ( description ) => setAttributes( { description } ) }
-							placeholder={ __( 'Texte d’introduction…', 'adaptours' ) }
+							rows={ 4 }
 						/>
+					</PanelBody>
+					<PanelBody title={ __( 'Boutons', 'adaptours' ) }>
+						<TextControl
+							label={ __( 'Bouton principal — texte', 'adaptours' ) }
+							help={ __( 'Laissez le texte vide pour masquer le bouton.', 'adaptours' ) }
+							value={ attributes.cta_primary_label }
+							onChange={ ( cta_primary_label ) => setAttributes( { cta_primary_label } ) }
+						/>
+						<TextControl
+							label={ __( 'Bouton principal — adresse', 'adaptours' ) }
+							type="url"
+							help={ __( 'La page ouverte au clic (par exemple /devis/).', 'adaptours' ) }
+							value={ attributes.cta_primary_url }
+							onChange={ ( cta_primary_url ) => setAttributes( { cta_primary_url } ) }
+						/>
+						<TextControl
+							label={ __( 'Bouton secondaire — texte', 'adaptours' ) }
+							help={ __( 'Laissez le texte vide pour masquer le bouton.', 'adaptours' ) }
+							value={ attributes.cta_secondary_label }
+							onChange={ ( cta_secondary_label ) => setAttributes( { cta_secondary_label } ) }
+						/>
+						<TextControl
+							label={ __( 'Bouton secondaire — adresse', 'adaptours' ) }
+							type="url"
+							help={ __( 'La page ouverte au clic.', 'adaptours' ) }
+							value={ attributes.cta_secondary_url }
+							onChange={ ( cta_secondary_url ) => setAttributes( { cta_secondary_url } ) }
+						/>
+					</PanelBody>
+				</InspectorControls>
 
-						<div className="page-header__cta">
-							<RichText
-								tagName="span"
-								className="button button--primary"
-								value={ attributes.cta_primary_label }
-								allowedFormats={ [] }
-								onChange={ ( cta_primary_label ) => setAttributes( { cta_primary_label } ) }
-								placeholder={ __( 'Bouton principal', 'adaptours' ) }
-							/>
-							<RichText
-								tagName="span"
-								className="button button--secondary"
-								value={ attributes.cta_secondary_label }
-								allowedFormats={ [] }
-								onChange={ ( cta_secondary_label ) => setAttributes( { cta_secondary_label } ) }
-								placeholder={ __( 'Bouton secondaire', 'adaptours' ) }
-							/>
-						</div>
-					</div>
-				</section>
+				<div { ...blockProps }>
+					<ServerSideRender
+						block={ metadata.name }
+						attributes={ attributes }
+						EmptyResponsePlaceholder={ () => (
+							<p>{ __( 'Cet en-tête est vide : remplissez les champs dans la colonne de droite.', 'adaptours' ) }</p>
+						) }
+					/>
+				</div>
 			</>
 		);
 	},

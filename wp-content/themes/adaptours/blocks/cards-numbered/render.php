@@ -29,7 +29,10 @@ if ( ! $has_cards ) {
 	return;
 }
 
-$wrapper = get_block_wrapper_attributes( array( 'class' => 'cards-numbered' ) );
+$background = (string) ( $attributes['background'] ?? 'surface-alt' );
+$background = in_array( $background, array( 'surface', 'surface-alt', 'highlight-soft' ), true ) ? $background : 'surface-alt';
+
+$wrapper = get_block_wrapper_attributes( array( 'class' => 'cards-numbered cards-numbered--bg-' . $background ) );
 ?>
 <section <?php echo $wrapper; // phpcs:ignore WordPress.Security.EscapeOutput ?>>
 	<div class="cards-numbered__inner">

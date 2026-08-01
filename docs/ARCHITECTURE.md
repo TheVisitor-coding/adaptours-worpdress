@@ -126,7 +126,8 @@ wp-content/themes/adaptours/
   - **Pages à structure figée** (`front-page.php`, `template-devis.php`, `template-qui-sommes-nous.php`,
     `template-contact.php`) → blocs insérés avec `templateLock: "all"`.
   - **Pages modulaires** (`single-destination.php`, `template-page-modulaire.php`) → zone Gutenberg
-    `templateLock: false` + `allowedBlocks` restreint à `adaptours/*`.
+    `templateLock: false` + palette restreinte **par contexte** (liste `allowed` de `adaptours_lock_map()` :
+    blocs de contenu riche §9.10.1 pour la page modulaire, sections destination pour le single).
   - **Archive** (`archive-destination.php`) → aucun bloc, tout figé en PHP + filtres AJAX.
 - Les modèles de page (`template-*.php`) exposent un en-tête `Template Name:` pour être sélectionnables
   dans *Attributs de page > Modèle*.
@@ -170,9 +171,19 @@ assets/build/blocks/<nom-bloc>/    # BUILD (généré par `npm run build`, gitig
   source seul ne suffit pas — il faut le compiler vers `assets/build/blocks/`).
 - **Attributs** : déclarés dans `block.json` selon les conventions consolidées §12.3 —
   `title_part_1/2[/3]`, `cta_*`, `columns`, repeaters (figés vs libres), richtext limité/étendu.
-- **`templateLock` / `allowedBlocks`** : posés côté template (pas dans le bloc) — figés pour les pages
-  à structure figée, palette restreinte pour les pages modulaires (filtre `allowed_block_types_all`
-  conditionné par `get_page_template_slug()`, §9.6.3 / §9.10.0).
+  Les blocs de contenu riche (§9.10) portent en plus un attribut **`background`**
+  (`surface` / `surface-alt` / `highlight-soft`, défaut par bloc) → modificateur BEM
+  `--bg-<valeur>` normalisé défensivement dans `render.php` (modèle : `media-full.width`).
+- **Édition** : les blocs s'éditent dans le **panneau latéral** (`InspectorControls` +
+  aperçu `ServerSideRender`, `save: null`). Les parents InnerBlocks sont **hybrides** :
+  champs du parent dans le panneau latéral + aperçu statique dans le canvas, enfants
+  ajoutés/retirés au canvas (chaque enfant a son propre panneau latéral). Le corps du bloc
+  `rich-text` (InnerBlocks core) reste la seule zone de texte libre éditée au canvas.
+- **`templateLock` / palette** : posés côté template (pas dans le bloc) — figés pour les pages
+  à structure figée ; pour les contextes modulaires, la clé **`allowed`** de `adaptours_lock_map()`
+  liste les blocs exacts de la palette (filtre `allowed_block_types_all`, global : inclure les blocs
+  **enfants** et les blocs **core** requis par des InnerBlocks, sinon ils deviennent ininsérables
+  dans leur parent). Contexte sans clé `allowed` = palette complète (adaptours/* + core texte).
 - **Verrou cliente** : les attributs « structurels » (`columns` du kpi-bar, longueurs figées) sont posés
   à l'insertion et non exposés dans l'inspecteur.
 - **Rendu partagé** : `render.php` inclut les partials communs (`card-destination.php`,
