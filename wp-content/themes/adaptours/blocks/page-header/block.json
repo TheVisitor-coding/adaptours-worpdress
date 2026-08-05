@@ -13,9 +13,9 @@
 	},
 	"attributes": {
 		"eyebrow": { "type": "string", "default": "" },
-		"title_part_1": { "type": "string", "default": "Page de" },
-		"title_part_2": { "type": "string", "default": "contenu riche" },
-		"description": { "type": "string", "default": "Cette page rassemble les briques de contenu standard du site Adaptours. Chacune est conçue pour être réutilisable, lisible, et combinable librement pour assembler une page éditoriale, une destination, une page de conseils." },
+		"title_part_1": { "type": "string", "default": "" },
+		"title_part_2": { "type": "string", "default": "" },
+		"description": { "type": "string", "default": "" },
 		"cta_primary_label": { "type": "string", "default": "" },
 		"cta_primary_url": { "type": "string", "default": "" },
 		"cta_secondary_label": { "type": "string", "default": "" },

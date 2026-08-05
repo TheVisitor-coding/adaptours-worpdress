@@ -107,11 +107,57 @@ remove_action( 'wp_head', 'rel_canonical' );
 add_action( 'wp_head', 'adaptours_seo_canonical', 10 );
 
 /**
+ * Suffixe de marque appliqué aux titres des fiches destination.
+ *
+ * Piloté par l'option « Suffixe des titres destination » (page Coordonnées & liens), traduisible
+ * via Polylang. Repli sur la chaîne du thème, qui reprend le gabarit historique de la production
+ * afin que les fiches conservent leur titre lors de la bascule.
+ *
+ * @return string
+ */
+function adaptours_seo_destination_title_suffix() {
+	$suffix = function_exists( 'adaptours_seo_option_i18n' )
+		? adaptours_seo_option_i18n( 'dest_title_suffix' )
+		: '';
+
+	if ( '' === $suffix ) {
+		$suffix = __( 'Adaptours voyages adaptés personnes mobilité réduite', 'adaptours' );
+	}
+
+	return trim( $suffix );
+}
+
+/**
+ * Gabarit de titre par défaut, appliqué faute de surcharge saisie en backoffice.
+ *
+ * Les 30 fiches destination doivent porter « {Pays} - {suffixe de marque} » sans saisie manuelle :
+ * WordPress produirait sinon « {Pays} – {nom du site} », qui perd les mots-clés du gabarit
+ * historique de la production. Le metabox reste prioritaire, fiche par fiche.
+ *
+ * @return string Titre complet, ou '' si le contexte n'a pas de gabarit.
+ */
+function adaptours_seo_default_title() {
+	if ( ! is_singular( 'destination' ) ) {
+		return '';
+	}
+
+	$name = trim( wp_strip_all_tags( (string) get_the_title( get_queried_object_id() ) ) );
+	if ( '' === $name ) {
+		return '';
+	}
+
+	$suffix = adaptours_seo_destination_title_suffix();
+
+	return ( '' !== $suffix ) ? $name . ' - ' . $suffix : $name;
+}
+
+/**
  * Titre du document, surchargeable en backoffice.
  *
- * Filtre court-circuitant : renvoyer '' laisse WordPress produire le titre automatique
- * (add_theme_support('title-tag')). Profite aussi à og:title, qui passe par
- * wp_get_document_title().
+ * Trois niveaux, du plus spécifique au plus général : surcharge saisie dans le metabox
+ * « Référencement (Google) », puis gabarit par défaut du thème (destinations), puis titre
+ * automatique de WordPress (add_theme_support('title-tag')). Profite aussi à og:title,
+ * qui passe par wp_get_document_title().
  *
  * @param string $title Titre calculé en amont ('' par défaut).
  * @return string
@@ -122,7 +168,12 @@ function adaptours_seo_document_title( $title ) {
 	}
 
 	$override = adaptours_seo_override( 'title' );
-	return ( '' !== $override ) ? $override : $title;
+	if ( '' !== $override ) {
+		return $override;
+	}
+
+	$default = adaptours_seo_default_title();
+	return ( '' !== $default ) ? $default : $title;
 }
 add_filter( 'pre_get_document_title', 'adaptours_seo_document_title' );
 

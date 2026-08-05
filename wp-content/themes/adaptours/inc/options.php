@@ -160,6 +160,11 @@ function adaptours_options_schema() {
 					'type'  => 'textarea',
 					'desc'  => __( 'Description de la page Destinations dans les résultats Google, 160 caractères maximum. Laissez vide pour réutiliser le texte d’introduction ci-dessus.', 'adaptours' ),
 				),
+				'dest_title_suffix' => array(
+					'label' => __( 'Suffixe des titres destination', 'adaptours' ),
+					'type'  => 'text',
+					'desc'  => __( 'Ajouté après le nom du pays dans le titre Google de chaque fiche destination, ex. « Maroc - Adaptours voyages adaptés personnes mobilité réduite ». Laissez vide pour utiliser le suffixe par défaut du thème. Ne concerne pas les fiches dont le titre est saisi à la main.', 'adaptours' ),
+				),
 			),
 		),
 		'legal'          => array(
@@ -444,6 +449,7 @@ function adaptours_register_option_strings() {
 		'dest_badge_label',
 		'dest_seo_title',
 		'dest_seo_desc',
+		'dest_title_suffix',
 	);
 
 	foreach ( $translatable as $key ) {
