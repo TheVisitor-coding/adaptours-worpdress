@@ -73,6 +73,10 @@ function adaptours_pll_copy_post_metas( $metas ) {
 	// Le template de page conditionne le verrou (adaptours_block_context) : la traduction
 	// doit hériter du même template que l'original.
 	$metas[] = '_wp_page_template';
+
+	// NE JAMAIS ajouter ici _adaptours_seo_title / _adaptours_seo_desc (inc/seo-fields.php) :
+	// ce sont des textes à rédiger par langue. Les recopier remettrait la version FR sur les
+	// traductions, exactement le défaut qu'on cherche à corriger.
 	return $metas;
 }
 add_filter( 'pll_copy_post_metas', 'adaptours_pll_copy_post_metas' );

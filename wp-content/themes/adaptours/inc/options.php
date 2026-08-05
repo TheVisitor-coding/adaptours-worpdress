@@ -150,6 +150,16 @@ function adaptours_options_schema() {
 					'type'  => 'text',
 					'desc'  => __( 'Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir » ; le {n} est remplacé automatiquement par le nombre réel.', 'adaptours' ),
 				),
+				'dest_seo_title'    => array(
+					'label' => __( 'Titre dans Google', 'adaptours' ),
+					'type'  => 'text',
+					'desc'  => __( 'Titre de la page Destinations dans les résultats Google, 60 caractères maximum. Laissez vide pour « Destinations – nom du site ».', 'adaptours' ),
+				),
+				'dest_seo_desc'     => array(
+					'label' => __( 'Description dans Google', 'adaptours' ),
+					'type'  => 'textarea',
+					'desc'  => __( 'Description de la page Destinations dans les résultats Google, 160 caractères maximum. Laissez vide pour réutiliser le texte d’introduction ci-dessus.', 'adaptours' ),
+				),
 			),
 		),
 		'legal'          => array(
@@ -432,6 +442,8 @@ function adaptours_register_option_strings() {
 		'dest_title_part_2',
 		'dest_intro',
 		'dest_badge_label',
+		'dest_seo_title',
+		'dest_seo_desc',
 	);
 
 	foreach ( $translatable as $key ) {

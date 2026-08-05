@@ -107,15 +107,41 @@ remove_action( 'wp_head', 'rel_canonical' );
 add_action( 'wp_head', 'adaptours_seo_canonical', 10 );
 
 /**
- * Meta description du contexte courant, dérivée du contenu éditorial.
+ * Titre du document, surchargeable en backoffice.
  *
- * On n'utilise que du texte saisi (accroche, extrait manuel, chapô) et jamais l'extrait
- * auto-généré à partir des blocs (illisible). Repli sur le slogan du site.
+ * Filtre court-circuitant : renvoyer '' laisse WordPress produire le titre automatique
+ * (add_theme_support('title-tag')). Profite aussi à og:title, qui passe par
+ * wp_get_document_title().
+ *
+ * @param string $title Titre calculé en amont ('' par défaut).
+ * @return string
+ */
+function adaptours_seo_document_title( $title ) {
+	if ( ! function_exists( 'adaptours_seo_override' ) ) {
+		return $title;
+	}
+
+	$override = adaptours_seo_override( 'title' );
+	return ( '' !== $override ) ? $override : $title;
+}
+add_filter( 'pre_get_document_title', 'adaptours_seo_document_title' );
+
+/**
+ * Meta description du contexte courant.
+ *
+ * Priorité : surcharge saisie en backoffice (inc/seo-fields.php), puis dérivation du contenu
+ * éditorial. On n'utilise que du texte saisi (accroche, extrait manuel, chapô) et jamais
+ * l'extrait auto-généré à partir des blocs (illisible). Repli sur le slogan du site.
  *
  * @return string Description nettoyée, bornée à ~160 caractères.
  */
 function adaptours_seo_description() {
-	$desc = '';
+	$desc = function_exists( 'adaptours_seo_override' ) ? adaptours_seo_override( 'desc' ) : '';
+
+	if ( '' !== $desc ) {
+		// Surcharge explicite : on ne dérive pas.
+		return $desc;
+	}
 
 	if ( is_singular( 'destination' ) ) {
 		$id   = get_queried_object_id();
@@ -124,7 +150,14 @@ function adaptours_seo_description() {
 			$desc = (string) get_the_excerpt( $id );
 		}
 	} elseif ( is_post_type_archive( 'destination' ) ) {
-		$desc = (string) adaptours_get_option( 'dest_intro' );
+		// pll__() indispensable : dest_intro est une chaîne Polylang (inc/options.php),
+		// sans quoi l'archive EN/ES hériterait du texte FR.
+		$desc = function_exists( 'adaptours_seo_option_i18n' )
+			? adaptours_seo_option_i18n( 'dest_intro' )
+			: (string) adaptours_get_option( 'dest_intro' );
+	} elseif ( is_tax( 'zone_geographique' ) ) {
+		$term = get_queried_object();
+		$desc = ( $term instanceof WP_Term ) ? (string) $term->description : '';
 	} elseif ( is_singular() && has_excerpt( get_queried_object_id() ) ) {
 		$desc = (string) get_the_excerpt( get_queried_object_id() );
 	}
