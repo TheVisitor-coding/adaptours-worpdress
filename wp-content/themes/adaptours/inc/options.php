@@ -429,17 +429,14 @@ function adaptours_get_option( $key, $default = '' ) {
 }
 
 /**
- * Enregistre dans Polylang les chaînes d'affichage traduisibles (si actif).
+ * Clés dont la valeur est une phrase affichée, donc traduisible par langue.
  *
- * Seules les phrases affichées sont traduites ; les données pures (tel, email, SIRET,
- * RCS, TVA, Atout France…) restent globales.
+ * Les données pures (tel, email, SIRET, RCS, TVA, Atout France…) restent globales.
+ *
+ * @return string[]
  */
-function adaptours_register_option_strings() {
-	if ( ! function_exists( 'pll_register_string' ) ) {
-		return;
-	}
-
-	$translatable = array(
+function adaptours_translatable_option_keys() {
+	return array(
 		'tel_horaires',
 		'email_delai',
 		'dest_eyebrow',
@@ -451,8 +448,44 @@ function adaptours_register_option_strings() {
 		'dest_seo_desc',
 		'dest_title_suffix',
 	);
+}
 
-	foreach ( $translatable as $key ) {
+/**
+ * Lit un réglage et renvoie sa traduction Polylang dans la langue courante.
+ *
+ * pll__() traduit par valeur : une chaîne non enregistrée revient inchangée.
+ *
+ * @param string $key     Clé du champ.
+ * @param string $default Valeur par défaut si absente/vide.
+ * @return string
+ */
+function adaptours_get_option_i18n( $key, $default = '' ) {
+	$value = (string) adaptours_get_option( $key, $default );
+
+	return ( '' !== $value && function_exists( 'pll__' ) ) ? (string) pll__( $value ) : $value;
+}
+
+/**
+ * Résout un réglage d'URL interne vers la page de la langue demandée.
+ *
+ * @param string $key     Clé du champ (url_devis, url_contact, url_cgv…).
+ * @param string $default Valeur par défaut si absente/vide.
+ * @param string $lang    Slug de langue cible ; vide = langue courante.
+ * @return string
+ */
+function adaptours_get_url_option( $key, $default = '', $lang = '' ) {
+	return adaptours_translate_url( (string) adaptours_get_option( $key, $default ), $lang );
+}
+
+/**
+ * Enregistre dans Polylang les chaînes d'affichage traduisibles (si actif).
+ */
+function adaptours_register_option_strings() {
+	if ( ! function_exists( 'pll_register_string' ) ) {
+		return;
+	}
+
+	foreach ( adaptours_translatable_option_keys() as $key ) {
 		$value = adaptours_get_option( $key );
 		if ( '' !== $value ) {
 			pll_register_string( 'adaptours_' . $key, $value, 'Adaptours' );

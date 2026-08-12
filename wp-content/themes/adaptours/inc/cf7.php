@@ -87,14 +87,14 @@ function adaptours_cf7_lang_option( $base_option, $slug, $default ) {
  * Sans Polylang, un seul formulaire est créé dans la langue du site (sans liaison).
  *
  * @param string   $base_option Option de la langue par défaut (ex. adaptours_contact_form_id).
- * @param callable $upsert      fn( string $option, string $locale ): int — crée le form, renvoie son ID.
+ * @param callable $upsert      fn( string $option, string $locale, string $slug ): int — crée le form, renvoie son ID.
  */
 function adaptours_cf7_ensure_translated_forms( $base_option, $upsert ) {
 	$langs   = adaptours_cf7_languages();
 	$default = function_exists( 'pll_default_language' ) ? pll_default_language() : '';
 
 	if ( empty( $langs ) ) {
-		$upsert( $base_option, '' );
+		$upsert( $base_option, '', '' );
 		return;
 	}
 
@@ -103,7 +103,7 @@ function adaptours_cf7_ensure_translated_forms( $base_option, $upsert ) {
 	foreach ( $langs as $slug => $locale ) {
 		$option   = adaptours_cf7_lang_option( $base_option, $slug, $default );
 		$existing = (int) get_option( $option, 0 );
-		$id       = $upsert( $option, $locale );
+		$id       = $upsert( $option, $locale, $slug );
 		if ( $id ) {
 			$ids[ $slug ] = $id;
 			pll_set_post_language( $id, $slug );
@@ -129,12 +129,11 @@ function adaptours_cf7_ensure_contact_form() {
 		return;
 	}
 
-	$email_to    = (string) adaptours_get_option( 'email', get_option( 'admin_email' ) );
-	$privacy_url = (string) adaptours_get_option( 'url_confidentialite', '#' );
+	$email_to = (string) adaptours_get_option( 'email', get_option( 'admin_email' ) );
 
 	adaptours_cf7_ensure_translated_forms(
 		'adaptours_contact_form_id',
-		static fn( $option, $locale ) => adaptours_cf7_upsert_contact( $option, $locale, $email_to, $privacy_url )
+		static fn( $option, $locale, $slug ) => adaptours_cf7_upsert_contact( $option, $locale, $slug, $email_to )
 	);
 }
 add_action( 'admin_init', 'adaptours_cf7_ensure_contact_form' );
@@ -144,13 +143,13 @@ add_action( 'admin_init', 'adaptours_cf7_ensure_contact_form' );
  *
  * Idempotent : si l'option pointe déjà vers un formulaire valide, la construction est sautée.
  *
- * @param string $option      Option mémorisant l'ID.
- * @param string $locale      Locale de construction (vide = locale courante).
- * @param string $email_to    Destinataire des e-mails.
- * @param string $privacy_url URL de la politique de confidentialité.
+ * @param string $option   Option mémorisant l'ID.
+ * @param string $locale   Locale de construction (vide = locale courante).
+ * @param string $slug     Slug de langue Polylang (vide = langue courante).
+ * @param string $email_to Destinataire des e-mails.
  * @return int
  */
-function adaptours_cf7_upsert_contact( $option, $locale, $email_to, $privacy_url ) {
+function adaptours_cf7_upsert_contact( $option, $locale, $slug, $email_to ) {
 	$existing = (int) get_option( $option, 0 );
 	if ( $existing > 0 && 'wpcf7_contact_form' === get_post_type( $existing ) ) {
 		return $existing;
@@ -160,7 +159,8 @@ function adaptours_cf7_upsert_contact( $option, $locale, $email_to, $privacy_url
 		switch_to_locale( $locale );
 	}
 
-	$props = adaptours_cf7_contact_properties( $email_to, $privacy_url );
+	// Le corps du formulaire est figé en base : l'URL doit pointer la page de CETTE langue.
+	$props = adaptours_cf7_contact_properties( $email_to, adaptours_get_url_option( 'url_confidentialite', '#', $slug ) );
 	$form  = WPCF7_ContactForm::get_template( array( 'title' => $props['title'] ) );
 	$form->set_properties(
 		array(

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$devis_url   = adaptours_get_option( 'url_devis', home_url( '/devis' ) );
+$devis_url   = adaptours_get_url_option( 'url_devis', '/devis/' );
 $tel_display = adaptours_get_option( 'tel_display' );
 $tel_link    = adaptours_get_option( 'tel_link' );
 

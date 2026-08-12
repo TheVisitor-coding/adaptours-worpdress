@@ -79,12 +79,11 @@ function adaptours_cf7_ensure_devis_form() {
 		return;
 	}
 
-	$email_to    = (string) adaptours_get_option( 'email', get_option( 'admin_email' ) );
-	$privacy_url = (string) adaptours_get_option( 'url_confidentialite', '#' );
+	$email_to = (string) adaptours_get_option( 'email', get_option( 'admin_email' ) );
 
 	adaptours_cf7_ensure_translated_forms(
 		'adaptours_devis_form_id',
-		static fn( $option, $locale ) => adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url )
+		static fn( $option, $locale, $slug ) => adaptours_devis_upsert_form( $option, $locale, $slug, $email_to )
 	);
 }
 add_action( 'admin_init', 'adaptours_cf7_ensure_devis_form' );
@@ -95,13 +94,13 @@ add_action( 'admin_init', 'adaptours_cf7_ensure_devis_form' );
  * Les libellés des profils et les règles conditionnelles sont générés dans la même locale :
  * les `if_value` correspondent ainsi au caractère près aux valeurs des boutons radio rendus.
  *
- * @param string $option      Option mémorisant l'ID.
- * @param string $locale      Locale de construction (vide = locale courante).
- * @param string $email_to    Destinataire des e-mails.
- * @param string $privacy_url URL de la politique de confidentialité.
+ * @param string $option   Option mémorisant l'ID.
+ * @param string $locale   Locale de construction (vide = locale courante).
+ * @param string $slug     Slug de langue Polylang (vide = langue courante).
+ * @param string $email_to Destinataire des e-mails.
  * @return int
  */
-function adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url ) {
+function adaptours_devis_upsert_form( $option, $locale, $slug, $email_to ) {
 	$existing = (int) get_option( $option, 0 );
 	if ( $existing > 0 && 'wpcf7_contact_form' === get_post_type( $existing ) ) {
 		return $existing;
@@ -111,6 +110,8 @@ function adaptours_devis_upsert_form( $option, $locale, $email_to, $privacy_url 
 		switch_to_locale( $locale );
 	}
 
+	// Le corps du formulaire est figé en base : l'URL doit pointer la page de CETTE langue.
+	$privacy_url  = adaptours_get_url_option( 'url_confidentialite', '#', $slug );
 	$privacy_link = '<a href="' . esc_url( $privacy_url ) . '">' . esc_html__( 'politique de confidentialité', 'adaptours' ) . '</a>';
 
 	$statut = adaptours_devis_statut_labels();

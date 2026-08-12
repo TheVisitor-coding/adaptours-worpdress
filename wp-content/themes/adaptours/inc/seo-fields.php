@@ -49,18 +49,14 @@ function adaptours_seo_field_post_types() {
 /**
  * Lit une option de la page d'options en appliquant la traduction Polylang.
  *
- * Les options SEO de l'archive sont enregistrées via pll_register_string()
- * (inc/options.php) : sans pll__(), l'archive EN/ES afficherait le texte FR.
+ * Alias historique de adaptours_get_option_i18n() (inc/options.php), conservé pour les
+ * appels du module SEO.
  *
  * @param string $key Clé d'option.
  * @return string
  */
 function adaptours_seo_option_i18n( $key ) {
-	$value = (string) adaptours_get_option( $key );
-	if ( '' === $value ) {
-		return '';
-	}
-	return function_exists( 'pll__' ) ? (string) pll__( $value ) : $value;
+	return adaptours_get_option_i18n( $key );
 }
 
 /**

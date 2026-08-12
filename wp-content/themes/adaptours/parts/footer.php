@@ -132,7 +132,7 @@ $legal_links = array(
 			<?php
 			$legal_items = array();
 			foreach ( $legal_links as $opt_key => $label ) {
-				$url = adaptours_get_option( $opt_key );
+				$url = adaptours_get_url_option( $opt_key );
 				if ( $url ) {
 					$legal_items[] = '<a href="' . esc_url( $url ) . '">' . esc_html( $label ) . '</a>';
 				}

@@ -135,6 +135,34 @@ function adaptours_search_include_ville( $search, $wp_query ) {
 }
 
 /**
+ * Nombre de destinations publiées dans la langue courante.
+ *
+ * wp_count_posts() interroge la table posts en direct et échappe au filtrage de Polylang :
+ * il additionnerait les destinations de toutes les langues.
+ *
+ * @return int
+ */
+function adaptours_count_published_destinations() {
+	$args = array(
+		'post_type'              => 'destination',
+		'post_status'            => 'publish',
+		'posts_per_page'         => 1,
+		'fields'                 => 'ids',
+		'no_found_rows'          => false,
+		'update_post_meta_cache' => false,
+		'update_post_term_cache' => false,
+	);
+
+	if ( function_exists( 'pll_current_language' ) && pll_current_language() ) {
+		$args['lang'] = pll_current_language();
+	}
+
+	$query = new WP_Query( $args );
+
+	return (int) $query->found_posts;
+}
+
+/**
  * Données du chapô de l'archive, prêtes à afficher.
  *
  * Lit les réglages éditables (page d'options) avec valeurs par défaut, applique la
@@ -143,18 +171,19 @@ function adaptours_search_include_ville( $search, $wp_query ) {
  * @return array{eyebrow:string,title_part_1:string,title_part_2:string,intro:string,badge:string}
  */
 function adaptours_get_destinations_chapo() {
-	$translate = static function ( $value ) {
-		return ( '' !== $value && function_exists( 'pll__' ) ) ? pll__( $value ) : $value;
-	};
+	$count = adaptours_count_published_destinations();
 
-	$count     = (int) wp_count_posts( 'destination' )->publish;
-	$badge_raw = $translate( adaptours_get_option( 'dest_badge_label', __( '{n} voyages prêts à partir', 'adaptours' ) ) );
+	$badge_raw = adaptours_get_option_i18n(
+		'dest_badge_label',
+		/* translators: {n} est remplacé à l'affichage par le nombre de destinations publiées. */
+		_n( '{n} voyage prêt à partir', '{n} voyages prêts à partir', $count, 'adaptours' )
+	);
 
 	return array(
-		'eyebrow'      => $translate( adaptours_get_option( 'dest_eyebrow', __( 'CATALOGUE', 'adaptours' ) ) ),
-		'title_part_1' => $translate( adaptours_get_option( 'dest_title_part_1', __( 'Destinations', 'adaptours' ) ) ),
-		'title_part_2' => $translate( adaptours_get_option( 'dest_title_part_2', __( 'accessibles.', 'adaptours' ) ) ),
-		'intro'        => $translate( adaptours_get_option( 'dest_intro', __( 'Toutes nos destinations sont repérées, testées et validées par notre équipe. Chaque fiche détaille les conditions d’accessibilité.', 'adaptours' ) ) ),
+		'eyebrow'      => adaptours_get_option_i18n( 'dest_eyebrow', __( 'CATALOGUE', 'adaptours' ) ),
+		'title_part_1' => adaptours_get_option_i18n( 'dest_title_part_1', __( 'Destinations', 'adaptours' ) ),
+		'title_part_2' => adaptours_get_option_i18n( 'dest_title_part_2', __( 'accessibles.', 'adaptours' ) ),
+		'intro'        => adaptours_get_option_i18n( 'dest_intro', __( 'Toutes nos destinations sont repérées, testées et validées par notre équipe. Chaque fiche détaille les conditions d’accessibilité.', 'adaptours' ) ),
 		'badge'        => str_replace( '{n}', number_format_i18n( $count ), $badge_raw ),
 	);
 }

@@ -31,6 +31,10 @@ WCAG 2.1 AA, SEO). Ce fichier ne fait que les enchaîner.
    + palette `adaptours`).
 5. **Build** — `npm run build`. Le bloc n'apparaît dans l'éditeur **qu'après build** (enregistrement
    depuis `assets/build/blocks/*`, cf. `ARCHITECTURE §3`).
+5 bis. **Chaînes par défaut** — si le `block.json` porte des `attributes[].default` de texte éditorial,
+   relancer `python3 tools/gen-block-default-strings.py` puis la chaîne i18n de `MULTILINGUE.md`.
+   `wp i18n make-pot` n'extrait **jamais** ces valeurs : sans cette étape, le bloc s'affiche en
+   français sur `/en/` et `/es/`, sans erreur.
 6. **Checklist skill** — `references/checklist-block.md` + `accessibilite-seo.md` (hiérarchie de titres,
    focus visible, **contraste AA** — texte normal ≥ 4,5:1, grand texte ≥ 3:1 ; `alt`, `aria-hidden` sur
    le décor, images responsives anti-CLS).

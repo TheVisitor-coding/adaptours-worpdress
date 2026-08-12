@@ -1,0 +1,143 @@
+<?php
+/**
+ * Fichier GÉNÉRÉ par tools/gen-block-default-strings.py — ne pas éditer à la main.
+ *
+ * Rend extractibles par `wp i18n make-pot` les valeurs par défaut éditoriales des
+ * block.json. Jamais requis à l'exécution : le rendu passe par inc/block-defaults-i18n.php.
+ *
+ * @package Adaptours
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+_x( "Avis clients", "adaptours/avis-grid:eyebrow", "adaptours" );
+_x( "Ils sont partis avec nous.", "adaptours/avis-grid:title", "adaptours" );
+_x( "avec nous", "adaptours/avis-grid:title_accent", "adaptours" );
+_x( "Plus de 800 voyageurs accompagnés depuis 2007. Voici ce qu'ils en disent.", "adaptours/avis-grid:description", "adaptours" );
+_x( "Rejoignez +800 voyageurs qui ont fait le pas.", "adaptours/avis-grid:band_text", "adaptours" );
+_x( "Demander mon devis", "adaptours/avis-grid:cta_label", "adaptours" );
+_x( "Titre de la", "adaptours/card-grid:title_part_1", "adaptours" );
+_x( "section", "adaptours/card-grid:title_part_2", "adaptours" );
+_x( "Titre de la", "adaptours/cards-numbered:title_part_1", "adaptours" );
+_x( "section", "adaptours/cards-numbered:title_part_2", "adaptours" );
+_x( "FORMULAIRE DE CONTACT", "adaptours/contact-form:form_eyebrow", "adaptours" );
+_x( "Quelques mots", "adaptours/contact-form:form_title_part_1", "adaptours" );
+_x( "suffisent.", "adaptours/contact-form:form_title_part_2", "adaptours" );
+_x( "Des équipements", "adaptours/content-storytelling:title_part_1", "adaptours" );
+_x( "adaptés", "adaptours/content-storytelling:title_part_2", "adaptours" );
+_x( "Un séjour accessible se prépare aussi dans les détails du quotidien. Fauteuil roulant, lit médicalisé, lève-personne ou fauteuil de douche : nous organisons la mise à disposition du matériel médical adapté directement sur votre lieu de séjour, pour que vous retrouviez vos repères dès l’arrivée. Vous voyagez plus léger, et vous profitez de votre voyage l’esprit tranquille.", "adaptours/content-storytelling:body", "adaptours" );
+_x( "La galerie", "adaptours/destination-gallery:eyebrow", "adaptours" );
+_x( "Ce que vous allez voir.", "adaptours/destination-gallery:title", "adaptours" );
+_x( "voir.", "adaptours/destination-gallery:title_accent", "adaptours" );
+_x( "Nos plus belles photos", "adaptours/destination-gallery:tagline", "adaptours" );
+_x( "Destinations", "adaptours/destinations-grid:eyebrow", "adaptours" );
+_x( "Des destinations", "adaptours/destinations-grid:title_part_1", "adaptours" );
+_x( "variées", "adaptours/destinations-grid:title_part_2", "adaptours" );
+_x( "Chaque séjour est pensé pour une mobilité, un rythme, une envie particulière. On s’adapte, vous profitez.", "adaptours/destinations-grid:description", "adaptours" );
+_x( "Toutes les destinations", "adaptours/destinations-grid:cta_label", "adaptours" );
+_x( "Pour aller plus loin", "adaptours/destinations-suggestions:eyebrow", "adaptours" );
+_x( "Vous aimerez aussi", "adaptours/destinations-suggestions:title", "adaptours" );
+_x( "ces îles-là.", "adaptours/destinations-suggestions:title_accent", "adaptours" );
+_x( "Toutes les destinations", "adaptours/destinations-suggestions:cta_label", "adaptours" );
+_x( "Voyager avec nous", "adaptours/dual-cta:card_1_eyebrow", "adaptours" );
+_x( "Et si on commençait par", "adaptours/dual-cta:card_1_title_1", "adaptours" );
+_x( "vous ?", "adaptours/dual-cta:card_1_title_2", "adaptours" );
+_x( "Un projet, une envie, une destination qui vous trotte dans la tête depuis trop longtemps. Dites-nous tout, on s’occupe du reste.", "adaptours/dual-cta:card_1_description", "adaptours" );
+_x( "Demander mon devis", "adaptours/dual-cta:card_1_cta_label", "adaptours" );
+_x( "Nous rejoindre", "adaptours/dual-cta:card_2_eyebrow", "adaptours" );
+_x( "On recherche des", "adaptours/dual-cta:card_2_title_1", "adaptours" );
+_x( "accompagnateurs.", "adaptours/dual-cta:card_2_title_2", "adaptours" );
+_x( "Sensible au handicap, disponible, auto-entrepreneur·e. Envoyez-nous votre CV directement, on lit chaque message.", "adaptours/dual-cta:card_2_description", "adaptours" );
+_x( "Adaptours, 19 ans à", "adaptours/founder-story:title_part_1", "adaptours" );
+_x( "dire oui.", "adaptours/founder-story:title_part_2", "adaptours" );
+_x( "Adaptours est née en 2007 d’un refus : celui d’entendre « ce ne sera pas possible » à chaque projet de voyage un peu différent. Pendant 17 ans, son fondateur Hervé Guichard a construit ce savoir-faire du voyage adapté, avec une règle qu’il n’a jamais lâchée.", "adaptours/founder-story:intro", "adaptours" );
+_x( "On ne vend que ce qu’on", "adaptours/founder-story:quote_part_1", "adaptours" );
+_x( "connaît.", "adaptours/founder-story:quote_part_2", "adaptours" );
+_x( "En 2024, Caroline a repris le flambeau. Formée par Hervé pendant des années, elle continue de faire vivre ce savoir-faire du sur-mesure adapté, avec les mêmes valeurs qu’au premier jour.", "adaptours/founder-story:outro", "adaptours" );
+_x( "— Caroline", "adaptours/founder-story:signature_name", "adaptours" );
+_x( "Dirigeante · Adaptours", "adaptours/founder-story:signature_role", "adaptours" );
+_x( "CONTACT", "adaptours/hero-contact:eyebrow", "adaptours" );
+_x( "Écrivez-nous,", "adaptours/hero-contact:title_part_1", "adaptours" );
+_x( "appelez,", "adaptours/hero-contact:title_part_2", "adaptours" );
+_x( "ou passez nous voir.", "adaptours/hero-contact:title_part_3", "adaptours" );
+_x( "Une question, un projet, une envie de discuter — on répond personnellement, généralement dans la journée.", "adaptours/hero-contact:description", "adaptours" );
+_x( "Devis personnalisé · sans engagement", "adaptours/hero-devis:eyebrow", "adaptours" );
+_x( "Votre prochain voyage", "adaptours/hero-devis:title_part_1", "adaptours" );
+_x( "commence ici.", "adaptours/hero-devis:title_part_2", "adaptours" );
+_x( "Quelques minutes pour nous raconter votre projet. On vous rappelle sous 48 h, puis on prend le temps de construire un devis vraiment sur mesure.", "adaptours/hero-devis:description", "adaptours" );
+_x( "Voyages accessibles · depuis 2007", "adaptours/hero-home:eyebrow", "adaptours" );
+_x( "Voyagez", "adaptours/hero-home:title_part_1", "adaptours" );
+_x( "sans limites,", "adaptours/hero-home:title_part_2", "adaptours" );
+_x( "d’ici", "adaptours/hero-home:title_script", "adaptours" );
+_x( "jusqu’à Bali\njusqu’au Kenya\njusqu’au Canada\njusqu’en Albanie\nen Crète", "adaptours/hero-home:rotator_words", "adaptours" );
+_x( "Séjours sur mesure, 100% accessibles. Hébergements vérifiés, matériel médical, équipe formée sur place. Vous rêvez, on organise.", "adaptours/hero-home:description", "adaptours" );
+_x( "Commencer mon voyage", "adaptours/hero-home:cta_primary_label", "adaptours" );
+_x( "Découvrir les destinations", "adaptours/hero-home:cta_secondary_label", "adaptours" );
+_x( "Qui sommes-nous", "adaptours/hero-qsn:eyebrow", "adaptours" );
+_x( "On n’organise pas des voyages, on rend des", "adaptours/hero-qsn:title_part_1", "adaptours" );
+_x( "envies", "adaptours/hero-qsn:title_part_2", "adaptours" );
+_x( "possibles.", "adaptours/hero-qsn:title_script", "adaptours" );
+_x( "Adaptours, c’est une équipe de trois personnes en France (Caroline, Célia et Élodie) et des partenaires de confiance sur place. Avec une conviction : tout le monde a le droit de partir. Même quand on vous a dit le contraire.", "adaptours/hero-qsn:description", "adaptours" );
+_x( "Rencontrer l’équipe", "adaptours/hero-qsn:cta_label", "adaptours" );
+_x( "Itinéraire", "adaptours/itinerary:eyebrow", "adaptours" );
+_x( "Le Programme", "adaptours/itinerary:title", "adaptours" );
+_x( "Titre de la", "adaptours/media-text:title_part_1", "adaptours" );
+_x( "section", "adaptours/media-text:title_part_2", "adaptours" );
+_x( "<p>Une trentaine de guides, chauffeurs et hôtes répartis sur trois continents. On les rencontre tous, on dort chez eux, on goûte leur cuisine avant de vous les recommander.</p>", "adaptours/media-text:body", "adaptours" );
+_x( "Page de", "adaptours/page-header:title_part_1", "adaptours" );
+_x( "contenu riche", "adaptours/page-header:title_part_2", "adaptours" );
+_x( "Cette page rassemble les briques de contenu standard du site Adaptours. Chacune est conçue pour être réutilisable, lisible, et combinable librement pour assembler une page éditoriale, une destination, une page de conseils.", "adaptours/page-header:description", "adaptours" );
+_x( "Comment ça marche", "adaptours/process:eyebrow", "adaptours" );
+_x( "Du", "adaptours/process:title_part_1", "adaptours" );
+_x( "premier mot au dernier souvenir.", "adaptours/process:title_part_2", "adaptours" );
+_x( "Une fois votre demande envoyée, voici exactement ce qui se passe. Pas de mauvaise surprise, pas de zone grise.", "adaptours/process:description", "adaptours" );
+_x( "Dites-nous où vous rêvez d’aller", "adaptours/process:process_1_title", "adaptours" );
+_x( "Un formulaire ou un appel. On écoute, on prend des notes, on pose des questions. Premier échange sous 48h. Le devis, lui, demande un peu plus de temps : tout est fait sur mesure.", "adaptours/process:process_1_description", "adaptours" );
+_x( "Premier échange gratuit\nRéponse sous 48h\nAucun engagement", "adaptours/process:process_1_features", "adaptours" );
+_x( "~ 30 min d’échange", "adaptours/process:process_1_meta", "adaptours" );
+_x( "On organise tout, dans le détail", "adaptours/process:process_2_title", "adaptours" );
+_x( "Vols, hébergement adapté, matériel médical, soins, transferts, activités. Chaque ligne du voyage est validée avec vous avant de partir.", "adaptours/process:process_2_description", "adaptours" );
+_x( "Vols + transferts adaptés\nHébergement vérifié sur place\nMatériel médical sur mesure", "adaptours/process:process_2_features", "adaptours" );
+_x( "~ 2 à 4 semaines", "adaptours/process:process_2_meta", "adaptours" );
+_x( "Partez l’esprit tranquille", "adaptours/process:process_3_title", "adaptours" );
+_x( "Équipe sur place formée, joignable 24/7. Carnet de route personnalisé dans votre valise. Au retour, on prend des nouvelles.", "adaptours/process:process_3_description", "adaptours" );
+_x( "Accompagnant local formé\nAssistance 24/7 en français\nSuivi post-voyage", "adaptours/process:process_3_features", "adaptours" );
+_x( "jusqu’au retour", "adaptours/process:process_3_meta", "adaptours" );
+_x( "On nous a livré un voyage cousu main, jusqu’au moindre détail. Et surtout : on a senti une équipe qui répondait, vraiment, quand il y a eu un imprévu.", "adaptours/quote:quote", "adaptours" );
+_x( "cousu main", "adaptours/quote:quote_accent", "adaptours" );
+_x( "Nous rejoindre", "adaptours/recruitment:eyebrow", "adaptours" );
+_x( "Adaptours recherche des", "adaptours/recruitment:title_part_1", "adaptours" );
+_x( "accompagnateurs.", "adaptours/recruitment:title_part_2", "adaptours" );
+_x( "Vous partez quelques jours, parfois quelques semaines, avec un petit groupe. Vous veillez à ce que tout se passe bien, du transfert aéroport jusqu’au dernier verre, le soir, sur la terrasse. C’est exigeant, c’est humain, et ça ne ressemble à aucun autre métier.", "adaptours/recruitment:description", "adaptours" );
+_x( "Conditions", "adaptours/recruitment:conditions_eyebrow", "adaptours" );
+_x( "Vous remplissez impérativement", "adaptours/recruitment:conditions_title_1", "adaptours" );
+_x( "ces conditions.", "adaptours/recruitment:conditions_title_2", "adaptours" );
+_x( "Pas un CV-type, mais quelques points sur lesquels on ne transige pas.", "adaptours/recruitment:conditions_subtitle", "adaptours" );
+_x( "Titre de la", "adaptours/rich-text:title_part_1", "adaptours" );
+_x( "section", "adaptours/rich-text:title_part_2", "adaptours" );
+_x( "Accessibilité", "adaptours/section-accessibility:eyebrow", "adaptours" );
+_x( "Pensé pour tous, quel que soit votre rythme.", "adaptours/section-accessibility:title", "adaptours" );
+_x( "tous", "adaptours/section-accessibility:title_accent", "adaptours" );
+_x( "Sur la carte", "adaptours/section-map:eyebrow", "adaptours" );
+_x( "De Paris à", "adaptours/section-map:title", "adaptours" );
+_x( "Pratique", "adaptours/section-practical:eyebrow", "adaptours" );
+_x( "Ce qu’il faut savoir.", "adaptours/section-practical:title", "adaptours" );
+_x( "savoir", "adaptours/section-practical:title_accent", "adaptours" );
+_x( "Pourquoi Adaptours", "adaptours/section-promise:eyebrow", "adaptours" );
+_x( "Le voyage, pensé", "adaptours/section-promise:title_part_1", "adaptours" );
+_x( "autour de vous.", "adaptours/section-promise:title_part_2", "adaptours" );
+_x( "Adaptours, c’est d’abord des personnes. Des voyageurs en situation de handicap, des proches aidants, des familles, des seniors. Et derrière, une équipe qui croit qu’aucune mobilité ne devrait empêcher de partir.\n\nOn ne propose pas des voyages « adaptés » au sens médical du terme. On conçoit, avec vous, un séjour pensé pour votre rythme, votre matériel, vos envies et celles des personnes qui vous accompagnent.", "adaptours/section-promise:description", "adaptours" );
+_x( "L’équipe", "adaptours/team-grid:eyebrow", "adaptours" );
+_x( "Des personnes", "adaptours/team-grid:title_part_1", "adaptours" );
+_x( "expérimentées et motivées", "adaptours/team-grid:title_part_2", "adaptours" );
+_x( "On ne recrute pas sur un CV. On recrute sur une histoire : quelqu’un qui a déjà aidé un proche à voyager, qui sait ce que ça veut dire d’attendre une réponse. Voici qui décroche quand vous appelez.", "adaptours/team-grid:description", "adaptours" );
+_x( "on recrute, par curiosité ?", "adaptours/team-grid:band_text", "adaptours" );
+_x( "Voir les conditions", "adaptours/team-grid:cta_label", "adaptours" );
+_x( "L’équipe", "adaptours/team-intro:eyebrow", "adaptours" );
+_x( "Trois personnes,", "adaptours/team-intro:title_part_1", "adaptours" );
+_x( "et 19 ans à repenser le voyage.", "adaptours/team-intro:title_part_2", "adaptours" );
+_x( "Adaptours est née d’un constat simple : voyager avec un handicap, ou accompagner un proche dépendant, c’était jusqu’ici un parcours du combattant. On a décidé que ça n’avait plus lieu d’être.", "adaptours/team-intro:paragraph_1", "adaptours" );
+_x( "Adaptours a été fondée en 2007 par Hervé Guichard, puis reprise en 2024 par Caroline, qu’il a formée. Aujourd’hui l’équipe compte 3 personnes et une trentaine de destinations testées sur le terrain. Chaque voyage est pensé un par un : on ne fait pas de volume, on fait du juste.", "adaptours/team-intro:paragraph_2", "adaptours" );
+_x( "Voir l’équipe", "adaptours/team-intro:cta_label", "adaptours" );

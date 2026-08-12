@@ -24,7 +24,7 @@ $c1_desc    = (string) ( $attributes['card_1_description'] ?? '' );
 $c1_label   = (string) ( $attributes['card_1_cta_label'] ?? '' );
 $c1_url     = trim( (string) ( $attributes['card_1_cta_url'] ?? '' ) );
 if ( '' === $c1_url ) {
-	$c1_url = home_url( '/devis/' );
+	$c1_url = adaptours_get_url_option( 'url_devis', '/devis/' );
 }
 
 // Carte 2 (recrutement / e-mail)

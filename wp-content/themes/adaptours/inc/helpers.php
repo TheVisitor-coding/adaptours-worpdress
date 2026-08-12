@@ -325,7 +325,7 @@ function adaptours_get_destination_meta_band( $post_id ) {
 
 	// CTA devis pré-rempli via le paramètre `dest` (et non `destination`, qui est la query
 	// var du CPT et provoquerait une collision de requête).
-	$devis_url = adaptours_get_option( 'url_devis', home_url( '/devis' ) );
+	$devis_url = adaptours_get_url_option( 'url_devis', '/devis/' );
 	$slug      = get_post_field( 'post_name', $post_id );
 	if ( '' !== (string) $slug ) {
 		$devis_url = add_query_arg( 'dest', $slug, $devis_url );
@@ -483,6 +483,84 @@ function adaptours_get_destination_gallery_items( $post_id ) {
 }
 
 /**
+ * Résout une URL interne vers la version traduite de la page qu'elle désigne.
+ *
+ * Les liens internes (réglages, replis de blocs) sont écrits une fois, en langue par
+ * défaut : tels quels ils renverraient vers les pages françaises depuis /en/ ou /es/.
+ * Un chemin relatif est accepté. URL externe, ancre, mailto:, valeur vide ou traduction
+ * absente : la valeur est rendue inchangée.
+ *
+ * @param string $url  URL ou chemin d'origine.
+ * @param string $lang Slug de langue cible ; vide = langue courante.
+ * @return string
+ */
+function adaptours_translate_url( $url, $lang = '' ) {
+	static $cache = array();
+
+	$url = (string) $url;
+	if ( '' === $url || ! function_exists( 'pll_get_post' ) ) {
+		return $url;
+	}
+
+	$cache_key = $url . '|' . $lang;
+	if ( isset( $cache[ $cache_key ] ) ) {
+		return $cache[ $cache_key ];
+	}
+
+	$scheme = (string) wp_parse_url( $url, PHP_URL_SCHEME );
+	$host   = (string) wp_parse_url( $url, PHP_URL_HOST );
+
+	if ( '' !== $host ) {
+		$target = $url;
+	} elseif ( '' === $scheme && '' !== ltrim( $url, '/' ) ) {
+		// url_to_postid() exige une URL absolue ; get_option('home') plutôt que home_url(),
+		// que Polylang préfixe de la langue courante.
+		$target = rtrim( (string) get_option( 'home' ), '/' ) . '/' . ltrim( $url, '/' );
+	} else {
+		$target = ''; // mailto:, tel:, ancre seule.
+	}
+
+	// url_to_postid() parse les règles de réécriture : assez coûteux pour mériter le cache.
+	$post_id    = $target ? url_to_postid( $target ) : 0;
+	$translated = $post_id ? pll_get_post( $post_id, $lang ) : 0;
+	$permalink  = $translated ? get_permalink( (int) $translated ) : '';
+
+	$cache[ $cache_key ] = $permalink ? (string) $permalink : $url;
+
+	return $cache[ $cache_key ];
+}
+
+/**
+ * Traduit un ID de contenu vers la langue courante.
+ *
+ * Renvoie 0 quand la traduction manque hors langue par défaut : un emplacement vide vaut
+ * mieux qu'un lien vers la fiche d'une autre langue, que le hreflang de la page dément.
+ * Un contenu sans langue (Polylang absent ou langue non posée) est rendu tel quel.
+ *
+ * @param int $post_id ID d'origine.
+ * @return int ID traduit, ID d'origine, ou 0.
+ */
+function adaptours_translate_post_id( $post_id ) {
+	$post_id = (int) $post_id;
+
+	if ( $post_id <= 0 || ! function_exists( 'pll_get_post' ) ) {
+		return $post_id;
+	}
+
+	$translated = pll_get_post( $post_id );
+	if ( $translated ) {
+		return (int) $translated;
+	}
+
+	if ( ! function_exists( 'pll_current_language' ) || ! function_exists( 'pll_default_language' )
+		|| ! pll_current_language() || pll_current_language() === pll_default_language() ) {
+		return $post_id;
+	}
+
+	return 0;
+}
+
+/**
  * Destinations suggérées d'une destination.
  *
  * Lit la relation ACF `suggestions` (max 4), traduit les IDs vers la langue courante,
@@ -502,13 +580,7 @@ function adaptours_get_destination_suggestions( $post_id ) {
 
 	$out = array();
 	foreach ( $ids as $id ) {
-		$id = (int) $id;
-		if ( function_exists( 'pll_get_post' ) ) {
-			$translated = pll_get_post( $id );
-			if ( $translated ) {
-				$id = (int) $translated;
-			}
-		}
+		$id = adaptours_translate_post_id( $id );
 		if ( $id <= 0 || $id === $post_id ) {
 			continue;
 		}
@@ -616,11 +688,9 @@ function adaptours_get_spotlight_avis_id( $destination_id ) {
 		return 0;
 	}
 
-	if ( function_exists( 'pll_get_post' ) ) {
-		$translated = pll_get_post( $avis_id );
-		if ( $translated ) {
-			$avis_id = (int) $translated;
-		}
+	$avis_id = adaptours_translate_post_id( $avis_id );
+	if ( $avis_id <= 0 ) {
+		return 0;
 	}
 
 	if ( 'avis' !== get_post_type( $avis_id ) || 'publish' !== get_post_status( $avis_id ) ) {

@@ -21,7 +21,7 @@ $part_2      = (string) ( $attributes['title_part_2'] ?? '' );
 $description = (string) ( $attributes['description'] ?? '' );
 $cta_label   = (string) ( $attributes['cta_label'] ?? '' );
 $cta_url     = (string) ( $attributes['cta_url'] ?? '' );
-$ids         = array_map( 'intval', (array) ( $attributes['destinations'] ?? array() ) );
+$ids         = array_map( 'adaptours_translate_post_id', (array) ( $attributes['destinations'] ?? array() ) );
 
 // Repli CTA → archive destinations.
 $archive_url = get_post_type_archive_link( 'destination' );

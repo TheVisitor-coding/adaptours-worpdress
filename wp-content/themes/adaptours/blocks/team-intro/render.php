@@ -22,7 +22,7 @@ $cta_url   = (string) ( $attributes['cta_url'] ?? '' );
 $image_id  = (int) ( $attributes['main_image'] ?? 0 );
 
 if ( '' === trim( $cta_url ) ) {
-	$cta_url = home_url( '/qui-sommes-nous/' );
+	$cta_url = adaptours_translate_url( '/qui-sommes-nous/' );
 }
 
 $wrapper = get_block_wrapper_attributes( array( 'class' => 'team-intro' ) );

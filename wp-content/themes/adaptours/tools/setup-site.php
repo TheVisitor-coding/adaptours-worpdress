@@ -131,14 +131,74 @@ if ( ! empty( $adaptours_ids['accueil'] ) ) {
 /*
  * 3. Zones géographiques (continents), idempotent.
  */
-$adaptours_zones = array( 'Europe', 'Afrique', 'Amériques', 'Asie', 'Océanie', 'Moyen-Orient' );
-foreach ( $adaptours_zones as $zone ) {
-	if ( ! term_exists( $zone, 'zone_geographique' ) ) {
-		$term = wp_insert_term( $zone, 'zone_geographique' );
-		echo is_wp_error( $term ) ? "ERREUR zone « $zone » : " . $term->get_error_message() . "\n" : "+ zone « $zone »\n";
-	} else {
-		echo "= zone « $zone » déjà présente\n";
+// La taxonomie est traduisible : un terme sans langue est filtré hors de get_terms() sur le
+// front, et le filtre « Continent » de l'archive ressort vide sans erreur. On pose donc la
+// langue à la création et on crée la traduction de chaque zone dans les autres langues.
+$adaptours_zones = array(
+	'Europe'       => array( 'en' => 'Europe', 'es' => 'Europa' ),
+	'Afrique'      => array( 'en' => 'Africa', 'es' => 'África' ),
+	'Amériques'    => array( 'en' => 'Americas', 'es' => 'Américas' ),
+	'Asie'         => array( 'en' => 'Asia', 'es' => 'Asia' ),
+	'Océanie'      => array( 'en' => 'Oceania', 'es' => 'Oceanía' ),
+	'Moyen-Orient' => array( 'en' => 'Middle East', 'es' => 'Oriente Medio' ),
+);
+
+// Polylang assigne d'office la langue par défaut à tout terme créé : forcer l'affectation,
+// sinon les traductions restent dans la langue source et sont filtrées hors du front.
+$adaptours_zone_lang = function ( $term_id, $lang ) {
+	if ( function_exists( 'pll_set_term_language' ) && pll_get_term_language( (int) $term_id ) !== $lang ) {
+		pll_set_term_language( (int) $term_id, $lang );
 	}
+};
+
+$adaptours_zone_default = function_exists( 'pll_default_language' ) ? pll_default_language() : 'fr';
+$adaptours_zone_langs   = function_exists( 'pll_languages_list' ) ? (array) pll_languages_list() : array( $adaptours_zone_default );
+
+foreach ( $adaptours_zones as $zone => $translations ) {
+	$existing = term_exists( $zone, 'zone_geographique' );
+
+	if ( $existing ) {
+		$zone_id = (int) ( is_array( $existing ) ? $existing['term_id'] : $existing );
+		echo "= zone « $zone » déjà présente\n";
+	} else {
+		$term = wp_insert_term( $zone, 'zone_geographique' );
+		if ( is_wp_error( $term ) ) {
+			echo "ERREUR zone « $zone » : " . $term->get_error_message() . "\n";
+			continue;
+		}
+		$zone_id = (int) $term['term_id'];
+		echo "+ zone « $zone »\n";
+	}
+
+	$adaptours_zone_lang( $zone_id, $adaptours_zone_default );
+
+	if ( ! function_exists( 'pll_save_term_translations' ) ) {
+		continue;
+	}
+
+	$group = (array) pll_get_term_translations( $zone_id );
+	$group[ $adaptours_zone_default ] = $zone_id;
+
+	foreach ( $adaptours_zone_langs as $zone_lang ) {
+		if ( $zone_lang === $adaptours_zone_default || ! isset( $translations[ $zone_lang ] ) ) {
+			continue;
+		}
+		if ( ! empty( $group[ $zone_lang ] ) ) {
+			continue;
+		}
+
+		$name = $translations[ $zone_lang ];
+		$new  = wp_insert_term( $name, 'zone_geographique', array( 'slug' => sanitize_title( $name . '-' . $zone_lang ) ) );
+		if ( is_wp_error( $new ) ) {
+			echo "ERREUR zone « $name » ($zone_lang) : " . $new->get_error_message() . "\n";
+			continue;
+		}
+		$adaptours_zone_lang( (int) $new['term_id'], $zone_lang );
+		$group[ $zone_lang ] = (int) $new['term_id'];
+		echo "+ zone « $name » ($zone_lang)\n";
+	}
+
+	pll_save_term_translations( $group );
 }
 
 /*
@@ -158,7 +218,7 @@ $adaptours_ensure_menu = function ( $name ) {
 	return $menu_id;
 };
 
-$adaptours_add_page_item = function ( $menu_id, $page_id, $title ) {
+$adaptours_add_page_item = function ( $menu_id, $page_id, $title = '' ) {
 	if ( ! $menu_id || ! $page_id ) {
 		return;
 	}
@@ -212,12 +272,27 @@ $adaptours_tr = function ( $base_id, $lang ) {
 	return (int) $base_id;
 };
 
-$footer_2_pages = array(
-	'qui-sommes-nous'              => 'Qui sommes-nous',
-	'contact'                      => 'Contact',
-	'mentions-legales'             => 'Mentions légales',
-	'cgv'                          => 'CGV',
-	'politique-de-confidentialite' => 'Politique de confidentialité',
+// Les items de page sont créés SANS titre : wp_update_nav_menu_item() laisse alors WordPress
+// afficher le titre de la page ciblée, donc celui de sa traduction. Seul « CGV » diverge du
+// titre réel de la page (« Conditions générales de vente ») et garde un libellé par langue.
+$footer_2_pages = array( 'qui-sommes-nous', 'contact', 'mentions-legales', 'cgv', 'politique-de-confidentialite' );
+
+$adaptours_menu_labels = array(
+	'fr' => array(
+		'destinations'     => 'Destinations',
+		'all_destinations' => 'Toutes les destinations',
+		'cgv'              => 'CGV',
+	),
+	'en' => array(
+		'destinations'     => 'Destinations',
+		'all_destinations' => 'All destinations',
+		'cgv'              => 'Terms',
+	),
+	'es' => array(
+		'destinations'     => 'Destinos',
+		'all_destinations' => 'Todos los destinos',
+		'cgv'              => 'Condiciones generales',
+	),
 );
 
 $menu_map = array();
@@ -226,16 +301,19 @@ foreach ( $langs as $lang ) {
 	$suffix   = strtoupper( $lang );
 	$dest_url = ( $lang === $default_lang ) ? home_url( '/destinations/' ) : home_url( '/' . $lang . '/destinations/' );
 
+	$labels = isset( $adaptours_menu_labels[ $lang ] ) ? $adaptours_menu_labels[ $lang ] : $adaptours_menu_labels[ $default_lang ];
+
 	$primary = $adaptours_ensure_menu( "Menu principal ($suffix)" );
-	$adaptours_add_link_item( $primary, $dest_url, 'Destinations' );
-	$adaptours_add_page_item( $primary, $adaptours_tr( $adaptours_ids['qui-sommes-nous'] ?? 0, $lang ), 'Qui sommes-nous' );
-	$adaptours_add_page_item( $primary, $adaptours_tr( $adaptours_ids['contact'] ?? 0, $lang ), 'Contact' );
+	$adaptours_add_link_item( $primary, $dest_url, $labels['destinations'] );
+	$adaptours_add_page_item( $primary, $adaptours_tr( $adaptours_ids['qui-sommes-nous'] ?? 0, $lang ), '' );
+	$adaptours_add_page_item( $primary, $adaptours_tr( $adaptours_ids['contact'] ?? 0, $lang ), '' );
 
 	$footer_1 = $adaptours_ensure_menu( "Footer — Destinations ($suffix)" );
-	$adaptours_add_link_item( $footer_1, $dest_url, 'Toutes les destinations' );
+	$adaptours_add_link_item( $footer_1, $dest_url, $labels['all_destinations'] );
 
 	$footer_2 = $adaptours_ensure_menu( "Footer — À propos ($suffix)" );
-	foreach ( $footer_2_pages as $slug => $title ) {
+	foreach ( $footer_2_pages as $slug ) {
+		$title = ( 'cgv' === $slug ) ? $labels['cgv'] : '';
 		$adaptours_add_page_item( $footer_2, $adaptours_tr( $adaptours_ids[ $slug ] ?? 0, $lang ), $title );
 	}
 

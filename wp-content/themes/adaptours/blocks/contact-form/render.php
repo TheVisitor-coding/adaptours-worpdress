@@ -20,9 +20,9 @@ $form_p2      = (string) ( $attributes['form_title_part_2'] ?? '' );
 $adresse     = (string) adaptours_get_option( 'adresse' );
 $tel_display = (string) adaptours_get_option( 'tel_display' );
 $tel_link    = (string) adaptours_get_option( 'tel_link' );
-$tel_hours   = (string) adaptours_get_option( 'tel_horaires' );
+$tel_hours   = (string) adaptours_get_option_i18n( 'tel_horaires' );
 $email       = (string) adaptours_get_option( 'email' );
-$email_delai = (string) adaptours_get_option( 'email_delai' );
+$email_delai = (string) adaptours_get_option_i18n( 'email_delai' );
 
 $form_id = function_exists( 'adaptours_get_contact_form_id' ) ? adaptours_get_contact_form_id() : 0;
 

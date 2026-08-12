@@ -39,7 +39,7 @@ $cta_secondary_url   = (string) ( $attributes['cta_secondary_url'] ?? '' );
 // Repli d'URL utile (le bouton reste fonctionnel même sans saisie cliente).
 $archive_url = get_post_type_archive_link( 'destination' );
 if ( '' === trim( $cta_primary_url ) ) {
-	$cta_primary_url = home_url( '/devis/' );
+	$cta_primary_url = adaptours_get_url_option( 'url_devis', '/devis/' );
 }
 if ( '' === trim( $cta_secondary_url ) ) {
 	$cta_secondary_url = $archive_url ? $archive_url : home_url( '/destinations/' );

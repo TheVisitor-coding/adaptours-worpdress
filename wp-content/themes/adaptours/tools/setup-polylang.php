@@ -9,8 +9,10 @@
  *   - force_lang = 1   → la langue est portée par le répertoire (/en/…).
  *   - hide_default = 1 → la langue par défaut (FR) reste sans préfixe.
  *
- * Pour ajouter l'espagnol (2e passe) : décommenter l'entrée « es » ci-dessous,
- * puis relancer le script (les langues déjà créées sont ignorées).
+ * Pour ajouter une langue : ajouter son entrée ci-dessous puis relancer le script (les langues
+ * déjà créées sont ignorées). ATTENTION à l'ordre : livrer d'abord languages/<locale>.mo ET
+ * les packs de langue (tools/install-language-packs.php), sinon les formulaires CF7 de la
+ * nouvelle langue sont créés en français et figés en base (voir MULTILINGUE.md).
  *
  * Ce fichier n'est PAS chargé par functions.php : c'est un outil d'admin/CLI.
  */
@@ -31,7 +33,7 @@ if ( ! function_exists( 'PLL' ) || ! PLL() || ! isset( PLL()->model ) ) {
 $adaptours_languages = array(
 	array( 'name' => 'Français', 'slug' => 'fr', 'locale' => 'fr_FR', 'rtl' => 0, 'term_group' => 0, 'flag' => 'fr' ),
 	array( 'name' => 'English',  'slug' => 'en', 'locale' => 'en_US', 'rtl' => 0, 'term_group' => 1, 'flag' => 'us' ),
-	// array( 'name' => 'Español', 'slug' => 'es', 'locale' => 'es_ES', 'rtl' => 0, 'term_group' => 2, 'flag' => 'es' ),
+	array( 'name' => 'Español', 'slug' => 'es', 'locale' => 'es_ES', 'rtl' => 0, 'term_group' => 2, 'flag' => 'es' ),
 );
 $adaptours_default_lang = 'fr';
 

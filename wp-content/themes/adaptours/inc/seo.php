@@ -203,9 +203,7 @@ function adaptours_seo_description() {
 	} elseif ( is_post_type_archive( 'destination' ) ) {
 		// pll__() indispensable : dest_intro est une chaîne Polylang (inc/options.php),
 		// sans quoi l'archive EN/ES hériterait du texte FR.
-		$desc = function_exists( 'adaptours_seo_option_i18n' )
-			? adaptours_seo_option_i18n( 'dest_intro' )
-			: (string) adaptours_get_option( 'dest_intro' );
+		$desc = adaptours_get_option_i18n( 'dest_intro' );
 	} elseif ( is_tax( 'zone_geographique' ) ) {
 		$term = get_queried_object();
 		$desc = ( $term instanceof WP_Term ) ? (string) $term->description : '';

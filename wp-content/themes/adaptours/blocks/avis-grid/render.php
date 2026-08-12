@@ -24,12 +24,12 @@ $eyebrow      = (string) ( $attributes['eyebrow'] ?? '' );
 $title        = (string) ( $attributes['title'] ?? '' );
 $title_accent = (string) ( $attributes['title_accent'] ?? '' );
 $description  = (string) ( $attributes['description'] ?? '' );
-$featured_id  = (int) ( $attributes['featured_avis_id'] ?? 0 );
+$featured_id  = adaptours_translate_post_id( $attributes['featured_avis_id'] ?? 0 );
 $band_text    = (string) ( $attributes['band_text'] ?? '' );
 $cta_label    = (string) ( $attributes['cta_label'] ?? '' );
 $cta_url      = (string) ( $attributes['cta_url'] ?? '' );
 if ( '' === trim( $cta_url ) ) {
-	$cta_url = (string) adaptours_get_option( 'url_devis' );
+	$cta_url = (string) adaptours_get_url_option( 'url_devis' );
 }
 
 // --- Avis du mois : picker explicite, sinon dernier is_featured publié. ------
@@ -110,7 +110,7 @@ $wrapper = get_block_wrapper_attributes(
 						<span class="avis-grid__rating-stars" aria-hidden="true">★★★★★</span>
 						<span class="avis-grid__rating-divider" aria-hidden="true"></span>
 						<span class="avis-grid__rating-score">
-							<span class="avis-grid__rating-value"><?php echo esc_html( str_replace( '.', ',', $g_rating ) ); ?></span><span class="avis-grid__rating-max">/5</span>
+							<span class="avis-grid__rating-value"><?php echo esc_html( number_format_i18n( (float) $g_rating, 1 ) ); ?></span><span class="avis-grid__rating-max">/5</span>
 						</span>
 						<?php if ( '' !== trim( $g_count ) ) : ?>
 							<span class="avis-grid__rating-divider" aria-hidden="true"></span>
@@ -118,7 +118,7 @@ $wrapper = get_block_wrapper_attributes(
 								<?php
 								printf(
 									/* translators: %s: nombre d'avis Google. */
-									esc_html__( '%s avis', 'adaptours' ),
+									esc_html( _n( '%s avis', '%s avis', (int) $g_count, 'adaptours' ) ),
 									esc_html( number_format_i18n( (float) $g_count ) )
 								);
 								?>

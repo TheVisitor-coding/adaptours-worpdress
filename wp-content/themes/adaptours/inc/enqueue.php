@@ -133,6 +133,15 @@ function adaptours_enqueue_devis_form() {
 		(string) filemtime( $js_path ),
 		true // in_footer
 	);
+
+	wp_localize_script(
+		'adaptours-devis-form',
+		'adaptoursDevisL10n',
+		array(
+			'decrease' => __( 'Diminuer', 'adaptours' ),
+			'increase' => __( 'Augmenter', 'adaptours' ),
+		)
+	);
 }
 add_action( 'wp_enqueue_scripts', 'adaptours_enqueue_devis_form' );
 

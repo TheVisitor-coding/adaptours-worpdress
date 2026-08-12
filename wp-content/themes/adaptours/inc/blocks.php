@@ -311,6 +311,33 @@ function adaptours_allowed_block_types( $allowed, $context ) {
 add_filter( 'allowed_block_types_all', 'adaptours_allowed_block_types', 10, 2 );
 
 /**
+ * Gabarit de blocs d'un contexte, évalué dans la langue du post édité.
+ *
+ * Les valeurs du gabarit sont sérialisées dans le post_content dès que l'éditeur s'ouvre :
+ * elles doivent l'être dans la langue de la page, pas dans celle de l'administrateur qui
+ * crée la traduction.
+ *
+ * @param string       $key  Clé de contexte de adaptours_lock_map().
+ * @param WP_Post|null $post Post édité.
+ * @return array
+ */
+function adaptours_lock_map_template( $key, $post ) {
+	$locale = ( $post && function_exists( 'pll_get_post_language' ) )
+		? (string) pll_get_post_language( (int) $post->ID, 'locale' )
+		: '';
+
+	if ( '' === $locale || $locale === determine_locale() ) {
+		return adaptours_lock_map()[ $key ]['template'];
+	}
+
+	switch_to_locale( $locale );
+	$template = adaptours_lock_map()[ $key ]['template'];
+	restore_previous_locale();
+
+	return $template;
+}
+
+/**
  * Injecte `template` + `templateLock` pour le post édité selon la carte de lock.
  *
  * @param array                   $settings Réglages de l'éditeur de blocs.
@@ -330,7 +357,7 @@ function adaptours_block_editor_settings( $settings, $context ) {
 	}
 
 	if ( array_key_exists( 'template', $config[ $key ] ) ) {
-		$settings['template'] = $config[ $key ]['template'];
+		$settings['template'] = adaptours_lock_map_template( $key, $post );
 	}
 	if ( array_key_exists( 'lock', $config[ $key ] ) ) {
 		$settings['templateLock'] = $config[ $key ]['lock'];

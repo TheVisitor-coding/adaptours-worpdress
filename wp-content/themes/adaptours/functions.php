@@ -46,6 +46,7 @@ require ADAPTOURS_DIR . '/inc/menus.php';
 
 // Blocs et présentation.
 require ADAPTOURS_DIR . '/inc/blocks.php';
+require ADAPTOURS_DIR . '/inc/block-defaults-i18n.php';
 require ADAPTOURS_DIR . '/inc/template-hooks.php';
 require ADAPTOURS_DIR . '/inc/seo.php';
 require ADAPTOURS_DIR . '/inc/seo-fields.php';

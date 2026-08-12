@@ -1,17 +1,16 @@
-# Copyright (C) 2026 Gulfstream Group
-# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Adaptours 0.1.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/adaptours\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: Adaptours\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T15:50:01+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.12.0\n"
+"POT-Creation-Date: 2026-08-12T15:13:59+00:00\n"
+"PO-Revision-Date: 2026-08-12T15:13:59+00:00\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: adaptours\n"
 
 #. Theme Name of the theme
@@ -39,255 +38,255 @@ msgstr ""
 #: archive-destination.php:85
 #: inc/cpt.php:31
 msgid "Rechercher une destination"
-msgstr ""
+msgstr "Buscar un destino"
 
 #: archive-destination.php:89
 #: archive-destination.php:91
 msgid "Continent"
-msgstr ""
+msgstr "Continente"
 
 #: archive-destination.php:99
 #: archive-destination.php:101
 #: inc/icons.php:25
 #: blocks/practical-card/index.js:26
 msgid "Budget"
-msgstr ""
+msgstr "Presupuesto"
 
 #: archive-destination.php:109
 msgid "Filtrer"
-msgstr ""
+msgstr "Filtrar"
 
 #. translators: %s = nombre de destinations (mis en valeur).
 #: archive-destination.php:117
 #, php-format
 msgid "%s destination correspond"
 msgid_plural "%s destinations correspondent"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s destino coincide"
+msgstr[1] "%s destinos coinciden"
 
 #: archive-destination.php:126
 msgid "— retirer ce filtre"
-msgstr ""
+msgstr "— quitar este filtro"
 
 #: archive-destination.php:132
 #: archive-destination.php:157
 msgid "Tout effacer"
-msgstr ""
+msgstr "Borrar todo"
 
 #: archive-destination.php:155
 msgid "Aucune destination ne correspond à votre recherche."
-msgstr ""
+msgstr "Ningún destino coincide con su búsqueda."
 
 #: blocks/avis-grid/render.php:85
 msgid "Avis clients"
-msgstr ""
+msgstr "Opiniones de clientes"
 
 #. translators: %s: nombre d'avis Google.
 #: blocks/avis-grid/render.php:121
 #, php-format
 msgid "%s avis"
 msgid_plural "%s avis"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%s opinión"
+msgstr[1] "%s opiniones"
 
 #: blocks/avis-spotlight/render.php:43
 msgid "Témoignage en avant"
-msgstr ""
+msgstr "Testimonio destacado"
 
 #: blocks/avis-spotlight/render.php:67
 #: template-parts/card-avis.php:106
 msgid "PHOTO"
-msgstr ""
+msgstr "FOTO"
 
 #: blocks/contact-form/render.php:37
 msgid "Adresse"
-msgstr ""
+msgstr "Dirección"
 
 #: blocks/contact-form/render.php:44
 msgid "Par téléphone"
-msgstr ""
+msgstr "Por teléfono"
 
 #: blocks/contact-form/render.php:60
 msgid "Par e-mail"
-msgstr ""
+msgstr "Por correo electrónico"
 
 #: blocks/contact-form/render.php:86
 msgid "Le formulaire de contact sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
-msgstr ""
+msgstr "El formulario de contacto estará disponible muy pronto. Mientras tanto, escríbanos directamente por correo electrónico."
 
 #: blocks/destination-gallery/render.php:46
 msgid "Galerie"
-msgstr ""
+msgstr "Galería"
 
 #. translators: %s: légende de la photo.
 #: blocks/destination-gallery/render.php:70
 #: blocks/destination-gallery/render.php:105
 msgid "Photo de la galerie"
-msgstr ""
+msgstr "Foto de la galería"
 
 #. translators: %s: légende de la photo.
 #: blocks/destination-gallery/render.php:77
 #: blocks/destination-gallery/render.php:105
 #, php-format
 msgid "Agrandir : %s"
-msgstr ""
+msgstr "Ampliar: %s"
 
 #. translators: %s: légende de la photo.
 #: blocks/destination-gallery/render.php:106
 msgid "Voir la photo"
-msgstr ""
+msgstr "Ver la foto"
 
 #. translators: %s = prix formaté, ex. « 2 490€ ».
 #: blocks/destinations-grid/render.php:81
 #, php-format
 msgid "dès %s"
-msgstr ""
+msgstr "desde %s"
 
 #: blocks/destinations-grid/render.php:83
 #: inc/helpers.php:337
 #: template-parts/card-destination.php:130
 msgid "/ personne"
-msgstr ""
+msgstr "/ persona"
 
 #: blocks/destinations-suggestions/render.php:45
 #: inc/acf-config.php:346
 msgid "Destinations suggérées"
-msgstr ""
+msgstr "Destinos sugeridos"
 
 #: blocks/devis-form/render.php:25
 msgid "Le formulaire de devis sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
-msgstr ""
+msgstr "El formulario de presupuesto estará disponible muy pronto. Mientras tanto, escríbanos directamente por correo electrónico."
 
 #: blocks/dual-cta/render.php:44
 msgid "Nous écrire"
-msgstr ""
+msgstr "Escríbanos"
 
 #: blocks/hero-devis/render.php:43
 #: parts/prefooter.php:25
 msgid "Réponse sous 48h"
-msgstr ""
+msgstr "Respuesta en 48 h"
 
 #: blocks/hero-devis/render.php:47
 msgid "Gratuit, sans engagement"
-msgstr ""
+msgstr "Gratis y sin compromiso"
 
 #: blocks/hero-devis/render.php:51
 msgid "Données protégées"
-msgstr ""
+msgstr "Datos protegidos"
 
 #: blocks/hero-home/render.php:51
 msgid "19 ans d’expérience"
-msgstr ""
+msgstr "19 años de experiencia"
 
 #: blocks/hero-home/render.php:55
 msgid "Hébergements vérifiés"
-msgstr ""
+msgstr "Alojamientos verificados"
 
 #: blocks/hero-home/render.php:59
 msgid "Matériel médical inclus"
-msgstr ""
+msgstr "Material médico incluido"
 
 #: blocks/hero-home/render.php:63
 msgid "100% sur mesure"
-msgstr ""
+msgstr "100 % a medida"
 
 #: blocks/itinerary-step/render.php:28
 #: blocks/itinerary-step/index.js:58
 msgid "Jour"
-msgstr ""
+msgstr "Día"
 
 #: blocks/itinerary/render.php:27
 msgid "Programme du voyage"
-msgstr ""
+msgstr "Programa del viaje"
 
 #: blocks/kpi-bar/render.php:41
 msgid "Chiffres clés"
-msgstr ""
+msgstr "Cifras clave"
 
 #: blocks/legal-info/render.php:16
 #: inc/options.php:174
 msgid "Forme juridique"
-msgstr ""
+msgstr "Forma jurídica"
 
 #: blocks/legal-info/render.php:17
 #: inc/options.php:179
 msgid "SIRET"
-msgstr ""
+msgstr "SIRET"
 
 #: blocks/legal-info/render.php:18
 msgid "NAF"
-msgstr ""
+msgstr "NAF"
 
 #: blocks/legal-info/render.php:19
 #: inc/options.php:188
 msgid "RCS"
-msgstr ""
+msgstr "RCS"
 
 #: blocks/legal-info/render.php:20
 msgid "TVA intracommunautaire"
-msgstr ""
+msgstr "IVA intracomunitario"
 
 #: blocks/legal-info/render.php:21
 msgid "Atout France"
-msgstr ""
+msgstr "Atout France"
 
 #: blocks/legal-info/render.php:40
 #: blocks/legal-info/render.php:41
 #: inc/options.php:171
 #: blocks/legal-info/index.js:17
 msgid "Informations légales"
-msgstr ""
+msgstr "Información legal"
 
 #: blocks/recruitment/render.php:63
 #: blocks/recruitment/index.js:93
 msgid "Merci d’envoyer votre CV à"
-msgstr ""
+msgstr "Envíe su CV a"
 
 #: blocks/section-accessibility/render.php:34
 #: inc/icons.php:29
 #: blocks/practical-card/index.js:30
 msgid "Accessibilité"
-msgstr ""
+msgstr "Accesibilidad"
 
 #: blocks/section-map/render.php:42
 msgid "Carte du voyage"
-msgstr ""
+msgstr "Mapa del viaje"
 
 #: blocks/section-practical/render.php:27
 msgid "Ce qu’il faut savoir"
-msgstr ""
+msgstr "Lo que hay que saber"
 
 #: blocks/section-promise/render.php:33
 msgid "L’humain d’abord"
-msgstr ""
+msgstr "Las personas primero"
 
 #: blocks/section-promise/render.php:34
 msgid "Un interlocuteur dédié du devis au retour."
-msgstr ""
+msgstr "Una única persona de contacto, del presupuesto a la vuelta."
 
 #: blocks/section-promise/render.php:38
 msgid "Vérifié sur le terrain"
-msgstr ""
+msgstr "Verificado sobre el terreno"
 
 #: blocks/section-promise/render.php:39
 msgid "Chaque hébergement testé par notre équipe."
-msgstr ""
+msgstr "Cada alojamiento probado por nuestro equipo."
 
 #: blocks/section-promise/render.php:43
 msgid "Matériel inclus"
-msgstr ""
+msgstr "Material incluido"
 
 #: blocks/section-promise/render.php:44
 msgid "Fauteuil de plage, lève-personne, matériel médical."
-msgstr ""
+msgstr "Silla de playa, grúa de traslado, material médico."
 
 #: blocks/section-promise/render.php:48
 msgid "Présents 24/7"
-msgstr ""
+msgstr "Presentes 24/7"
 
 #: blocks/section-promise/render.php:49
 msgid "Une équipe joignable, même à l’autre bout du monde."
-msgstr ""
+msgstr "Un equipo localizable, incluso al otro lado del mundo."
 
 #: inc/acf-config.php:58
 msgid "Détails de la destination"
@@ -300,7 +299,7 @@ msgstr ""
 #: inc/acf-config.php:68
 #: inc/helpers.php:295
 msgid "Durée"
-msgstr ""
+msgstr "Duración"
 
 #: inc/acf-config.php:74
 msgid "Prix à partir de (€)"
@@ -313,7 +312,7 @@ msgstr ""
 #: inc/acf-config.php:83
 #: template-parts/card-destination.php:117
 msgid "Coup de cœur"
-msgstr ""
+msgstr "Nuestro favorito"
 
 #: inc/acf-config.php:90
 msgid "Avis mis en avant"
@@ -359,7 +358,7 @@ msgstr ""
 #: inc/acf-config.php:137
 #: inc/helpers.php:300
 msgid "Période idéale"
-msgstr ""
+msgstr "Mejor época"
 
 #: inc/acf-config.php:140
 msgid "Meilleure période pour partir (ex. : Mai → Sep)."
@@ -392,7 +391,7 @@ msgstr ""
 #: inc/acf-config.php:169
 #: inc/helpers.php:310
 msgid "Temps de vol moyen"
-msgstr ""
+msgstr "Tiempo de vuelo medio"
 
 #: inc/acf-config.php:172
 msgid "Durée de vol indicative (ex. : 2h)."
@@ -419,7 +418,7 @@ msgstr ""
 #: inc/icons.php:23
 #: blocks/practical-card/index.js:24
 msgid "Décalage horaire"
-msgstr ""
+msgstr "Diferencia horaria"
 
 #: inc/acf-config.php:199
 msgid "Affiché dans la bande sous la carte (ex. : +6h en été)."
@@ -428,7 +427,7 @@ msgstr ""
 #: inc/acf-config.php:203
 #: inc/helpers.php:378
 msgid "Visa"
-msgstr ""
+msgstr "Visado"
 
 #: inc/acf-config.php:206
 msgid "Formalités d’entrée, en quelques mots (ex. : Sur place 35€)."
@@ -439,7 +438,7 @@ msgstr ""
 #: inc/icons.php:27
 #: blocks/practical-card/index.js:28
 msgid "Monnaie"
-msgstr ""
+msgstr "Moneda"
 
 #: inc/acf-config.php:213
 msgid "Nom de la monnaie locale (ex. : Rupiah)."
@@ -549,7 +548,7 @@ msgstr ""
 #: inc/acf-config.php:391
 #: inc/devis.php:212
 msgid "Nom du voyageur"
-msgstr ""
+msgstr "Nombre del viajero"
 
 #: inc/acf-config.php:395
 msgid "Nom affiché sous l’avis (ex. : Claire M.)."
@@ -626,341 +625,341 @@ msgstr ""
 
 #: inc/archive-destination.php:28
 msgid "Moins de 2 000 €"
-msgstr ""
+msgstr "Menos de 2.000 €"
 
 #: inc/archive-destination.php:33
 msgid "2 000 – 3 000 €"
-msgstr ""
+msgstr "2.000 – 3.000 €"
 
 #: inc/archive-destination.php:38
 msgid "Plus de 3 000 €"
-msgstr ""
+msgstr "Más de 3.000 €"
 
 #. translators: {n} est remplacé à l'affichage par le nombre de destinations publiées.
 #: inc/archive-destination.php:179
 msgid "{n} voyage prêt à partir"
 msgid_plural "{n} voyages prêts à partir"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} viaje listo para salir"
+msgstr[1] "{n} viajes listos para salir"
 
 #: inc/archive-destination.php:183
 msgid "CATALOGUE"
-msgstr ""
+msgstr "CATÁLOGO"
 
 #: inc/archive-destination.php:184
 #: parts/footer.php:82
 #: single-destination.php:70
 msgid "Destinations"
-msgstr ""
+msgstr "Destinos"
 
 #: inc/archive-destination.php:185
 msgid "accessibles."
-msgstr ""
+msgstr "accesibles."
 
 #: inc/archive-destination.php:186
 msgid "Toutes nos destinations sont repérées, testées et validées par notre équipe. Chaque fiche détaille les conditions d’accessibilité."
-msgstr ""
+msgstr "Todos nuestros destinos han sido explorados, probados y validados por nuestro equipo. Cada ficha detalla las condiciones de accesibilidad."
 
 #. translators: %s = terme recherché.
 #: inc/archive-destination.php:227
 #, php-format
 msgid "« %s »"
-msgstr ""
+msgstr "« %s »"
 
 #: inc/block-default-strings.php:15
 msgctxt "adaptours/avis-grid:eyebrow"
 msgid "Avis clients"
-msgstr ""
+msgstr "Opiniones de clientes"
 
 #: inc/block-default-strings.php:16
 msgctxt "adaptours/avis-grid:title"
 msgid "Ils sont partis avec nous."
-msgstr ""
+msgstr "Viajaron con nosotros."
 
 #: inc/block-default-strings.php:17
 msgctxt "adaptours/avis-grid:title_accent"
 msgid "avec nous"
-msgstr ""
+msgstr "con nosotros"
 
 #: inc/block-default-strings.php:18
 msgctxt "adaptours/avis-grid:description"
 msgid "Plus de 800 voyageurs accompagnés depuis 2007. Voici ce qu'ils en disent."
-msgstr ""
+msgstr "Más de 800 viajeros acompañados desde 2007. Esto es lo que cuentan."
 
 #: inc/block-default-strings.php:19
 msgctxt "adaptours/avis-grid:band_text"
 msgid "Rejoignez +800 voyageurs qui ont fait le pas."
-msgstr ""
+msgstr "Únase a los más de 800 viajeros que dieron el paso."
 
 #: inc/block-default-strings.php:20
 msgctxt "adaptours/avis-grid:cta_label"
 msgid "Demander mon devis"
-msgstr ""
+msgstr "Solicitar mi presupuesto"
 
 #: inc/block-default-strings.php:21
 msgctxt "adaptours/card-grid:title_part_1"
 msgid "Titre de la"
-msgstr ""
+msgstr "Título de la"
 
 #: inc/block-default-strings.php:22
 msgctxt "adaptours/card-grid:title_part_2"
 msgid "section"
-msgstr ""
+msgstr "sección"
 
 #: inc/block-default-strings.php:23
 msgctxt "adaptours/cards-numbered:title_part_1"
 msgid "Titre de la"
-msgstr ""
+msgstr "Título de la"
 
 #: inc/block-default-strings.php:24
 msgctxt "adaptours/cards-numbered:title_part_2"
 msgid "section"
-msgstr ""
+msgstr "sección"
 
 #: inc/block-default-strings.php:25
 msgctxt "adaptours/contact-form:form_eyebrow"
 msgid "FORMULAIRE DE CONTACT"
-msgstr ""
+msgstr "FORMULARIO DE CONTACTO"
 
 #: inc/block-default-strings.php:26
 msgctxt "adaptours/contact-form:form_title_part_1"
 msgid "Quelques mots"
-msgstr ""
+msgstr "Bastan unas"
 
 #: inc/block-default-strings.php:27
 msgctxt "adaptours/contact-form:form_title_part_2"
 msgid "suffisent."
-msgstr ""
+msgstr "pocas palabras."
 
 #: inc/block-default-strings.php:28
 msgctxt "adaptours/content-storytelling:title_part_1"
 msgid "Des équipements"
-msgstr ""
+msgstr "Equipamiento"
 
 #: inc/block-default-strings.php:29
 msgctxt "adaptours/content-storytelling:title_part_2"
 msgid "adaptés"
-msgstr ""
+msgstr "adaptado"
 
 #: inc/block-default-strings.php:30
 msgctxt "adaptours/content-storytelling:body"
 msgid "Un séjour accessible se prépare aussi dans les détails du quotidien. Fauteuil roulant, lit médicalisé, lève-personne ou fauteuil de douche : nous organisons la mise à disposition du matériel médical adapté directement sur votre lieu de séjour, pour que vous retrouviez vos repères dès l’arrivée. Vous voyagez plus léger, et vous profitez de votre voyage l’esprit tranquille."
-msgstr ""
+msgstr "Una estancia accesible también se prepara en los detalles del día a día. Silla de ruedas, cama articulada, grúa de traslado o silla de ducha: organizamos la puesta a disposición del material médico adecuado directamente en su lugar de estancia, para que recupere sus rutinas desde el momento de llegar. Viaje más ligero y disfrute del viaje con tranquilidad."
 
 #: inc/block-default-strings.php:31
 msgctxt "adaptours/destination-gallery:eyebrow"
 msgid "La galerie"
-msgstr ""
+msgstr "La galería"
 
 #: inc/block-default-strings.php:32
 msgctxt "adaptours/destination-gallery:title"
 msgid "Ce que vous allez voir."
-msgstr ""
+msgstr "Lo que va a ver."
 
 #: inc/block-default-strings.php:33
 msgctxt "adaptours/destination-gallery:title_accent"
 msgid "voir."
-msgstr ""
+msgstr "ver."
 
 #: inc/block-default-strings.php:34
 msgctxt "adaptours/destination-gallery:tagline"
 msgid "Nos plus belles photos"
-msgstr ""
+msgstr "Nuestras mejores fotos"
 
 #: inc/block-default-strings.php:35
 msgctxt "adaptours/destinations-grid:eyebrow"
 msgid "Destinations"
-msgstr ""
+msgstr "Destinos"
 
 #: inc/block-default-strings.php:36
 msgctxt "adaptours/destinations-grid:title_part_1"
 msgid "Des destinations"
-msgstr ""
+msgstr "Destinos"
 
 #: inc/block-default-strings.php:37
 msgctxt "adaptours/destinations-grid:title_part_2"
 msgid "variées"
-msgstr ""
+msgstr "variados"
 
 #: inc/block-default-strings.php:38
 msgctxt "adaptours/destinations-grid:description"
 msgid "Chaque séjour est pensé pour une mobilité, un rythme, une envie particulière. On s’adapte, vous profitez."
-msgstr ""
+msgstr "Cada estancia está pensada para una movilidad, un ritmo y un deseo concretos. Nosotros nos adaptamos, usted disfruta."
 
 #: inc/block-default-strings.php:39
 msgctxt "adaptours/destinations-grid:cta_label"
 msgid "Toutes les destinations"
-msgstr ""
+msgstr "Todos los destinos"
 
 #: inc/block-default-strings.php:40
 msgctxt "adaptours/destinations-suggestions:eyebrow"
 msgid "Pour aller plus loin"
-msgstr ""
+msgstr "Para ir más lejos"
 
 #: inc/block-default-strings.php:41
 msgctxt "adaptours/destinations-suggestions:title"
 msgid "Vous aimerez aussi"
-msgstr ""
+msgstr "También le gustarán"
 
 #: inc/block-default-strings.php:42
 msgctxt "adaptours/destinations-suggestions:title_accent"
 msgid "ces îles-là."
-msgstr ""
+msgstr "estas islas."
 
 #: inc/block-default-strings.php:43
 msgctxt "adaptours/destinations-suggestions:cta_label"
 msgid "Toutes les destinations"
-msgstr ""
+msgstr "Todos los destinos"
 
 #: inc/block-default-strings.php:44
 msgctxt "adaptours/dual-cta:card_1_eyebrow"
 msgid "Voyager avec nous"
-msgstr ""
+msgstr "Viajar con nosotros"
 
 #: inc/block-default-strings.php:45
 msgctxt "adaptours/dual-cta:card_1_title_1"
 msgid "Et si on commençait par"
-msgstr ""
+msgstr "¿Y si empezamos por"
 
 #: inc/block-default-strings.php:46
 msgctxt "adaptours/dual-cta:card_1_title_2"
 msgid "vous ?"
-msgstr ""
+msgstr "usted?"
 
 #: inc/block-default-strings.php:47
 msgctxt "adaptours/dual-cta:card_1_description"
 msgid "Un projet, une envie, une destination qui vous trotte dans la tête depuis trop longtemps. Dites-nous tout, on s’occupe du reste."
-msgstr ""
+msgstr "Un proyecto, un deseo, un destino que le ronda la cabeza desde demasiado tiempo. Cuéntenoslo todo, nosotros nos encargamos del resto."
 
 #: inc/block-default-strings.php:48
 msgctxt "adaptours/dual-cta:card_1_cta_label"
 msgid "Demander mon devis"
-msgstr ""
+msgstr "Solicitar mi presupuesto"
 
 #: inc/block-default-strings.php:49
 msgctxt "adaptours/dual-cta:card_2_eyebrow"
 msgid "Nous rejoindre"
-msgstr ""
+msgstr "Únase al equipo"
 
 #: inc/block-default-strings.php:50
 msgctxt "adaptours/dual-cta:card_2_title_1"
 msgid "On recherche des"
-msgstr ""
+msgstr "Buscamos"
 
 #: inc/block-default-strings.php:51
 msgctxt "adaptours/dual-cta:card_2_title_2"
 msgid "accompagnateurs."
-msgstr ""
+msgstr "acompañantes."
 
 #: inc/block-default-strings.php:52
 msgctxt "adaptours/dual-cta:card_2_description"
 msgid "Sensible au handicap, disponible, auto-entrepreneur·e. Envoyez-nous votre CV directement, on lit chaque message."
-msgstr ""
+msgstr "Sensible a la discapacidad, disponible, autónomo. Envíenos su CV directamente, leemos cada mensaje."
 
 #: inc/block-default-strings.php:53
 msgctxt "adaptours/founder-story:title_part_1"
 msgid "Adaptours, 19 ans à"
-msgstr ""
+msgstr "Adaptours, 19 años"
 
 #: inc/block-default-strings.php:54
 msgctxt "adaptours/founder-story:title_part_2"
 msgid "dire oui."
-msgstr ""
+msgstr "diciendo sí."
 
 #: inc/block-default-strings.php:55
 msgctxt "adaptours/founder-story:intro"
 msgid "Adaptours est née en 2007 d’un refus : celui d’entendre « ce ne sera pas possible » à chaque projet de voyage un peu différent. Pendant 17 ans, son fondateur Hervé Guichard a construit ce savoir-faire du voyage adapté, avec une règle qu’il n’a jamais lâchée."
-msgstr ""
+msgstr "Adaptours nació en 2007 de una negativa: la de oír « no será posible » cada vez que un proyecto de viaje era un poco distinto. Durante 17 años, su fundador Hervé Guichard construyó este saber hacer del viaje adaptado, con una regla que nunca abandonó."
 
 #: inc/block-default-strings.php:56
 msgctxt "adaptours/founder-story:quote_part_1"
 msgid "On ne vend que ce qu’on"
-msgstr ""
+msgstr "Solo vendemos lo que"
 
 #: inc/block-default-strings.php:57
 msgctxt "adaptours/founder-story:quote_part_2"
 msgid "connaît."
-msgstr ""
+msgstr "conocemos."
 
 #: inc/block-default-strings.php:58
 msgctxt "adaptours/founder-story:outro"
 msgid "En 2024, Caroline a repris le flambeau. Formée par Hervé pendant des années, elle continue de faire vivre ce savoir-faire du sur-mesure adapté, avec les mêmes valeurs qu’au premier jour."
-msgstr ""
+msgstr "En 2024, Caroline tomó el relevo. Formada por Hervé durante años, mantiene vivo este saber hacer del viaje a medida adaptado, con los mismos valores del primer día."
 
 #: inc/block-default-strings.php:59
 msgctxt "adaptours/founder-story:signature_name"
 msgid "— Caroline"
-msgstr ""
+msgstr "— Caroline"
 
 #: inc/block-default-strings.php:60
 msgctxt "adaptours/founder-story:signature_role"
 msgid "Dirigeante · Adaptours"
-msgstr ""
+msgstr "Directora · Adaptours"
 
 #: inc/block-default-strings.php:61
 msgctxt "adaptours/hero-contact:eyebrow"
 msgid "CONTACT"
-msgstr ""
+msgstr "CONTACTO"
 
 #: inc/block-default-strings.php:62
 msgctxt "adaptours/hero-contact:title_part_1"
 msgid "Écrivez-nous,"
-msgstr ""
+msgstr "Escríbanos,"
 
 #: inc/block-default-strings.php:63
 msgctxt "adaptours/hero-contact:title_part_2"
 msgid "appelez,"
-msgstr ""
+msgstr "llame,"
 
 #: inc/block-default-strings.php:64
 msgctxt "adaptours/hero-contact:title_part_3"
 msgid "ou passez nous voir."
-msgstr ""
+msgstr "o venga a vernos."
 
 #: inc/block-default-strings.php:65
 msgctxt "adaptours/hero-contact:description"
 msgid "Une question, un projet, une envie de discuter — on répond personnellement, généralement dans la journée."
-msgstr ""
+msgstr "Una pregunta, un proyecto o simplemente ganas de hablar: respondemos personalmente, normalmente el mismo día."
 
 #: inc/block-default-strings.php:66
 msgctxt "adaptours/hero-devis:eyebrow"
 msgid "Devis personnalisé · sans engagement"
-msgstr ""
+msgstr "Presupuesto personalizado · sin compromiso"
 
 #: inc/block-default-strings.php:67
 msgctxt "adaptours/hero-devis:title_part_1"
 msgid "Votre prochain voyage"
-msgstr ""
+msgstr "Su próximo viaje"
 
 #: inc/block-default-strings.php:68
 msgctxt "adaptours/hero-devis:title_part_2"
 msgid "commence ici."
-msgstr ""
+msgstr "empieza aquí."
 
 #: inc/block-default-strings.php:69
 msgctxt "adaptours/hero-devis:description"
 msgid "Quelques minutes pour nous raconter votre projet. On vous rappelle sous 48 h, puis on prend le temps de construire un devis vraiment sur mesure."
-msgstr ""
+msgstr "Unos minutos para contarnos su proyecto. Le llamamos en 48 h y después nos tomamos el tiempo de construir un presupuesto realmente a medida."
 
 #: inc/block-default-strings.php:70
 msgctxt "adaptours/hero-home:eyebrow"
 msgid "Voyages accessibles · depuis 2007"
-msgstr ""
+msgstr "Viajes accesibles · desde 2007"
 
 #: inc/block-default-strings.php:71
 msgctxt "adaptours/hero-home:title_part_1"
 msgid "Voyagez"
-msgstr ""
+msgstr "Viaje"
 
 #: inc/block-default-strings.php:72
 msgctxt "adaptours/hero-home:title_part_2"
 msgid "sans limites,"
-msgstr ""
+msgstr "sin límites,"
 
 #: inc/block-default-strings.php:73
 msgctxt "adaptours/hero-home:title_script"
 msgid "d’ici"
-msgstr ""
+msgstr "desde aquí"
 
 #: inc/block-default-strings.php:74
 msgctxt "adaptours/hero-home:rotator_words"
@@ -971,121 +970,126 @@ msgid ""
 "jusqu’en Albanie\n"
 "en Crète"
 msgstr ""
+"hasta Bali\n"
+"hasta Kenia\n"
+"hasta Canadá\n"
+"hasta Albania\n"
+"a Creta"
 
 #: inc/block-default-strings.php:75
 msgctxt "adaptours/hero-home:description"
 msgid "Séjours sur mesure, 100% accessibles. Hébergements vérifiés, matériel médical, équipe formée sur place. Vous rêvez, on organise."
-msgstr ""
+msgstr "Estancias a medida, 100 % accesibles. Alojamientos verificados, material médico, equipo formado en destino. Usted sueña, nosotros lo organizamos."
 
 #: inc/block-default-strings.php:76
 msgctxt "adaptours/hero-home:cta_primary_label"
 msgid "Commencer mon voyage"
-msgstr ""
+msgstr "Empezar mi viaje"
 
 #: inc/block-default-strings.php:77
 msgctxt "adaptours/hero-home:cta_secondary_label"
 msgid "Découvrir les destinations"
-msgstr ""
+msgstr "Descubrir los destinos"
 
 #: inc/block-default-strings.php:78
 msgctxt "adaptours/hero-qsn:eyebrow"
 msgid "Qui sommes-nous"
-msgstr ""
+msgstr "Quiénes somos"
 
 #: inc/block-default-strings.php:79
 msgctxt "adaptours/hero-qsn:title_part_1"
 msgid "On n’organise pas des voyages, on rend des"
-msgstr ""
+msgstr "No organizamos viajes, hacemos que los"
 
 #: inc/block-default-strings.php:80
 msgctxt "adaptours/hero-qsn:title_part_2"
 msgid "envies"
-msgstr ""
+msgstr "deseos"
 
 #: inc/block-default-strings.php:81
 msgctxt "adaptours/hero-qsn:title_script"
 msgid "possibles."
-msgstr ""
+msgstr "sean posibles."
 
 #: inc/block-default-strings.php:82
 msgctxt "adaptours/hero-qsn:description"
 msgid "Adaptours, c’est une équipe de trois personnes en France (Caroline, Célia et Élodie) et des partenaires de confiance sur place. Avec une conviction : tout le monde a le droit de partir. Même quand on vous a dit le contraire."
-msgstr ""
+msgstr "Adaptours es un equipo de tres personas en Francia (Caroline, Célia y Élodie) y colaboradores de confianza en destino. Con una convicción: todo el mundo tiene derecho a viajar. Incluso cuando le han dicho lo contrario."
 
 #: inc/block-default-strings.php:83
 msgctxt "adaptours/hero-qsn:cta_label"
 msgid "Rencontrer l’équipe"
-msgstr ""
+msgstr "Conocer al equipo"
 
 #: inc/block-default-strings.php:84
 msgctxt "adaptours/itinerary:eyebrow"
 msgid "Itinéraire"
-msgstr ""
+msgstr "Itinerario"
 
 #: inc/block-default-strings.php:85
 msgctxt "adaptours/itinerary:title"
 msgid "Le Programme"
-msgstr ""
+msgstr "El programa"
 
 #: inc/block-default-strings.php:86
 msgctxt "adaptours/media-text:title_part_1"
 msgid "Titre de la"
-msgstr ""
+msgstr "Título de la"
 
 #: inc/block-default-strings.php:87
 msgctxt "adaptours/media-text:title_part_2"
 msgid "section"
-msgstr ""
+msgstr "sección"
 
 #: inc/block-default-strings.php:88
 msgctxt "adaptours/media-text:body"
 msgid "<p>Une trentaine de guides, chauffeurs et hôtes répartis sur trois continents. On les rencontre tous, on dort chez eux, on goûte leur cuisine avant de vous les recommander.</p>"
-msgstr ""
+msgstr "<p>Una treintena de guías, conductores y anfitriones repartidos por tres continentes. Los conocemos a todos, dormimos en sus casas y probamos su cocina antes de recomendárselos.</p>"
 
 #: inc/block-default-strings.php:89
 msgctxt "adaptours/page-header:title_part_1"
 msgid "Page de"
-msgstr ""
+msgstr "Página de"
 
 #: inc/block-default-strings.php:90
 msgctxt "adaptours/page-header:title_part_2"
 msgid "contenu riche"
-msgstr ""
+msgstr "contenido enriquecido"
 
 #: inc/block-default-strings.php:91
 msgctxt "adaptours/page-header:description"
 msgid "Cette page rassemble les briques de contenu standard du site Adaptours. Chacune est conçue pour être réutilisable, lisible, et combinable librement pour assembler une page éditoriale, une destination, une page de conseils."
-msgstr ""
+msgstr "Esta página reúne los bloques de contenido estándar del sitio Adaptours. Cada uno está pensado para ser reutilizable, legible y combinable libremente para montar una página editorial, un destino o una página de consejos."
 
 #: inc/block-default-strings.php:92
 msgctxt "adaptours/process:eyebrow"
 msgid "Comment ça marche"
-msgstr ""
+msgstr "Cómo funciona"
 
 #: inc/block-default-strings.php:93
 msgctxt "adaptours/process:title_part_1"
 msgid "Du"
-msgstr ""
+msgstr "De la"
 
 #: inc/block-default-strings.php:94
 msgctxt "adaptours/process:title_part_2"
 msgid "premier mot au dernier souvenir."
-msgstr ""
+msgstr "primera palabra al último recuerdo."
 
 #: inc/block-default-strings.php:95
 msgctxt "adaptours/process:description"
 msgid "Une fois votre demande envoyée, voici exactement ce qui se passe. Pas de mauvaise surprise, pas de zone grise."
-msgstr ""
+msgstr "Una vez enviada su solicitud, esto es exactamente lo que ocurre. Sin sorpresas desagradables, sin zonas grises."
 
 #: inc/block-default-strings.php:96
 msgctxt "adaptours/process:process_1_title"
 msgid "Dites-nous où vous rêvez d’aller"
-msgstr ""
+msgstr "Díganos dónde sueña con ir"
 
 #: inc/block-default-strings.php:97
 msgctxt "adaptours/process:process_1_description"
 msgid "Un formulaire ou un appel. On écoute, on prend des notes, on pose des questions. Premier échange sous 48h. Le devis, lui, demande un peu plus de temps : tout est fait sur mesure."
-msgstr ""
+msgstr "Un formulario o una llamada. Escuchamos, tomamos notas, hacemos preguntas. Primer contacto en 48 h. El presupuesto necesita algo más de tiempo: todo se hace a medida."
 
 #: inc/block-default-strings.php:98
 msgctxt "adaptours/process:process_1_features"
@@ -1094,21 +1098,24 @@ msgid ""
 "Réponse sous 48h\n"
 "Aucun engagement"
 msgstr ""
+"Primer contacto gratuito\n"
+"Respuesta en 48 h\n"
+"Sin compromiso"
 
 #: inc/block-default-strings.php:99
 msgctxt "adaptours/process:process_1_meta"
 msgid "~ 30 min d’échange"
-msgstr ""
+msgstr "~ 30 min de conversación"
 
 #: inc/block-default-strings.php:100
 msgctxt "adaptours/process:process_2_title"
 msgid "On organise tout, dans le détail"
-msgstr ""
+msgstr "Lo organizamos todo, al detalle"
 
 #: inc/block-default-strings.php:101
 msgctxt "adaptours/process:process_2_description"
 msgid "Vols, hébergement adapté, matériel médical, soins, transferts, activités. Chaque ligne du voyage est validée avec vous avant de partir."
-msgstr ""
+msgstr "Vuelos, alojamiento adaptado, material médico, cuidados, traslados, actividades. Cada línea del viaje se valida con usted antes de salir."
 
 #: inc/block-default-strings.php:102
 msgctxt "adaptours/process:process_2_features"
@@ -1117,21 +1124,24 @@ msgid ""
 "Hébergement vérifié sur place\n"
 "Matériel médical sur mesure"
 msgstr ""
+"Vuelos y traslados adaptados\n"
+"Alojamiento verificado en destino\n"
+"Material médico a medida"
 
 #: inc/block-default-strings.php:103
 msgctxt "adaptours/process:process_2_meta"
 msgid "~ 2 à 4 semaines"
-msgstr ""
+msgstr "~ 2 a 4 semanas"
 
 #: inc/block-default-strings.php:104
 msgctxt "adaptours/process:process_3_title"
 msgid "Partez l’esprit tranquille"
-msgstr ""
+msgstr "Salga con tranquilidad"
 
 #: inc/block-default-strings.php:105
 msgctxt "adaptours/process:process_3_description"
 msgid "Équipe sur place formée, joignable 24/7. Carnet de route personnalisé dans votre valise. Au retour, on prend des nouvelles."
-msgstr ""
+msgstr "Equipo formado en destino, localizable 24/7. Cuaderno de ruta personalizado en su maleta. A la vuelta, le preguntamos cómo fue."
 
 #: inc/block-default-strings.php:106
 msgctxt "adaptours/process:process_3_features"
@@ -1140,126 +1150,129 @@ msgid ""
 "Assistance 24/7 en français\n"
 "Suivi post-voyage"
 msgstr ""
+"Acompañante local formado\n"
+"Asistencia 24/7 en francés\n"
+"Seguimiento posviaje"
 
 #: inc/block-default-strings.php:107
 msgctxt "adaptours/process:process_3_meta"
 msgid "jusqu’au retour"
-msgstr ""
+msgstr "hasta la vuelta"
 
 #: inc/block-default-strings.php:108
 msgctxt "adaptours/quote:quote"
 msgid "On nous a livré un voyage cousu main, jusqu’au moindre détail. Et surtout : on a senti une équipe qui répondait, vraiment, quand il y a eu un imprévu."
-msgstr ""
+msgstr "Nos entregaron un viaje hecho a mano, hasta el último detalle. Y sobre todo: sentimos un equipo que respondía, de verdad, cuando surgió un imprevisto."
 
 #: inc/block-default-strings.php:109
 msgctxt "adaptours/quote:quote_accent"
 msgid "cousu main"
-msgstr ""
+msgstr "hecho a mano"
 
 #: inc/block-default-strings.php:110
 msgctxt "adaptours/recruitment:eyebrow"
 msgid "Nous rejoindre"
-msgstr ""
+msgstr "Únase al equipo"
 
 #: inc/block-default-strings.php:111
 msgctxt "adaptours/recruitment:title_part_1"
 msgid "Adaptours recherche des"
-msgstr ""
+msgstr "Adaptours busca"
 
 #: inc/block-default-strings.php:112
 msgctxt "adaptours/recruitment:title_part_2"
 msgid "accompagnateurs."
-msgstr ""
+msgstr "acompañantes."
 
 #: inc/block-default-strings.php:113
 msgctxt "adaptours/recruitment:description"
 msgid "Vous partez quelques jours, parfois quelques semaines, avec un petit groupe. Vous veillez à ce que tout se passe bien, du transfert aéroport jusqu’au dernier verre, le soir, sur la terrasse. C’est exigeant, c’est humain, et ça ne ressemble à aucun autre métier."
-msgstr ""
+msgstr "Se va unos días, a veces unas semanas, con un grupo pequeño. Se asegura de que todo vaya bien, desde el traslado del aeropuerto hasta la última copa, por la noche, en la terraza. Es exigente, es profundamente humano y no se parece a ningún otro oficio."
 
 #: inc/block-default-strings.php:114
 msgctxt "adaptours/recruitment:conditions_eyebrow"
 msgid "Conditions"
-msgstr ""
+msgstr "Requisitos"
 
 #: inc/block-default-strings.php:115
 msgctxt "adaptours/recruitment:conditions_title_1"
 msgid "Vous remplissez impérativement"
-msgstr ""
+msgstr "Debe cumplir obligatoriamente"
 
 #: inc/block-default-strings.php:116
 msgctxt "adaptours/recruitment:conditions_title_2"
 msgid "ces conditions."
-msgstr ""
+msgstr "estos requisitos."
 
 #: inc/block-default-strings.php:117
 msgctxt "adaptours/recruitment:conditions_subtitle"
 msgid "Pas un CV-type, mais quelques points sur lesquels on ne transige pas."
-msgstr ""
+msgstr "No es un CV tipo, sino algunos puntos en los que no cedemos."
 
 #: inc/block-default-strings.php:118
 msgctxt "adaptours/rich-text:title_part_1"
 msgid "Titre de la"
-msgstr ""
+msgstr "Título de la"
 
 #: inc/block-default-strings.php:119
 msgctxt "adaptours/rich-text:title_part_2"
 msgid "section"
-msgstr ""
+msgstr "sección"
 
 #: inc/block-default-strings.php:120
 msgctxt "adaptours/section-accessibility:eyebrow"
 msgid "Accessibilité"
-msgstr ""
+msgstr "Accesibilidad"
 
 #: inc/block-default-strings.php:121
 msgctxt "adaptours/section-accessibility:title"
 msgid "Pensé pour tous, quel que soit votre rythme."
-msgstr ""
+msgstr "Pensado para todos, sea cual sea su ritmo."
 
 #: inc/block-default-strings.php:122
 msgctxt "adaptours/section-accessibility:title_accent"
 msgid "tous"
-msgstr ""
+msgstr "todos"
 
 #: inc/block-default-strings.php:123
 msgctxt "adaptours/section-map:eyebrow"
 msgid "Sur la carte"
-msgstr ""
+msgstr "En el mapa"
 
 #: inc/block-default-strings.php:124
 msgctxt "adaptours/section-map:title"
 msgid "De Paris à"
-msgstr ""
+msgstr "De París a"
 
 #: inc/block-default-strings.php:125
 msgctxt "adaptours/section-practical:eyebrow"
 msgid "Pratique"
-msgstr ""
+msgstr "Práctico"
 
 #: inc/block-default-strings.php:126
 msgctxt "adaptours/section-practical:title"
 msgid "Ce qu’il faut savoir."
-msgstr ""
+msgstr "Lo que hay que saber."
 
 #: inc/block-default-strings.php:127
 msgctxt "adaptours/section-practical:title_accent"
 msgid "savoir"
-msgstr ""
+msgstr "saber"
 
 #: inc/block-default-strings.php:128
 msgctxt "adaptours/section-promise:eyebrow"
 msgid "Pourquoi Adaptours"
-msgstr ""
+msgstr "Por qué Adaptours"
 
 #: inc/block-default-strings.php:129
 msgctxt "adaptours/section-promise:title_part_1"
 msgid "Le voyage, pensé"
-msgstr ""
+msgstr "El viaje, pensado"
 
 #: inc/block-default-strings.php:130
 msgctxt "adaptours/section-promise:title_part_2"
 msgid "autour de vous."
-msgstr ""
+msgstr "en torno a usted."
 
 #: inc/block-default-strings.php:131
 msgctxt "adaptours/section-promise:description"
@@ -1268,66 +1281,69 @@ msgid ""
 "\n"
 "On ne propose pas des voyages « adaptés » au sens médical du terme. On conçoit, avec vous, un séjour pensé pour votre rythme, votre matériel, vos envies et celles des personnes qui vous accompagnent."
 msgstr ""
+"Adaptours son, antes que nada, personas. Viajeros con discapacidad, familiares cuidadores, familias, personas mayores. Y detrás, un equipo convencido de que ninguna movilidad debería impedir viajar.\n"
+"\n"
+"No proponemos viajes « adaptados » en el sentido médico del término. Diseñamos con usted una estancia pensada para su ritmo, su material, sus deseos y los de las personas que le acompañan."
 
 #: inc/block-default-strings.php:132
 msgctxt "adaptours/team-grid:eyebrow"
 msgid "L’équipe"
-msgstr ""
+msgstr "El equipo"
 
 #: inc/block-default-strings.php:133
 msgctxt "adaptours/team-grid:title_part_1"
 msgid "Des personnes"
-msgstr ""
+msgstr "Personas"
 
 #: inc/block-default-strings.php:134
 msgctxt "adaptours/team-grid:title_part_2"
 msgid "expérimentées et motivées"
-msgstr ""
+msgstr "con experiencia y motivadas"
 
 #: inc/block-default-strings.php:135
 msgctxt "adaptours/team-grid:description"
 msgid "On ne recrute pas sur un CV. On recrute sur une histoire : quelqu’un qui a déjà aidé un proche à voyager, qui sait ce que ça veut dire d’attendre une réponse. Voici qui décroche quand vous appelez."
-msgstr ""
+msgstr "No contratamos por un CV. Contratamos por una historia: alguien que ya ha ayudado a un ser querido a viajar, que sabe lo que significa esperar una respuesta. Estas son las personas que descuelgan cuando usted llama."
 
 #: inc/block-default-strings.php:136
 msgctxt "adaptours/team-grid:band_text"
 msgid "on recrute, par curiosité ?"
-msgstr ""
+msgstr "estamos contratando, ¿le interesa?"
 
 #: inc/block-default-strings.php:137
 msgctxt "adaptours/team-grid:cta_label"
 msgid "Voir les conditions"
-msgstr ""
+msgstr "Ver los requisitos"
 
 #: inc/block-default-strings.php:138
 msgctxt "adaptours/team-intro:eyebrow"
 msgid "L’équipe"
-msgstr ""
+msgstr "El equipo"
 
 #: inc/block-default-strings.php:139
 msgctxt "adaptours/team-intro:title_part_1"
 msgid "Trois personnes,"
-msgstr ""
+msgstr "Tres personas"
 
 #: inc/block-default-strings.php:140
 msgctxt "adaptours/team-intro:title_part_2"
 msgid "et 19 ans à repenser le voyage."
-msgstr ""
+msgstr "y 19 años repensando el viaje."
 
 #: inc/block-default-strings.php:141
 msgctxt "adaptours/team-intro:paragraph_1"
 msgid "Adaptours est née d’un constat simple : voyager avec un handicap, ou accompagner un proche dépendant, c’était jusqu’ici un parcours du combattant. On a décidé que ça n’avait plus lieu d’être."
-msgstr ""
+msgstr "Adaptours nació de una constatación simple: viajar con una discapacidad, o acompañar a un familiar dependiente, era hasta ahora una carrera de obstáculos. Decidimos que eso ya no tenía razón de ser."
 
 #: inc/block-default-strings.php:142
 msgctxt "adaptours/team-intro:paragraph_2"
 msgid "Adaptours a été fondée en 2007 par Hervé Guichard, puis reprise en 2024 par Caroline, qu’il a formée. Aujourd’hui l’équipe compte 3 personnes et une trentaine de destinations testées sur le terrain. Chaque voyage est pensé un par un : on ne fait pas de volume, on fait du juste."
-msgstr ""
+msgstr "Adaptours fue fundada en 2007 por Hervé Guichard y retomada en 2024 por Caroline, a quien él formó. Hoy el equipo cuenta con 3 personas y una treintena de destinos probados sobre el terreno. Cada viaje se piensa uno a uno: no hacemos volumen, hacemos las cosas bien."
 
 #: inc/block-default-strings.php:143
 msgctxt "adaptours/team-intro:cta_label"
 msgid "Voir l’équipe"
-msgstr ""
+msgstr "Ver el equipo"
 
 #: inc/blocks.php:139
 msgid "voyageurs accompagnés"
@@ -1351,109 +1367,109 @@ msgstr ""
 
 #: inc/cf7.php:194
 msgid "En savoir plus"
-msgstr ""
+msgstr "Más información"
 
 #: inc/cf7.php:200
 msgid "Nom et prénom"
-msgstr ""
+msgstr "Nombre y apellidos"
 
 #: inc/cf7.php:201
 #: inc/devis.php:206
 msgid "Caroline Martin"
-msgstr ""
+msgstr "Carolina Martín"
 
 #: inc/cf7.php:204
 #: inc/devis.php:389
 msgid "E-mail"
-msgstr ""
+msgstr "Correo electrónico"
 
 #: inc/cf7.php:205
 #: inc/devis.php:233
 msgid "caroline@exemple.fr"
-msgstr ""
+msgstr "carolina@ejemplo.es"
 
 #: inc/cf7.php:209
 msgid "Sujet"
-msgstr ""
+msgstr "Asunto"
 
 #: inc/cf7.php:210
 msgid "Une question générale"
-msgstr ""
+msgstr "Una consulta general"
 
 #: inc/cf7.php:210
 msgid "Demande de devis"
-msgstr ""
+msgstr "Solicitud de presupuesto"
 
 #: inc/cf7.php:210
 msgid "Partenariat"
-msgstr ""
+msgstr "Colaboración"
 
 #: inc/cf7.php:210
 #: inc/devis.php:436
 msgid "Autre"
-msgstr ""
+msgstr "Otro"
 
 #: inc/cf7.php:213
 msgid "Message"
-msgstr ""
+msgstr "Mensaje"
 
 #: inc/cf7.php:214
 msgid "Dites-nous tout en quelques lignes…"
-msgstr ""
+msgstr "Cuéntenos todo en unas líneas…"
 
 #: inc/cf7.php:217
 msgid "J’accepte que mes informations soient utilisées pour me répondre."
-msgstr ""
+msgstr "Acepto que mis datos se utilicen para responderme."
 
 #: inc/cf7.php:218
 msgid "Envoyer"
-msgstr ""
+msgstr "Enviar"
 
 #: inc/cf7.php:221
 msgid "Sujet : [contact-sujet]"
-msgstr ""
+msgstr "Asunto: [contact-sujet]"
 
 #: inc/cf7.php:222
 msgid "Nom : [contact-nom]"
-msgstr ""
+msgstr "Nombre: [contact-nom]"
 
 #: inc/cf7.php:223
 msgid "E-mail : [contact-email]"
-msgstr ""
+msgstr "Correo electrónico: [contact-email]"
 
 #: inc/cf7.php:224
 msgid "Message :"
-msgstr ""
+msgstr "Mensaje:"
 
 #: inc/cf7.php:227
 msgid "[Contact] [contact-sujet] — [contact-nom]"
-msgstr ""
+msgstr "[Contacto] [contact-sujet] — [contact-nom]"
 
 #: inc/cf7.php:237
 msgid "Bonjour [contact-nom],"
-msgstr ""
+msgstr "Hola [contact-nom]:"
 
 #: inc/cf7.php:238
 msgid "Merci de nous avoir écrit. Nous avons bien reçu votre message et vous répondrons personnellement, généralement dans la journée."
-msgstr ""
+msgstr "Gracias por escribirnos. Hemos recibido su mensaje y le responderemos personalmente, normalmente el mismo día."
 
 #: inc/cf7.php:239
 #: inc/devis.php:135
 msgid "À très vite,"
-msgstr ""
+msgstr "Hasta pronto,"
 
 #: inc/cf7.php:239
 #: inc/devis.php:135
 msgid "L’équipe Adaptours"
-msgstr ""
+msgstr "El equipo de Adaptours"
 
 #: inc/cf7.php:243
 msgid "Nous avons bien reçu votre message — Adaptours"
-msgstr ""
+msgstr "Hemos recibido su mensaje — Adaptours"
 
 #: inc/cf7.php:262
 msgid "Contact (FR)"
-msgstr ""
+msgstr "Contacto (ES)"
 
 #: inc/cpt.php:21
 msgctxt "post type general name"
@@ -1590,369 +1606,369 @@ msgstr ""
 
 #: inc/devis.php:66
 msgid "Particulier"
-msgstr ""
+msgstr "Particular"
 
 #: inc/devis.php:67
 #: inc/devis.php:217
 #: inc/devis.php:382
 msgid "Agence / revendeur"
-msgstr ""
+msgstr "Agencia / distribuidor"
 
 #: inc/devis.php:68
 msgid "Partenaire (asso, MDPH…)"
-msgstr ""
+msgstr "Socio (asociación, MDPH…)"
 
 #: inc/devis.php:115
 msgid "politique de confidentialité"
-msgstr ""
+msgstr "política de privacidad"
 
 #: inc/devis.php:122
 msgid "[Devis] [devis-destination] — [devis-nom-prenom][devis-nom-client]"
-msgstr ""
+msgstr "[Presupuesto] [devis-destination] — [devis-nom-prenom][devis-nom-client]"
 
 #: inc/devis.php:132
 msgid "Bonjour [devis-nom-prenom][devis-nom-client],"
-msgstr ""
+msgstr "Hola [devis-nom-prenom][devis-nom-client]:"
 
 #: inc/devis.php:133
 msgid "Merci pour votre demande de devis concernant : [devis-destination]."
-msgstr ""
+msgstr "Gracias por su solicitud de presupuesto para: [devis-destination]."
 
 #: inc/devis.php:134
 msgid "Nous avons bien reçu toutes vos informations et nous vous recontactons sous 48 h ouvrées pour un premier échange. Le devis demande un peu plus de temps : chaque voyage est construit sur mesure."
-msgstr ""
+msgstr "Hemos recibido toda su información y nos pondremos en contacto con usted en 48 h laborables para un primer intercambio. El presupuesto necesita algo más de tiempo: cada viaje se construye a medida."
 
 #: inc/devis.php:139
 msgid "Votre demande de devis Adaptours — bien reçue"
-msgstr ""
+msgstr "Su solicitud de presupuesto Adaptours — recibida"
 
 #: inc/devis.php:156
 msgid "Merci ! Votre demande est arrivée. On vous recontacte sous 48 h ouvrées pour un premier échange."
-msgstr ""
+msgstr "¡Gracias! Su solicitud ha llegado. Nos pondremos en contacto con usted en 48 h laborables para un primer intercambio."
 
 #: inc/devis.php:159
 msgid "Devis (FR)"
-msgstr ""
+msgstr "Presupuesto (ES)"
 
 #: inc/devis.php:199
 #: inc/devis.php:380
 msgid "Vous êtes"
-msgstr ""
+msgstr "Usted es"
 
 #: inc/devis.php:205
 msgid "Votre nom et prénom"
-msgstr ""
+msgstr "Su nombre y apellidos"
 
 #: inc/devis.php:211
 msgid "Nom du client"
-msgstr ""
+msgstr "Nombre del cliente"
 
 #: inc/devis.php:218
 msgid "Nom de l’agence"
-msgstr ""
+msgstr "Nombre de la agencia"
 
 #: inc/devis.php:223
 #: inc/devis.php:383
 msgid "Structure partenaire"
-msgstr ""
+msgstr "Entidad colaboradora"
 
 #: inc/devis.php:224
 msgid "Association, MDPH…"
-msgstr ""
+msgstr "Asociación, MDPH…"
 
 #: inc/devis.php:230
 msgid "Vos coordonnées"
-msgstr ""
+msgstr "Sus datos de contacto"
 
 #: inc/devis.php:232
 msgid "Adresse e-mail"
-msgstr ""
+msgstr "Correo electrónico"
 
 #: inc/devis.php:237
 #: inc/devis.php:390
 msgid "Portable"
-msgstr ""
+msgstr "Móvil"
 
 #: inc/devis.php:238
 msgid "06 12 34 56 78"
-msgstr ""
+msgstr "600 12 34 56"
 
 #: inc/devis.php:241
 #: inc/devis.php:391
 msgid "Téléphone fixe"
-msgstr ""
+msgstr "Teléfono fijo"
 
 #: inc/devis.php:241
 #: inc/devis.php:346
 msgid "facultatif"
-msgstr ""
+msgstr "opcional"
 
 #: inc/devis.php:242
 msgid "04 12 34 56 78"
-msgstr ""
+msgstr "91 234 56 78"
 
 #: inc/devis.php:248
 msgid "Votre voyage"
-msgstr ""
+msgstr "Su viaje"
 
 #: inc/devis.php:250
 msgid "Destination choisie"
-msgstr ""
+msgstr "Destino elegido"
 
 #: inc/devis.php:251
 #: inc/devis.php:544
 msgid "— Choisir une destination —"
-msgstr ""
+msgstr "— Elegir un destino —"
 
 #: inc/devis.php:254
 #: inc/devis.php:398
 msgid "Vol et transport"
-msgstr ""
+msgstr "Vuelo y transporte"
 
 #: inc/devis.php:256
 msgid "Avion"
-msgstr ""
+msgstr "Avión"
 
 #: inc/devis.php:256
 msgid "Train"
-msgstr ""
+msgstr "Tren"
 
 #: inc/devis.php:256
 msgid "Voiture"
-msgstr ""
+msgstr "Coche"
 
 #: inc/devis.php:256
 msgid "À voir ensemble"
-msgstr ""
+msgstr "Por concretar juntos"
 
 #: inc/devis.php:261
 #: inc/devis.php:399
 msgid "Ville de départ"
-msgstr ""
+msgstr "Ciudad de salida"
 
 #: inc/devis.php:262
 msgid "ex. Lyon"
-msgstr ""
+msgstr "ej. Madrid"
 
 #: inc/devis.php:265
 msgid "Dates ou période souhaitée"
-msgstr ""
+msgstr "Fechas o periodo deseado"
 
 #: inc/devis.php:266
 msgid "ex. 12 → 22 mars"
-msgstr ""
+msgstr "ej. 12 → 22 de marzo"
 
 #: inc/devis.php:272
 msgid "Les voyageurs"
-msgstr ""
+msgstr "Los viajeros"
 
 #: inc/devis.php:274
 msgid "Nombre total de personnes"
-msgstr ""
+msgstr "Número total de personas"
 
 #: inc/devis.php:278
 #: inc/devis.php:407
 msgid "Dont enfants"
-msgstr ""
+msgstr "De ellos, niños"
 
 #: inc/devis.php:278
 msgid "Moins de 18 ans"
-msgstr ""
+msgstr "Menores de 18 años"
 
 #: inc/devis.php:282
 msgid "Budget par personne"
-msgstr ""
+msgstr "Presupuesto por persona"
 
 #: inc/devis.php:282
 msgid "indicatif"
-msgstr ""
+msgstr "orientativo"
 
 #: inc/devis.php:283
 msgid "ex. 2 500 €"
-msgstr ""
+msgstr "ej. 2.500 €"
 
 #: inc/devis.php:288
 #: inc/devis.php:412
 msgid "Mobilité"
-msgstr ""
+msgstr "Movilidad"
 
 #: inc/devis.php:290
 msgid "Fauteuils roulants manuels"
-msgstr ""
+msgstr "Sillas de ruedas manuales"
 
 #: inc/devis.php:294
 msgid "Fauteuils roulants électriques"
-msgstr ""
+msgstr "Sillas de ruedas eléctricas"
 
 #: inc/devis.php:298
 msgid "Véhicule adapté (avec rampe) sur place"
-msgstr ""
+msgstr "Vehículo adaptado (con rampa) en destino"
 
 #: inc/devis.php:300
 msgid "Indispensable"
-msgstr ""
+msgstr "Imprescindible"
 
 #: inc/devis.php:300
 #: inc/devis.php:326
 #: inc/devis.php:332
 #: inc/devis.php:338
 msgid "Non"
-msgstr ""
+msgstr "No"
 
 #: inc/devis.php:300
 msgid "À voir"
-msgstr ""
+msgstr "Por concretar"
 
 #: inc/devis.php:306
 #: inc/devis.php:420
 msgid "Matériel sur place"
-msgstr ""
+msgstr "Material en destino"
 
 #: inc/devis.php:308
 #: inc/devis.php:422
 msgid "Sièges de douche"
-msgstr ""
+msgstr "Sillas de ducha"
 
 #: inc/devis.php:312
 #: inc/devis.php:423
 msgid "Lits médicalisés"
-msgstr ""
+msgstr "Camas articuladas"
 
 #: inc/devis.php:316
 #: inc/devis.php:424
 msgid "Lève-personnes"
-msgstr ""
+msgstr "Grúas de traslado"
 
 #: inc/devis.php:322
 #: inc/devis.php:428
 msgid "Accompagnement & soins"
-msgstr ""
+msgstr "Acompañamiento y cuidados"
 
 #: inc/devis.php:324
 msgid "Accompagnateur fourni par Adaptours"
-msgstr ""
+msgstr "Acompañante facilitado por Adaptours"
 
 #: inc/devis.php:324
 msgid "Un membre de notre équipe vous accompagne sur tout le séjour."
-msgstr ""
+msgstr "Un miembro de nuestro equipo le acompaña durante toda la estancia."
 
 #: inc/devis.php:326
 #: inc/devis.php:332
 #: inc/devis.php:338
 msgid "Oui"
-msgstr ""
+msgstr "Sí"
 
 #: inc/devis.php:330
 #: inc/devis.php:431
 msgid "Soins d’auxiliaire de vie"
-msgstr ""
+msgstr "Cuidados de auxiliar a domicilio"
 
 #: inc/devis.php:336
 #: inc/devis.php:432
 msgid "Soins infirmiers"
-msgstr ""
+msgstr "Cuidados de enfermería"
 
 #: inc/devis.php:344
 msgid "Autre chose ?"
-msgstr ""
+msgstr "¿Algo más?"
 
 #: inc/devis.php:346
 msgid "Besoins spécifiques ou demandes particulières"
-msgstr ""
+msgstr "Necesidades específicas o peticiones especiales"
 
 #: inc/devis.php:347
 msgid "Allergie, anniversaire à fêter sur place, peur, rêve précis…"
-msgstr ""
+msgstr "Alergias, un cumpleaños que celebrar allí, un miedo, un sueño concreto…"
 
 #. translators: %s: lien vers la politique de confidentialité.
 #: inc/devis.php:355
 #, php-format
 msgid "J’accepte que mes données soient utilisées pour traiter ma demande de devis. Voir notre %s."
-msgstr ""
+msgstr "Acepto que mis datos se utilicen para tramitar mi solicitud de presupuesto. Consulte nuestra %s."
 
 #: inc/devis.php:359
 msgid "Envoyer ma demande →"
-msgstr ""
+msgstr "Enviar mi solicitud →"
 
 #: inc/devis.php:360
 msgid "Réponse sous 48 h ouvrées · sans engagement"
-msgstr ""
+msgstr "Respuesta en 48 h laborables · sin compromiso"
 
 #: inc/devis.php:378
 msgid "Profil"
-msgstr ""
+msgstr "Perfil"
 
 #: inc/devis.php:381
 #: blocks/founder-story/index.js:96
 #: blocks/team-grid-member/index.js:57
 msgid "Nom"
-msgstr ""
+msgstr "Nombre"
 
 #: inc/devis.php:387
 #: inc/options.php:37
 msgid "Coordonnées"
-msgstr ""
+msgstr "Datos de contacto"
 
 #: inc/devis.php:395
 msgid "Voyage"
-msgstr ""
+msgstr "Viaje"
 
 #: inc/devis.php:397
 msgid "Destination"
-msgstr ""
+msgstr "Destino"
 
 #: inc/devis.php:400
 msgid "Dates / période"
-msgstr ""
+msgstr "Fechas / periodo"
 
 #: inc/devis.php:404
 #: inc/helpers.php:305
 msgid "Voyageurs"
-msgstr ""
+msgstr "Viajeros"
 
 #: inc/devis.php:406
 msgid "Nombre total"
-msgstr ""
+msgstr "Número total"
 
 #: inc/devis.php:408
 msgid "Budget / personne"
-msgstr ""
+msgstr "Presupuesto / persona"
 
 #: inc/devis.php:414
 msgid "Fauteuils manuels"
-msgstr ""
+msgstr "Sillas manuales"
 
 #: inc/devis.php:415
 msgid "Fauteuils électriques"
-msgstr ""
+msgstr "Sillas eléctricas"
 
 #: inc/devis.php:416
 msgid "Véhicule adapté sur place"
-msgstr ""
+msgstr "Vehículo adaptado en destino"
 
 #: inc/devis.php:430
 msgid "Accompagnateur Adaptours"
-msgstr ""
+msgstr "Acompañante Adaptours"
 
 #: inc/devis.php:438
 msgid "Besoins / demandes"
-msgstr ""
+msgstr "Necesidades / peticiones"
 
 #: inc/devis.php:444
 msgid "Nouvelle demande de devis"
-msgstr ""
+msgstr "Nueva solicitud de presupuesto"
 
 #: inc/devis.php:550
 msgid "Sur-mesure / je ne sais pas encore"
-msgstr ""
+msgstr "A medida / todavía no lo sé"
 
 #: inc/enqueue.php:141
 msgid "Diminuer"
-msgstr ""
+msgstr "Disminuir"
 
 #: inc/enqueue.php:142
 msgid "Augmenter"
-msgstr ""
+msgstr "Aumentar"
 
 #: inc/gallery-metabox.php:25
 #: inc/gallery-metabox.php:164
@@ -1976,33 +1992,33 @@ msgstr ""
 #, php-format
 msgid "%d nuit sur place"
 msgid_plural "%d nuits sur place"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d noche en destino"
+msgstr[1] "%d noches en destino"
 
 #: inc/helpers.php:307
 msgid "en petit comité"
-msgstr ""
+msgstr "en grupo reducido"
 
 #: inc/helpers.php:339
 #: parts/header.php:63
 msgid "Demander un devis"
-msgstr ""
+msgstr "Solicitar un presupuesto"
 
 #: inc/helpers.php:369
 msgid "km à vol d’oiseau"
-msgstr ""
+msgstr "km en línea recta"
 
 #: inc/helpers.php:386
 #: inc/icons.php:26
 #: blocks/practical-card/index.js:27
 msgid "Langue"
-msgstr ""
+msgstr "Idioma"
 
 #. translators: %d: note de 1 à 5.
 #: inc/helpers.php:661
 #, php-format
 msgid "Note : %d sur 5"
-msgstr ""
+msgstr "Valoración: %d de 5"
 
 #: inc/icons.php:21
 #: blocks/practical-card/index.js:22
@@ -2076,7 +2092,7 @@ msgstr ""
 #: inc/menus.php:20
 #: parts/header.php:45
 msgid "Menu principal"
-msgstr ""
+msgstr "Menú principal"
 
 #: inc/menus.php:21
 msgid "Footer — Colonne 1"
@@ -2303,34 +2319,6 @@ msgstr ""
 msgid "Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir » ; le {n} est remplacé automatiquement par le nombre réel."
 msgstr ""
 
-#: inc/options.php:154
-#: inc/seo-fields.php:174
-#: inc/seo-fields.php:327
-msgid "Titre dans Google"
-msgstr ""
-
-#: inc/options.php:156
-msgid "Titre de la page Destinations dans les résultats Google, 60 caractères maximum. Laissez vide pour « Destinations – nom du site »."
-msgstr ""
-
-#: inc/options.php:159
-#: inc/seo-fields.php:200
-#: inc/seo-fields.php:342
-msgid "Description dans Google"
-msgstr ""
-
-#: inc/options.php:161
-msgid "Description de la page Destinations dans les résultats Google, 160 caractères maximum. Laissez vide pour réutiliser le texte d’introduction ci-dessus."
-msgstr ""
-
-#: inc/options.php:164
-msgid "Suffixe des titres destination"
-msgstr ""
-
-#: inc/options.php:166
-msgid "Ajouté après le nom du pays dans le titre Google de chaque fiche destination, ex. « Maroc - Adaptours voyages adaptés personnes mobilité réduite ». Laissez vide pour utiliser le suffixe par défaut du thème. Ne concerne pas les fiches dont le titre est saisi à la main."
-msgstr ""
-
 #: inc/options.php:176
 msgid "Ex. « SARL au capital de 10 000 € »."
 msgstr ""
@@ -2374,42 +2362,6 @@ msgstr ""
 
 #: inc/roles.php:61
 msgid "Cliente"
-msgstr ""
-
-#: inc/seo-fields.php:137
-msgid "Référencement (Google)"
-msgstr ""
-
-#: inc/seo-fields.php:169
-msgid "Ce que Google affiche dans ses résultats. Laissez vide pour utiliser la valeur automatique indiquée sous chaque champ."
-msgstr ""
-
-#. translators: %1$d : longueur recommandée, %2$s : titre automatique.
-#: inc/seo-fields.php:190
-#, php-format
-msgid "%1$d caractères maximum. Si vide : « %2$s »."
-msgstr ""
-
-#. translators: %d : longueur recommandée.
-#: inc/seo-fields.php:215
-#, php-format
-msgid "%d caractères maximum. Deux phrases décrivant la page, avec les mots que taperait un visiteur."
-msgstr ""
-
-#. translators: %d : longueur recommandée.
-#: inc/seo-fields.php:334
-#, php-format
-msgid "%d caractères maximum. Laissez vide pour utiliser le nom de la zone."
-msgstr ""
-
-#. translators: %d : longueur recommandée.
-#: inc/seo-fields.php:349
-#, php-format
-msgid "%d caractères maximum."
-msgstr ""
-
-#: inc/seo.php:124
-msgid "Adaptours voyages adaptés personnes mobilité réduite"
 msgstr ""
 
 #: inc/taxonomies.php:20
@@ -2460,117 +2412,117 @@ msgstr ""
 
 #: index.php:27
 msgid "Aucun contenu pour le moment."
-msgstr ""
+msgstr "Todavía no hay contenido."
 
 #: parts/footer.php:28
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
 
 #: parts/footer.php:32
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: parts/footer.php:36
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: parts/footer.php:42
 msgid "CGV"
-msgstr ""
+msgstr "Condiciones generales"
 
 #: parts/footer.php:43
 msgid "Mentions légales"
-msgstr ""
+msgstr "Aviso legal"
 
 #: parts/footer.php:44
 msgid "Confidentialité"
-msgstr ""
+msgstr "Privacidad"
 
 #: parts/footer.php:52
 msgid "Séjours accessibles, sur mesure, depuis 2007. Voyagez sans limites, où que vous soyez."
-msgstr ""
+msgstr "Estancias accesibles y a medida desde 2007. Viaje sin límites, dondequiera que esté."
 
 #: parts/footer.php:90
 msgid "À propos"
-msgstr ""
+msgstr "Sobre nosotros"
 
 #: parts/footer.php:96
 msgid "Nous suivre"
-msgstr ""
+msgstr "Síganos"
 
 #. translators: %s: année courante.
 #: parts/footer.php:127
 #, php-format
 msgid "© %s Adaptours · Tous droits réservés"
-msgstr ""
+msgstr "© %s Adaptours · Todos los derechos reservados"
 
 #: parts/footer.php:142
 msgid "Liens légaux"
-msgstr ""
+msgstr "Enlaces legales"
 
 #: parts/header.php:28
 msgid "Aller au contenu"
-msgstr ""
+msgstr "Ir al contenido"
 
 #: parts/header.php:39
 msgid "Menu"
-msgstr ""
+msgstr "Menú"
 
 #: parts/prefooter.php:21
 msgid "Votre prochain voyage commence par un mot."
-msgstr ""
+msgstr "Su próximo viaje empieza con una palabra."
 
 #: parts/prefooter.php:22
 msgid "un mot."
-msgstr ""
+msgstr "una palabra."
 
 #: parts/prefooter.php:26
 msgid "Devis gratuit"
-msgstr ""
+msgstr "Presupuesto gratuito"
 
 #: parts/prefooter.php:27
 msgid "Sans engagement"
-msgstr ""
+msgstr "Sin compromiso"
 
 #: parts/prefooter.php:28
 msgid "9h–18h, lun–ven"
-msgstr ""
+msgstr "9-18 h, lun-vie"
 
 #: parts/prefooter.php:33
 msgid "ET SI C’ÉTAIT VOTRE TOUR ?"
-msgstr ""
+msgstr "¿Y SI AHORA FUERA SU TURNO?"
 
 #: parts/prefooter.php:43
 msgid "Dites-nous où vous rêvez d’aller, on s’occupe du reste. Premier échange gratuit, sans engagement. Réponse sous 48h."
-msgstr ""
+msgstr "Díganos dónde sueña con ir y nosotros nos encargamos del resto. Primer contacto gratuito y sin compromiso. Respuesta en 48 h."
 
 #: parts/prefooter.php:48
 msgid "Demander mon devis"
-msgstr ""
+msgstr "Solicitar mi presupuesto"
 
 #. translators: %s: numéro de téléphone affiché.
 #: parts/prefooter.php:56
 #, php-format
 msgid "Nous appeler · %s"
-msgstr ""
+msgstr "Llámenos · %s"
 
 #: single-destination.php:66
 msgid "Fil d’Ariane"
-msgstr ""
+msgstr "Ruta de navegación"
 
 #: single-destination.php:67
 msgid "Accueil"
-msgstr ""
+msgstr "Inicio"
 
 #: single-destination.php:96
 msgid "Informations clés"
-msgstr ""
+msgstr "Información clave"
 
 #: single-destination.php:110
 #: template-parts/card-destination.php:102
 #: template-parts/card-destination.php:127
 msgid "À partir de"
-msgstr ""
+msgstr "Desde"
 
 #. Template Name of the theme
 msgid "Contact"
@@ -2586,17 +2538,17 @@ msgstr ""
 
 #: template-parts/card-avis.php:74
 msgid "— Avis du mois"
-msgstr ""
+msgstr "— Opinión del mes"
 
 #: template-parts/card-destination.php:104
 msgid "/ pers"
-msgstr ""
+msgstr "/ pers."
 
 #. translators: %s: nom de la langue active.
 #: template-parts/language-switcher.php:59
 #, php-format
 msgid "Choisir la langue — actuelle : %s"
-msgstr ""
+msgstr "Elegir idioma — actual: %s"
 
 #. Template Name of the theme
 msgid "Qui sommes-nous"
@@ -4039,3 +3991,67 @@ msgstr ""
 msgctxt "Space size name"
 msgid "4XL"
 msgstr ""
+
+#: inc/options.php:154
+#: inc/seo-fields.php:174
+#: inc/seo-fields.php:327
+msgid "Titre dans Google"
+msgstr ""
+
+#: inc/options.php:156
+msgid "Titre de la page Destinations dans les résultats Google, 60 caractères maximum. Laissez vide pour « Destinations – nom du site »."
+msgstr ""
+
+#: inc/options.php:159
+#: inc/seo-fields.php:200
+#: inc/seo-fields.php:342
+msgid "Description dans Google"
+msgstr ""
+
+#: inc/options.php:161
+msgid "Description de la page Destinations dans les résultats Google, 160 caractères maximum. Laissez vide pour réutiliser le texte d’introduction ci-dessus."
+msgstr ""
+
+#: inc/options.php:164
+msgid "Suffixe des titres destination"
+msgstr ""
+
+#: inc/options.php:166
+msgid "Ajouté après le nom du pays dans le titre Google de chaque fiche destination, ex. « Maroc - Adaptours voyages adaptés personnes mobilité réduite ». Laissez vide pour utiliser le suffixe par défaut du thème. Ne concerne pas les fiches dont le titre est saisi à la main."
+msgstr ""
+
+#: inc/seo-fields.php:137
+msgid "Référencement (Google)"
+msgstr ""
+
+#: inc/seo-fields.php:169
+msgid "Ce que Google affiche dans ses résultats. Laissez vide pour utiliser la valeur automatique indiquée sous chaque champ."
+msgstr ""
+
+#. translators: %1$d : longueur recommandée, %2$s : titre automatique.
+#: inc/seo-fields.php:190
+#, php-format
+msgid "%1$d caractères maximum. Si vide : « %2$s »."
+msgstr ""
+
+#. translators: %d : longueur recommandée.
+#: inc/seo-fields.php:215
+#, php-format
+msgid "%d caractères maximum. Deux phrases décrivant la page, avec les mots que taperait un visiteur."
+msgstr ""
+
+#. translators: %d : longueur recommandée.
+#: inc/seo-fields.php:334
+#, php-format
+msgid "%d caractères maximum. Laissez vide pour utiliser le nom de la zone."
+msgstr ""
+
+#. translators: %d : longueur recommandée.
+#: inc/seo-fields.php:349
+#, php-format
+msgid "%d caractères maximum."
+msgstr ""
+
+#: inc/seo.php:124
+msgid "Adaptours voyages adaptés personnes mobilité réduite"
+msgstr "Adaptours viajes adaptados para personas con movilidad reducida"

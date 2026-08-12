@@ -20,6 +20,8 @@
 		return;
 	}
 
+	var l10n = window.adaptoursDevisL10n || {};
+
 	function clamp( value, min, max ) {
 		if ( isFinite( min ) && value < min ) {
 			value = min;
@@ -61,7 +63,7 @@
 		var minus = document.createElement( 'button' );
 		minus.type = 'button';
 		minus.className = 'devis-stepper__btn';
-		minus.setAttribute( 'aria-label', 'Diminuer' );
+		minus.setAttribute( 'aria-label', l10n.decrease || 'Diminuer' );
 		minus.textContent = '−';
 
 		var value = document.createElement( 'span' );
@@ -71,7 +73,7 @@
 		var plus = document.createElement( 'button' );
 		plus.type = 'button';
 		plus.className = 'devis-stepper__btn';
-		plus.setAttribute( 'aria-label', 'Augmenter' );
+		plus.setAttribute( 'aria-label', l10n.increase || 'Augmenter' );
 		plus.textContent = '+';
 
 		var sync = function () {
