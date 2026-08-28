@@ -1,0 +1,41 @@
+// Bandeau d’annonce : premier enfant de `.site-header`, dont il hérite
+// le comportement sticky.
+
+@use "abstracts" as *;
+
+.site-announcement {
+	background-color: var(--wp--preset--color--dark);
+	// Posée explicitement : l'héritage donnerait le `body` de theme.json, trop peu
+	// contrasté sur le navy.
+	color: var(--wp--preset--color--surface);
+
+	&__inner {
+
+		@include container;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		justify-content: center;
+		gap: 0.25rem 0.75rem;
+		margin: 0;
+		padding-block: var(--wp--preset--spacing--20);
+		font-size: 0.875rem;
+		line-height: 1.4;
+		text-align: center;
+	}
+
+	&__link {
+		// Annule la couleur imposée par styles.elements.link de theme.json ; le
+		// soulignement est conservé comme affordance.
+		color: var(--wp--preset--color--surface);
+		font-weight: 600;
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2em;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--wp--preset--color--highlight-soft);
+		}
+	}
+}

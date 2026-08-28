@@ -96,17 +96,21 @@
 	// Sélecteur du hero figé à l'étape single-destination ; repli scrollY sinon.
 	var hero = document.querySelector( '.single-destination__hero' );
 
+	// Hauteur réelle du header, bandeau d'annonce inclus : en deçà, le header
+	// transparent à texte blanc surplomberait la bande méta, elle aussi claire.
+	var offset = header.offsetHeight;
+
 	if ( hero && 'IntersectionObserver' in window ) {
 		var observer = new IntersectionObserver(
 			function ( entries ) {
 				setSolid( ! entries[ 0 ].isIntersecting );
 			},
-			{ rootMargin: '-80px 0px 0px 0px' }
+			{ rootMargin: '-' + offset + 'px 0px 0px 0px' }
 		);
 		observer.observe( hero );
 	} else {
 		var onScroll = function () {
-			setSolid( window.scrollY > 80 );
+			setSolid( window.scrollY > offset );
 		};
 		window.addEventListener( 'scroll', onScroll, { passive: true } );
 		onScroll();

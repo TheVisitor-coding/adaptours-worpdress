@@ -37,11 +37,12 @@ wp-content/themes/adaptours/
 │   ├── page.php / index.php / 404.php
 │
 ├── parts/                        # [PART] composants partagés (§10), non éditables Gutenberg
-│   ├── header.php                # §10.1 (sticky + variante transparente single)
+│   ├── header.php                # §10.1 (sticky + variante transparente single + bandeau d'annonce)
 │   ├── prefooter.php             # §10.2 (masqué sur devis/contact/QSN)
 │   └── footer.php                # §10.3 (4 colonnes + barre légale)
 │
 ├── template-parts/               # partials de rendu réutilisés (§12.4)
+│   ├── announcement-bar.php       # bandeau d'annonce, 1er enfant du header (réglages)
 │   ├── card-destination.php       # source UNIQUE d'une card destination (§9.4.3)
 │   ├── card-numbered.php          # numéro 01..NN + pastille (process/practical/cards-numbered/recruitment)
 │   └── block-hero.php             # socle commun des 5 héros
@@ -218,6 +219,10 @@ méthode ; reportée par bloc dans la spec §12.1 et consolidée en §12.3) :
   `inc/options.php` (UNE option tableau `adaptours_options`), protégée par la capability
   `manage_adaptours_options`. ⚠️ **PAS `acf_add_options_page()`** : c'est une fonction ACF **Pro**,
   exclue du projet.
+- **Bandeau d'annonce** : section `annonce` de la page d'options (message, lien, libellé,
+  dernier jour d'affichage). Rendu par `template-parts/announcement-bar.php` en **premier enfant
+  de `.site-header`**, dont il hérite le sticky. Message vide ou date dépassée ⇒ rien n'est rendu.
+  Prédicat : `adaptours_get_announcement()` (`inc/helpers.php`).
 - **Galerie** : métabox native custom (`inc/gallery-metabox.php`) → post meta `_adaptours_gallery_ids`
   (array d'IDs médiathèque), consommée par le bloc `destination-gallery` (§9.6.6, §11.1).
 - **Exception type** : `prix_a_partir_de` en `number` (filtre budget) ; tous les autres « chiffres »

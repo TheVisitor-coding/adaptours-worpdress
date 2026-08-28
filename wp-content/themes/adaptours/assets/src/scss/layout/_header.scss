@@ -6,7 +6,11 @@
 
 .site-header {
 	position: sticky;
-	top: 0;
+	// Sans ce décalage, le header s'épingle SOUS la barre d'admin fixe une fois
+	// scrollé et lui sacrifie ses premiers pixels, donc tout le bandeau
+	// d'annonce, pour la cliente connectée. WP définit la variable sur `html`
+	// (32px, 46px en ≤782px) ; absente pour un visiteur déconnecté.
+	top: var(--wp-admin--admin-bar--height, 0px);
 	z-index: 100;
 	background-color: var(--wp--preset--color--surface);
 	border-bottom: 1px solid var(--wp--preset--color--line);
@@ -55,7 +59,7 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		font-size: 0.875rem; // 14px
+		font-size: var(--wp--preset--font-size--medium);
 		font-weight: 500;
 
 		a {
@@ -264,8 +268,11 @@
 		// Le drawer reprend la main sur le layout (plus de display:contents).
 		&__panel {
 			display: flex;
-			position: fixed;
-			inset: 5.875rem 0 0 auto;
+			// `absolute` dans le header (déjà positionné) : `top: 100%` vaut sa
+			// hauteur réelle, bandeau d'annonce inclus, dès le premier paint.
+			position: absolute;
+			inset: 100% 0 auto auto;
+			height: calc(100svh - 100%);
 			width: min(22rem, 100%);
 			flex-direction: column;
 			align-items: stretch;

@@ -9,6 +9,7 @@
 @use "components/button";
 @use "components/card-destination";
 @use "components/card-avis";
+@use "layout/announcement";
 @use "layout/header";
 @use "layout/prefooter";
 @use "layout/footer";
@@ -53,7 +54,9 @@ img { display: block; }
 
 // Lien d'évitement (skip link)
 .skip-link {
-	position: absolute;
+	// `fixed` et non `absolute` : au focus après défilement, un lien absolu
+	// s'afficherait au sommet du document, hors écran.
+	position: fixed;
 	left: -9999px;
 	top: 0;
 	z-index: 1000;
@@ -62,7 +65,13 @@ img { display: block; }
 	color: var(--wp--preset--color--surface);
 	border-radius: 0 0 var(--wp--custom--radius--media) 0;
 
-	&:focus { left: 0; }
+	&:focus {
+		left: 0;
+		// `ink` est le hex du bandeau d'annonce, qu'il recouvre : sans cet anneau,
+		// le lien focalisé se fond dedans.
+		outline: 2px solid var(--wp--preset--color--surface);
+		outline-offset: -2px;
+	}
 }
 
 // Utilitaires partagés
@@ -75,8 +84,14 @@ img { display: block; }
 // `.site-main` (qui est le conteneur 1280px : un clip là re-rognerait les sections
 // pleine largeur à 1280px → bords blancs). `clip` ne crée pas de conteneur de
 // défilement → n'altère pas le `position: sticky` du header.
+// Absorbe aussi le drawer mobile fermé (`translateX(100%)` hors viewport, cf.
+// layout/_header.scss) : sans ce clip, une barre horizontale apparaît sur mobile.
 html {
 	overflow-x: clip;
+	// Décale les cibles d'ancres sous le header sticky (+ bandeau d'annonce).
+	// Volontairement généreux : trop grand ne fait que du blanc au-dessus de la
+	// cible, trop petit masque du contenu sous le header.
+	scroll-padding-top: 8rem;
 }
 
 // Eyebrow / overline (ex. « VOYAGES ACCESSIBLES · DEPUIS 2011 »).

@@ -28,6 +28,8 @@ $devis_url = adaptours_get_url_option( 'url_devis', '/devis/' );
 <a class="skip-link" href="#main"><?php esc_html_e( 'Aller au contenu', 'adaptours' ); ?></a>
 
 <header class="site-header">
+	<?php get_template_part( 'template-parts/announcement-bar' ); ?>
+
 	<div class="site-header__inner container">
 		<?php get_template_part( 'template-parts/site-logo', null, array( 'class' => 'site-header__logo' ) ); ?>
 

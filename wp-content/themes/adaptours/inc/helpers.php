@@ -502,7 +502,11 @@ function adaptours_translate_url( $url, $lang = '' ) {
 		return $url;
 	}
 
-	$cache_key = $url . '|' . $lang;
+	// La langue courante entre dans la clé : le repli sur une archive de CPT en dépend,
+	// et $lang vide signifie « langue courante », pas « une seule valeur possible ».
+	$current   = function_exists( 'pll_current_language' ) ? (string) pll_current_language() : '';
+	$cache_key = $url . '|' . $lang . '|' . $current;
+
 	if ( isset( $cache[ $cache_key ] ) ) {
 		return $cache[ $cache_key ];
 	}
@@ -512,7 +516,7 @@ function adaptours_translate_url( $url, $lang = '' ) {
 
 	if ( '' !== $host ) {
 		$target = $url;
-	} elseif ( '' === $scheme && '' !== ltrim( $url, '/' ) ) {
+	} elseif ( '' === $scheme && '' !== trim( (string) wp_parse_url( $url, PHP_URL_PATH ), '/' ) ) {
 		// url_to_postid() exige une URL absolue ; get_option('home') plutôt que home_url(),
 		// que Polylang préfixe de la langue courante.
 		$target = rtrim( (string) get_option( 'home' ), '/' ) . '/' . ltrim( $url, '/' );
@@ -525,9 +529,62 @@ function adaptours_translate_url( $url, $lang = '' ) {
 	$translated = $post_id ? pll_get_post( $post_id, $lang ) : 0;
 	$permalink  = $translated ? get_permalink( (int) $translated ) : '';
 
+	if ( '' === $permalink && '' === $host && '' === $scheme ) {
+		$permalink = adaptours_post_type_archive_url( (string) wp_parse_url( $url, PHP_URL_PATH ) );
+
+		if ( '' !== $permalink ) {
+			$query    = (string) wp_parse_url( $url, PHP_URL_QUERY );
+			$fragment = (string) wp_parse_url( $url, PHP_URL_FRAGMENT );
+			$permalink .= ( '' !== $query ? '?' . $query : '' ) . ( '' !== $fragment ? '#' . $fragment : '' );
+		}
+	}
+
 	$cache[ $cache_key ] = $permalink ? (string) $permalink : $url;
 
 	return $cache[ $cache_key ];
+}
+
+/**
+ * Résout un chemin interne vers le lien d'archive de CPT correspondant.
+ *
+ * Complète url_to_postid(), qui ne connaît que les posts : sans cela une archive
+ * (/destinations/) n'est jamais traduite et renvoie le visiteur sur la version
+ * française. Le lien sort dans la langue courante : les rares appelants qui forcent
+ * une langue ne visent que des pages, donc la branche url_to_postid().
+ *
+ * @param string $path Chemin interne, préfixe de langue toléré.
+ * @return string Lien d'archive, ou '' si le chemin n'en désigne aucune.
+ */
+function adaptours_post_type_archive_url( $path ) {
+	$path = trim( (string) $path, '/' );
+
+	if ( '' === $path ) {
+		return '';
+	}
+
+	$segments = explode( '/', $path );
+
+	if ( function_exists( 'pll_languages_list' ) && in_array( $segments[0], (array) pll_languages_list(), true ) ) {
+		array_shift( $segments );
+	}
+
+	$path = implode( '/', $segments );
+
+	foreach ( get_post_types( array( 'has_archive' => true ), 'objects' ) as $post_type ) {
+		if ( true === $post_type->has_archive ) {
+			$slug = ( is_array( $post_type->rewrite ) && ! empty( $post_type->rewrite['slug'] ) )
+				? $post_type->rewrite['slug']
+				: $post_type->name;
+		} else {
+			$slug = (string) $post_type->has_archive;
+		}
+
+		if ( $path === trim( (string) $slug, '/' ) ) {
+			return (string) get_post_type_archive_link( $post_type->name );
+		}
+	}
+
+	return '';
 }
 
 /**
@@ -716,4 +773,36 @@ function adaptours_show_prefooter() {
 	);
 
 	return ! is_page_template( $blacklist );
+}
+
+/**
+ * Contrat du bandeau d'annonce, ou tableau vide s'il ne doit pas s'afficher.
+ *
+ * Le bandeau est piloté par la cliente depuis « Coordonnées & liens » : message vide
+ * ou date de fin dépassée valent masquage. La date est inclusive (le bandeau tombe le
+ * lendemain) et lue dans le fuseau du site.
+ *
+ * @return array{message:string,link_url:string,link_label:string}|array{}
+ */
+function adaptours_get_announcement() {
+	$message = trim( (string) adaptours_get_option_i18n( 'annonce_message' ) );
+
+	if ( '' === $message ) {
+		return array();
+	}
+
+	$date_fin = (string) adaptours_get_option( 'annonce_date_fin' );
+
+	if ( '' !== $date_fin && current_time( 'Y-m-d' ) > $date_fin ) {
+		return array();
+	}
+
+	$link_url   = (string) adaptours_get_url_option( 'annonce_link_url' );
+	$link_label = trim( (string) adaptours_get_option_i18n( 'annonce_link_label' ) );
+
+	return array(
+		'message'    => $message,
+		'link_url'   => ( '' !== $link_label ) ? $link_url : '',
+		'link_label' => ( '' !== $link_url ) ? $link_label : '',
+	);
 }

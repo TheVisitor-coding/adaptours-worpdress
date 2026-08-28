@@ -27,12 +27,40 @@ const ADAPTOURS_OPTION_PAGE  = 'adaptours-options';
  * Schéma des réglages : sections → champs (clé => type|label|description).
  *
  * Source de vérité unique, consommée à la fois par le rendu et la sanitisation.
- * Types supportés : text, email, url, textarea, number_float, number_int.
+ * Types supportés : text, email, url, url_path, textarea, number_float, number_int, date.
+ *
+ * `url` attend une URL absolue (réseaux sociaux) ; `url_path` accepte aussi un chemin
+ * interne (« /devis/ »), que la validation HTML5 de <input type="url"> rejetterait.
  *
  * @return array<string,array>
  */
 function adaptours_options_schema() {
 	return array(
+		'annonce'        => array(
+			'title'  => __( 'Bandeau d’annonce', 'adaptours' ),
+			'fields' => array(
+				'annonce_message'    => array(
+					'label' => __( 'Message', 'adaptours' ),
+					'type'  => 'text',
+					'desc'  => __( 'Le bandeau s’affiche en haut de toutes les pages dès que ce champ est rempli. Videz-le pour le faire disparaître. Ex. « 5 nouvelles destinations en Asie ». Si le site est traduit, pensez à repasser par Langues → Traductions des chaînes après chaque modification, sinon le texte français s’affiche aussi en anglais et en espagnol.', 'adaptours' ),
+				),
+				'annonce_link_url'   => array(
+					'label' => __( 'Lien (facultatif)', 'adaptours' ),
+					'type'  => 'url_path',
+					'desc'  => __( 'Page vers laquelle le bandeau renvoie, ex. « /destinations/ ». Laissez vide pour un bandeau sans lien.', 'adaptours' ),
+				),
+				'annonce_link_label' => array(
+					'label' => __( 'Texte du lien', 'adaptours' ),
+					'type'  => 'text',
+					'desc'  => __( 'Ex. « Voir les destinations ». Sans texte, le lien n’apparaît pas.', 'adaptours' ),
+				),
+				'annonce_date_fin'   => array(
+					'label' => __( 'Dernier jour d’affichage', 'adaptours' ),
+					'type'  => 'date',
+					'desc'  => __( 'Le bandeau disparaît tout seul le lendemain de cette date. Laissez vide pour l’afficher sans limite de temps.', 'adaptours' ),
+				),
+			),
+		),
 		'coordonnees'    => array(
 			'title'  => __( 'Coordonnées', 'adaptours' ),
 			'fields' => array(
@@ -71,23 +99,23 @@ function adaptours_options_schema() {
 			'fields' => array(
 				'url_devis'             => array(
 					'label' => __( 'Lien vers la page Devis', 'adaptours' ),
-					'type'  => 'url',
+					'type'  => 'url_path',
 				),
 				'url_contact'           => array(
 					'label' => __( 'Lien vers la page Contact', 'adaptours' ),
-					'type'  => 'url',
+					'type'  => 'url_path',
 				),
 				'url_cgv'               => array(
 					'label' => __( 'Lien vers les CGV', 'adaptours' ),
-					'type'  => 'url',
+					'type'  => 'url_path',
 				),
 				'url_mentions_legales'  => array(
 					'label' => __( 'Lien vers les Mentions légales', 'adaptours' ),
-					'type'  => 'url',
+					'type'  => 'url_path',
 				),
 				'url_confidentialite'   => array(
 					'label' => __( 'Lien vers la Politique de confidentialité', 'adaptours' ),
-					'type'  => 'url',
+					'type'  => 'url_path',
 				),
 			),
 		),
@@ -325,6 +353,9 @@ function adaptours_options_render_field( $args ) {
 				$input_type = 'url';
 				$extra      = 'class="regular-text code"';
 				break;
+			case 'url_path':
+				$extra = 'class="regular-text code"';
+				break;
 			case 'number_float':
 				$input_type = 'number';
 				$extra      = 'class="small-text" step="0.1" min="0"';
@@ -332,6 +363,9 @@ function adaptours_options_render_field( $args ) {
 			case 'number_int':
 				$input_type = 'number';
 				$extra      = 'class="small-text" step="1" min="0"';
+				break;
+			case 'date':
+				$input_type = 'date';
 				break;
 		}
 
@@ -369,6 +403,7 @@ function adaptours_sanitize_options( $input ) {
 				$output[ $key ] = sanitize_email( $raw );
 				break;
 			case 'url':
+			case 'url_path':
 				$output[ $key ] = esc_url_raw( $raw );
 				break;
 			case 'textarea':
@@ -379,6 +414,12 @@ function adaptours_sanitize_options( $input ) {
 				break;
 			case 'number_int':
 				$output[ $key ] = ( '' === $raw ) ? '' : (string) absint( $raw );
+				break;
+			case 'date':
+				$date           = trim( (string) $raw );
+				$valid          = 1 === preg_match( '/^(\d{4})-(\d{2})-(\d{2})$/', $date, $parts )
+					&& checkdate( (int) $parts[2], (int) $parts[3], (int) $parts[1] );
+				$output[ $key ] = $valid ? $date : '';
 				break;
 			default:
 				$output[ $key ] = sanitize_text_field( $raw );
@@ -437,6 +478,8 @@ function adaptours_get_option( $key, $default = '' ) {
  */
 function adaptours_translatable_option_keys() {
 	return array(
+		'annonce_message',
+		'annonce_link_label',
 		'tel_horaires',
 		'email_delai',
 		'dest_eyebrow',
