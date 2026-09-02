@@ -4,10 +4,8 @@
 @use "abstracts" as *;
 
 .site-announcement {
-	background-color: var(--wp--preset--color--dark);
-	// Posée explicitement : l'héritage donnerait le `body` de theme.json, trop peu
-	// contrasté sur le navy.
-	color: var(--wp--preset--color--surface);
+	background-color: var(--wp--preset--color--highlight);
+	color: var(--wp--preset--color--ink);
 
 	&__inner {
 
@@ -17,9 +15,12 @@
 		align-items: baseline;
 		justify-content: center;
 		gap: 0.25rem 0.75rem;
-		margin: 0;
-		padding-block: var(--wp--preset--spacing--20);
-		font-size: 0.875rem;
+		// `margin: 0` écraserait le centrage `margin-inline: auto` du mixin.
+		margin-block: 0;
+		padding-block: 0.75rem;
+		font-family: var(--wp--preset--font-family--display);
+		font-weight: 700;
+		font-size: 0.85rem;
 		line-height: 1.4;
 		text-align: center;
 	}
@@ -27,15 +28,23 @@
 	&__link {
 		// Annule la couleur imposée par styles.elements.link de theme.json ; le
 		// soulignement est conservé comme affordance.
-		color: var(--wp--preset--color--surface);
-		font-weight: 600;
+		color: var(--wp--preset--color--ink);
+		// Posé en permanent pour que l'inversion au survol ne décale rien.
+		padding-inline: 0.375rem;
 		text-decoration: underline;
-		text-decoration-thickness: 1px;
+		text-decoration-thickness: 2px;
 		text-underline-offset: 0.2em;
 
 		&:hover,
 		&:focus-visible {
-			color: var(--wp--preset--color--highlight-soft);
+			background-color: var(--wp--preset--color--ink);
+			color: var(--wp--preset--color--surface);
+		}
+
+		// L'outline global (highlight-strong) est presque invisible sur l'orange.
+		&:focus-visible {
+			outline: 2px solid var(--wp--preset--color--ink);
+			outline-offset: 2px;
 		}
 	}
 }

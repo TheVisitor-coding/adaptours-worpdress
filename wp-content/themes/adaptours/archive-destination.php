@@ -106,7 +106,7 @@ get_template_part( 'parts/header' );
 				<?php endforeach; ?>
 			</select>
 
-			<button type="submit" class="archive-destinations__submit"><?php esc_html_e( 'Filtrer', 'adaptours' ); ?></button>
+			<button type="submit" class="button button--primary archive-destinations__submit"><?php esc_html_e( 'Rechercher', 'adaptours' ); ?></button>
 		</form>
 
 		<div class="archive-destinations__status">

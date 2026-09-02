@@ -82,34 +82,6 @@ function adaptours_enqueue_gallery_lightbox() {
 add_action( 'wp_enqueue_scripts', 'adaptours_enqueue_gallery_lightbox' );
 
 /**
- * Charge le script des filtres de l'archive Destinations, uniquement sur cette archive.
- *
- * Amélioration progressive : soumission auto des menus au change, repli sur le bouton
- * « Filtrer » sans JS.
- */
-function adaptours_enqueue_archive_destination() {
-	if ( ! is_post_type_archive( 'destination' ) ) {
-		return;
-	}
-
-	$js      = '/assets/js/archive-destination.js';
-	$js_path = ADAPTOURS_DIR . $js;
-
-	if ( ! file_exists( $js_path ) ) {
-		return;
-	}
-
-	wp_enqueue_script(
-		'adaptours-archive-destination',
-		ADAPTOURS_URI . $js,
-		array(),
-		(string) filemtime( $js_path ),
-		true // in_footer
-	);
-}
-add_action( 'wp_enqueue_scripts', 'adaptours_enqueue_archive_destination' );
-
-/**
  * Charge le script du formulaire Devis, uniquement sur le template Devis.
  *
  * Amélioration progressive : steppers −/+, repli sur les champs nombre natifs sans JS.

@@ -31,7 +31,7 @@ $has_logo = file_exists( get_theme_file_path( $logo_rel ) );
 ?>
 <a class="<?php echo esc_attr( $classes ); ?>" href="<?php echo esc_url( $home_url ); ?>" rel="home">
 	<?php if ( $has_logo ) : ?>
-		<img class="site-logo__img" src="<?php echo esc_url( get_theme_file_uri( $logo_rel ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="86" height="86" decoding="async">
+		<img class="site-logo__img" src="<?php echo esc_url( get_theme_file_uri( $logo_rel ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" width="216" height="216" decoding="async" loading="eager" fetchpriority="high">
 	<?php else : ?>
 		<span class="site-logo__text"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></span>
 	<?php endif; ?>

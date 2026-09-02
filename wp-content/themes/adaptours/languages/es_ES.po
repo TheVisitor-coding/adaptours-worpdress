@@ -53,8 +53,8 @@ msgid "Budget"
 msgstr "Presupuesto"
 
 #: archive-destination.php:109
-msgid "Filtrer"
-msgstr "Filtrar"
+msgid "Rechercher"
+msgstr "Buscar"
 
 #. translators: %s = nombre de destinations (mis en valeur).
 #: archive-destination.php:117

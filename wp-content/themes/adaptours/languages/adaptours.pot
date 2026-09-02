@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-12T15:50:01+00:00\n"
+"POT-Creation-Date: 2026-09-02T10:03:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: adaptours\n"
@@ -49,12 +49,13 @@ msgstr ""
 #: archive-destination.php:99
 #: archive-destination.php:101
 #: inc/icons.php:25
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:26
 msgid "Budget"
 msgstr ""
 
 #: archive-destination.php:109
-msgid "Filtrer"
+msgid "Rechercher"
 msgstr ""
 
 #. translators: %s = nombre de destinations (mis en valeur).
@@ -78,11 +79,13 @@ msgstr ""
 msgid "Aucune destination ne correspond à votre recherche."
 msgstr ""
 
+#: assets/build/blocks/avis-grid/render.php:85
 #: blocks/avis-grid/render.php:85
 msgid "Avis clients"
 msgstr ""
 
 #. translators: %s: nombre d'avis Google.
+#: assets/build/blocks/avis-grid/render.php:121
 #: blocks/avis-grid/render.php:121
 #, php-format
 msgid "%s avis"
@@ -90,42 +93,53 @@ msgid_plural "%s avis"
 msgstr[0] ""
 msgstr[1] ""
 
+#: assets/build/blocks/avis-spotlight/render.php:43
 #: blocks/avis-spotlight/render.php:43
 msgid "Témoignage en avant"
 msgstr ""
 
+#: assets/build/blocks/avis-spotlight/render.php:67
 #: blocks/avis-spotlight/render.php:67
 #: template-parts/card-avis.php:106
 msgid "PHOTO"
 msgstr ""
 
+#: assets/build/blocks/contact-form/render.php:37
 #: blocks/contact-form/render.php:37
 msgid "Adresse"
 msgstr ""
 
+#: assets/build/blocks/contact-form/render.php:44
 #: blocks/contact-form/render.php:44
 msgid "Par téléphone"
 msgstr ""
 
+#: assets/build/blocks/contact-form/render.php:60
 #: blocks/contact-form/render.php:60
 msgid "Par e-mail"
 msgstr ""
 
+#: assets/build/blocks/contact-form/render.php:86
 #: blocks/contact-form/render.php:86
 msgid "Le formulaire de contact sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
 msgstr ""
 
+#: assets/build/blocks/destination-gallery/render.php:46
 #: blocks/destination-gallery/render.php:46
 msgid "Galerie"
 msgstr ""
 
 #. translators: %s: légende de la photo.
+#: assets/build/blocks/destination-gallery/render.php:70
+#: assets/build/blocks/destination-gallery/render.php:105
 #: blocks/destination-gallery/render.php:70
 #: blocks/destination-gallery/render.php:105
 msgid "Photo de la galerie"
 msgstr ""
 
 #. translators: %s: légende de la photo.
+#: assets/build/blocks/destination-gallery/render.php:77
+#: assets/build/blocks/destination-gallery/render.php:105
 #: blocks/destination-gallery/render.php:77
 #: blocks/destination-gallery/render.php:105
 #, php-format
@@ -133,158 +147,198 @@ msgid "Agrandir : %s"
 msgstr ""
 
 #. translators: %s: légende de la photo.
+#: assets/build/blocks/destination-gallery/render.php:106
 #: blocks/destination-gallery/render.php:106
 msgid "Voir la photo"
 msgstr ""
 
 #. translators: %s = prix formaté, ex. « 2 490€ ».
+#: assets/build/blocks/destinations-grid/render.php:81
 #: blocks/destinations-grid/render.php:81
 #, php-format
 msgid "dès %s"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/render.php:83
 #: blocks/destinations-grid/render.php:83
 #: inc/helpers.php:337
 #: template-parts/card-destination.php:130
 msgid "/ personne"
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/render.php:45
 #: blocks/destinations-suggestions/render.php:45
 #: inc/acf-config.php:346
 msgid "Destinations suggérées"
 msgstr ""
 
+#: assets/build/blocks/devis-form/render.php:25
 #: blocks/devis-form/render.php:25
 msgid "Le formulaire de devis sera disponible très prochainement. En attendant, écrivez-nous directement par e-mail."
 msgstr ""
 
+#: assets/build/blocks/dual-cta/render.php:44
 #: blocks/dual-cta/render.php:44
 msgid "Nous écrire"
 msgstr ""
 
+#: assets/build/blocks/hero-devis/render.php:43
 #: blocks/hero-devis/render.php:43
 #: parts/prefooter.php:25
 msgid "Réponse sous 48h"
 msgstr ""
 
+#: assets/build/blocks/hero-devis/render.php:47
 #: blocks/hero-devis/render.php:47
 msgid "Gratuit, sans engagement"
 msgstr ""
 
+#: assets/build/blocks/hero-devis/render.php:51
 #: blocks/hero-devis/render.php:51
 msgid "Données protégées"
 msgstr ""
 
+#: assets/build/blocks/hero-home/render.php:51
 #: blocks/hero-home/render.php:51
 msgid "19 ans d’expérience"
 msgstr ""
 
+#: assets/build/blocks/hero-home/render.php:55
 #: blocks/hero-home/render.php:55
 msgid "Hébergements vérifiés"
 msgstr ""
 
+#: assets/build/blocks/hero-home/render.php:59
 #: blocks/hero-home/render.php:59
 msgid "Matériel médical inclus"
 msgstr ""
 
+#: assets/build/blocks/hero-home/render.php:63
 #: blocks/hero-home/render.php:63
 msgid "100% sur mesure"
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/render.php:28
 #: blocks/itinerary-step/render.php:28
+#: assets/build/blocks/itinerary-step/index.js:1
 #: blocks/itinerary-step/index.js:58
 msgid "Jour"
 msgstr ""
 
+#: assets/build/blocks/itinerary/render.php:27
 #: blocks/itinerary/render.php:27
 msgid "Programme du voyage"
 msgstr ""
 
+#: assets/build/blocks/kpi-bar/render.php:41
 #: blocks/kpi-bar/render.php:41
 msgid "Chiffres clés"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:16
 #: blocks/legal-info/render.php:16
-#: inc/options.php:174
+#: inc/options.php:202
 msgid "Forme juridique"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:17
 #: blocks/legal-info/render.php:17
-#: inc/options.php:179
+#: inc/options.php:207
 msgid "SIRET"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:18
 #: blocks/legal-info/render.php:18
 msgid "NAF"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:19
 #: blocks/legal-info/render.php:19
-#: inc/options.php:188
+#: inc/options.php:216
 msgid "RCS"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:20
 #: blocks/legal-info/render.php:20
 msgid "TVA intracommunautaire"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:21
 #: blocks/legal-info/render.php:21
 msgid "Atout France"
 msgstr ""
 
+#: assets/build/blocks/legal-info/render.php:40
+#: assets/build/blocks/legal-info/render.php:41
 #: blocks/legal-info/render.php:40
 #: blocks/legal-info/render.php:41
-#: inc/options.php:171
+#: inc/options.php:199
+#: assets/build/blocks/legal-info/index.js:1
 #: blocks/legal-info/index.js:17
 msgid "Informations légales"
 msgstr ""
 
+#: assets/build/blocks/recruitment/render.php:63
 #: blocks/recruitment/render.php:63
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:93
 msgid "Merci d’envoyer votre CV à"
 msgstr ""
 
+#: assets/build/blocks/section-accessibility/render.php:34
 #: blocks/section-accessibility/render.php:34
 #: inc/icons.php:29
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:30
 msgid "Accessibilité"
 msgstr ""
 
+#: assets/build/blocks/section-map/render.php:42
 #: blocks/section-map/render.php:42
 msgid "Carte du voyage"
 msgstr ""
 
+#: assets/build/blocks/section-practical/render.php:27
 #: blocks/section-practical/render.php:27
 msgid "Ce qu’il faut savoir"
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:33
 #: blocks/section-promise/render.php:33
 msgid "L’humain d’abord"
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:34
 #: blocks/section-promise/render.php:34
 msgid "Un interlocuteur dédié du devis au retour."
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:38
 #: blocks/section-promise/render.php:38
 msgid "Vérifié sur le terrain"
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:39
 #: blocks/section-promise/render.php:39
 msgid "Chaque hébergement testé par notre équipe."
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:43
 #: blocks/section-promise/render.php:43
 msgid "Matériel inclus"
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:44
 #: blocks/section-promise/render.php:44
 msgid "Fauteuil de plage, lève-personne, matériel médical."
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:48
 #: blocks/section-promise/render.php:48
 msgid "Présents 24/7"
 msgstr ""
 
+#: assets/build/blocks/section-promise/render.php:49
 #: blocks/section-promise/render.php:49
 msgid "Une équipe joignable, même à l’autre bout du monde."
 msgstr ""
@@ -332,6 +386,7 @@ msgid "Affichées sous le titre, à côté de la ville (ex. : 8°25′S 115°11�
 msgstr ""
 
 #: inc/acf-config.php:111
+#: assets/build/blocks/destination-gallery/index.js:1
 #: blocks/destination-gallery/index.js:53
 msgid "Petite phrase manuscrite"
 msgstr ""
@@ -417,6 +472,7 @@ msgstr ""
 #: inc/acf-config.php:196
 #: inc/helpers.php:374
 #: inc/icons.php:23
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:24
 msgid "Décalage horaire"
 msgstr ""
@@ -437,6 +493,7 @@ msgstr ""
 #: inc/acf-config.php:210
 #: inc/helpers.php:382
 #: inc/icons.php:27
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:28
 msgid "Monnaie"
 msgstr ""
@@ -604,6 +661,7 @@ msgid "Photo du voyageur (facultatif)."
 msgstr ""
 
 #: inc/acf-config.php:459
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:77
 msgid "Avis du mois"
 msgstr ""
@@ -1394,6 +1452,7 @@ msgid "Autre"
 msgstr ""
 
 #: inc/cf7.php:213
+#: inc/options.php:43
 msgid "Message"
 msgstr ""
 
@@ -1883,13 +1942,15 @@ msgid "Profil"
 msgstr ""
 
 #: inc/devis.php:381
+#: assets/build/blocks/founder-story/index.js:1
+#: assets/build/blocks/team-grid-member/index.js:1
 #: blocks/founder-story/index.js:96
 #: blocks/team-grid-member/index.js:57
 msgid "Nom"
 msgstr ""
 
 #: inc/devis.php:387
-#: inc/options.php:37
+#: inc/options.php:65
 msgid "Coordonnées"
 msgstr ""
 
@@ -1946,11 +2007,11 @@ msgstr ""
 msgid "Sur-mesure / je ne sais pas encore"
 msgstr ""
 
-#: inc/enqueue.php:141
+#: inc/enqueue.php:113
 msgid "Diminuer"
 msgstr ""
 
-#: inc/enqueue.php:142
+#: inc/enqueue.php:114
 msgid "Augmenter"
 msgstr ""
 
@@ -1984,7 +2045,8 @@ msgid "en petit comité"
 msgstr ""
 
 #: inc/helpers.php:339
-#: parts/header.php:63
+#: parts/header.php:65
+#: tools/verify-langues.php:78
 msgid "Demander un devis"
 msgstr ""
 
@@ -1994,49 +2056,57 @@ msgstr ""
 
 #: inc/helpers.php:386
 #: inc/icons.php:26
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:27
 msgid "Langue"
 msgstr ""
 
 #. translators: %d: note de 1 à 5.
-#: inc/helpers.php:661
+#: inc/helpers.php:718
 #, php-format
 msgid "Note : %d sur 5"
 msgstr ""
 
 #: inc/icons.php:21
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:22
 msgid "Visa / formalités"
 msgstr ""
 
 #: inc/icons.php:22
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:23
 msgid "Santé"
 msgstr ""
 
 #: inc/icons.php:24
 #: inc/itinerary-tags.php:21
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:25
 msgid "Vol"
 msgstr ""
 
 #: inc/icons.php:28
 #: inc/itinerary-tags.php:22
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:29
 msgid "Transport"
 msgstr ""
 
 #: inc/icons.php:30
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:31
 msgid "Rythme adapté"
 msgstr ""
 
 #: inc/icons.php:31
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:32
 msgid "Accompagnement"
 msgstr ""
 
 #: inc/icons.php:32
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:33
 msgid "Confort"
 msgstr ""
@@ -2074,7 +2144,7 @@ msgid "Marche"
 msgstr ""
 
 #: inc/menus.php:20
-#: parts/header.php:45
+#: parts/header.php:47
 msgid "Menu principal"
 msgstr ""
 
@@ -2087,106 +2157,162 @@ msgid "Footer — Colonne 2"
 msgstr ""
 
 #: inc/options.php:40
-msgid "Téléphone (affiché sur le site)"
-msgstr ""
-
-#: inc/options.php:42
-msgid "Numéro tel qu’il apparaît sur le site, ex. « 04 XX XX XX XX »."
+msgid "Bandeau d’annonce"
 msgstr ""
 
 #: inc/options.php:45
-msgid "Téléphone (numéro cliquable)"
+msgid "Le bandeau s’affiche en haut de toutes les pages dès que ce champ est rempli. Videz-le pour le faire disparaître. Ex. « 5 nouvelles destinations en Asie ». Si le site est traduit, pensez à repasser par Langues → Traductions des chaînes après chaque modification, sinon le texte français s’affiche aussi en anglais et en espagnol."
 msgstr ""
 
-#: inc/options.php:47
-msgid "Au format international, sans espaces, ex. « +33XXXXXXXXX ». Permet d’appeler d’un clic depuis un mobile."
+#: inc/options.php:48
+msgid "Lien (facultatif)"
 msgstr ""
 
 #: inc/options.php:50
-msgid "Horaires d’appel"
+msgid "Page vers laquelle le bandeau renvoie, ex. « /destinations/ ». Laissez vide pour un bandeau sans lien."
 msgstr ""
 
-#: inc/options.php:52
-msgid "Ex. « Lundi – Vendredi · 9h → 18h ». Traduisible (Polylang)."
+#: inc/options.php:53
+msgid "Texte du lien"
 msgstr ""
 
 #: inc/options.php:55
-msgid "Email de contact"
+msgid "Ex. « Voir les destinations ». Sans texte, le lien n’apparaît pas."
 msgstr ""
 
-#: inc/options.php:59
-msgid "Délai de réponse"
+#: inc/options.php:58
+msgid "Dernier jour d’affichage"
 msgstr ""
 
-#: inc/options.php:61
-msgid "Ex. « Réponse sous 24h ouvrées ». Traduisible (Polylang)."
+#: inc/options.php:60
+msgid "Le bandeau disparaît tout seul le lendemain de cette date. Laissez vide pour l’afficher sans limite de temps."
 msgstr ""
 
-#: inc/options.php:64
-msgid "Adresse postale"
+#: inc/options.php:68
+msgid "Téléphone (affiché sur le site)"
 msgstr ""
 
 #: inc/options.php:70
-msgid "Liens internes"
+msgid "Numéro tel qu’il apparaît sur le site, ex. « 04 XX XX XX XX »."
 msgstr ""
 
 #: inc/options.php:73
-msgid "Lien vers la page Devis"
+msgid "Téléphone (numéro cliquable)"
 msgstr ""
 
-#: inc/options.php:77
-msgid "Lien vers la page Contact"
+#: inc/options.php:75
+msgid "Au format international, sans espaces, ex. « +33XXXXXXXXX ». Permet d’appeler d’un clic depuis un mobile."
 msgstr ""
 
-#: inc/options.php:81
-msgid "Lien vers les CGV"
+#: inc/options.php:78
+msgid "Horaires d’appel"
 msgstr ""
 
-#: inc/options.php:85
-msgid "Lien vers les Mentions légales"
+#: inc/options.php:80
+msgid "Ex. « Lundi – Vendredi · 9h → 18h ». Traduisible (Polylang)."
+msgstr ""
+
+#: inc/options.php:83
+msgid "Email de contact"
+msgstr ""
+
+#: inc/options.php:87
+msgid "Délai de réponse"
 msgstr ""
 
 #: inc/options.php:89
-msgid "Lien vers la Politique de confidentialité"
+msgid "Ex. « Réponse sous 24h ouvrées ». Traduisible (Polylang)."
 msgstr ""
 
-#: inc/options.php:95
-msgid "Réseaux sociaux"
+#: inc/options.php:92
+msgid "Adresse postale"
 msgstr ""
 
 #: inc/options.php:98
-msgid "Lien Facebook"
+msgid "Liens internes"
 msgstr ""
 
-#: inc/options.php:102
-msgid "Lien Instagram"
+#: inc/options.php:101
+msgid "Lien vers la page Devis"
 msgstr ""
 
-#: inc/options.php:106
-msgid "Lien LinkedIn"
+#: inc/options.php:105
+msgid "Lien vers la page Contact"
 msgstr ""
 
-#: inc/options.php:112
-msgid "Avis Google"
+#: inc/options.php:109
+msgid "Lien vers les CGV"
 msgstr ""
 
-#: inc/options.php:115
-msgid "Note Google (★)"
+#: inc/options.php:113
+msgid "Lien vers les Mentions légales"
 msgstr ""
 
 #: inc/options.php:117
-msgid "Saisie manuelle, ex. « 4.9 ». Fallback si pas d’API."
+msgid "Lien vers la Politique de confidentialité"
 msgstr ""
 
-#: inc/options.php:120
-msgid "Nombre d’avis Google"
+#: inc/options.php:123
+msgid "Réseaux sociaux"
 msgstr ""
 
 #: inc/options.php:126
+msgid "Lien Facebook"
+msgstr ""
+
+#: inc/options.php:130
+msgid "Lien Instagram"
+msgstr ""
+
+#: inc/options.php:134
+msgid "Lien LinkedIn"
+msgstr ""
+
+#: inc/options.php:140
+msgid "Avis Google"
+msgstr ""
+
+#: inc/options.php:143
+msgid "Note Google (★)"
+msgstr ""
+
+#: inc/options.php:145
+msgid "Saisie manuelle, ex. « 4.9 ». Fallback si pas d’API."
+msgstr ""
+
+#: inc/options.php:148
+msgid "Nombre d’avis Google"
+msgstr ""
+
+#: inc/options.php:154
 msgid "Page Destinations"
 msgstr ""
 
-#: inc/options.php:129
+#: inc/options.php:157
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/contact-form/index.js:1
+#: assets/build/blocks/destination-gallery/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/dual-cta/index.js:1
+#: assets/build/blocks/hero-contact/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
+#: assets/build/blocks/process/index.js:1
+#: assets/build/blocks/recruitment/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
+#: assets/build/blocks/section-accessibility/index.js:1
+#: assets/build/blocks/section-map/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
+#: assets/build/blocks/team-grid/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/avis-grid/index.js:50
 #: blocks/card-grid/index.js:64
 #: blocks/cards-numbered/index.js:62
@@ -2216,11 +2342,29 @@ msgstr ""
 msgid "Surtitre"
 msgstr ""
 
-#: inc/options.php:131
+#: inc/options.php:159
 msgid "Petit mot affiché au-dessus du titre. Laissez vide pour afficher « CATALOGUE »."
 msgstr ""
 
-#: inc/options.php:134
+#: inc/options.php:162
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/destination-gallery/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
+#: assets/build/blocks/process/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
+#: assets/build/blocks/section-accessibility/index.js:1
+#: assets/build/blocks/section-map/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/avis-grid/index.js:56
 #: blocks/card-grid-card/index.js:82
 #: blocks/card-grid/index.js:62
@@ -2243,11 +2387,37 @@ msgstr ""
 msgid "Titre"
 msgstr ""
 
-#: inc/options.php:136
+#: inc/options.php:164
 msgid "Début du grand titre de la page. Laissez vide pour « Destinations »."
 msgstr ""
 
-#: inc/options.php:139
+#: inc/options.php:167
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/contact-form/index.js:1
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/destination-gallery/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/dual-cta/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
+#: assets/build/blocks/hero-contact/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/itinerary-step/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
+#: assets/build/blocks/process/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
+#: assets/build/blocks/section-accessibility/index.js:1
+#: assets/build/blocks/section-map/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/avis-grid/index.js:61
 #: blocks/card-grid/index.js:75
 #: blocks/cards-numbered/index.js:73
@@ -2278,11 +2448,16 @@ msgstr ""
 msgid "Mot(s) en orange"
 msgstr ""
 
-#: inc/options.php:141
+#: inc/options.php:169
 msgid "Mot(s) affiché(s) en orange, à la suite du titre. Laissez vide pour « accessibles. »."
 msgstr ""
 
-#: inc/options.php:144
+#: inc/options.php:172
+#: assets/build/blocks/hero-contact/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/hero-contact/index.js:42
 #: blocks/hero-devis/index.js:41
 #: blocks/hero-home/index.js:89
@@ -2291,84 +2466,84 @@ msgstr ""
 msgid "Texte d’introduction"
 msgstr ""
 
-#: inc/options.php:146
+#: inc/options.php:174
 msgid "Court texte de présentation, à droite du titre."
 msgstr ""
 
-#: inc/options.php:149
+#: inc/options.php:177
 msgid "Phrase manuscrite"
 msgstr ""
 
-#: inc/options.php:151
+#: inc/options.php:179
 msgid "Petite phrase manuscrite. Écrivez {n} à l’endroit où doit apparaître le nombre de voyages, ex. « {n} voyages prêts à partir » ; le {n} est remplacé automatiquement par le nombre réel."
 msgstr ""
 
-#: inc/options.php:154
+#: inc/options.php:182
 #: inc/seo-fields.php:174
 #: inc/seo-fields.php:327
 msgid "Titre dans Google"
 msgstr ""
 
-#: inc/options.php:156
+#: inc/options.php:184
 msgid "Titre de la page Destinations dans les résultats Google, 60 caractères maximum. Laissez vide pour « Destinations – nom du site »."
 msgstr ""
 
-#: inc/options.php:159
+#: inc/options.php:187
 #: inc/seo-fields.php:200
 #: inc/seo-fields.php:342
 msgid "Description dans Google"
 msgstr ""
 
-#: inc/options.php:161
+#: inc/options.php:189
 msgid "Description de la page Destinations dans les résultats Google, 160 caractères maximum. Laissez vide pour réutiliser le texte d’introduction ci-dessus."
 msgstr ""
 
-#: inc/options.php:164
+#: inc/options.php:192
 msgid "Suffixe des titres destination"
 msgstr ""
 
-#: inc/options.php:166
+#: inc/options.php:194
 msgid "Ajouté après le nom du pays dans le titre Google de chaque fiche destination, ex. « Maroc - Adaptours voyages adaptés personnes mobilité réduite ». Laissez vide pour utiliser le suffixe par défaut du thème. Ne concerne pas les fiches dont le titre est saisi à la main."
 msgstr ""
 
-#: inc/options.php:176
+#: inc/options.php:204
 msgid "Ex. « SARL au capital de 10 000 € »."
 msgstr ""
 
-#: inc/options.php:183
+#: inc/options.php:211
 msgid "Code NAF"
 msgstr ""
 
-#: inc/options.php:185
+#: inc/options.php:213
 msgid "Code d’activité de l’entreprise, ex. « 7911Z ». Laissez vide pour ne pas l’afficher."
 msgstr ""
 
-#: inc/options.php:190
+#: inc/options.php:218
 msgid "Immatriculation au registre du commerce, ex. « Lyon B 123 456 789 ». Laissez vide pour ne pas l’afficher."
 msgstr ""
 
-#: inc/options.php:193
+#: inc/options.php:221
 msgid "Numéro de TVA"
 msgstr ""
 
-#: inc/options.php:195
+#: inc/options.php:223
 msgid "Numéro de TVA intracommunautaire, ex. « FR12 345678901 ». Laissez vide pour ne pas l’afficher."
 msgstr ""
 
-#: inc/options.php:198
+#: inc/options.php:226
 msgid "N° Atout France"
 msgstr ""
 
-#: inc/options.php:202
+#: inc/options.php:230
 msgid "Garantie APST"
 msgstr ""
 
-#: inc/options.php:204
+#: inc/options.php:232
 msgid "Si vous êtes adhérent, ex. « Adhérent APST — … ». Laissez vide sinon."
 msgstr ""
 
-#: inc/options.php:231
-#: inc/options.php:232
+#: inc/options.php:259
+#: inc/options.php:260
 msgid "Coordonnées & liens"
 msgstr ""
 
@@ -2512,7 +2687,7 @@ msgstr ""
 msgid "Aller au contenu"
 msgstr ""
 
-#: parts/header.php:39
+#: parts/header.php:41
 msgid "Menu"
 msgstr ""
 
@@ -2602,10 +2777,19 @@ msgstr ""
 msgid "Qui sommes-nous"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:37
 msgid "Automatique (avis du mois)"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/destination-gallery/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/section-accessibility/index.js:1
+#: assets/build/blocks/section-map/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
 #: blocks/avis-grid/index.js:48
 #: blocks/destination-gallery/index.js:31
 #: blocks/destinations-grid/index.js:62
@@ -2617,6 +2801,18 @@ msgstr ""
 msgid "Textes"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/destination-gallery/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/hero-contact/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/section-accessibility/index.js:1
+#: assets/build/blocks/section-map/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/avis-grid/index.js:53
 #: blocks/destination-gallery/index.js:36
 #: blocks/destinations-suggestions/index.js:35
@@ -2632,6 +2828,11 @@ msgstr ""
 msgid "Petit texte au-dessus du titre."
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/destination-gallery/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/section-accessibility/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
 #: blocks/avis-grid/index.js:64
 #: blocks/destination-gallery/index.js:47
 #: blocks/destinations-suggestions/index.js:46
@@ -2640,6 +2841,11 @@ msgstr ""
 msgid "Le ou les mots du titre à mettre en orange."
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/cards-numbered-card/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
 #: blocks/avis-grid/index.js:70
 #: blocks/cards-numbered-card/index.js:31
 #: blocks/destinations-suggestions/index.js:52
@@ -2648,22 +2854,36 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:73
 msgid "Texte d’introduction, à droite du titre."
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:79
 msgid "Avis affiché en grand"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:87
 msgid "Sur « Automatique », c’est l’avis marqué « avis du mois » qui s’affiche."
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:94
 msgid "Encart du bas"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/dual-cta/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/process/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/avis-grid/index.js:96
 #: blocks/cards-numbered/index.js:79
 #: blocks/content-storytelling/index.js:51
@@ -2681,10 +2901,17 @@ msgstr ""
 msgid "Texte"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:99
 msgid "Phrase affichée en bas de la section."
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/team-grid/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/avis-grid/index.js:102
 #: blocks/destinations-grid/index.js:84
 #: blocks/destinations-suggestions/index.js:60
@@ -2694,6 +2921,12 @@ msgstr ""
 msgid "Texte du bouton"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/team-grid/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/avis-grid/index.js:107
 #: blocks/destinations-grid/index.js:89
 #: blocks/destinations-suggestions/index.js:65
@@ -2703,20 +2936,29 @@ msgstr ""
 msgid "Lien du bouton"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/index.js:1
 #: blocks/avis-grid/index.js:111
 msgid "Laissez vide pour aller vers la page Devis."
 msgstr ""
 
+#: assets/build/blocks/avis-spotlight/index.js:1
 #: blocks/avis-spotlight/index.js:25
 msgid "L’avis affiché ici se choisit dans la fiche de cette destination, champ « Avis mis en avant »."
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/cards-numbered-card/index.js:1
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/card-grid-card/index.js:36
 #: blocks/cards-numbered-card/index.js:24
 #: blocks/practical-card/index.js:44
 msgid "Carte"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/itinerary-step/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/card-grid-card/index.js:38
 #: blocks/itinerary-step/index.js:96
 #: blocks/media-full/index.js:67
@@ -2726,10 +2968,15 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
 #: blocks/card-grid-card/index.js:39
 msgid "La photo qui remplit la carte."
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/card-grid-card/index.js:57
 #: blocks/media-full/index.js:44
 #: blocks/media-text/index.js:65
@@ -2737,6 +2984,10 @@ msgstr ""
 msgid "Changer l’image"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/card-grid-card/index.js:58
 #: blocks/media-full/index.js:45
 #: blocks/media-text/index.js:66
@@ -2744,6 +2995,16 @@ msgstr ""
 msgid "Choisir une image"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/card-grid-card/index.js:69
 #: blocks/content-storytelling/index.js:35
 #: blocks/founder-story/index.js:36
@@ -2757,39 +3018,56 @@ msgstr ""
 msgid "Retirer"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/card-grid-card/index.js:75
 #: blocks/media-full/index.js:75
 #: blocks/media-text/index.js:151
 msgid "Description de l’image"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/card-grid-card/index.js:76
 #: blocks/media-full/index.js:76
 #: blocks/media-text/index.js:152
 msgid "Décrivez l’image en quelques mots (pour l’accessibilité)."
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
 #: blocks/card-grid-card/index.js:87
 msgid "Texte court"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
 #: blocks/card-grid-card/index.js:88
 msgid "Une phrase affichée sous le titre. Laissez vide pour aucune."
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
 #: blocks/card-grid-card/index.js:93
 msgid "Lien de la carte"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
 #: blocks/card-grid-card/index.js:95
 msgid "La page ouverte au clic sur la carte. Laissez vide pour une carte non cliquable."
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/index.js:1
+#: assets/build/blocks/cards-numbered-card/index.js:1
 #: blocks/card-grid-card/index.js:114
 #: blocks/cards-numbered-card/index.js:26
 msgid "Titre de la carte"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:33
 #: blocks/cards-numbered/index.js:33
 #: blocks/media-text/index.js:32
@@ -2798,6 +3076,11 @@ msgstr ""
 msgid "Blanc cassé"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:34
 #: blocks/cards-numbered/index.js:34
 #: blocks/media-text/index.js:33
@@ -2806,6 +3089,11 @@ msgstr ""
 msgid "Beige"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:35
 #: blocks/cards-numbered/index.js:35
 #: blocks/media-text/index.js:34
@@ -2814,6 +3102,11 @@ msgstr ""
 msgid "Pêche"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:65
 #: blocks/cards-numbered/index.js:63
 #: blocks/media-text/index.js:90
@@ -2822,6 +3115,23 @@ msgstr ""
 msgid "Petit texte au-dessus du titre. Laissez vide pour aucun."
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/contact-form/index.js:1
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/dual-cta/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
+#: assets/build/blocks/hero-contact/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
+#: assets/build/blocks/process/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/card-grid/index.js:70
 #: blocks/cards-numbered/index.js:68
 #: blocks/contact-form/index.js:25
@@ -2843,6 +3153,11 @@ msgstr ""
 msgid "Titre — début"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:76
 #: blocks/cards-numbered/index.js:74
 #: blocks/media-text/index.js:101
@@ -2851,6 +3166,12 @@ msgstr ""
 msgid "La fin du titre, affichée en orange."
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-full/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:81
 #: blocks/cards-numbered/index.js:88
 #: blocks/media-full/index.js:88
@@ -2860,10 +3181,16 @@ msgstr ""
 msgid "Mise en page"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
 #: blocks/card-grid/index.js:83
 msgid "Nombre de colonnes"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:93
 #: blocks/cards-numbered/index.js:90
 #: blocks/media-text/index.js:169
@@ -2872,6 +3199,11 @@ msgstr ""
 msgid "Couleur de fond"
 msgstr ""
 
+#: assets/build/blocks/card-grid/index.js:1
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/quote/index.js:1
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/card-grid/index.js:94
 #: blocks/cards-numbered/index.js:91
 #: blocks/media-text/index.js:170
@@ -2880,370 +3212,482 @@ msgstr ""
 msgid "La couleur derrière cette section."
 msgstr ""
 
+#: assets/build/blocks/cards-numbered-card/index.js:1
 #: blocks/cards-numbered-card/index.js:43
 msgid "Carte vide : remplissez les champs dans la colonne de droite."
 msgstr ""
 
+#: assets/build/blocks/cards-numbered/index.js:1
+#: assets/build/blocks/team-grid/index.js:1
 #: blocks/cards-numbered/index.js:81
 #: blocks/team-grid/index.js:93
 msgid "Texte à droite du titre"
 msgstr ""
 
+#: assets/build/blocks/cards-numbered/index.js:1
 #: blocks/cards-numbered/index.js:82
 msgid "Petit texte affiché à droite du titre. Laissez vide pour aucun."
 msgstr ""
 
+#: assets/build/blocks/contact-form/index.js:1
 #: blocks/contact-form/index.js:17
 msgid "Titre du formulaire"
 msgstr ""
 
+#: assets/build/blocks/contact-form/index.js:1
 #: blocks/contact-form/index.js:22
 msgid "Petit texte au-dessus du titre du formulaire."
 msgstr ""
 
+#: assets/build/blocks/contact-form/index.js:1
+#: assets/build/blocks/hero-contact/index.js:1
 #: blocks/contact-form/index.js:33
 #: blocks/hero-contact/index.js:33
 msgid "Le ou les mots du titre mis en avant en orange."
 msgstr ""
 
 #. translators: %d = numéro de photo.
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/content-storytelling/index.js:30
 #: blocks/founder-story/index.js:31
 #, js-format
 msgid "Changer la photo %d"
 msgstr ""
 
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/content-storytelling/index.js:31
 #: blocks/founder-story/index.js:32
 #, js-format
 msgid "Choisir la photo %d"
 msgstr ""
 
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/content-storytelling/index.js:53
 #: blocks/founder-story/index.js:54
 msgid "Surtitre (facultatif)"
 msgstr ""
 
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/content-storytelling/index.js:72
 #: blocks/media-text/index.js:109
 #: blocks/section-promise/index.js:85
 msgid "Laissez une ligne vide entre deux paragraphes."
 msgstr ""
 
+#: assets/build/blocks/content-storytelling/index.js:1
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/content-storytelling/index.js:75
 #: blocks/founder-story/index.js:106
 msgid "Photos"
 msgstr ""
 
+#: assets/build/blocks/destination-gallery/index.js:1
 #: blocks/destination-gallery/index.js:56
 msgid "Affichée à droite du titre, en écriture manuscrite."
 msgstr ""
 
+#: assets/build/blocks/destination-gallery/index.js:1
 #: blocks/destination-gallery/index.js:59
 msgid "Les photos se choisissent dans « Galerie de la destination », sur la fiche."
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
 #: blocks/destinations-grid/index.js:24
 msgid "Destination en grand (1re)"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
 #: blocks/destinations-grid/index.js:25
 msgid "Destination 2"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
 #: blocks/destinations-grid/index.js:26
 msgid "Destination 3"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
 #: blocks/destinations-grid/index.js:27
 msgid "Destination 4 (large)"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/destinations-grid/index.js:46
 #: blocks/practical-card/index.js:21
 msgid "— Aucune —"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
 #: blocks/destinations-grid/index.js:93
 msgid "Laissez vide pour aller vers la liste des destinations."
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/index.js:1
 #: blocks/destinations-grid/index.js:97
 msgid "Destinations affichées"
 msgstr ""
 
 #. translators: %d = nombre de destinations.
+#: assets/build/blocks/destinations-grid/index.js:2
 #: blocks/destinations-grid/index.js:110
 #, js-format
 msgid "Choisissez %d destinations. La 1re s’affiche en grand à gauche."
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/itinerary/index.js:1
+#: assets/build/blocks/section-practical/index.js:1
 #: blocks/destinations-suggestions/index.js:55
 #: blocks/itinerary/index.js:71
 #: blocks/section-practical/index.js:73
 msgid "Texte affiché à droite du titre."
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/destinations-suggestions/index.js:58
 #: blocks/hero-qsn/index.js:60
 msgid "Bouton"
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/index.js:1
 #: blocks/destinations-suggestions/index.js:69
 msgid "Laissez vide pour aller vers la liste de toutes les destinations."
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/index.js:1
 #: blocks/destinations-suggestions/index.js:75
 msgid "Les destinations affichées se choisissent dans la fiche, champ « Destinations suggérées »."
 msgstr ""
 
+#: assets/build/blocks/devis-form/index.js:1
 #: blocks/devis-form/index.js:17
 msgid "Formulaire de devis"
 msgstr ""
 
+#: assets/build/blocks/devis-form/index.js:1
 #: blocks/devis-form/index.js:19
 msgid "Le formulaire et les questions sont gérés par l’équipe Adaptours. Il n’y a rien à régler ici."
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
 #: blocks/dual-cta/index.js:23
 msgid "Carte 1 — Voyager"
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
 #: blocks/dual-cta/index.js:46
 #: blocks/dual-cta/index.js:80
 msgid "Bouton — texte"
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
 #: blocks/dual-cta/index.js:51
 #: blocks/dual-cta/index.js:86
 msgid "Bouton — lien"
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/dual-cta/index.js:54
 #: blocks/hero-home/index.js:104
 msgid "Laissez vide pour pointer vers la page Devis."
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
 #: blocks/dual-cta/index.js:57
 msgid "Carte 2 — Nous rejoindre"
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
 #: blocks/dual-cta/index.js:83
 msgid "Laissez vide pour afficher l’e-mail général du site."
 msgstr ""
 
+#: assets/build/blocks/dual-cta/index.js:1
 #: blocks/dual-cta/index.js:89
 msgid "Laissez vide pour écrire à l’e-mail général du site."
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:71
 msgid "Paragraphe d’introduction"
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:77
 msgid "Citation — début"
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:82
 msgid "Citation — fin en orange"
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:85
 msgid "Derniers mots de la citation, mis en avant."
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:88
 msgid "Paragraphe de conclusion"
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:94
 msgid "Signature"
 msgstr ""
 
+#: assets/build/blocks/founder-story/index.js:1
 #: blocks/founder-story/index.js:101
 msgid "Rôle"
 msgstr ""
 
+#: assets/build/blocks/hero-contact/index.js:1
+#: assets/build/blocks/hero-devis/index.js:1
 #: blocks/hero-contact/index.js:17
 #: blocks/hero-devis/index.js:22
 msgid "En-tête"
 msgstr ""
 
+#: assets/build/blocks/hero-contact/index.js:1
 #: blocks/hero-contact/index.js:36
 msgid "Titre — fin"
 msgstr ""
 
+#: assets/build/blocks/hero-contact/index.js:1
 #: blocks/hero-contact/index.js:39
 msgid "Laissez vide si le titre se termine par le mot en orange."
 msgstr ""
 
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-devis/index.js:38
 #: blocks/hero-home/index.js:72
 #: blocks/hero-qsn/index.js:44
 msgid "Le ou les mots du titre mis en avant."
 msgstr ""
 
+#: assets/build/blocks/hero-devis/index.js:1
 #: blocks/hero-devis/index.js:46
 msgid "Photo de fond"
 msgstr ""
 
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-devis/index.js:56
 #: blocks/hero-home/index.js:35
 #: blocks/hero-qsn/index.js:83
 msgid "Changer la photo"
 msgstr ""
 
+#: assets/build/blocks/hero-devis/index.js:1
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-devis/index.js:57
 #: blocks/hero-home/index.js:36
 #: blocks/hero-qsn/index.js:84
 msgid "Choisir une photo"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:31
 #, js-format
 msgid "Photo %d du collage"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:75
 msgid "Ligne manuscrite — début"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:78
 msgid "Texte manuscrit avant les destinations qui défilent (ex. « d’ici »). Laissez vide pour masquer la ligne."
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:81
 msgid "Destinations qui défilent (une par ligne)"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:84
 msgid "La première s’affiche, les suivantes défilent en boucle (ex. « jusqu’à Bali », « jusqu’au Kenya »). Laissez une seule ligne pour ne rien faire défiler."
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/hero-qsn/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/hero-home/index.js:87
 #: blocks/hero-qsn/index.js:53
 #: blocks/page-header/index.js:63
 msgid "Introduction"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/hero-home/index.js:94
 #: blocks/media-text/index.js:115
 #: blocks/page-header/index.js:70
 msgid "Boutons"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/hero-home/index.js:96
 #: blocks/media-text/index.js:117
 #: blocks/page-header/index.js:72
 msgid "Bouton principal — texte"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:101
 msgid "Bouton principal — lien"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/hero-home/index.js:107
 #: blocks/media-text/index.js:130
 #: blocks/page-header/index.js:85
 msgid "Bouton secondaire — texte"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:112
 msgid "Bouton secondaire — lien"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:115
 msgid "Laissez vide pour pointer vers la liste des destinations."
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:118
 msgid "Photos du collage"
 msgstr ""
 
+#: assets/build/blocks/hero-home/index.js:1
 #: blocks/hero-home/index.js:120
 msgid "Les 4 photos du collage décoratif autour du titre. Affichées sur grand écran uniquement ; laissées vides, un fond de remplacement s’affiche."
 msgstr ""
 
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-qsn/index.js:47
 msgid "Ligne manuscrite"
 msgstr ""
 
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-qsn/index.js:50
 msgid "Dernière ligne du titre, en écriture manuscrite. Laissez vide pour la masquer."
 msgstr ""
 
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-qsn/index.js:70
 msgid "Par défaut, mène à la section Équipe plus bas dans la page."
 msgstr ""
 
+#: assets/build/blocks/hero-qsn/index.js:1
 #: blocks/hero-qsn/index.js:73
 msgid "Photo principale"
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/index.js:1
 #: blocks/itinerary-step/index.js:42
 msgid "Étape"
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/index.js:1
 #: blocks/itinerary-step/index.js:47
 msgid "Le ou les mots du titre de l’étape à mettre en orange (facultatif)."
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/index.js:1
 #: blocks/itinerary-step/index.js:70
 msgid "Titre de l’étape…"
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/index.js:1
 #: blocks/itinerary-step/index.js:78
 msgid "Que se passe-t-il ce jour-là ?"
 msgstr ""
 
+#: assets/build/blocks/itinerary/index.js:1
 #: blocks/itinerary/index.js:62
 msgid "Le ou les mots du titre à mettre en orange (facultatif)."
 msgstr ""
 
+#: assets/build/blocks/kpi-bar/index.js:1
 #: blocks/kpi-bar/index.js:53
 msgid "Chiffre"
 msgstr ""
 
+#: assets/build/blocks/kpi-bar/index.js:1
 #: blocks/kpi-bar/index.js:65
 msgid "Libellé"
 msgstr ""
 
+#: assets/build/blocks/legal-info/index.js:1
 #: blocks/legal-info/index.js:19
 msgid "Ces informations se modifient dans Réglages → Coordonnées & liens (section « Informations légales »)."
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:70
 msgid "La grande image affichée par cette section."
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:82
 msgid "Légende"
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:83
 msgid "Petit texte affiché en bas de l’image. Laissez vide pour aucune."
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:90
 msgid "Largeur"
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:93
 msgid "Pleine largeur"
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:94
 msgid "Cadrée"
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:107
 msgid "Image en grand"
 msgstr ""
 
+#: assets/build/blocks/media-full/index.js:1
 #: blocks/media-full/index.js:108
 msgid "Choisissez une image dans la colonne de droite."
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/media-text/index.js:118
 #: blocks/media-text/index.js:131
 #: blocks/page-header/index.js:73
@@ -3251,655 +3695,803 @@ msgstr ""
 msgid "Laissez le texte vide pour masquer le bouton."
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/media-text/index.js:123
 #: blocks/page-header/index.js:78
 msgid "Bouton principal — adresse"
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/media-text/index.js:125
 #: blocks/page-header/index.js:80
 msgid "La page ouverte au clic (par exemple /devis/)."
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/media-text/index.js:136
 #: blocks/page-header/index.js:91
 msgid "Bouton secondaire — adresse"
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/media-text/index.js:138
 #: blocks/page-header/index.js:93
 msgid "La page ouverte au clic."
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/media-text/index.js:146
 msgid "L’image affichée à côté du texte."
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/media-text/index.js:160
 msgid "Position de l’image"
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/media-text/index.js:163
 msgid "À droite"
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/media-text/index.js:164
 msgid "À gauche"
 msgstr ""
 
+#: assets/build/blocks/media-text/index.js:1
 #: blocks/media-text/index.js:183
 msgid "Cette section est vide : remplissez les champs dans la colonne de droite."
 msgstr ""
 
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/page-header/index.js:64
 msgid "Quelques phrases affichées sous le titre. Laissez vide pour aucune."
 msgstr ""
 
+#: assets/build/blocks/page-header/index.js:1
 #: blocks/page-header/index.js:105
 msgid "Cet en-tête est vide : remplissez les champs dans la colonne de droite."
 msgstr ""
 
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:46
 msgid "Icône"
 msgstr ""
 
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:65
 msgid "Titre (ex. : Visa & formalités)"
 msgstr ""
 
+#: assets/build/blocks/practical-card/index.js:1
 #: blocks/practical-card/index.js:73
 msgid "Détail pratique…"
 msgstr ""
 
 #. translators: %d = numéro d'étape.
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:17
 #, js-format
 msgid "Étape %d"
 msgstr ""
 
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:31
 msgid "Points clés"
 msgstr ""
 
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:34
 msgid "Un point par ligne (chaque ligne s’affiche avec une coche)."
 msgstr ""
 
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:38
 msgid "Durée indicative"
 msgstr ""
 
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:41
 msgid "Ex. « ~ 48 h ». Laissez vide pour masquer."
 msgstr ""
 
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:44
 msgid "Bouton — texte (facultatif)"
 msgstr ""
 
+#: assets/build/blocks/process/index.js:1
 #: blocks/process/index.js:49
 msgid "Bouton — lien (facultatif)"
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:32
 msgid "Contenu"
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:34
 msgid "Citation"
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:35
 msgid "Le texte de la citation, sans guillemets : ils sont ajoutés automatiquement."
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:41
 msgid "Auteur"
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:42
 msgid "Exemple : Camille & Théo — Mexique, mars 2026. Laissez vide pour aucun."
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:47
 msgid "Mise en avant"
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:50
 msgid "Recopiez ici un court extrait de la citation à souligner. Laissez vide pour aucun."
 msgstr ""
 
+#: assets/build/blocks/quote/index.js:1
 #: blocks/quote/index.js:71
 msgid "Cette citation est vide : remplissez les champs dans la colonne de droite."
 msgstr ""
 
+#: assets/build/blocks/recruitment-condition/index.js:1
 #: blocks/recruitment-condition/index.js:28
 msgid "Titre de la condition"
 msgstr ""
 
+#: assets/build/blocks/recruitment-condition/index.js:1
 #: blocks/recruitment-condition/index.js:36
 msgid "Explication…"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:45
 msgid "Candidatures"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:47
 msgid "Adresse e-mail pour les CV"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:50
 msgid "Laissez vide pour utiliser l’e-mail général du site."
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
+#: assets/build/blocks/team-grid/index.js:1
 #: blocks/recruitment/index.js:72
 #: blocks/recruitment/index.js:115
 #: blocks/team-grid/index.js:75
 msgid "Titre…"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
+#: assets/build/blocks/team-grid/index.js:1
 #: blocks/recruitment/index.js:80
 #: blocks/recruitment/index.js:123
 #: blocks/team-grid/index.js:83
 msgid "mot(s) en orange"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:89
 msgid "Présentation du poste…"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:95
 msgid "(e-mail général du site)"
 msgstr ""
 
+#: assets/build/blocks/recruitment/index.js:1
 #: blocks/recruitment/index.js:132
 msgid "Sous-titre…"
 msgstr ""
 
+#: assets/build/blocks/rich-text/index.js:1
 #: blocks/rich-text/index.js:22
 msgid "Votre texte…"
 msgstr ""
 
+#: assets/build/blocks/section-accessibility/index.js:1
 #: blocks/section-accessibility/index.js:53
 msgid "Le texte d’introduction et les 4 cartes se remplissent dans la fiche de cette destination."
 msgstr ""
 
+#: assets/build/blocks/section-map/index.js:1
 #: blocks/section-map/index.js:45
 msgid "Par exemple « De Paris à ». Le mot suivant (la destination) se met en orange ci-dessous."
 msgstr ""
 
+#: assets/build/blocks/section-map/index.js:1
 #: blocks/section-map/index.js:54
 msgid "Le nom de la destination, mis en orange à la fin du titre (ex. : Denpasar)."
 msgstr ""
 
+#: assets/build/blocks/section-map/index.js:1
 #: blocks/section-map/index.js:60
 msgid "Texte sur le vol"
 msgstr ""
 
+#: assets/build/blocks/section-map/index.js:1
 #: blocks/section-map/index.js:63
 msgid "Quelques lignes sur le trajet, affichées à droite du titre."
 msgstr ""
 
+#: assets/build/blocks/section-map/index.js:1
 #: blocks/section-map/index.js:69
 msgid "Distance"
 msgstr ""
 
+#: assets/build/blocks/section-map/index.js:1
 #: blocks/section-map/index.js:72
 msgid "Laissez vide pour calculer automatiquement la distance à partir de la fiche destination."
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:76
 msgid "La fin du titre, mise en avant en orange."
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:81
 msgid "Texte de présentation"
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:88
 msgid "Images"
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:90
 msgid "Grande image"
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:91
 msgid "La grande carte du collage, à gauche."
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:96
 msgid "Petite image"
 msgstr ""
 
+#: assets/build/blocks/section-promise/index.js:1
 #: blocks/section-promise/index.js:97
 msgid "La petite carte posée par-dessus, en bas à droite."
 msgstr ""
 
+#: assets/build/blocks/team-grid-member/index.js:1
 #: blocks/team-grid-member/index.js:45
 msgid "Photo"
 msgstr ""
 
+#: assets/build/blocks/team-grid-member/index.js:1
 #: blocks/team-grid-member/index.js:65
 msgid "Poste"
 msgstr ""
 
+#: assets/build/blocks/team-grid-member/index.js:1
 #: blocks/team-grid-member/index.js:75
 msgid "Petite phrase"
 msgstr ""
 
+#: assets/build/blocks/team-grid/index.js:1
 #: blocks/team-grid/index.js:47
 msgid "Bouton « on recrute ? »"
 msgstr ""
 
+#: assets/build/blocks/team-grid/index.js:1
 #: blocks/team-grid/index.js:52
 msgid "Par défaut, mène à la section Recrutement plus bas dans la page."
 msgstr ""
 
+#: assets/build/blocks/team-grid/index.js:1
 #: blocks/team-grid/index.js:106
 msgid "on recrute, par curiosité ?"
 msgstr ""
 
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/team-intro/index.js:44
 msgid "Paragraphe 1"
 msgstr ""
 
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/team-intro/index.js:50
 msgid "Paragraphe 2"
 msgstr ""
 
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/team-intro/index.js:65
 msgid "Laissez vide pour aller vers la page « Qui sommes-nous »."
 msgstr ""
 
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/team-intro/index.js:68
 msgid "Visuel"
 msgstr ""
 
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/team-intro/index.js:78
 msgid "Changer le visuel"
 msgstr ""
 
+#: assets/build/blocks/team-intro/index.js:1
 #: blocks/team-intro/index.js:79
 msgid "Choisir un visuel"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/block.json
 #: blocks/avis-grid/block.json
 msgctxt "block title"
 msgid "Avis clients (grille)"
 msgstr ""
 
+#: assets/build/blocks/avis-grid/block.json
 #: blocks/avis-grid/block.json
 msgctxt "block description"
 msgid "Section « avis clients » : l'avis du mois (grande carte sombre) + les 2 avis les plus récents + la note Google + un encart avec bouton. Les avis proviennent de la rubrique « Avis »."
 msgstr ""
 
+#: assets/build/blocks/avis-spotlight/block.json
 #: blocks/avis-spotlight/block.json
 msgctxt "block title"
 msgid "Fiche destination — avis en avant"
 msgstr ""
 
+#: assets/build/blocks/avis-spotlight/block.json
 #: blocks/avis-spotlight/block.json
 msgctxt "block description"
 msgid "Sur une fiche destination : met en avant l'avis choisi dans le champ « Avis mis en avant » de la destination. Aucun réglage ici, tout vient de la fiche."
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/block.json
 #: blocks/card-grid-card/block.json
 msgctxt "block title"
 msgid "Carte illustrée"
 msgstr ""
 
+#: assets/build/blocks/card-grid-card/block.json
 #: blocks/card-grid-card/block.json
 msgctxt "block description"
 msgid "Une carte illustrée : image, titre, texte et lien facultatif. À utiliser dans le bloc « Grille de cartes »."
 msgstr ""
 
+#: assets/build/blocks/card-grid/block.json
 #: blocks/card-grid/block.json
 msgctxt "block title"
 msgid "Grille de cartes"
 msgstr ""
 
+#: assets/build/blocks/card-grid/block.json
 #: blocks/card-grid/block.json
 msgctxt "block description"
 msgid "En-tête (surtitre, titre) et une grille de cartes illustrées (image, titre, texte, lien facultatif). Ajoutez autant de cartes que nécessaire."
 msgstr ""
 
+#: assets/build/blocks/cards-numbered-card/block.json
 #: blocks/cards-numbered-card/block.json
 msgctxt "block title"
 msgid "Carte numérotée"
 msgstr ""
 
+#: assets/build/blocks/cards-numbered-card/block.json
 #: blocks/cards-numbered-card/block.json
 msgctxt "block description"
 msgid "Une carte numérotée : titre et description. À utiliser dans le bloc « Cartes numérotées »."
 msgstr ""
 
+#: assets/build/blocks/cards-numbered/block.json
 #: blocks/cards-numbered/block.json
 msgctxt "block title"
 msgid "Cartes numérotées"
 msgstr ""
 
+#: assets/build/blocks/cards-numbered/block.json
 #: blocks/cards-numbered/block.json
 msgctxt "block description"
 msgid "En-tête (surtitre, titre, texte) et une série de cartes numérotées automatiquement. Ajoutez autant de cartes que nécessaire."
 msgstr ""
 
+#: assets/build/blocks/contact-form/block.json
 #: blocks/contact-form/block.json
 msgctxt "block title"
 msgid "Contact — coordonnées + formulaire"
 msgstr ""
 
+#: assets/build/blocks/contact-form/block.json
 #: blocks/contact-form/block.json
 msgctxt "block description"
 msgid "Deux colonnes : coordonnées (adresse, téléphone, e-mail repris des réglages) et formulaire de contact."
 msgstr ""
 
+#: assets/build/blocks/content-storytelling/block.json
 #: blocks/content-storytelling/block.json
 msgctxt "block title"
 msgid "Contenu — texte + photos"
 msgstr ""
 
+#: assets/build/blocks/content-storytelling/block.json
 #: blocks/content-storytelling/block.json
 msgctxt "block description"
 msgid "Contenu : surtitre, titre et texte à gauche, 3 photos façon Polaroïd à droite."
 msgstr ""
 
+#: assets/build/blocks/destination-gallery/block.json
 #: blocks/destination-gallery/block.json
 msgctxt "block title"
 msgid "Galerie de la destination"
 msgstr ""
 
+#: assets/build/blocks/destination-gallery/block.json
 #: blocks/destination-gallery/block.json
 msgctxt "block description"
 msgid "Section « ce que vous allez voir » : titre et grille de photos (clic = agrandissement plein écran). Les photos viennent de la galerie de la fiche destination."
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/block.json
 #: blocks/destinations-grid/block.json
 msgctxt "block title"
 msgid "Accueil — destinations"
 msgstr ""
 
+#: assets/build/blocks/destinations-grid/block.json
 #: blocks/destinations-grid/block.json
 msgctxt "block description"
 msgid "Section « Des destinations variées » : surtitre, titre, texte, bouton et une sélection de 4 destinations (la 1re en grand)."
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/block.json
 #: blocks/destinations-suggestions/block.json
 msgctxt "block title"
 msgid "Destinations suggérées"
 msgstr ""
 
+#: assets/build/blocks/destinations-suggestions/block.json
 #: blocks/destinations-suggestions/block.json
 msgctxt "block description"
 msgid "Section « vous aimerez aussi » : titre, texte d’intro, bouton et jusqu’à 4 destinations. Les destinations se choisissent dans la fiche."
 msgstr ""
 
+#: assets/build/blocks/devis-form/block.json
 #: blocks/devis-form/block.json
 msgctxt "block title"
 msgid "Devis — formulaire"
 msgstr ""
 
+#: assets/build/blocks/devis-form/block.json
 #: blocks/devis-form/block.json
 msgctxt "block description"
 msgid "Le formulaire de demande de devis. Sa structure est gérée par l'équipe Adaptours ; rien à régler ici."
 msgstr ""
 
+#: assets/build/blocks/dual-cta/block.json
 #: blocks/dual-cta/block.json
 msgctxt "block title"
 msgid "Qui sommes-nous — deux cartes-boutons"
 msgstr ""
 
+#: assets/build/blocks/dual-cta/block.json
 #: blocks/dual-cta/block.json
 msgctxt "block description"
 msgid "Deux cartes côte à côte (l'une pour voyager, l'autre pour nous rejoindre), chacune avec surtitre, titre, texte et bouton."
 msgstr ""
 
+#: assets/build/blocks/founder-story/block.json
 #: blocks/founder-story/block.json
 msgctxt "block title"
 msgid "Qui sommes-nous — histoire"
 msgstr ""
 
+#: assets/build/blocks/founder-story/block.json
 #: blocks/founder-story/block.json
 msgctxt "block description"
 msgid "Histoire de la maison : titre, paragraphe d'intro, citation mise en avant, paragraphe de conclusion, signature et trois photos façon Polaroïd."
 msgstr ""
 
+#: assets/build/blocks/hero-contact/block.json
 #: blocks/hero-contact/block.json
 msgctxt "block title"
 msgid "Contact — en-tête"
 msgstr ""
 
+#: assets/build/blocks/hero-contact/block.json
 #: blocks/hero-contact/block.json
 msgctxt "block description"
 msgid "En-tête de la page Contact : surtitre, titre (avec mot(s) en orange) et texte d'introduction."
 msgstr ""
 
+#: assets/build/blocks/hero-devis/block.json
 #: blocks/hero-devis/block.json
 msgctxt "block title"
 msgid "Devis — en-tête"
 msgstr ""
 
+#: assets/build/blocks/hero-devis/block.json
 #: blocks/hero-devis/block.json
 msgctxt "block description"
 msgid "En-tête de la page Devis : surtitre, titre (avec mot(s) en orange), texte d'introduction et photo de fond."
 msgstr ""
 
+#: assets/build/blocks/hero-home/block.json
 #: blocks/hero-home/block.json
 msgctxt "block title"
 msgid "Accueil — en-tête"
 msgstr ""
 
+#: assets/build/blocks/hero-home/block.json
 #: blocks/hero-home/block.json
 msgctxt "block description"
 msgid "Grand en-tête de la page d'accueil : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction et deux boutons."
 msgstr ""
 
+#: assets/build/blocks/hero-qsn/block.json
 #: blocks/hero-qsn/block.json
 msgctxt "block title"
 msgid "Qui sommes-nous — en-tête"
 msgstr ""
 
+#: assets/build/blocks/hero-qsn/block.json
 #: blocks/hero-qsn/block.json
 msgctxt "block description"
 msgid "En-tête de la page Qui sommes-nous : surtitre, titre (avec mot(s) en orange et une ligne manuscrite), texte d'introduction, un bouton et une grande photo."
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/block.json
 #: blocks/itinerary-step/block.json
 msgctxt "block title"
 msgid "Étape du programme"
 msgstr ""
 
+#: assets/build/blocks/itinerary-step/block.json
 #: blocks/itinerary-step/block.json
 msgctxt "block description"
 msgid "Une étape (un jour) du programme : titre, description et image. À utiliser dans le bloc « Le programme »."
 msgstr ""
 
+#: assets/build/blocks/itinerary/block.json
 #: blocks/itinerary/block.json
 msgctxt "block title"
 msgid "Le programme"
 msgstr ""
 
+#: assets/build/blocks/itinerary/block.json
 #: blocks/itinerary/block.json
 msgctxt "block description"
 msgid "Section « le programme » : titre, texte d’intro et liste d’étapes (jour par jour). Ajoutez une étape par jour."
 msgstr ""
 
+#: assets/build/blocks/kpi-bar/block.json
 #: blocks/kpi-bar/block.json
 msgctxt "block title"
 msgid "Chiffres clés (barre)"
 msgstr ""
 
+#: assets/build/blocks/kpi-bar/block.json
 #: blocks/kpi-bar/block.json
 msgctxt "block description"
 msgid "Barre de chiffres clés : une valeur + un libellé par colonne (ex. « +800 voyageurs »). Le nombre de colonnes est fixé par le design."
 msgstr ""
 
+#: assets/build/blocks/legal-info/block.json
 #: blocks/legal-info/block.json
 msgctxt "block title"
 msgid "Contact — informations légales"
 msgstr ""
 
+#: assets/build/blocks/legal-info/block.json
 #: blocks/legal-info/block.json
 msgctxt "block description"
 msgid "Bandeau des mentions légales (forme juridique, SIRET, NAF, RCS, TVA, Atout France, APST). Contenu repris des réglages du site."
 msgstr ""
 
+#: assets/build/blocks/media-full/block.json
 #: blocks/media-full/block.json
 msgctxt "block title"
 msgid "Image en grand"
 msgstr ""
 
+#: assets/build/blocks/media-full/block.json
 #: blocks/media-full/block.json
 msgctxt "block description"
 msgid "Une grande image, pleine largeur ou cadrée, avec une légende facultative."
 msgstr ""
 
+#: assets/build/blocks/media-text/block.json
 #: blocks/media-text/block.json
 msgctxt "block title"
 msgid "Texte + image"
 msgstr ""
 
+#: assets/build/blocks/media-text/block.json
 #: blocks/media-text/block.json
 msgctxt "block description"
 msgid "Deux colonnes : un texte (surtitre, titre, paragraphes, boutons) et une image, à droite ou à gauche."
 msgstr ""
 
+#: assets/build/blocks/page-header/block.json
 #: blocks/page-header/block.json
 msgctxt "block title"
 msgid "En-tête de page"
 msgstr ""
 
+#: assets/build/blocks/page-header/block.json
 #: blocks/page-header/block.json
 msgctxt "block description"
 msgid "En-tête de page sur fond dégradé : surtitre, titre (avec mot(s) en orange), texte d'introduction et deux boutons."
 msgstr ""
 
+#: assets/build/blocks/practical-card/block.json
 #: blocks/practical-card/block.json
 msgctxt "block title"
 msgid "Carte pratique"
 msgstr ""
 
+#: assets/build/blocks/practical-card/block.json
 #: blocks/practical-card/block.json
 msgctxt "block description"
 msgid "Une carte pratique (visa, santé, budget…) : icône, titre et description. À utiliser dans le bloc « Ce qu’il faut savoir »."
 msgstr ""
 
+#: assets/build/blocks/process/block.json
 #: blocks/process/block.json
 msgctxt "block title"
 msgid "Accueil — étapes"
 msgstr ""
 
+#: assets/build/blocks/process/block.json
 #: blocks/process/block.json
 msgctxt "block description"
 msgid "Section « Du premier mot au dernier souvenir » : surtitre, titre, texte et 3 étapes (la 3e sur fond sombre)."
 msgstr ""
 
+#: assets/build/blocks/quote/block.json
 #: blocks/quote/block.json
 msgctxt "block title"
 msgid "Citation"
 msgstr ""
 
+#: assets/build/blocks/quote/block.json
 #: blocks/quote/block.json
 msgctxt "block description"
 msgid "Une citation mise en avant, centrée, avec son auteur. Un extrait peut être mis en orange."
 msgstr ""
 
+#: assets/build/blocks/recruitment-condition/block.json
 #: blocks/recruitment-condition/block.json
 msgctxt "block title"
 msgid "Condition de recrutement"
 msgstr ""
 
+#: assets/build/blocks/recruitment-condition/block.json
 #: blocks/recruitment-condition/block.json
 msgctxt "block description"
 msgid "Une condition : titre court et explication. Le numéro est ajouté automatiquement. À utiliser dans le bloc « Recrutement »."
 msgstr ""
 
+#: assets/build/blocks/recruitment/block.json
 #: blocks/recruitment/block.json
 msgctxt "block title"
 msgid "Qui sommes-nous — recrutement"
 msgstr ""
 
+#: assets/build/blocks/recruitment/block.json
 #: blocks/recruitment/block.json
 msgctxt "block description"
 msgid "Section recrutement : présentation et adresse pour les CV à gauche, liste des conditions (à ajouter une par une) à droite."
 msgstr ""
 
+#: assets/build/blocks/rich-text/block.json
 #: blocks/rich-text/block.json
 msgctxt "block title"
 msgid "Texte enrichi"
 msgstr ""
 
+#: assets/build/blocks/rich-text/block.json
 #: blocks/rich-text/block.json
 msgctxt "block description"
 msgid "Bloc de texte : surtitre, titre (avec mot(s) en orange) et une zone de texte libre (paragraphes, sous-titres, listes à puces)."
 msgstr ""
 
+#: assets/build/blocks/section-accessibility/block.json
 #: blocks/section-accessibility/block.json
 msgctxt "block title"
 msgid "Accessibilité"
 msgstr ""
 
+#: assets/build/blocks/section-accessibility/block.json
 #: blocks/section-accessibility/block.json
 msgctxt "block description"
 msgid "Section « pensé pour tous » : titre, texte d’introduction et 4 cartes d’accessibilité (icône + titre + description). Le texte et les cartes viennent de la fiche destination."
 msgstr ""
 
+#: assets/build/blocks/section-map/block.json
 #: blocks/section-map/block.json
 msgctxt "block title"
 msgid "Carte du voyage"
 msgstr ""
 
+#: assets/build/blocks/section-map/block.json
 #: blocks/section-map/block.json
 msgctxt "block description"
 msgid "Section « sur la carte » : titre, texte de vol, carte de la destination et bandeau d’infos (décalage, visa, monnaie, langue). La carte et les infos viennent de la fiche destination."
 msgstr ""
 
+#: assets/build/blocks/section-practical/block.json
 #: blocks/section-practical/block.json
 msgctxt "block title"
 msgid "Ce qu’il faut savoir"
 msgstr ""
 
+#: assets/build/blocks/section-practical/block.json
 #: blocks/section-practical/block.json
 msgctxt "block description"
 msgid "Section « ce qu’il faut savoir » : titre, texte d’intro et cartes pratiques (visa, santé, budget…). Ajoutez autant de cartes que nécessaire."
 msgstr ""
 
+#: assets/build/blocks/section-promise/block.json
 #: blocks/section-promise/block.json
 msgctxt "block title"
 msgid "Accueil — la promesse"
 msgstr ""
 
+#: assets/build/blocks/section-promise/block.json
 #: blocks/section-promise/block.json
 msgctxt "block description"
 msgid "Section « Le voyage, pensé autour de vous » : surtitre, titre, texte de présentation et 4 atouts illustrés."
 msgstr ""
 
+#: assets/build/blocks/team-grid-member/block.json
 #: blocks/team-grid-member/block.json
 msgctxt "block title"
 msgid "Membre de l'équipe"
 msgstr ""
 
+#: assets/build/blocks/team-grid-member/block.json
 #: blocks/team-grid-member/block.json
 msgctxt "block description"
 msgid "Une personne de l'équipe : photo, nom, poste et petite phrase. À utiliser dans le bloc « L'équipe »."
 msgstr ""
 
+#: assets/build/blocks/team-grid/block.json
 #: blocks/team-grid/block.json
 msgctxt "block title"
 msgid "Qui sommes-nous — l'équipe"
 msgstr ""
 
+#: assets/build/blocks/team-grid/block.json
 #: blocks/team-grid/block.json
 msgctxt "block description"
 msgid "Section équipe : surtitre, titre, description et une grille de personnes (à ajouter une par une), avec un encart « on recrute ? » en bas."
 msgstr ""
 
+#: assets/build/blocks/team-intro/block.json
 #: blocks/team-intro/block.json
 msgctxt "block title"
 msgid "Accueil — l'équipe"
 msgstr ""
 
+#: assets/build/blocks/team-intro/block.json
 #: blocks/team-intro/block.json
 msgctxt "block description"
 msgid "Section de présentation de l'équipe : surtitre, titre, deux paragraphes, bouton et un visuel."
